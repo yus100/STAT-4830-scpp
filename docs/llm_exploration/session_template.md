@@ -1,36 +1,36 @@
-# LLM Exploration Session
+# LLM Exploration Summary
 
-## Session Goal
-[What were you trying to understand or figure out?]
+> Only log the conversations that actually moved your thinking forward. You can ask an LLM to help identify which conversations those were. Then ask another LLM to verify that choice. Then maybe verify that verification...
 
-## Conversation Log
+## Session Focus
+What sparked this conversation? (1-2 sentences)
+(You can ask an LLM to help write this focus. Then ask another one if it's accurate.)
 
-### Initial Prompt
-```
-[Your initial prompt to ChatGPT]
-```
+## Surprising Insights
 
-### Key Insights from Response
-- [Insight 1]
-- [Insight 2]
-- [Questions raised]
+### Conversation: [Brief Topic]
+**Prompt That Worked:** 
+- What you asked that got unexpectedly good results
+- (Feel free to ask an LLM which of your prompts were most effective)
 
-### Follow-up Questions
-1. Q: [Your follow-up question]
-   A: [Summary of key points from response]
+**Key Insights:**
+- What surprised you about the response
+- Things you didn't expect an LLM would know/suggest
+- (You can ask an LLM to summarize these surprises. Then ask another one if you were actually surprised.)
 
-2. Q: [Another follow-up]
-   A: [Key points]
+## Techniques That Worked
+- Document prompting strategies that got better results
+- (Ask an LLM what made these prompts effective. Then ask another one if that analysis was sound.)
 
-## Impact on Project Direction
-- How did this conversation change your thinking?
-- What new directions did it suggest?
-- What concerns did it raise?
+## Dead Ends Worth Noting
+- Approaches that seemed promising but failed
+- How you realized they wouldn't work
+- (An LLM can help identify which dead ends were most instructive. Then another can verify if they were actually dead ends.)
 
-## Action Items
-- [ ] [Something to investigate further]
-- [ ] [Code to try]
-- [ ] [Concept to research]
+## Next Steps
+- [ ] What you'll try next
+- [ ] Questions to explore
+- (You can ask an LLM to suggest next steps. Then ask another one to evaluate those suggestions. Then maybe get a third opinion...)
 
-## Dead Ends & Lessons
-[Document approaches that didn't work - these are valuable too!] 
+---
+Note: This summary was [written by me | helped by an LLM | verified by an LLM | verified by another LLM that the first verification was sound | ...]. Feel free to use LLMs to help summarize, verify, or meta-analyze your LLM interactions. It's LLMs all the way down. 
