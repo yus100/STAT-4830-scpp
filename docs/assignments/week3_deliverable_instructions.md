@@ -87,27 +87,27 @@ your-repo/
 
 ## Grading Criteria
 
-### Report (25%)
+### Report 
 - Clear problem definition
 - Well-formulated technical approach
 - Evidence of testing/validation
 - Thoughtful next steps
 
-### Implementation (40%)
+### Implementation 
 - Code runs end-to-end
 - Clear objective function
 - Working optimization loop
 - Basic validation/testing
 - Resource monitoring
 
-### Development Process (20%)
+### Development Process 
 - AI conversations show exploration
 - Failed attempts documented
 - Design decisions explained
 - Safety considerations
 - Alternative approaches considered
 
-### Repository Structure (15%)
+### Repository Structure 
 - Clean organization
 - Clear documentation
 - Working tests
