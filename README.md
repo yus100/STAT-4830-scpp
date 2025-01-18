@@ -2,26 +2,11 @@
 
 > This is in-progress scaffolding for the Week 3 project deliverable. Like the rest of the course, I'm developing this in the open. The structure will evolve based on student needs.
 
+## Base Repository Overview
 This repository helps you:
 - Organize your project exploration
 - Document your llm conversations (seriously, use an llm a lot)
 - Have a working repo from day one
-
-## Team Members
-- Name 1 (GitHub username)
-- Name 2 (GitHub username)
-- Name 3 (GitHub username)
-
-> Note: Feel free to use an anonymous GitHub account, just make sure to share your GitHub username and Penn identity with the course instructor and TA.
-
-## Project Overview
-[2-3 sentences about your project idea. Don't stress too much about this - your direction will probably change as you learn more about optimization]
-
-## Initial Direction
-- What problem are you trying to solve?
-- Why is this an optimization problem?
-- What's your initial approach?
-- What don't you know yet? (probably a lot, that's fine)
 
 ## Repository Structure
 ```
@@ -34,9 +19,6 @@ This repository helps you:
 │   └── initial_exploration.ipynb
 └── requirements.txt       # Project dependencies
 ```
-
-## Current Status
-[What's working, what isn't, what you're stuck on - be honest!]
 
 ## Development Environment
 I use [Cursor](https://cursor.sh/) for this course. It's basically VS Code with additional AI features built in:
@@ -148,4 +130,28 @@ git merge main
 - Windows path too long? Enable long paths:
   ```bash
   git config --system core.longpaths true
-  ``` 
+  ```
+
+---
+
+# Your Team Project Starts Here
+After forking this repository, replace everything below this line with your team's content.
+
+## Team Members
+- Name 1 (GitHub username)
+- Name 2 (GitHub username)
+- Name 3 (GitHub username)
+
+> Note: Feel free to use an anonymous GitHub account, just make sure to share your GitHub username and Penn identity with the course instructor and TA.
+
+## Project Overview
+[2-3 sentences about your project idea. Don't stress too much about this - your direction will probably change as you learn more about optimization]
+
+## Initial Direction
+- What problem are you trying to solve?
+- Why is this an optimization problem?
+- What's your initial approach?
+- What don't you know yet? (probably a lot, that's fine)
+
+## Current Status
+[What's working, what isn't, what you're stuck on - be honest!] 
