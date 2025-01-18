@@ -10,11 +10,14 @@ This repository helps you:
 
 ## Repository Structure
 ```
-project_template/
-├── docs/                  # Your documentation
-│   └── llm_exploration/   # AI interaction logs
-├── notebooks/             # Jupyter notebooks for exploration
-└── README.md             # This guide
+├── docs/                  # Documentation
+│   ├── week3_report.pdf   # Your one-page project direction
+│   └── llm_exploration/   # ChatGPT interaction logs
+│       ├── session1.md    # Individual exploration sessions
+│       └── insights.md    # Key takeaways
+├── notebooks/             # Jupyter/Colab notebooks
+│   └── week3_notebook.ipynb
+└── requirements.txt       # Project dependencies
 ```
 
 ---
@@ -155,4 +158,9 @@ git merge main
 - Windows path too long? Enable long paths:
   ```bash
   git config --system core.longpaths true
-  ``` 
+  ```
+
+
+
+
+[What's working, what isn't, what you're stuck on - be honest!] 
