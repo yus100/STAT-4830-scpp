@@ -1,6 +1,15 @@
-# STAT-4830 Project Base
+# Week 3 Project Deliverable
 
 > This is in-progress scaffolding for the Week 3 project deliverable. Like the rest of the course, I'm developing this in the open. The structure will evolve based on student needs.
+
+## Start Here: Finding Your Project Idea
+Not sure what to build? I've created a guide to help you explore ideas with AI assistance. Check out [`docs/project_scaffolding.md`](docs/project_scaffolding.md) - it's designed to:
+- Help you find problems you actually care about
+- Test if your ideas are feasible
+- Use AI to explore and validate approaches
+- Turn promising ideas into project plans
+
+You can paste the whole guide into ChatGPT and have it walk you through the process. Just remember: while AI can help you explore and validate ideas, only YOU can decide what problem actually matters to you.
 
 ## Base Repository Overview
 This repository helps you:
@@ -49,7 +58,7 @@ After forking this repository, replace everything below this line with your team
 # Reference: Development Setup
 
 ## Development Environment
-I use [Cursor](https://cursor.sh/) for this course. It's basically VS Code with additional AI features built in:
+I use [Cursor](https://cursor.com/) for this course. It's basically VS Code with additional AI features built in:
 - Same interface and shortcuts as VS Code
 - Same extensions work
 - Added AI assistance for code exploration and debugging
