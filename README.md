@@ -21,26 +21,13 @@ Welcome to your project repository! This template helps you develop and implemen
 
 Each week follows an OODA (Observe, Orient, Decide, Act) loop that helps you improve your project systematically:
 
-```
-                  ┌────────────────────────────────────────┐
-                  │                                        │
-                  ▼                                        │
-OBSERVE ──────► ORIENT ──────► DECIDE ──────► ACT         │
-(Report)        (Critique)     (Plan)        (Execute)     │
-  │                │            │              │           │
-  │                │            │              │           │
-  ▼                ▼            ▼              ▼           │
-Review           Identify      Plan          Execute       │
-Current          Strengths     Next          Changes       │
-Draft            Weaknesses    Actions                     │
-                 Risks                                     │
-```
+![Project Development Cycle - A diagram showing the OODA loop (Observe, Orient, Decide, Act) adapted for project development. Each phase has specific activities: Observe (Review Report, Check Results), Orient (Write Critique, Find Gaps), Decide (Plan Changes, Set Goals), and Act (Code, Run Tests). The phases are connected by arrows showing the flow of work, with a feedback loop labeled "Iterative Development" completing the cycle.](docs/figures/ooda_loop.png)
 
-Each cycle produces:
-- Improved report draft
-- Updated code & results
-- Self-critique document
-- Clear plan for next week
+Each cycle produces specific deliverables:
+- OBSERVE: Updated report draft
+- ORIENT: Self-critique document
+- DECIDE: Next actions plan
+- ACT: Code changes & results
 
 See the [Week 3 Instructions](docs/assignments/week3_deliverable_instructions.md) for detailed guidance on writing your first self-critique.
 
