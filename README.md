@@ -1,83 +1,130 @@
-# Week 3 Project Deliverable
+# STAT 4830 Project Repository
 
-> This is in-progress scaffolding for the Week 3 project deliverable. Like the rest of the course, I'm developing this in the open. The structure will evolve based on student needs.
+Welcome to your project repository! This template helps you develop and implement an optimization project over the semester.
 
-## Start Here: Finding Your Project Idea
-Not sure what to build? I've created a guide to help you explore ideas with AI assistance. Check out [`docs/project_scaffolding.md`](docs/project_scaffolding.md) - it's designed to:
-- Help you find problems you actually care about
-- Test if your ideas are feasible
-- Use AI to explore and validate approaches
-- Turn promising ideas into project plans
+## Getting Started
 
-You can paste the whole guide into ChatGPT and have it walk you through the process. Just remember: while AI can help you explore and validate ideas, only YOU can decide what problem actually matters to you.
+1. **Finding Your Project Idea**
+   - Start with our [Project Ideas Guide](docs/finding_project_ideas.md)
+   - Use AI to explore and refine your ideas
+   - Take time to find something you care about
 
-## Base Repository Overview
-This repository helps you:
-- Organize your project exploration
-- Document your llm conversations (seriously, use an llm a lot)
-- Have a working repo from day one
+2. **Week 3 Deliverable**
+   - Follow the [Week 3 Instructions](docs/assignments/week3_deliverable_instructions.md)
+   - Required components:
+     - Initial report draft
+     - Self-critique document analyzing your report's strengths and weaknesses
+     - Supporting Jupyter notebooks/code
+   - Due: Friday, January 31, 2025
+
+## Project Development Cycle
+
+Each week follows an OODA (Observe, Orient, Decide, Act) loop that helps you improve your project systematically:
+
+```
+                  ┌────────────────────────────────────────┐
+                  │                                        │
+                  ▼                                        │
+OBSERVE ──────► ORIENT ──────► DECIDE ──────► ACT         │
+(Report)        (Critique)     (Plan)        (Execute)     │
+  │                │            │              │           │
+  │                │            │              │           │
+  ▼                ▼            ▼              ▼           │
+Review           Identify      Plan          Execute       │
+Current          Strengths     Next          Changes       │
+Draft            Weaknesses    Actions                     │
+                 Risks                                     │
+```
+
+Each cycle produces:
+- Improved report draft
+- Updated code & results
+- Self-critique document
+- Clear plan for next week
+
+See the [Week 3 Instructions](docs/assignments/week3_deliverable_instructions.md) for detailed guidance on writing your first self-critique.
+
+## Project Schedule
+
+### Deliverables (Due Fridays)
+- Week 3 (Jan 31): Report Draft 1 + Code + Self Critique
+- Week 4 (Feb 7): Slides Draft 1
+- Week 5 (Feb 14): Report Draft 2 + Code + Self Critique
+- Week 6 (Feb 21): Slides Draft 2
+- Week 7 (Feb 28): Report Draft 3 + Code + Self Critique
+- Week 8: ⚡ Lightning Talks in Class (Mar 5/7) & Slides Draft 3 due Friday ⚡
+- Spring Break (Mar 8-16)
+- Week 9 (Mar 21): Report Draft 4 + Code + Self Critique
+- Week 10 (Mar 28): Slides Draft 4
+- Week 11 (Apr 4): Report Draft 5 + Code + Self Critique
+- Week 12 (Apr 11): Slides Draft 5
+- Week 13: Final Presentations in Class (Apr 22/24) & Report Draft 6 + Code + Self Critique due Friday (Apr 18)
+- Week 14 (Apr 29): Final Report + Code + Self Critique Due
+
+Note: Instructions for peer feedback will be added throughout the semester for each deliverable.
+
+Each draft builds on the previous one, incorporating feedback and new results. You'll meet with course staff three times during the semester to discuss your progress.
+
+## Project Grading
+
+Each deliverable is graded on five components:
+- Report (20%): Problem statement, methodology, results
+- Implementation (35%): Working code, tests, experiments
+- Development Process (15%): Logs, decisions, iterations
+- Critiques (15%): Reflection and planning
+  - Self-critiques (required)
+  - Peer critiques (when assigned)
+  - Response to feedback
+- Repository Structure (15%): Organization, documentation, clarity
+
+Remember:
+- Quality > Quantity
+- Working > Perfect
 
 ## Repository Structure
+
 ```
-├── docs/                  # Documentation
-│   ├── week3_report.pdf   # Your one-page project direction
-│   └── llm_exploration/   # ChatGPT interaction logs
-│       ├── session1.md    # Individual exploration sessions
-│       └── insights.md    # Key takeaways
-├── notebooks/             # Jupyter/Colab notebooks
-│   └── week3_notebook.ipynb
-└── requirements.txt       # Project dependencies
+your-repo/
+├── README.md                    # This file
+├── report.md                    # Your project report
+├── notebooks/                   # Jupyter notebooks
+├── src/                        # Source code
+├── tests/                      # Test files
+└── docs/
+    ├── finding_project_ideas.md    # Guide to finding your project
+    ├── assignments/                # Assignment instructions
+    ├── llm_exploration/           # AI conversation logs
+    └── development_log.md         # Progress & decisions
 ```
-
----
-
-# Your Team Project Starts Here
-After forking this repository, replace everything below this line with your team's content.
-
-## Team Members
-- Name 1 (GitHub username)
-- Name 2 (GitHub username)
-- Name 3 (GitHub username)
-
-> Note: Feel free to use an anonymous GitHub account, just make sure to share your GitHub username and Penn identity with the course instructor and TA.
-
-## Project Overview
-[2-3 sentences about your project idea. Don't stress too much about this - your direction will probably change as you learn more about optimization]
-
-## Initial Direction
-- What problem are you trying to solve?
-- Why is this an optimization problem?
-- What's your initial approach?
-- What don't you know yet? (probably a lot, that's fine)
-
-## Current Status
-[What's working, what isn't, what you're stuck on - be honest!]
-
----
-
-# Reference: Development Setup
 
 ## Development Environment
-I use [Cursor](https://cursor.com/) for this course. It's basically VS Code with additional AI features built in:
-- Same interface and shortcuts as VS Code
-- Same extensions work
-- Added AI assistance for code exploration and debugging
-- If you learn Cursor, you're also learning VS Code
 
-Cursor is a paid product ($20/month). For a free alternative with similar capabilities:
+### Editor Setup
+We recommend using one of these editors:
 
-[VS Code](https://code.visualstudio.com/) is the industry standard that Cursor builds on:
-- Download from https://code.visualstudio.com/
-- It comes with Git integration
-- Install these extensions:
-  - Python
-  - GitHub Pull Requests
-  - GitHub Copilot (FREE for students!)
-    - Sign up at https://education.github.com/discount_requests/application
-    - This gives you FREE access to GitHub Copilot
-    - Plus other GitHub student benefits
+1. **VS Code** (Free, Industry Standard)
+   - Download from https://code.visualstudio.com/
+   - Install recommended extensions:
+     - Python
+     - GitHub Pull Requests
+     - GitHub Copilot (FREE for students!)
+       - Sign up at https://education.github.com/discount_requests/application
+       - This gives you FREE access to GitHub Copilot
+       - Plus other GitHub student benefits
 
-Both editors will work great for the course. VS Code with Copilot gives you professional-grade AI assistance at no cost (thanks to your student status), while Cursor offers a different take on AI integration. Use what works for you!
+2. **Cursor** (Paid Alternative, $20/month)
+   - Built on VS Code with additional AI features
+   - Same interface and shortcuts as VS Code
+   - Same extensions work
+   - Added AI assistance for code exploration
+
+Both editors work well with Git and provide excellent AI assistance. VS Code with Copilot is recommended for beginners as it's free with your student status and is the industry standard.
+
+### Required Tools
+- Python 3.10+
+- PyTorch
+- Jupyter Notebook/Lab
+- Git
 
 ## Git Setup and Workflow
 
@@ -88,33 +135,26 @@ Both editors will work great for the course. VS Code with Copilot gives you prof
    - This creates your own copy that can receive updates
 
 2. Set up Git (if you haven't already):
+   If you installed VS Code or Cursor, they'll help you install Git! Both editors have excellent Git integration built in.
    
-   If you installed VS Code or Cursor, they'll help you set up Git! The process is almost identical in both editors.
-   
-   For detailed instructions, see:
-   - [Official Git installation guide](https://github.com/git-guides/install-git)
-   - The guide includes VS Code-specific instructions
-   
-   After installing, just set up your identity:
+   For detailed instructions, see the [Official Git installation guide](https://github.com/git-guides/install-git)
+
+   After installing, set up your identity:
    ```bash
    git config --global user.name "Your Name"
    git config --global user.email "your.email@upenn.edu"
    ```
 
 3. Clone your fork:
-   - Open Terminal (Mac/Linux) or Git Bash (Windows)
-   - Clone the repo:
-     ```bash
-     # HTTPS (easier):
-     git clone https://github.com/[your-username]/STAT-4830-[team-name]-project.git
+   ```bash
+   # HTTPS (easier):
+   git clone https://github.com/[your-username]/STAT-4830-[team-name]-project.git
 
-     # SSH (if you've set up SSH keys):
-     git clone git@github.com:[your-username]/STAT-4830-[team-name]-project.git
-     ```
-   - Move into the directory:
-     ```bash
-     cd STAT-4830-[team-name]-project
-     ```
+   # SSH (if you've set up SSH keys):
+   git clone git@github.com:[your-username]/STAT-4830-[team-name]-project.git
+   
+   cd STAT-4830-[team-name]-project
+   ```
 
 4. Add upstream remote (to get updates):
    ```bash
@@ -130,44 +170,46 @@ Both editors will work great for the course. VS Code with Copilot gives you prof
    - Settings → Collaborators → Add people
    - Add using their GitHub usernames
 
-### Start Working
-1. Create a new branch for your work:
+### Working on Your Project
+1. Create a new branch:
    ```bash
    git checkout -b exploration
    ```
 
-2. Start exploring:
-   - Log your ChatGPT conversations in `docs/llm_exploration/`
-   - Get ANY optimization example running in the notebook
-   - Document what you learn
-
-3. Save your changes:
+2. Make changes and commit:
    ```bash
    git add .
-   git commit -m "Add initial exploration"
+   git commit -m "Description of changes"
    git push origin exploration
    ```
 
 ### Getting Updates
-When we improve the base repository:
+When the base repository is improved:
 ```bash
 # Get updates
 git fetch upstream
 git checkout main
 git merge upstream/main
 
-# Update your exploration branch
+# Update your branch
 git checkout exploration
 git merge main
 ```
 
 ### Troubleshooting
-- Having git issues? Post on Ed Discussion
+- Having Git issues? Post on Ed Discussion
 - Can't push/pull? Check if you're using HTTPS or SSH
 - Windows path too long? Enable long paths:
   ```bash
   git config --system core.longpaths true
   ```
+
+## Getting Help
+- Use AI tools (ChatGPT, GitHub Copilot)
+- See course staff for technical issues
+- Document your progress
+
+
 
 
 
