@@ -2,3 +2,4 @@
 docs/figures/*
 !docs/figures/*.png
 !docs/figures/*.tex 
+
