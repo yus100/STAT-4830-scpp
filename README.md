@@ -9,6 +9,11 @@ Welcome to your project repository! This template helps you develop and implemen
    - Use AI to explore and refine your ideas
    - Take time to find something you care about
 
+   It's very important you learn to use AI tools in your work! [Noam Brown](https://x.com/polynoamial/status/1870307185961386366) (OpenAI) says that students should...
+   > Practice working with AI. Human+AI will be superior to human or AI alone for the foreseeable future. Those who can work most effectively with AI will be the most highly valued.
+
+   ![Noam tweet](figures/noam.png)
+
 2. **Week 3 Deliverable**
    - Follow the [Week 3 Instructions](docs/assignments/week3_deliverable_instructions.md)
    - Required components:
