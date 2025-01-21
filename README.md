@@ -39,6 +39,7 @@ See the [Week 3 Instructions](docs/assignments/week3_deliverable_instructions.md
 ## Project Schedule
 
 ### Deliverables (Due Fridays)
+- Week 2 (Jan 24): Email Project Team Names to yihuihe@wharton.upenn.edu
 - Week 3 (Jan 31): Report Draft 1 + Code + Self Critique
 - Week 4 (Feb 7): Slides Draft 1
 - Week 5 (Feb 14): Report Draft 2 + Code + Self Critique
