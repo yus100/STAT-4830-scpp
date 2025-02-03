@@ -2,6 +2,65 @@
 
 Welcome to your project repository! This template helps you develop and implement an optimization project over the semester.
 
+## Spring 2025 Project Teams
+
+Current student projects:
+
+1. **GraphSAGE-Enhanced Cold-Start Recommendation System**  
+   * **Summary:**  
+     This report presents a graph‐based recommendation system designed for e-commerce cold‐start scenarios. It integrates heterogeneous product metadata—from images to reviews—by leveraging GraphSAGE for modeling inter‐item relationships and CLIP embeddings for visual clustering. The document details the problem formulation, experimental evaluations, and resource considerations for delivering personalized recommendations to users with minimal history.  
+   * **Link:** [GraphSAGE-Enhanced Cold-Start Recommendation System](https://github.com/kuomat/STAT-4830-vllm-project/blob/main/report.md)
+
+2. **Efficient Transformer Attention via Custom Sparse Mask Learning**  
+   * **Summary:**  
+     Addressing the quadratic complexity of standard Transformer attention, this report introduces a method to learn custom sparse attention masks. By minimizing the KL-divergence between a modified (sparse) attention model and a baseline Transformer, the study demonstrates how selective token attention can preserve performance while reducing computational overhead. The report outlines the mathematical formulation, implementation in PyTorch, and experimental results on language modeling tasks.  
+   * **Link:** [Efficient Transformer Attention via Custom Sparse Mask Learning](https://github.com/charisgao/STAT-4830-project/blob/main/report.md)
+
+3. **Reinforcement Learning for Poker Strategy Optimization**  
+   * **Summary:**  
+     This report explores the use of reinforcement learning to optimize poker strategies in a simulated environment. It details the design of the simulation, reward structures tailored for bluffing and incomplete information, and experiments comparing learned policies against baseline strategies. The study highlights challenges such as non-deterministic decision-making and proposes refinements to enhance the AI's competitive performance.  
+   * **Link:** [Reinforcement Learning for Poker Strategy Optimization](https://github.com/AC2005/STAT-4830-poker/blob/main/Report.md)
+
+4. **Portfolio Optimization with Multi-Objective Constraints**  
+   * **Summary:**  
+     This report outlines a quantitative framework for daily portfolio construction that simultaneously maximizes risk-adjusted returns and minimizes drawdown while accounting for transaction costs. It formulates the optimization problem mathematically—incorporating the Sharpe ratio, maximum drawdown, and weight-change penalties—and implements a gradient-based solution using PyTorch. The report details validation via backtesting on historical data, discusses challenges such as handling short positions and computational constraints, and concludes with next steps for scaling the strategy with more assets and advanced risk measures.  
+   * **Link:** [Portfolio Optimization with Multi-Objective Constraints](https://github.com/dhruv575/STAT-4830-project-base/blob/main/report.md)
+
+5. **Collaborative Optimization in Group Decision-Making: Week 3 Progress Report**  
+   * **Summary:**  
+     This Week 3 progress report details a collaborative approach to group decision-making optimization. It outlines initial model proposals, experimental setups, and preliminary results that integrate individual preferences into a unified recommendation system. The document discusses the challenges of merging diverse opinions and sets the stage for further refinements in collaborative optimization techniques.  
+   * **Link:** [Collaborative Optimization in Group Decision-Making: Week 3 Progress Report](https://github.com/Lexaun-chen/STAT-4830-Group-Project/blob/main/Week%203%20Report.pdf)
+
+6. **Parameter-Efficient Reinforcement Learning via Curriculum Strategies**  
+   * **Summary:**  
+     This report presents a curriculum learning framework aimed at achieving parameter efficiency in reinforcement learning. It outlines strategies for incrementally increasing model complexity while keeping computational costs low and demonstrates through benchmark experiments how such an approach can improve convergence and overall performance with fewer parameters.  
+   * **Link:** [Parameter-Efficient Reinforcement Learning via Curriculum Strategies](https://github.com/JustinSQiu/STAT-4830-curriculum-learning-project/blob/main/docs/Parameter_Efficient_Reinforcement_Learning_Paper.pdf)
+
+7. **Optimizing Concession Stand Placement for Enhanced Stadium Accessibility and Revenue**  
+   * **Summary:**  
+     This report formulates a spatial optimization model for the strategic placement of concession stands in stadiums. By combining heuristic search with mathematical optimization, it seeks to balance user accessibility with revenue generation. Simulation studies and performance metrics validate the model's effectiveness, offering insights into its practical deployment in large venues.  
+   * **Link:** [Optimizing Concession Stand Placement for Enhanced Stadium Accessibility and Revenue](https://github.com/awu626/STAT-4830-project/blob/main/report.md)
+
+8. **Multi-Agent Reinforcement Learning for Optimized Decision-Making**  
+   * **Summary:**  
+     Focusing on multi-agent systems, this report explores reinforcement learning techniques to enhance decision-making in competitive and cooperative environments. It details a framework where agents learn optimal strategies through interaction, addresses challenges such as non-stationarity and credit assignment, and presents simulation results that highlight improvements in collective performance.  
+   * **Link:** [Multi-Agent Reinforcement Learning for Optimized Decision-Making](https://github.com/sheyanlalmohammed1/STAT-4830-CTP-RL-project/blob/main/report.md)
+
+9. **Optimizing Sleep Stage Classification through Integrated Physiological Signal Analysis**  
+   * **Summary:**  
+     This report presents a machine learning framework designed to classify sleep stages by integrating diverse physiological signals. It details advanced data preprocessing, feature extraction techniques, and classification algorithms aimed at accurately differentiating between wakefulness and various sleep states, underscoring the clinical potential of enhanced sleep analysis methodologies.  
+   * **Link:** [Optimizing Sleep Stage Classification through Integrated Physiological Signal Analysis](https://github.com/kimberlyliang/STAT-4830-GOALZ-project/blob/main/report.md)
+
+10. **Optimizing Urban Travel for Electric Vehicles in NYC**  
+    * **Summary:**  
+      This report develops an optimization framework targeting improved travel efficiency for electric vehicles in NYC. It integrates real-time traffic data, charging station locations, and route optimization algorithms to demonstrate significant reductions in travel time and energy consumption, paving the way for smarter urban mobility solutions.  
+    * **Link:** [Optimizing Urban Travel for Electric Vehicles in NYC](https://github.com/TheCrypted/STAT-4830-project-base/blob/main/report.md)
+
+11. **Real-Time Predictive Modeling for 1v1 Basketball Live-Streams**  
+    * **Summary:**  
+      This report details the development of a real-time predictive modeling system for 1v1 basketball live-streams. It combines statistical analysis with machine learning techniques to forecast game outcomes on the fly, addressing challenges such as latency and rapidly changing game conditions, and highlighting innovative approaches to delivering timely and accurate sports analytics.  
+    * **Link:** [Real-Time Predictive Modeling for 1v1 Basketball Live-Streams](https://github.com/fortyjmps/your-repo-stat4830/blob/main/report.md)
+
 ## Getting Started
 
 1. **Finding Your Project Idea**
