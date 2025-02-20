@@ -1,0 +1,404 @@
+{
+  "examples": [
+    {
+      "input": "What is John’s favorite color?",
+      "response": "<memory_ask> What is John’s favorite color? </memory_ask>"
+    },
+    {
+      "input": "John likes blue. Later, he mentions he also likes green.",
+      "response": "<memory_write> John likes blue and green. </memory_write>"
+    },
+    {
+      "input": "I don’t have the details about Mary’s phone number.",
+      "response": "<memory_ask> What is Mary’s phone number? </memory_ask>"
+    },
+    {
+      "input": "Record: Mary’s phone is 555-1234.",
+      "response": "<memory_write> Mary’s phone is 555-1234. </memory_write>"
+    },
+    {
+      "input": "Could you tell me the meeting location?",
+      "response": "<memory_ask> Where is the meeting location? </memory_ask>"
+    },
+    {
+      "input": "Update: The meeting will now be in Conference Room B.",
+      "response": "<memory_write> Meeting location updated to Conference Room B. </memory_write>"
+    },
+    {
+      "input": "How tall is the Eiffel Tower?",
+      "response": "<memory_ask> What is the height of the Eiffel Tower? </memory_ask>"
+    },
+    {
+      "input": "Record the Eiffel Tower’s height as 300 meters.",
+      "response": "<memory_write> Eiffel Tower height: 300 meters. </memory_write>"
+    },
+    {
+      "input": "Who won the game last night?",
+      "response": "<memory_ask> Who won the game last night? </memory_ask>"
+    },
+    {
+      "input": "Update: The Lakers won last night.",
+      "response": "<memory_write> Lakers won last night. </memory_write>"
+    },
+    {
+      "input": "I am just sharing my thoughts about the book.",
+      "response": "I am just sharing my thoughts about the book."
+    },
+    {
+      "input": "What time does the train leave?",
+      "response": "<memory_ask> What time does the train leave? </memory_ask>"
+    },
+    {
+      "input": "Record: The train departs at 8:45 AM.",
+      "response": "<memory_write> Train departs at 8:45 AM. </memory_write>"
+    },
+    {
+      "input": "Is there any update on the project deadline?",
+      "response": "<memory_ask> What is the updated project deadline? </memory_ask>"
+    },
+    {
+      "input": "Update: The project deadline is now next Friday.",
+      "response": "<memory_write> Project deadline updated to next Friday. </memory_write>"
+    },
+    {
+      "input": "Can you remind me to call Sarah?",
+      "response": "<memory_ask> When should I call Sarah? </memory_ask>"
+    },
+    {
+      "input": "Record: Call Sarah at 2 PM.",
+      "response": "<memory_write> Reminder: Call Sarah at 2 PM. </memory_write>"
+    },
+    {
+      "input": "What is the recipe for chocolate cake?",
+      "response": "<memory_ask> Could you provide the recipe for chocolate cake? </memory_ask>"
+    },
+    {
+      "input": "Record: Chocolate cake recipe includes cocoa, flour, and eggs.",
+      "response": "<memory_write> Chocolate cake recipe: cocoa, flour, eggs. </memory_write>"
+    },
+    {
+      "input": "I’m not sure what the capital of Australia is.",
+      "response": "<memory_ask> What is the capital of Australia? </memory_ask>"
+    },
+    {
+      "input": "Update: The capital of Australia is Canberra.",
+      "response": "<memory_write> Capital of Australia: Canberra. </memory_write>"
+    },
+    {
+      "input": "Tell me the serial number of device X.",
+      "response": "<memory_ask> What is the serial number of device X? </memory_ask>"
+    },
+    {
+      "input": "Record: Device X serial number: SN12345678.",
+      "response": "<memory_write> Device X serial number: SN12345678. </memory_write>"
+    },
+    {
+      "input": "I wonder about the origin of that saying.",
+      "response": "I wonder about the origin of that saying."
+    },
+    {
+      "input": "What does the weather report say for today?",
+      "response": "<memory_ask> What is today’s weather report? </memory_ask>"
+    },
+    {
+      "input": "Update: Today’s weather is sunny with a high of 75°F.",
+      "response": "<memory_write> Weather update: Sunny, high of 75°F. </memory_write>"
+    },
+    {
+      "input": "Could you remind me of my appointment time?",
+      "response": "<memory_ask> What is my appointment time? </memory_ask>"
+    },
+    {
+      "input": "Record: Appointment time is 10 AM tomorrow.",
+      "response": "<memory_write> Appointment time: 10 AM tomorrow. </memory_write>"
+    },
+    {
+      "input": "What’s the status of my order?",
+      "response": "<memory_ask> What is the status of my order? </memory_ask>"
+    },
+    {
+      "input": "Update: Your order has been shipped.",
+      "response": "<memory_write> Order status: Shipped. </memory_write>"
+    },
+    {
+      "input": "I just want to say hello.",
+      "response": "I just want to say hello."
+    },
+    {
+      "input": "Do you know the ISBN of that book?",
+      "response": "<memory_ask> What is the ISBN of the book? </memory_ask>"
+    },
+    {
+      "input": "Record: The ISBN is 9783161484100.",
+      "response": "<memory_write> Book ISBN: 9783161484100. </memory_write>"
+    },
+    {
+      "input": "What time does the movie start?",
+      "response": "<memory_ask> What time does the movie start? </memory_ask>"
+    },
+    {
+      "input": "Update: Movie starts at 7:30 PM.",
+      "response": "<memory_write> Movie start time: 7:30 PM. </memory_write>"
+    },
+    {
+      "input": "I have no memory tokens here, just text.",
+      "response": "I have no memory tokens here, just text."
+    },
+    {
+      "input": "I forgot the meeting location, can you help?",
+      "response": "<memory_ask> What is the meeting location? </memory_ask>"
+    },
+    {
+      "input": "Record: Meeting location is Room 402.",
+      "response": "<memory_write> Meeting location: Room 402. </memory_write>"
+    },
+    {
+      "input": "What’s the current version of the software?",
+      "response": "<memory_ask> What is the current software version? </memory_ask>"
+    },
+    {
+      "input": "Update: Software version is 4.2.1.",
+      "response": "<memory_write> Software version: 4.2.1. </memory_write>"
+    },
+    {
+      "input": "Random text with no operation tokens should be here.",
+      "response": "Random text with no operation tokens should be here."
+    },
+    {
+      "input": "I need more info on the product’s warranty.",
+      "response": "<memory_ask> What is the product’s warranty information? </memory_ask>"
+    },
+    {
+      "input": "Record: Warranty is valid for 2 years.",
+      "response": "<memory_write> Product warranty: 2 years. </memory_write>"
+    },
+    {
+      "input": "When is the next holiday?",
+      "response": "<memory_ask> What is the date of the next holiday? </memory_ask>"
+    },
+    {
+      "input": "Update: The next holiday is July 4th.",
+      "response": "<memory_write> Next holiday: July 4th. </memory_write>"
+    },
+    {
+      "input": "Please update my profile with the latest changes.",
+      "response": "<memory_write> Profile updated with latest changes. </memory_write>"
+    },
+    {
+      "input": "What was my previous email address?",
+      "response": "<memory_ask> What is my previous email address? </memory_ask>"
+    },
+    {
+      "input": "I just mentioned that my email is test@example.com.",
+      "response": "<memory_write> Email updated to test@example.com. </memory_write>"
+    },
+    {
+      "input": "Random chatter without memory tokens.",
+      "response": "Random chatter without memory tokens."
+    },
+    {
+      "input": "I need details about the conference schedule.",
+      "response": "<memory_ask> What are the details of the conference schedule? </memory_ask>"
+    },
+    {
+      "input": "Update: Conference schedule includes 3 sessions.",
+      "response": "<memory_write> Conference schedule: 3 sessions. </memory_write>"
+    },
+    {
+      "input": "Could you tell me the winner of the contest?",
+      "response": "<memory_ask> Who won the contest? </memory_ask>"
+    },
+    {
+      "input": "Record: The contest was won by Alice.",
+      "response": "<memory_write> Contest winner: Alice. </memory_write>"
+    },
+    {
+      "input": "I think I just share this random thought.",
+      "response": "I think I just share this random thought."
+    },
+    {
+      "input": "What is the serial number for gadget Y?",
+      "response": "<memory_ask> What is the serial number for gadget Y? </memory_ask>"
+    },
+    {
+      "input": "Update: Gadget Y serial number: GY98765.",
+      "response": "<memory_write> Gadget Y serial number: GY98765. </memory_write>"
+    },
+    {
+      "input": "I am confused about my last transaction.",
+      "response": "<memory_ask> What was the detail of my last transaction? </memory_ask>"
+    },
+    {
+      "input": "Record: Last transaction was $250 withdrawal.",
+      "response": "<memory_write> Last transaction: $250 withdrawal. </memory_write>"
+    },
+    {
+      "input": "Just random thoughts without memory intervention.",
+      "response": "Just random thoughts without memory intervention."
+    },
+    {
+      "input": "Could you fetch the latest news headline?",
+      "response": "<memory_ask> What is the latest news headline? </memory_ask>"
+    },
+    {
+      "input": "Update: Latest headline: Market hits record high.",
+      "response": "<memory_write> Latest headline: Market hits record high. </memory_write>"
+    },
+    {
+      "input": "What’s the model number of my device?",
+      "response": "<memory_ask> What is the model number of my device? </memory_ask>"
+    },
+    {
+      "input": "Record: Model number is MDL-2025.",
+      "response": "<memory_write> Model number: MDL-2025. </memory_write>"
+    },
+    {
+      "input": "No tokens are used here, just plain info.",
+      "response": "No tokens are used here, just plain info."
+    },
+    {
+      "input": "I need the contact information for support.",
+      "response": "<memory_ask> What is the support contact information? </memory_ask>"
+    },
+    {
+      "input": "Update: Support contact is 1-800-123-4567.",
+      "response": "<memory_write> Support contact: 1-800-123-4567. </memory_write>"
+    },
+    {
+      "input": "When is my next appointment?",
+      "response": "<memory_ask> What is the time for my next appointment? </memory_ask>"
+    },
+    {
+      "input": "Record: Next appointment is on Monday at 9 AM.",
+      "response": "<memory_write> Next appointment: Monday at 9 AM. </memory_write>"
+    },
+    {
+      "input": "Just a regular message with no memory tokens.",
+      "response": "Just a regular message with no memory tokens."
+    },
+    {
+      "input": "What is the battery life of this phone?",
+      "response": "<memory_ask> What is the battery life of this phone? </memory_ask>"
+    },
+    {
+      "input": "Update: Battery life is approximately 10 hours.",
+      "response": "<memory_write> Battery life: ~10 hours. </memory_write>"
+    },
+    {
+      "input": "I forgot to mention my new address.",
+      "response": "<memory_write> New address recorded. </memory_write>"
+    },
+    {
+      "input": "What is the location of the new store?",
+      "response": "<memory_ask> Where is the new store located? </memory_ask>"
+    },
+    {
+      "input": "Record: The new store is at 123 Main Street.",
+      "response": "<memory_write> New store location: 123 Main Street. </memory_write>"
+    },
+    {
+      "input": "This sentence doesn’t use memory tokens intentionally.",
+      "response": "This sentence doesn’t use memory tokens intentionally."
+    },
+    {
+      "input": "Can you update my subscription details?",
+      "response": "<memory_write> Subscription details updated. </memory_write>"
+    },
+    {
+      "input": "I need to know when my package will arrive.",
+      "response": "<memory_ask> What is the estimated arrival time for my package? </memory_ask>"
+    },
+    {
+      "input": "Record: Package arrival is scheduled for tomorrow.",
+      "response": "<memory_write> Package arrival: Scheduled for tomorrow. </memory_write>"
+    },
+    {
+      "input": "I keep asking, what time is it?",
+      "response": "<memory_ask> What time is it? </memory_ask> <memory_ask> What time is it? </memory_ask>"
+    },
+    {
+      "input": "I’m just stating a fact without tokens.",
+      "response": "I’m just stating a fact without tokens."
+    },
+    {
+      "input": "What’s the status of my flight booking?",
+      "response": "<memory_ask> What is the status of my flight booking? </memory_ask>"
+    },
+    {
+      "input": "Update: Flight booking confirmed for 6 PM.",
+      "response": "<memory_write> Flight booking confirmed for 6 PM. </memory_write>"
+    },
+    {
+      "input": "Can you write down the ingredients list for the recipe?",
+      "response": "<memory_write> Ingredients: flour, sugar, eggs, butter. </memory_write>"
+    },
+    {
+      "input": "What is missing in the ingredients list?",
+      "response": "<memory_ask> Are any ingredients missing from the list? </memory_ask>"
+    },
+    {
+      "input": "I am just giving you some random data here.",
+      "response": "I am just giving you some random data here."
+    },
+    {
+      "input": "Please store my updated profile information.",
+      "response": "<memory_write> Updated profile information stored. </memory_write>"
+    },
+    {
+      "input": "What changes were made to the profile?",
+      "response": "<memory_ask> What are the recent changes made to the profile? </memory_ask>"
+    },
+    {
+      "input": "The prompt is entirely off-topic.",
+      "response": "The prompt is entirely off-topic."
+    },
+    {
+      "input": "I need to update my billing address.",
+      "response": "<memory_write> Billing address updated. </memory_write>"
+    },
+    {
+      "input": "Can you retrieve my previous billing address?",
+      "response": "<memory_ask> What was my previous billing address? </memory_ask>"
+    },
+    {
+      "input": "I feel like I’m repeating myself here.",
+      "response": "<memory_write> Repeated information noted. </memory_write>"
+    },
+    {
+      "input": "What was the repeated info?",
+      "response": "<memory_ask> What repeated info are you referring to? </memory_ask>"
+    },
+    {
+      "input": "This is a long paragraph that does not use any memory tokens at all, just a default text that is meant to be an example of what not to do when memory interaction is required.",
+      "response": "This is a long paragraph that does not use any memory tokens at all, just a default text."
+    },
+    {
+      "input": "I need to confirm the meeting agenda.",
+      "response": "<memory_ask> What is the confirmed meeting agenda? </memory_ask>"
+    },
+    {
+      "input": "Update: Meeting agenda confirmed with three key points.",
+      "response": "<memory_write> Meeting agenda: three key points confirmed. </memory_write>"
+    },
+    {
+      "input": "Could you store my updated profile information?",
+      "response": "<memory_write> Updated profile information stored. </memory_write>"
+    },
+    {
+      "input": "What changes were made to the profile?",
+      "response": "<memory_ask> What are the recent changes made to the profile? </memory_ask>"
+    },
+    {
+      "input": "Random default text without any memory usage.",
+      "response": "Random default text without any memory usage."
+    },
+    {
+      "input": "What’s the registration deadline for the event?",
+      "response": "<memory_ask> What is the registration deadline for the event? </memory_ask>"
+    },
+    {
+      "input": "Update: Registration deadline is next Tuesday.",
+      "response": "<memory_write> Registration deadline: next Tuesday. </memory_write>"
+    }
+  ]
+}

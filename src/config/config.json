@@ -1,0 +1,33 @@
+{
+    "structure": {
+        "max_nodes": -1,
+        "max_edges": -1,
+        "max_depth": -1
+    },
+    "weights": {
+        "prune_edge_weight": 0.01,
+        "permenant_edge_weight": 0.995,
+        "fire_wire_strengthen_ratio": 1.02,
+        "low_rated_weak_ratio": 0.95,
+        "high_rated_strength_ratio": 1.05,
+        "passive_weak_ratio": 0.99,
+        "default_edge_weight": 0.5
+    },
+    "consolidation": {
+        "clique_size_min": 3,
+        "cique_weight_ratio": 0.97
+    },
+    "working_memory": {
+        "LTM_move_threshold_act_count": 5,
+        "forget_activations_since": 25
+    },
+    "long_term_memory": {
+        "forget_activations_since": 150,
+        "prevent_forgets_with_permenant_edges": true,
+        "forgets_only_isolated": true,
+        "permenant_nodes": {
+            "active": true,
+            "activation_count": 100
+        }
+    }
+}
