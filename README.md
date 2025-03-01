@@ -2,7 +2,7 @@
 
 Welcome to your project repository! This template helps you develop and implement an optimization project over the semester.
 
-## Spring 2025 Project Teams
+## Spring 2025 Project Teams 
 
 Current student projects:
 
