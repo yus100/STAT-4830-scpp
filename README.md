@@ -7,7 +7,7 @@ Welcome to your project repository! This template helps you develop and implemen
 Current student projects:
 
 1. **GraphSAGE-Enhanced Cold-Start Recommendation System**  
-   * **Summary:**  
+   * **Summary:**   
      This report presents a graph‐based recommendation system designed for e-commerce cold‐start scenarios. It integrates heterogeneous product metadata—from images to reviews—by leveraging GraphSAGE for modeling inter‐item relationships and CLIP embeddings for visual clustering. The document details the problem formulation, experimental evaluations, and resource considerations for delivering personalized recommendations to users with minimal history.  
    * **Link:** [GraphSAGE-Enhanced Cold-Start Recommendation System](https://github.com/kuomat/STAT-4830-vllm-project/blob/main/report.md)
 
