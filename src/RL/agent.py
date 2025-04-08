@@ -27,7 +27,7 @@ class MemoryAgent:
         # Initialize tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(
             model_name,
-            use_safetensors=False,
+            use_safetensors=True,
             padding_side="left",
             add_eos_token=True,
             add_bos_token=True
@@ -37,7 +37,7 @@ class MemoryAgent:
         # Initialize model
         self.model = AutoModelForCausalLMWithValueHead.from_pretrained(
             model_name,
-            use_safetensors=False,
+            use_safetensors=True,
             model_type=model_type,
             torch_dtype=torch.float16,
             device_map="auto"
@@ -273,7 +273,7 @@ def main():
     # Initialize agent
     print("\nInitializing Memory Agent...")
     agent = MemoryAgent(
-        model_name="/Users/pragya/.llama/checkpoints/Llama3.2-1B",
+        model_name="models/llama-3.2-3B-instruct",
         learning_rate=1e-5,
         max_steps=1000,
         batch_size=4,
