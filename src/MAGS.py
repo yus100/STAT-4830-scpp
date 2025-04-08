@@ -6,6 +6,7 @@ from Graph import Graph, Node, Edge
 from Memory import Memory, MemoryBlock, MemoryType, WorkingMemory, LTM, EpisodicMemory, SemanticMemory  
 from Llama import LLama
 from Embedding import Embedding
+from HebPlasticity import HebPlasticity
 
 import numpy as np
 
@@ -20,9 +21,9 @@ class MAGS:
         self.long_term_memory = LGK() # for now, a single graph for LTM
         self.llm = LLama(model_name="llama3.2")
         self.embeddor: Embedding = Embedding()
-
         self.config = Config()
         self.llm = LLama()
+        self.heb_plasticity = HebPlasticity()
 
     async def add_text_to_LTM_Semantic(self, texts: list[str], node_adj: list[Node] = []):
         """
@@ -51,10 +52,11 @@ class MAGS:
         await node.updatecontent(new_text, _embeded_text)
     
     async def query(self, question_prompt: str):
+        documents = await self.recall_with_path_tracking(question_prompt)
 
-        refactored_questions = await RAG.multiquery(question_prompt, self.llm)
+        # refactored_questions = await RAG.multiquery(question_prompt, self.llm)
 
-        documents = await RAG.find_documents(refactored_questions, self.long_term_memory, top_k=3)
+        # documents = await RAG.find_documents(refactored_questions, self.long_term_memory, top_k=3)
 
         documents_as_string = ""
         
@@ -76,6 +78,9 @@ class MAGS:
 
         response = (await self.llm.query_json(prompt))
 
+        self.heb_plasticity.strengthen_paths(self.long_term_memory, reward=1.0)
+        self.heb_plasticity.apply_recency_decay(self.long_term_memory)
+
         if "new_memory" in response["answer"]:
             if response["answer"]["new_memory"]["count"] > 0:
                 count = response["answer"]["new_memory"]["count"]
@@ -88,3 +93,13 @@ class MAGS:
 
         return response["answer"]["question_response"]
 
+    async def recall_with_path_tracking(self, question_prompt: str, top_k: int = 3):
+        # for hebbian updates -- path tracking
+        refactored_questions = await RAG.multiquery(question_prompt, self.llm)
+        documents = await RAG.find_documents(refactored_questions, self.long_term_memory, top_k=top_k)
+        for doc in documents:
+            # in a more sophisticated implementation, this would track the actual traversal path
+            path = ["query_node", doc.id]
+            self.heb_plasticity.record_path(path)
+        
+        return documents
