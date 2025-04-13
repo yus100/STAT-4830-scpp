@@ -110,7 +110,7 @@ See the [Week 3 Instructions](docs/assignments/week3_deliverable_instructions.md
 - Week 10 (Mar 28): Slides Draft 4
 - Week 11 (Apr 4): Report Draft 5 + Code + Self Critique
 - Week 12 (Apr 11): Slides Draft 5
-- Week 13: Final Presentations in Class (Apr 22/24) & Report Draft 6 + Code + Self Critique due Friday (Apr 18)
+- Week 13: Final Presentations in Class (Apr 24/29) & Report Draft 6 + Code + Self Critique due Friday (Apr 18)
 - Week 14 (Apr 29): Final Report + Code + Self Critique Due
 
 Note: Instructions for peer feedback will be added throughout the semester for each deliverable.
