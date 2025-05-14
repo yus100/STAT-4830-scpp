@@ -15,12 +15,6 @@ Enabling LLMs to learn
 Current LLMs struggle with learning and long-term retention, relying on inefficient and ephemeral context windows that limit adaptability and scalability. MAGS (Memory Augmented Generative System) proposes a neuroscience-inspired architecture using Liquid Knowledge Graphs (LKGs) and dual memory blocks—episodic (eMB) and semantic (sMB)—to emulate human memory and enable continuous, test-time learning. The system dynamically updates memory through a reinforcement-learning-trained model and Hebbian plasticity-inspired methods, managing graph growth to ensure efficiency. We tested the architecture on a combination of text-based and logic games to measure accuracy, adaptability, and explainability. We found promising results that match or exceed state-of-the-art approaches in many tasks.
 
 ## Structure
-- `_archive`: Previous work and documentation
-- `src/`: Python source code and modules
-- `notebooks/`: Final demo notebooks (inference the `src/` modules)
-- `docs/`: Final version of Documentation
-- `docs/report.pdf`: Final report
-- `docs/Final_Presentation.pdf`: Final presentation
 AI Model Structure (Conceptual)
 ```
 ├── _archive/                    # Previous work and documentation
