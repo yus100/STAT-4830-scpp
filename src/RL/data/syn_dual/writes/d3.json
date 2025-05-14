@@ -1,0 +1,504 @@
+{
+    "examples": [
+      {
+        "input": "The tree is tall.",
+        "response": "<memory_write>Tree,is,tall</memory_write>",
+        "id": 0
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: What color is the sky? My window is dirty.\nMemory:\nMemory 1: Sky,is usually,blue during day\nGenerated Thinking and Response: The sky is typically blue during a clear day due to Rayleigh scattering of sunlight in the atmosphere. Your dirty window might obscure this.",
+        "response": "<memory_write>My window,is,dirty</memory_write><memory_write>Sky,is typically blue during,clear day</memory_write><memory_write>Sky's blue color,is due to,Rayleigh scattering of sunlight in atmosphere</memory_write><memory_write>My dirty window,might obscure,sky color</memory_write>",
+        "id": 1
+      },
+      {
+        "input": "The report is due Friday. It needs a cover page.",
+        "response": "<memory_write>Report,is due,Friday</memory_write><memory_write>Report,needs,cover page</memory_write>",
+        "id": 2
+      },
+      {
+        "input": "The company's new logo is green. The old logo was blue.",
+        "response": "<memory_write>Company's new logo,is,green</memory_write><memory_write>Company's old logo,was,blue</memory_write>",
+        "id": 3
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My dog is barking. Is he hungry?\nMemory:\nMemory 1: Dogs,bark for,many reasons\nGenerated Thinking and Response: Dogs bark for various reasons, including hunger, wanting attention, boredom, or alertness. If it's near his mealtime, hunger could be a reason.",
+        "response": "<memory_write>My dog,is,barking</memory_write><memory_write>Dogs,bark for,hunger</memory_write><memory_write>Dogs,bark for,wanting attention</memory_write><memory_write>Dogs,bark for,boredom</memory_write><memory_write>Dogs,bark for,alertness</memory_write><memory_write>If it is near his mealtime,hunger,could be reason for,dog barking</memory_write>",
+        "id": 4
+      },
+      {
+        "input": "flibble glorp snorf",
+        "response": "",
+        "id": 5
+      },
+      {
+        "input": "The moon is bright tonight. It is a full moon.",
+        "response": "<memory_write>Moon,is,bright tonight</memory_write><memory_write>Moon,is,full moon</memory_write>",
+        "id": 6
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: I saw a bird. It was red. My field guide says blue jays are blue.\nMemory:\nMemory 1: Blue jays,are,blue\nGenerated Thinking and Response: You saw a red bird. Blue jays are indeed blue, so the bird you saw was likely a different species, perhaps a cardinal or a tanager, depending on your location.",
+        "response": "<memory_write>I,saw,bird</memory_write><memory_write>Bird I saw,was,red</memory_write><memory_write>My field guide,says,blue jays are blue</memory_write><memory_write>Bird I saw,was likely,different species than blue jay</memory_write><memory_write>Bird I saw,was perhaps,cardinal</memory_write><memory_write>Bird I saw,was perhaps,tanager</memory_write>",
+        "id": 7
+      },
+      {
+        "input": "The meeting is at 3 PM. It is in Room 4B.",
+        "response": "<memory_write>Meeting,is at,3 PM</memory_write><memory_write>Meeting,is in,Room 4B</memory_write>",
+        "id": 8
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Is ice hot or cold?\nMemory:\nMemory 1: Water,freezes at,0 degrees Celsius (to become ice)\nGenerated Thinking and Response: Ice is the solid form of water and is cold, typically at or below 0 degrees Celsius (32 degrees Fahrenheit).",
+        "response": "<memory_write>Ice,is,solid form of water</memory_write><memory_write>Ice,is,cold</memory_write><memory_write>Ice,is typically at or below,0 degrees Celsius</memory_write><memory_write>Ice,is typically at or below,32 degrees Fahrenheit</memory_write>",
+        "id": 9
+      },
+      {
+        "input": "The new update failed. The system is down.",
+        "response": "<memory_write>New update,failed,now</memory_write><memory_write>System,is,down</memory_write>",
+        "id": 10
+      },
+      {
+        "input": "The project 'Phoenix' is approved. The budget is $2 million. The timeline is six months.",
+        "response": "<memory_write>Project Phoenix,is,approved</memory_write><memory_write>Project Phoenix budget,is,$2 million</memory_write><memory_write>Project Phoenix timeline,is,six months</memory_write>",
+        "id": 11
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My favorite fruit is banana. Is banana a berry?\nMemory:\nMemory 1: Berries,are,small, pulpy, and often edible fruits\nGenerated Thinking and Response: Yes, botanically speaking, a banana is classified as a berry. This surprises many people!",
+        "response": "<memory_write>My favorite fruit,is,banana</memory_write><memory_write>Botanically speaking,banana,is classified as,berry</memory_write><memory_write>Banana being a berry,surprises,many people</memory_write>",
+        "id": 12
+      },
+      {
+        "input": "The key is lost. The door is locked.",
+        "response": "<memory_write>Key,is,lost</memory_write><memory_write>Door,is,locked</memory_write>",
+        "id": 13
+      },
+      {
+        "input": "The car is fast and red. The driver is careful.",
+        "response": "<memory_write>Car,is,fast</memory_write><memory_write>Car,is,red</memory_write><memory_write>Driver,is,careful</memory_write>",
+        "id": 14
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My computer is making a loud noise. It started after I installed new RAM. The RAM is 16GB.\nMemory:\nMemory 1: Incorrectly installed RAM,can cause,system instability\nMemory 2: Loud computer noise,can indicate,fan issue\nGenerated Thinking and Response: A loud noise after installing new 16GB RAM could be due to a few things. The RAM might not be seated correctly, or a fan cable might have been dislodged and is hitting the fan blades. It's also possible the new RAM is causing the system to work harder, making fans spin faster.",
+        "response": "<memory_write>My computer,is making,loud noise</memory_write><memory_write>Loud noise,started after,I installed new RAM</memory_write><memory_write>New RAM,is,16GB</memory_write><memory_write>Loud noise after RAM installation,could be due to,RAM not seated correctly</memory_write><memory_write>Loud noise after RAM installation,could be due to,fan cable dislodged and hitting fan blades</memory_write><memory_write>Loud noise after RAM installation,could be due to,new RAM causing system to work harder</memory_write><memory_write>New RAM causing system to work harder,can make,fans spin faster</memory_write>",
+        "id": 15
+      },
+      {
+        "input": "The light is green. Go now.",
+        "response": "<memory_write>Light,is,green</memory_write><memory_write>You,should go,now</memory_write>",
+        "id": 16
+      },
+      {
+        "input": "zxcvbnm,./",
+        "response": "",
+        "id": 17
+      },
+      {
+        "input": "Team Alpha is winning. Team Beta is losing.",
+        "response": "<memory_write>Team Alpha,is,winning</memory_write><memory_write>Team Beta,is,losing</memory_write>",
+        "id": 18
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Is a whale a fish?\nMemory:\nMemory 1: Whales,are,mammals\nMemory 2: Fish,are,aquatic vertebrates with gills\nGenerated Thinking and Response: No, a whale is not a fish. Whales are marine mammals. They breathe air, are warm-blooded, and feed milk to their young, unlike fish.",
+        "response": "<memory_write>Whale,is not,fish</memory_write><memory_write>Whales,are,marine mammals</memory_write><memory_write>Whales,breathe,air</memory_write><memory_write>Whales,are,warm-blooded</memory_write><memory_write>Whales,feed,milk to their young</memory_write><memory_write>Whales,are unlike,fish in these aspects</memory_write>",
+        "id": 19
+      },
+      {
+        "input": "The system requires an update. The update improves security.",
+        "response": "<memory_write>System,requires,update</memory_write><memory_write>Update,improves,security</memory_write>",
+        "id": 20
+      },
+      {
+        "input": "The city is vibrant. It has a bustling nightlife. Many cultures coexist here.",
+        "response": "<memory_write>City,is,vibrant</memory_write><memory_write>City,has,bustling nightlife</memory_write><memory_write>Many cultures,coexist in,city</memory_write>",
+        "id": 21
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My appointment is at 3 PM. It was previously at 2 PM. The doctor is Dr. Smith.\nMemory:\nMemory 1: My appointment,was at,2 PM\nGenerated Thinking and Response: Your appointment with Dr. Smith has been changed from 2 PM to 3 PM.",
+        "response": "<memory_write,contradict>My appointment,was at,2 PM</memory_write><memory_write>My appointment,is at,3 PM</memory_write><memory_write>My appointment doctor,is,Dr. Smith</memory_write>",
+        "id": 22
+      },
+      {
+        "input": "The sauce is spicy. The drink is refreshing.",
+        "response": "<memory_write>Sauce,is,spicy</memory_write><memory_write>Drink,is,refreshing</memory_write>",
+        "id": 23
+      },
+      {
+        "input": "The new policy is complex. It requires careful reading.",
+        "response": "<memory_write>New policy,is,complex</memory_write><memory_write>New policy,requires,careful reading</memory_write>",
+        "id": 24
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Is the Earth flat? My uncle says it is.\nMemory:\nMemory 1: Earth,is,round (colloquial)\nGenerated Thinking and Response: No, the Earth is not flat. It is an oblate spheroid, which is a sphere slightly flattened at the poles and bulging at the equator. Your uncle is mistaken; this has been scientifically proven for centuries.",
+        "response": "<memory_write>My uncle,says,Earth is flat</memory_write><memory_write>Earth,is not,flat</memory_write><memory_write>Earth,is,oblate spheroid</memory_write><memory_write>Oblate spheroid,is,sphere slightly flattened at poles</memory_write><memory_write>Oblate spheroid,is,sphere slightly bulging at equator</memory_write><memory_write>My uncle,is,mistaken</memory_write><memory_write>Earth not being flat,has been scientifically proven for,centuries</memory_write>",
+        "id": 25
+      },
+      {
+        "input": "The test results are positive. The patient needs treatment.",
+        "response": "<memory_write>Test results,are,positive</memory_write><memory_write>Patient,needs,treatment</memory_write>",
+        "id": 26
+      },
+      {
+        "input": "The network is slow today. Yesterday it was fast. Many users are online.",
+        "response": "<memory_write>Network,is,slow today</memory_write><memory_write>Network,was,fast yesterday</memory_write><memory_write>Many users,are,online</memory_write>",
+        "id": 27
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: What is the currency of Japan? I have Euros.\nMemory:\nMemory 1: Euro,is currency of,many European countries\nGenerated Thinking and Response: The currency of Japan is the Japanese Yen (JPY). You will need to exchange your Euros for Yen if you plan to spend money in Japan.",
+        "response": "<memory_write>I,have,Euros</memory_write><memory_write>Currency of Japan,is,Japanese Yen (JPY)</memory_write><memory_write>You,will need to exchange,Euros for Yen to spend money in Japan</memory_write>",
+        "id": 28
+      },
+      {
+        "input": "The new software 'CodeGen' generates Python code from specifications. It uses AI. It is in beta.",
+        "response": "<memory_write>New software CodeGen,generates,Python code from specifications</memory_write><memory_write>CodeGen,uses,AI</memory_write><memory_write>CodeGen,is in,beta</memory_write>",
+        "id": 29
+      },
+      {
+        "input": "This is an important announcement. The office will be closed on Monday. Normal operations resume Tuesday.",
+        "response": "<memory_write>This,is,important announcement</memory_write><memory_write>Office,will be closed on,Monday</memory_write><memory_write>Normal office operations,resume,Tuesday</memory_write>",
+        "id": 30
+      },
+      {
+        "input": "The city of Berlin is the capital of Germany. It is known for its history and art scene. The Brandenburg Gate is a famous landmark.",
+        "response": "<memory_write>City of Berlin,is,capital of Germany</memory_write><memory_write>City of Berlin,is known for,its history</memory_write><memory_write>City of Berlin,is known for,its art scene</memory_write><memory_write>Brandenburg Gate,is,famous landmark in Berlin</memory_write>",
+        "id": 31
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Is the sun hot? It feels warm.\nMemory:\nMemory 1: Sun,is,a star\nGenerated Thinking and Response: Yes, the Sun is extremely hot. Its surface temperature is about 5,500 degrees Celsius (9,940 degrees Fahrenheit), and its core is much hotter.",
+        "response": "<memory_write>Sun,feels,warm</memory_write><memory_write>Sun,is,extremely hot</memory_write><memory_write>Sun surface temperature,is,about 5,500 degrees Celsius</memory_write><memory_write>Sun surface temperature,is,about 9,940 degrees Fahrenheit</memory_write><memory_write>Sun core,is,much hotter than surface</memory_write>",
+        "id": 32
+      },
+      {
+        "input": "The research team discovered a new particle. It is called the 'Xion'. Its properties are unknown.",
+        "response": "<memory_write>Research team,discovered,new particle</memory_write><memory_write>New particle,is called,Xion</memory_write><memory_write>Xion properties,are,unknown</memory_write>",
+        "id": 33
+      },
+      {
+        "input": "The company 'EcoSolutions' develops sustainable packaging. Their products are biodegradable. They aim to reduce plastic waste.",
+        "response": "<memory_write>Company EcoSolutions,develops,sustainable packaging</memory_write><memory_write>EcoSolutions products,are,biodegradable</memory_write><memory_write>EcoSolutions,aims to reduce,plastic waste</memory_write>",
+        "id": 34
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: What is DNA? My teacher said it's like a blueprint.\nMemory:\nMemory 1: DNA,is,molecule\nGenerated Thinking and Response: DNA (deoxyribonucleic acid) is the molecule that carries genetic information for the development, functioning, growth, and reproduction of all known organisms and many viruses. Your teacher's analogy of a blueprint is a good way to understand its role in an organism.",
+        "response": "<memory_write>My teacher,said,DNA is like a blueprint</memory_write><memory_write>DNA,is,deoxyribonucleic acid</memory_write><memory_write>DNA,carries,genetic information for development of organisms</memory_write><memory_write>DNA,carries,genetic information for functioning of organisms</memory_write><memory_write>DNA,carries,genetic information for growth of organisms</memory_write><memory_write>DNA,carries,genetic information for reproduction of organisms</memory_write><memory_write>DNA,carries,genetic information for many viruses</memory_write><memory_write>Teacher's analogy of DNA as blueprint,is,good way to understand its role</memory_write>",
+        "id": 35
+      },
+      {
+        "input": "The new security system uses biometric scanners. It identifies fingerprints. It also uses facial recognition.",
+        "response": "<memory_write>New security system,uses,biometric scanners</memory_write><memory_write>New security system,identifies,fingerprints</memory_write><memory_write>New security system,uses,facial recognition</memory_write>",
+        "id": 36
+      },
+      {
+        "input": "The Earth orbits the Sun. The Moon orbits the Earth. The Sun is a star. Stars are celestial bodies.",
+        "response": "<memory_write>Earth,orbits,Sun</memory_write><memory_write>Moon,orbits,Earth</memory_write><memory_write>Sun,is,star</memory_write><memory_write>Stars,are,celestial bodies</memory_write>",
+        "id": 37
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My car, a Toyota, is blue. My friend's car, a Honda, is red. Yesterday my car was green.\nMemory:\nMemory 1: My car,is,green\nMemory 2: Toyota,is,car brand\nMemory 3: Honda,is,car brand\nGenerated Thinking and Response: Your blue Toyota car was previously green. Your friend's car is a red Honda.",
+        "response": "<memory_write,contradict>My car,is,green</memory_write><memory_write>My car,is,Toyota</memory_write><memory_write>My car,is,blue</memory_write><memory_write>My friend's car,is,Honda</memory_write><memory_write>My friend's car,is,red</memory_write>",
+        "id": 38
+      },
+      {
+        "input": "The project 'Helios' aims to build a solar farm. It will be located in Nevada. It will power 10,000 homes.",
+        "response": "<memory_write>Project Helios,aims to build,solar farm</memory_write><memory_write>Solar farm,will be located in,Nevada</memory_write><memory_write>Solar farm,will power,10,000 homes</memory_write>",
+        "id": 39
+      },
+      {
+        "input": "The Milky Way galaxy is a spiral galaxy. It contains our Solar System. It has billions of stars. It also has a central supermassive black hole.",
+        "response": "<memory_write>Milky Way galaxy,is,spiral galaxy</memory_write><memory_write>Milky Way galaxy,contains,our Solar System</memory_write><memory_write>Milky Way galaxy,has,billions of stars</memory_write><memory_write>Milky Way galaxy,has,central supermassive black hole</memory_write>",
+        "id": 40
+      },
+      {
+        "input": "The user asked for varied examples. This example is short. It provides two facts.",
+        "response": "<memory_write>User,asked for,varied examples</memory_write><memory_write>This example,is,short</memory_write><memory_write>This example,provides,two facts</memory_write>",
+        "id": 41
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Is the ocean blue because it reflects the sky?\nMemory:\nMemory 1: Water,can appear,blue in large volumes\nGenerated Thinking and Response: While the ocean does reflect the sky, which contributes to its appearance, water itself also has a slight intrinsic blue color. This is due to the way water molecules absorb light, preferentially absorbing red light and scattering blue light. This intrinsic blue is more noticeable in large, deep bodies of water.",
+        "response": "<memory_write>Ocean,does reflect,sky</memory_write><memory_write>Ocean reflecting sky,contributes to,its appearance</memory_write><memory_write>Water itself,has,slight intrinsic blue color</memory_write><memory_write>Water's intrinsic blue color,is due to,way water molecules absorb light</memory_write><memory_write>Water molecules,preferentially absorb,red light</memory_write><memory_write>Water molecules,scatter,blue light</memory_write><memory_write>Water's intrinsic blue,is more noticeable in,large deep bodies of water</memory_write>",
+        "id": 42
+      },
+      {
+        "input": "The new algorithm, 'PathFinder', finds optimal routes. It considers traffic conditions. It is used in navigation apps.",
+        "response": "<memory_write>New algorithm PathFinder,finds,optimal routes</memory_write><memory_write>PathFinder,considers,traffic conditions</memory_write><memory_write>PathFinder,is used in,navigation apps</memory_write>",
+        "id": 43
+      },
+      {
+        "input": "The definition of AI is Artificial Intelligence. It is a branch of computer science. It aims to create intelligent machines.",
+        "response": "<memory_write>Definition of AI,is,Artificial Intelligence</memory_write><memory_write>AI,is,branch of computer science</memory_write><memory_write>AI,aims to create,intelligent machines</memory_write>",
+        "id": 44
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My coffee is cold. I made it an hour ago. It was hot then.\nMemory:\nMemory 1: My coffee,was,hot\nGenerated Thinking and Response: Your coffee, which you made an hour ago and was initially hot, is now cold. This is expected as it loses heat to the surroundings over time.",
+        "response": "<memory_write>My coffee,is,cold</memory_write><memory_write>I,made,my coffee an hour ago</memory_write><memory_write,contradict>My coffee,was,hot</memory_write><memory_write>Coffee,loses,heat to surroundings over time</memory_write>",
+        "id": 45
+      },
+      {
+        "input": "The new game 'Galaxy Quest' is a space exploration RPG. Players can customize ships. They can explore planets. The game has a vast universe.",
+        "response": "<memory_write>New game Galaxy Quest,is,space exploration RPG</memory_write><memory_write>Players in Galaxy Quest,can customize,ships</memory_write><memory_write>Players in Galaxy Quest,can explore,planets</memory_write><memory_write>Galaxy Quest,has,vast universe</memory_write>",
+        "id": 46
+      },
+      {
+        "input": "This is a test. It is only a test. No action required.",
+        "response": "<memory_write>This,is,a test</memory_write><memory_write>It,is,only a test</memory_write><memory_write>No action,is,required</memory_write>",
+        "id": 47
+      },
+      {
+        "input": "1qaz 2wsx 3edc",
+        "response": "",
+        "id": 48
+      },
+      {
+        "input": "The book 'Dune' is a science fiction classic. It was written by Frank Herbert. It is set on the desert planet Arrakis.",
+        "response": "<memory_write>Book 'Dune',is,science fiction classic</memory_write><memory_write>Book 'Dune',was written by,Frank Herbert</memory_write><memory_write>Book 'Dune',is set on,desert planet Arrakis</memory_write>",
+        "id": 49
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Is Mount Everest the only tall mountain? I saw a picture of K2.\nMemory:\nMemory 1: Mount Everest,is,world's highest mountain above sea level\nMemory 2: K2,is,world's second highest mountain\nGenerated Thinking and Response: While Mount Everest is the highest mountain above sea level, K2 is the second highest and also incredibly tall and challenging. There are many other very tall mountains in ranges like the Himalayas and Karakoram.",
+        "response": "<memory_write>I,saw,picture of K2</memory_write><memory_write>K2,is,incredibly tall</memory_write><memory_write>K2,is,incredibly challenging</memory_write><memory_write>Many other very tall mountains,exist in,Himalayas range</memory_write><memory_write>Many other very tall mountains,exist in,Karakoram range</memory_write>",
+        "id": 50
+      },
+      {
+        "input": "The committee will review the proposal. The proposal suggests a new park. The park will have a playground.",
+        "response": "<memory_write>Committee,will review,proposal</memory_write><memory_write>Proposal,suggests,new park</memory_write><memory_write>New park,will have,playground</memory_write>",
+        "id": 51
+      },
+      {
+        "input": "The restaurant 'Bella Napoli' serves pizza. Their Margherita pizza is popular. They also offer pasta dishes. It is located downtown.",
+        "response": "<memory_write>Restaurant Bella Napoli,serves,pizza</memory_write><memory_write>Restaurant Bella Napoli Margherita pizza,is,popular</memory_write><memory_write>Restaurant Bella Napoli,offers,pasta dishes</memory_write><memory_write>Restaurant Bella Napoli,is located,downtown</memory_write>",
+        "id": 52
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My internet is slow. It was fast this morning. My provider is Xfinity.\nMemory:\nMemory 1: My internet,was,fast this morning\nMemory 2: Xfinity,is,internet service provider\nGenerated Thinking and Response: Your Xfinity internet, which was fast this morning, is now slow. Internet speeds can fluctuate due to network congestion, modem issues, or local outages. You could try restarting your modem and router.",
+        "response": "<memory_write>My internet,is,slow</memory_write><memory_write,contradict>My internet,was,fast this morning</memory_write><memory_write>My internet provider,is,Xfinity</memory_write><memory_write>Internet speeds,can fluctuate due to,network congestion</memory_write><memory_write>Internet speeds,can fluctuate due to,modem issues</memory_write><memory_write>Internet speeds,can fluctuate due to,local outages</memory_write><memory_write>You,could try,restarting your modem</memory_write><memory_write>You,could try,restarting your router</memory_write>",
+        "id": 53
+      },
+      {
+        "input": "The new policy is about data privacy. It affects all employees. Training sessions will be held next week.",
+        "response": "<memory_write>New policy,is about,data privacy</memory_write><memory_write>New policy,affects,all employees</memory_write><memory_write>Training sessions for new policy,will be held,next week</memory_write>",
+        "id": 54
+      },
+      {
+        "input": "The company 'AstroTech' builds satellites. They are launching a new satellite next month. The satellite will monitor weather patterns.",
+        "response": "<memory_write>Company AstroTech,builds,satellites</memory_write><memory_write>Company AstroTech,is launching,new satellite next month</memory_write><memory_write>New satellite,will monitor,weather patterns</memory_write>",
+        "id": 55
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: What are vitamins? Are they food?\nMemory:\nMemory 1: Vitamins,are,organic compounds essential for normal growth and nutrition\nGenerated Thinking and Response: Vitamins are organic compounds that are essential micronutrients an organism needs in small quantities for the proper functioning of its metabolism. They are not 'food' in the sense of providing energy (calories) like carbohydrates, fats, or proteins, but they are vital for health and are obtained through food.",
+        "response": "<memory_write>Vitamins,are,essential micronutrients</memory_write><memory_write>Organism,needs,vitamins in small quantities for proper functioning of its metabolism</memory_write><memory_write>Vitamins,are not 'food' in sense of,providing energy (calories)</memory_write><memory_write>Carbohydrates,provide,energy (calories)</memory_write><memory_write>Fats,provide,energy (calories)</memory_write><memory_write>Proteins,provide,energy (calories)</memory_write><memory_write>Vitamins,are vital for,health</memory_write><memory_write>Vitamins,are obtained through,food</memory_write>",
+        "id": 56
+      },
+      {
+        "input": "The climate conference is in Kyoto. Delegates are discussing carbon emissions. A new treaty is expected.",
+        "response": "<memory_write>Climate conference,is in,Kyoto</memory_write><memory_write>Delegates at climate conference,are discussing,carbon emissions</memory_write><memory_write>New treaty,is expected from,climate conference</memory_write>",
+        "id": 57
+      },
+      {
+        "input": "The city of Rome has ancient ruins. The Colosseum is a famous ruin. The Pantheon is another. Rome is in Italy.",
+        "response": "<memory_write>City of Rome,has,ancient ruins</memory_write><memory_write>Colosseum,is,famous ruin in Rome</memory_write><memory_write>Pantheon,is,another famous ruin in Rome</memory_write><memory_write>Rome,is in,Italy</memory_write>",
+        "id": 58
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My phone is an Android. My friend's phone is an iPhone. Which is better?\nMemory:\nMemory 1: Android,is,mobile operating system\nMemory 2: iPhone,uses,iOS operating system\nGenerated Thinking and Response: Both Android phones and iPhones have their own strengths and weaknesses. 'Better' is subjective and depends on individual preferences for features, ecosystem, price, and user interface. There's no single answer to which is definitively better.",
+        "response": "<memory_write>My phone,is,Android</memory_write><memory_write>My friend's phone,is,iPhone</memory_write><memory_write>Android phones,have,their own strengths</memory_write><memory_write>Android phones,have,their own weaknesses</memory_write><memory_write>iPhones,have,their own strengths</memory_write><memory_write>iPhones,have,their own weaknesses</memory_write><memory_write>'Better' between Android and iPhone,is,subjective</memory_write><memory_write>'Better' between Android and iPhone,depends on,individual preferences for features</memory_write><memory_write>'Better' between Android and iPhone,depends on,individual preferences for ecosystem</memory_write><memory_write>'Better' between Android and iPhone,depends on,individual preferences for price</memory_write><memory_write>'Better' between Android and iPhone,depends on,individual preferences for user interface</memory_write><memory_write>There is no,single answer to,which phone is definitively better</memory_write>",
+        "id": 59
+      },
+      {
+        "input": "The startup 'HealthAI' is developing AI for medical diagnosis. Their system analyzes X-rays. It can detect early signs of lung cancer.",
+        "response": "<memory_write>Startup HealthAI,is developing,AI for medical diagnosis</memory_write><memory_write>HealthAI system,analyzes,X-rays</memory_write><memory_write>HealthAI system,can detect,early signs of lung cancer</memory_write>",
+        "id": 60
+      },
+      {
+        "input": "The history museum has an exhibit on ancient Egypt. It includes a replica of Tutankhamun's tomb. There are also many artifacts.",
+        "response": "<memory_write>History museum,has,exhibit on ancient Egypt</memory_write><memory_write>Ancient Egypt exhibit,includes,replica of Tutankhamun's tomb</memory_write><memory_write>Ancient Egypt exhibit,has,many artifacts</memory_write>",
+        "id": 61
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My cat's name is Luna. She is a Siamese. She is 2 years old. My previous cat, Felix, was a tabby and lived for 15 years.\nMemory:\nMemory 1: Felix,was,tabby cat\nMemory 2: Felix,lived for,15 years\nGenerated Thinking and Response: You have a 2-year-old Siamese cat named Luna. Your previous cat was a tabby named Felix who lived to be 15.",
+        "response": "<memory_write>My cat's name,is,Luna</memory_write><memory_write>Luna,is,Siamese</memory_write><memory_write>Luna,is,2 years old</memory_write><memory_write>My previous cat,was named,Felix</memory_write>",
+        "id": 62
+      },
+      {
+        "input": "The software update process is ongoing. It should complete in one hour. Users may experience temporary slowness.",
+        "response": "<memory_write>Software update process,is,ongoing</memory_write><memory_write>Software update process,should complete in,one hour</memory_write><memory_write>Users,may experience,temporary slowness during update</memory_write>",
+        "id": 63
+      },
+      {
+        "input": "The human skeletal system provides support. It also protects organs. It is made of bones.",
+        "response": "<memory_write>Human skeletal system,provides,support</memory_write><memory_write>Human skeletal system,protects,organs</memory_write><memory_write>Human skeletal system,is made of,bones</memory_write>",
+        "id": 64
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Is the Great Wall of China visible from space with the naked eye? I heard it is.\nMemory:\nMemory 1: Great Wall of China,is,very long\nGenerated Thinking and Response: The claim that the Great Wall of China is visible from space (specifically, from the Moon or low Earth orbit) with the naked eye is a common misconception. While it's very long, it's too narrow to be seen without aid from typical orbital altitudes. Astronauts have confirmed this.",
+        "response": "<memory_write>I,heard,Great Wall of China is visible from space with naked eye</memory_write><memory_write>Claim that Great Wall of China is visible from space with naked eye,is,common misconception</memory_write><memory_write>Great Wall of China,is too narrow to be seen without aid from,typical orbital altitudes</memory_write><memory_write>Astronauts,have confirmed,Great Wall of China not visible from space with naked eye</memory_write>",
+        "id": 65
+      },
+      {
+        "input": "The AI model 'Titan' was trained by 'MegaCorp'. It excels at language translation. It supports over 100 languages.",
+        "response": "<memory_write>AI model Titan,was trained by,MegaCorp</memory_write><memory_write>AI model Titan,excels at,language translation</memory_write><memory_write>AI model Titan,supports,over 100 languages</memory_write>",
+        "id": 66
+      },
+      {
+        "input": "The novel 'Moby Dick' is about a whaling voyage. The captain is Ahab. He seeks a white whale. The narrator is Ishmael.",
+        "response": "<memory_write>Novel 'Moby Dick',is about,whaling voyage</memory_write><memory_write>Novel 'Moby Dick' captain,is,Ahab</memory_write><memory_write>Ahab,seeks,white whale</memory_write><memory_write>Novel 'Moby Dick' narrator,is,Ishmael</memory_write>",
+        "id": 67
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My coffee is black. My sugar is white. The coffee was green before roasting.\nMemory:\nMemory 1: Coffee beans,are,green before roasting\nGenerated Thinking and Response: You have black coffee and white sugar. It's true that coffee beans are green before they are roasted, which then turns them brown or black.",
+        "response": "<memory_write>My coffee,is,black</memory_write><memory_write>My sugar,is,white</memory_write><memory_write>Coffee beans,turn,brown or black after roasting</memory_write>",
+        "id": 68
+      },
+      {
+        "input": "The research focuses on quantum entanglement. It has potential for quantum computing. Dr. Lee leads the team.",
+        "response": "<memory_write>Research,focuses on,quantum entanglement</memory_write><memory_write>Quantum entanglement,has potential for,quantum computing</memory_write><memory_write>Dr. Lee,leads,research team</memory_write>",
+        "id": 69
+      },
+      {
+        "input": "The city's public transport includes buses and trains. A new metro line is under construction. It will open in 2025.",
+        "response": "<memory_write>City's public transport,includes,buses</memory_write><memory_write>City's public transport,includes,trains</memory_write><memory_write>New metro line,is,under construction in city</memory_write><memory_write>New metro line,will open in,2025</memory_write>",
+        "id": 70
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Can humans breathe underwater without equipment?\nMemory:\nMemory 1: Humans,need,oxygen to breathe\nMemory 2: Water,contains,dissolved oxygen (but not breathable by human lungs)\nGenerated Thinking and Response: No, humans cannot breathe underwater for any significant time without specialized equipment like scuba gear. Our lungs are designed to extract oxygen from the air, not from water.",
+        "response": "<memory_write>Humans,cannot breathe,underwater for any significant time without specialized equipment</memory_write><memory_write>Specialized equipment for breathing underwater,includes,scuba gear</memory_write><memory_write>Human lungs,are designed to extract,oxygen from air</memory_write><memory_write>Human lungs,are not designed to extract,oxygen from water</memory_write>",
+        "id": 71
+      },
+      {
+        "input": "This input has few distinct facts. The sky is currently blue. Clouds are white.",
+        "response": "<memory_write>Sky,is currently,blue</memory_write><memory_write>Clouds,are,white</memory_write>",
+        "id": 72
+      },
+      {
+        "input": "The red rose has thorns. The white lily has a strong scent.",
+        "response": "<memory_write>Red rose,has,thorns</memory_write><memory_write>White lily,has,strong scent</memory_write>",
+        "id": 73
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My computer is slow. It is a Mac. It's 5 years old. Is it too old?\nMemory:\nMemory 1: Mac,is,type of computer\nMemory 2: Computer performance,can degrade with,age\nGenerated Thinking and Response: A 5-year-old Mac might be slow due to its age, as hardware becomes outdated and software demands increase. However, slowness can also be caused by software issues, lack of storage space, or malware. It's not necessarily 'too old' if it still meets your needs, but performance decline is expected.",
+        "response": "<memory_write>My computer,is,slow</memory_write><memory_write>My computer,is,Mac</memory_write><memory_write>My computer,is,5 years old</memory_write><memory_write>5-year-old Mac,might be slow due to,its age</memory_write><memory_write>Hardware,becomes,outdated with age</memory_write><memory_write>Software demands,increase,over time</memory_write><memory_write>Slowness in computers,can also be caused by,software issues</memory_write><memory_write>Slowness in computers,can also be caused by,lack of storage space</memory_write><memory_write>Slowness in computers,can also be caused by,malware</memory_write><memory_write>5-year-old Mac,is not necessarily 'too old' if,it still meets your needs</memory_write><memory_write>Performance decline in 5-year-old Mac,is,expected</memory_write>",
+        "id": 74
+      },
+      {
+        "input": "The library is quiet today. Many students are studying for exams.",
+        "response": "<memory_write>Library,is,quiet today</memory_write><memory_write>Many students,are studying for,exams in library</memory_write>",
+        "id": 75
+      },
+      {
+        "input": "The blue car is parked outside. Its lights are on. The car is a sedan. It is a new model, from 2023.",
+        "response": "<memory_write>Blue car,is parked,outside</memory_write><memory_write>Blue car lights,are,on</memory_write><memory_write>Blue car,is,sedan</memory_write><memory_write>Blue car,is,new model</memory_write><memory_write>Blue car,is from,2023</memory_write>",
+        "id": 76
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: I want to learn guitar. Is it hard? My friend plays well.\nMemory:\nMemory 1: Learning musical instrument,requires,practice\nGenerated Thinking and Response: Learning guitar, like any instrument, can be challenging but also very rewarding. The difficulty varies per person. Consistent practice is key. Your friend's skill is likely a result of dedication. Many resources are available for beginners.",
+        "response": "<memory_write>I,want to learn,guitar</memory_write><memory_write>Learning guitar,can be,challenging</memory_write><memory_write>Learning guitar,can be,very rewarding</memory_write><memory_write>Difficulty of learning guitar,varies,per person</memory_write><memory_write>Consistent practice,is key to,learning guitar</memory_write><memory_write>My friend,plays,guitar well</memory_write><memory_write>My friend's guitar skill,is likely result of,dedication</memory_write><memory_write>Many resources,are available for,guitar beginners</memory_write>",
+        "id": 77
+      },
+      {
+        "input": "The new algorithm 'Optimizer' improves database query speed by 50%. It was developed at 'DataCore Labs'. It is patent pending.",
+        "response": "<memory_write>New algorithm Optimizer,improves,database query speed by 50%</memory_write><memory_write>Algorithm Optimizer,was developed at,DataCore Labs</memory_write><memory_write>Algorithm Optimizer,is,patent pending</memory_write>",
+        "id": 78
+      },
+      {
+        "input": "The software release includes several new features. Feature A allows data export. Feature B improves user interface. Feature C adds collaboration tools.",
+        "response": "<memory_write>Software release,includes,several new features</memory_write><memory_write>Feature A,allows,data export</memory_write><memory_write>Feature B,improves,user interface</memory_write><memory_write>Feature C,adds,collaboration tools</memory_write>",
+        "id": 79
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: What is the largest ocean on Earth?\nMemory:\nMemory 1: Pacific Ocean,is,an ocean\nGenerated Thinking and Response: The largest ocean on Earth is the Pacific Ocean. It covers more area than all the Earth's landmasses combined.",
+        "response": "<memory_write>Largest ocean on Earth,is,Pacific Ocean</memory_write><memory_write>Pacific Ocean,covers more area than,all Earth's landmasses combined</memory_write>",
+        "id": 80
+      },
+      {
+        "input": "The team is developing a mobile app. The app will help users find local events. It will be available on iOS and Android.",
+        "response": "<memory_write>Team,is developing,mobile app</memory_write><memory_write>Mobile app,will help,users find local events</memory_write><memory_write>Mobile app,will be available on,iOS</memory_write><memory_write>Mobile app,will be available on,Android</memory_write>",
+        "id": 81
+      },
+      {
+        "input": "The city of Kyoto is famous for its temples. Kinkaku-ji is a golden temple. Ryoan-ji is known for its rock garden.",
+        "response": "<memory_write>City of Kyoto,is famous for,its temples</memory_write><memory_write>Kinkaku-ji,is,golden temple in Kyoto</memory_write><memory_write>Ryoan-ji,is known for,its rock garden in Kyoto</memory_write>",
+        "id": 82
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: Is tomorrow Monday? My calendar says today is Sunday, June 16th.\nMemory:\nMemory 1: Days of week,follow,specific order\nGenerated Thinking and Response: Yes, if today is Sunday, June 16th, then tomorrow will be Monday, June 17th.",
+        "response": "<memory_write>My calendar,says,today is Sunday, June 16th</memory_write><memory_write>Tomorrow,will be,Monday, June 17th</memory_write>",
+        "id": 83
+      },
+      {
+        "input": "The new restaurant, 'Fusion Bites', offers Asian-Latin fusion cuisine. The head chef is Maria Rodriguez. It is located on Elm Street.",
+        "response": "<memory_write>New restaurant Fusion Bites,offers,Asian-Latin fusion cuisine</memory_write><memory_write>Fusion Bites head chef,is,Maria Rodriguez</memory_write><memory_write>Fusion Bites,is located on,Elm Street</memory_write>",
+        "id": 84
+      },
+      {
+        "input": "This is an input for an LLM. The LLM writes to a graph. The graph is a RAG-like system. Memory writes are triplets. The LLM name is 'GraphWriter'. GraphWriter is version 0.1. This LLM should not answer questions. It should only use the write function. If it cannot write, it should return an empty string. Some input is query-only. Other input is finalized-query. Finalized queries start with 'Output Generated. Write Memory.'. This dataset has many examples. Some are short. Some are long. Contradictions use a flag. The flag is 'contradict'.",
+        "response": "<memory_write>This,is,input for LLM</memory_write><memory_write>LLM,writes to,graph</memory_write><memory_write>Graph,is,RAG-like system</memory_write><memory_write>Memory writes,are,triplets</memory_write><memory_write>LLM name,is,GraphWriter</memory_write><memory_write>GraphWriter,is,version 0.1</memory_write><memory_write>This LLM,should not answer,questions</memory_write><memory_write>This LLM,should only use,write function</memory_write><memory_write>If LLM cannot write,it should return,empty string</memory_write><memory_write>Some input,is,query-only</memory_write><memory_write>Other input,is,finalized-query</memory_write><memory_write>Finalized queries,start with,'Output Generated. Write Memory.'</memory_write><memory_write>This dataset,has,many examples</memory_write><memory_write>Some examples in dataset,are,short</memory_write><memory_write>Some examples in dataset,are,long</memory_write><memory_write>Contradictions,use,flag</memory_write><memory_write>Contradiction flag,is,contradict</memory_write>",
+        "id": 85
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My flight is on 'Alpha Airlines'. It departs at 9 AM. It arrives at 12 PM. The flight number is AA123. Yesterday, the departure was 10 AM.\nMemory:\nMemory 1: My flight departure,was,10 AM\nGenerated Thinking and Response: Your flight AA123 on Alpha Airlines departs at 9 AM and arrives at 12 PM. The departure time has changed from 10 AM.",
+        "response": "<memory_write>My flight,is on,Alpha Airlines</memory_write><memory_write>My flight,departs at,9 AM</memory_write><memory_write>My flight,arrives at,12 PM</memory_write><memory_write>My flight number,is,AA123</memory_write><memory_write,contradict>My flight departure,was,10 AM</memory_write>",
+        "id": 86
+      },
+      {
+        "input": "The project deadline is next Friday. All deliverables must be submitted by then. A final review meeting is on Thursday.",
+        "response": "<memory_write>Project deadline,is,next Friday</memory_write><memory_write>All deliverables,must be submitted by,next Friday</memory_write><memory_write>Final review meeting,is on,Thursday</memory_write>",
+        "id": 87
+      },
+      {
+        "input": "The human heart pumps blood. Blood carries oxygen. Oxygen is vital for cells. Cells make up tissues.",
+        "response": "<memory_write>Human heart,pumps,blood</memory_write><memory_write>Blood,carries,oxygen</memory_write><memory_write>Oxygen,is vital for,cells</memory_write><memory_write>Cells,make up,tissues</memory_write>",
+        "id": 88
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: How do airplanes fly?\nMemory:\nMemory 1: Airplanes,have,wings\nMemory 2: Wings,generate,lift\nGenerated Thinking and Response: Airplanes fly due to a combination of four forces: lift, weight, thrust, and drag. Wings are shaped to create lift (an upward force) as air moves over them, overcoming the plane's weight. Engines provide thrust (forward force) to overcome drag (air resistance).",
+        "response": "<memory_write>Airplanes,fly due to,combination of four forces</memory_write><memory_write>Four forces of flight,are,lift</memory_write><memory_write>Four forces of flight,are,weight</memory_write><memory_write>Four forces of flight,are,thrust</memory_write><memory_write>Four forces of flight,are,drag</memory_write><memory_write>Wings,are shaped to create,lift as air moves over them</memory_write><memory_write>Lift,overcomes,plane's weight</memory_write><memory_write>Engines,provide,thrust</memory_write><memory_write>Thrust,overcomes,drag</memory_write><memory_write>Drag,is,air resistance</memory_write>",
+        "id": 89
+      },
+      {
+        "input": "The new AI chip 'Neuromorph' is designed for edge computing. It consumes low power. It can perform real-time inference.",
+        "response": "<memory_write>New AI chip Neuromorph,is designed for,edge computing</memory_write><memory_write>Neuromorph,consumes,low power</memory_write><memory_write>Neuromorph,can perform,real-time inference</memory_write>",
+        "id": 90
+      },
+      {
+        "input": "The Great Barrier Reef is in Australia. It is the world's largest coral reef system. It is threatened by climate change.",
+        "response": "<memory_write>Great Barrier Reef,is in,Australia</memory_write><memory_write>Great Barrier Reef,is,world's largest coral reef system</memory_write><memory_write>Great Barrier Reef,is threatened by,climate change</memory_write>",
+        "id": 91
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: What is the tallest building in the world? I thought it was the Empire State Building.\nMemory:\nMemory 1: Empire State Building,was once,world's tallest building\nGenerated Thinking and Response: The current tallest building in the world is the Burj Khalifa in Dubai. The Empire State Building held that title for many years but has since been surpassed by several other structures.",
+        "response": "<memory_write>I,thought,Empire State Building was tallest building in world</memory_write><memory_write>Current tallest building in world,is,Burj Khalifa</memory_write><memory_write>Burj Khalifa,is in,Dubai</memory_write><memory_write>Empire State Building,has been surpassed by,several other structures for tallest building title</memory_write>",
+        "id": 92
+      },
+      {
+        "input": "The tech startup 'InnovateAI' develops AI solutions for healthcare. Their flagship product 'MediMind' assists in diagnostics. It uses machine learning on patient data.",
+        "response": "<memory_write>Tech startup InnovateAI,develops,AI solutions for healthcare</memory_write><memory_write>InnovateAI flagship product,is,MediMind</memory_write><memory_write>MediMind,assists in,diagnostics</memory_write><memory_write>MediMind,uses,machine learning on patient data</memory_write>",
+        "id": 93
+      },
+      {
+        "input": "The human body is composed of many cells. Cells form tissues. Tissues form organs. Organs form organ systems. An organism is made of organ systems.",
+        "response": "<memory_write>Human body,is composed of,many cells</memory_write><memory_write>Cells,form,tissues</memory_write><memory_write>Tissues,form,organs</memory_write><memory_write>Organs,form,organ systems</memory_write><memory_write>Organism,is made of,organ systems</memory_write>",
+        "id": 94
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: My meeting is tomorrow. It is with John. The topic is 'Project X'. The meeting was originally today.\nMemory:\nMemory 1: Meeting,was,today\nGenerated Thinking and Response: Your meeting with John about 'Project X' is scheduled for tomorrow, having been moved from today.",
+        "response": "<memory_write>My meeting,is,tomorrow</memory_write><memory_write>My meeting,is with,John</memory_write><memory_write>My meeting topic,is,Project X</memory_write><memory_write,contradict>Meeting,was,today</memory_write>",
+        "id": 95
+      },
+      {
+        "input": "The national park is open year-round. It has hiking trails and campgrounds. It is home to bears and eagles.",
+        "response": "<memory_write>National park,is open,year-round</memory_write><memory_write>National park,has,hiking trails</memory_write><memory_write>National park,has,campgrounds</memory_write><memory_write>National park,is home to,bears</memory_write><memory_write>National park,is home to,eagles</memory_write>",
+        "id": 96
+      },
+      {
+        "input": "The city of Amsterdam is in the Netherlands. It is known for its canals and bicycles. The Van Gogh Museum is located there.",
+        "response": "<memory_write>City of Amsterdam,is in,Netherlands</memory_write><memory_write>City of Amsterdam,is known for,its canals</memory_write><memory_write>City of Amsterdam,is known for,its bicycles</memory_write><memory_write>Van Gogh Museum,is located in,Amsterdam</memory_write>",
+        "id": 97
+      },
+      {
+        "input": "Output Generated. Write Memory.\nInput Question: I have a new phone. It's a Samsung Galaxy. It's black. My old phone was white. It was also a Samsung.\nMemory:\nMemory 1: My old phone,was,white\nMemory 2: My old phone,was,Samsung\nGenerated Thinking and Response: You have a new black Samsung Galaxy phone. This replaces your old white Samsung phone.",
+        "response": "<memory_write>I,have,new phone</memory_write><memory_write>My new phone,is,Samsung Galaxy</memory_write><memory_write>My new phone,is,black</memory_write>",
+        "id": 98
+      },
+      {
+        "input": "The solar energy company 'SunPower Co.' installs solar panels. They offer solutions for homes and businesses. Their panels are highly efficient.",
+        "response": "<memory_write>Solar energy company SunPower Co.,installs,solar panels</memory_write><memory_write>SunPower Co.,offers,solutions for homes</memory_write><memory_write>SunPower Co.,offers,solutions for businesses</memory_write><memory_write>SunPower Co. panels,are,highly efficient</memory_write>",
+        "id": 99
+      }
+    ]
+}

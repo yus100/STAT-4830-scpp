@@ -1,0 +1,1254 @@
+{
+    "examples": [
+      {
+        "input": "What is the capital of Canada?",
+        "response": "<memory_ask>Capital of Canada</memory_ask>",
+        "id": 0
+      },
+      {
+        "input": "My dog Fido is a golden retriever. Are golden retrievers good family pets?",
+        "response": "<memory_ask>Information about Fido the dog</memory_ask><memory_ask>Breed of Fido: golden retriever</memory_ask><memory_ask>Are golden retrievers good family pets</memory_ask><memory_ask>Information about golden retrievers</memory_ask>",
+        "id": 1
+      },
+      {
+        "input": "Tell me about black holes.",
+        "response": "<memory_ask>Information about black holes</memory_ask><memory_ask>How are black holes formed</memory_ask>",
+        "id": 2
+      },
+      {
+        "input": "I'm planning a trip to Italy next spring. What are some must-see cities? My budget is moderate. I like history.",
+        "response": "<memory_ask>Information about planning a trip to Italy</memory_ask><memory_ask>Best time to visit Italy: spring</memory_ask><memory_ask>Must-see cities in Italy for history</memory_ask><memory_ask>Italy travel on a moderate budget</memory_ask>",
+        "id": 3
+      },
+      {
+        "input": "The new AI model 'ChatMaster_v3' was released by 'OpenAI_Clone Corp'. How does it compare to 'GPT-4'?",
+        "response": "<memory_ask>Information about ChatMaster_v3 AI model</memory_ask><memory_ask>Developer of ChatMaster_v3: OpenAI_Clone Corp</memory_ask><memory_ask>Comparison of ChatMaster_v3 and GPT-4</memory_ask><memory_ask>Information about GPT-4</memory_ask>",
+        "id": 4
+      },
+      {
+        "input": "Explain quantum entanglement simply. Einstein called it 'spooky'.",
+        "response": "<memory_ask>Simple explanation of quantum entanglement</memory_ask><memory_ask>Einstein's view on quantum entanglement ('spooky action at a distance')</memory_ask>",
+        "id": 5
+      },
+      {
+        "input": "r2d2c3po",
+        "response": "",
+        "id": 6
+      },
+      {
+        "input": "What are the benefits of meditation? My friend Sarah meditates daily.",
+        "response": "<memory_ask>Benefits of meditation</memory_ask><memory_ask>Who is Sarah</memory_ask><memory_ask>Information about Sarah's daily meditation practice</memory_ask>",
+        "id": 7
+      },
+      {
+        "input": "The 'Everest Cafe' on Elm Street serves amazing coffee. They also have vegan pastries. What are their opening hours?",
+        "response": "<memory_ask>Information about Everest Cafe</memory_ask><memory_ask>Location of Everest Cafe: Elm Street</memory_ask><memory_ask>Everest Cafe coffee quality</memory_ask><memory_ask>Everest Cafe vegan pastries</memory_ask><memory_ask>Opening hours of Everest Cafe</memory_ask>",
+        "id": 8
+      },
+      {
+        "input": "Define 'photosynthesis'.",
+        "response": "<memory_ask>Definition of photosynthesis</memory_ask>",
+        "id": 9
+      },
+      {
+        "input": "I need a recipe for chocolate chip cookies. My oven is gas.",
+        "response": "<memory_ask>Recipe for chocolate chip cookies</memory_ask><memory_ask>Information about user's gas oven</memory_ask><memory_ask>Tips for baking cookies in a gas oven</memory_ask>",
+        "id": 10
+      },
+      {
+        "input": "The movie 'Starlight Voyager' is out. Is it good? Who directed it?",
+        "response": "<memory_ask>Information about movie Starlight Voyager</memory_ask><memory_ask>Reviews for movie Starlight Voyager</memory_ask><memory_ask>Director of movie Starlight Voyager</memory_ask>",
+        "id": 11
+      },
+      {
+        "input": "The sky is cloudy. It might rain. My umbrella is broken.",
+        "response": "<memory_ask>Current weather: cloudy sky</memory_ask><memory_ask>Possibility of rain</memory_ask><memory_ask>Information about user's broken umbrella</memory_ask>",
+        "id": 12
+      },
+      {
+        "input": "What is the 'Internet of Things' (IoT)? Give an example.",
+        "response": "<memory_ask>Definition of Internet of Things (IoT)</memory_ask><memory_ask>Examples of IoT devices</memory_ask>",
+        "id": 13
+      },
+      {
+        "input": "The 'SolarFlare' energy company is building a new plant in Arizona. It will use 'SunPanel X' technology. What is the expected output?",
+        "response": "<memory_ask>Information about SolarFlare energy company</memory_ask><memory_ask>SolarFlare new plant location: Arizona</memory_ask><memory_ask>Technology used: SunPanel X</memory_ask><memory_ask>Information about SunPanel X technology</memory_ask><memory_ask>Expected output of SolarFlare Arizona plant</memory_ask>",
+        "id": 14
+      },
+      {
+        "input": "My computer is slow. It's a 'MacroHard SurfPro'.",
+        "response": "<memory_ask>Troubleshooting slow computer</memory_ask><memory_ask>Information about MacroHard SurfPro model</memory_ask><memory_ask>Common reasons for MacroHard SurfPro slowness</memory_ask>",
+        "id": 15
+      },
+      {
+        "input": "Can you tell me about the Roman Empire's decline?",
+        "response": "<memory_ask>Information about Roman Empire</memory_ask><memory_ask>Causes of Roman Empire's decline</memory_ask>",
+        "id": 16
+      },
+      {
+        "input": "I'm learning Python. What are some good resources for beginners? My friend recommended 'CodeEasy.com'.",
+        "response": "<memory_ask>Information about learning Python</memory_ask><memory_ask>Resources for Python beginners</memory_ask><memory_ask>Information about CodeEasy.com for Python</memory_ask>",
+        "id": 17
+      },
+      {
+        "input": "The book 'Chronicles of Aethel' by Jane Quill is a fantasy novel. What is it about?",
+        "response": "<memory_ask>Information about book Chronicles of Aethel</memory_ask><memory_ask>Author of Chronicles of Aethel: Jane Quill</memory_ask><memory_ask>Genre of Chronicles of Aethel: fantasy</memory_ask><memory_ask>Plot summary of Chronicles of Aethel</memory_ask>",
+        "id": 18
+      },
+      {
+        "input": "What causes tides?",
+        "response": "<memory_ask>Causes of ocean tides</memory_ask><memory_ask>Role of Moon in tides</memory_ask><memory_ask>Role of Sun in tides</memory_ask>",
+        "id": 19
+      },
+      {
+        "input": "The 'AlphaGo' program beat Lee Sedol. What is Go?",
+        "response": "<memory_ask>Information about AlphaGo program</memory_ask><memory_ask>AlphaGo's match against Lee Sedol</memory_ask><memory_ask>What is the game of Go</memory_ask>",
+        "id": 20
+      },
+      {
+        "input": "How does photosynthesis work? Plants need sunlight, right?",
+        "response": "<memory_ask>Working mechanism of photosynthesis</memory_ask><memory_ask>Role of sunlight in photosynthesis</memory_ask><memory_ask>Inputs and outputs of photosynthesis</memory_ask>",
+        "id": 21
+      },
+      {
+        "input": "My car needs an oil change. It's a 'Honda Civic'.",
+        "response": "<memory_ask>Information about car oil changes</memory_ask><memory_ask>User's car: Honda Civic</memory_ask><memory_ask>Recommended oil change interval for Honda Civic</memory_ask>",
+        "id": 22
+      },
+      {
+        "input": "What is 'dark matter'?",
+        "response": "<memory_ask>Definition of dark matter</memory_ask><memory_ask>Evidence for dark matter</memory_ask>",
+        "id": 23
+      },
+      {
+        "input": "The restaurant 'Luigi's Pizza' is on Oak Street. Do they deliver?",
+        "response": "<memory_ask>Information about Luigi's Pizza restaurant</memory_ask><memory_ask>Location of Luigi's Pizza: Oak Street</memory_ask><memory_ask>Luigi's Pizza delivery service</memory_ask>",
+        "id": 24
+      },
+      {
+        "input": "123 abc !@#",
+        "response": "",
+        "id": 25
+      },
+      {
+        "input": "Tell me about the Voyager space probes.",
+        "response": "<memory_ask>Information about Voyager 1 space probe</memory_ask><memory_ask>Information about Voyager 2 space probe</memory_ask><memory_ask>Missions of Voyager probes</memory_ask><memory_ask>Golden Record on Voyager probes</memory_ask>",
+        "id": 26
+      },
+      {
+        "input": "I want to learn to play the ukulele. Is it hard?",
+        "response": "<memory_ask>Information about learning to play ukulele</memory_ask><memory_ask>Difficulty of learning ukulele for beginners</memory_ask>",
+        "id": 27
+      },
+      {
+        "input": "The 'Cygnus X-1' is a black hole. How was it discovered?",
+        "response": "<memory_ask>Information about Cygnus X-1</memory_ask><memory_ask>Cygnus X-1 as a black hole candidate</memory_ask><memory_ask>Discovery of Cygnus X-1</memory_ask>",
+        "id": 28
+      },
+      {
+        "input": "My favorite color is blue. The sky is also blue. Why is the sky blue?",
+        "response": "<memory_ask>User's favorite color: blue</memory_ask><memory_ask>Information about the color blue</memory_ask><memory_ask>Reason why the sky is blue (Rayleigh scattering)</memory_ask>",
+        "id": 29
+      },
+      {
+        "input": "What is 'CRISPR' technology used for?",
+        "response": "<memory_ask>Information about CRISPR technology</memory_ask><memory_ask>Applications of CRISPR gene editing</memory_ask>",
+        "id": 30
+      },
+      {
+        "input": "The company 'FutureGadgets Inc.' just announced 'Teleporter X'. Is it real?",
+        "response": "<memory_ask>Information about FutureGadgets Inc.</memory_ask><memory_ask>Announcement of Teleporter X</memory_ask><memory_ask>Reality of Teleporter X device</memory_ask><memory_ask>Current state of teleportation technology</memory_ask>",
+        "id": 31
+      },
+      {
+        "input": "How do I make an omelette? I have eggs and cheese.",
+        "response": "<memory_ask>Recipe for an omelette</memory_ask><memory_ask>User has eggs for omelette</memory_ask><memory_ask>User has cheese for omelette</memory_ask><memory_ask>Tips for making a good omelette</memory_ask>",
+        "id": 32
+      },
+      {
+        "input": "The 'Mariana Trench' is the deepest ocean point. How deep is it?",
+        "response": "<memory_ask>Information about Mariana Trench</memory_ask><memory_ask>Mariana Trench as deepest ocean point</memory_ask><memory_ask>Depth of Mariana Trench (Challenger Deep)</memory_ask>",
+        "id": 33
+      },
+      {
+        "input": "zzzzxxxxcccc",
+        "response": "",
+        "id": 34
+      },
+      {
+        "input": "What are the symptoms of the common cold?",
+        "response": "<memory_ask>Symptoms of the common cold</memory_ask>",
+        "id": 35
+      },
+      {
+        "input": "My new game 'Galaxy Quest V' is crashing. It's on 'Steam'.",
+        "response": "<memory_ask>Information about game Galaxy Quest V</memory_ask><memory_ask>Problem: Galaxy Quest V crashing</memory_ask><memory_ask>Platform: Steam</memory_ask><memory_ask>Troubleshooting steps for crashing games on Steam</memory_ask>",
+        "id": 36
+      },
+      {
+        "input": "Tell me about the 'Silk Road'.",
+        "response": "<memory_ask>Information about the Silk Road</memory_ask><memory_ask>Historical period of the Silk Road</memory_ask><memory_ask>Goods traded on the Silk Road</memory_ask>",
+        "id": 37
+      },
+      {
+        "input": "The 'Aurora Borealis'. What causes it?",
+        "response": "<memory_ask>Information about Aurora Borealis (Northern Lights)</memory_ask><memory_ask>Causes of Aurora Borealis</memory_ask>",
+        "id": 38
+      },
+      {
+        "input": "I'm looking for a good sci-fi book. I liked 'Dune'.",
+        "response": "<memory_ask>Recommendations for sci-fi books</memory_ask><memory_ask>User liked Dune by Frank Herbert</memory_ask><memory_ask>Sci-fi books similar to Dune</memory_ask>",
+        "id": 39
+      },
+      {
+        "input": "The 'Acme Corporation' is hiring. What positions are open? Their CEO is John Doe.",
+        "response": "<memory_ask>Information about Acme Corporation</memory_ask><memory_ask>Acme Corporation hiring status</memory_ask><memory_ask>Open positions at Acme Corporation</memory_ask><memory_ask>CEO of Acme Corporation: John Doe</memory_ask><memory_ask>Who is John Doe</memory_ask>",
+        "id": 40
+      },
+      {
+        "input": "How does a GPS work?",
+        "response": "<memory_ask>Working principle of GPS (Global Positioning System)</memory_ask><memory_ask>Role of satellites in GPS</memory_ask>",
+        "id": 41
+      },
+      {
+        "input": "My flight 'UA123' to London is delayed. Why?",
+        "response": "<memory_ask>Information about flight UA123 to London</memory_ask><memory_ask>Status of flight UA123: delayed</memory_ask><memory_ask>Reasons for flight UA123 delay</memory_ask>",
+        "id": 42
+      },
+      {
+        "input": "What is 'Occam's Razor'?",
+        "response": "<memory_ask>Definition of Occam's Razor</memory_ask><memory_ask>Principle of Occam's Razor</memory_ask>",
+        "id": 43
+      },
+      {
+        "input": "The 'Panama Canal'. When was it built?",
+        "response": "<memory_ask>Information about Panama Canal</memory_ask><memory_ask>Construction period of Panama Canal</memory_ask>",
+        "id": 44
+      },
+      {
+        "input": "This is a test. Only a test.",
+        "response": "<memory_ask>Information about this test</memory_ask><memory_ask>Nature of the test</memory_ask>",
+        "id": 45
+      },
+      {
+        "input": "I need to fix my leaky faucet. It's in the kitchen.",
+        "response": "<memory_ask>How to fix a leaky faucet</memory_ask><memory_ask>Location of leaky faucet: kitchen</memory_ask><memory_ask>Common causes of leaky kitchen faucets</memory_ask>",
+        "id": 46
+      },
+      {
+        "input": "What is the 'Higgs boson'?",
+        "response": "<memory_ask>Information about Higgs boson</memory_ask><memory_ask>Significance of Higgs boson in Standard Model</memory_ask>",
+        "id": 47
+      },
+      {
+        "input": "The 'Pythagorean theorem'. What is the formula?",
+        "response": "<memory_ask>Information about Pythagorean theorem</memory_ask><memory_ask>Formula for Pythagorean theorem (a^2 + b^2 = c^2)</memory_ask>",
+        "id": 48
+      },
+      {
+        "input": "My project 'BlueMoon' is due next Friday. Team members are Alice and Bob.",
+        "response": "<memory_ask>Information about project BlueMoon</memory_ask><memory_ask>Due date for project BlueMoon: next Friday</memory_ask><memory_ask>Team members for project BlueMoon: Alice, Bob</memory_ask><memory_ask>Who is Alice</memory_ask><memory_ask>Who is Bob</memory_ask>",
+        "id": 49
+      },
+      {
+        "input": "Tell me about the 'Rosetta Stone'.",
+        "response": "<memory_ask>Information about Rosetta Stone</memory_ask><memory_ask>Significance of Rosetta Stone in deciphering Egyptian hieroglyphs</memory_ask>",
+        "id": 50
+      },
+      {
+        "input": "What are the primary colors?",
+        "response": "<memory_ask>Primary colors (additive model: red, green, blue)</memory_ask><memory_ask>Primary colors (subtractive model: red, yellow, blue OR cyan, magenta, yellow)</memory_ask>",
+        "id": 51
+      },
+      {
+        "input": "I'm trying to understand blockchain. My friend mentioned 'smart contracts'.",
+        "response": "<memory_ask>Explanation of blockchain technology</memory_ask><memory_ask>Information about smart contracts</memory_ask><memory_ask>Relationship between blockchain and smart contracts</memory_ask>",
+        "id": 52
+      },
+      {
+        "input": "The movie 'Blade Runner 2049'. Who was the main actor?",
+        "response": "<memory_ask>Information about movie Blade Runner 2049</memory_ask><memory_ask>Main actor in Blade Runner 2049 (Ryan Gosling)</memory_ask>",
+        "id": 53
+      },
+      {
+        "input": "My new phone is an 'iPhone 15'. What are its new features?",
+        "response": "<memory_ask>Information about iPhone 15</memory_ask><memory_ask>New features of iPhone 15</memory_ask>",
+        "id": 54
+      },
+      {
+        "input": "The 'Great Wall of China'. How long is it?",
+        "response": "<memory_ask>Information about Great Wall of China</memory_ask><memory_ask>Length of Great Wall of China</memory_ask>",
+        "id": 55
+      },
+      {
+        "input": "Is Pluto a planet? I remember it being one. My teacher Mrs. Davis said so.",
+        "response": "<memory_ask>Current classification of Pluto</memory_ask><memory_ask>History of Pluto's classification as a planet</memory_ask><memory_ask>Reasons for Pluto's reclassification</memory_ask><memory_ask>Who is Mrs. Davis</memory_ask><memory_ask>Mrs. Davis's statement about Pluto</memory_ask>",
+        "id": 56
+      },
+      {
+        "input": "1qaz2wsx3edc",
+        "response": "",
+        "id": 57
+      },
+      {
+        "input": "How does a microwave oven heat food?",
+        "response": "<memory_ask>Working principle of a microwave oven</memory_ask><memory_ask>Role of microwaves in heating food</memory_ask>",
+        "id": 58
+      },
+      {
+        "input": "The book '1984' by George Orwell. What is 'Big Brother'?",
+        "response": "<memory_ask>Information about book 1984 by George Orwell</memory_ask><memory_ask>Concept of Big Brother in 1984</memory_ask>",
+        "id": 59
+      },
+      {
+        "input": "I'm looking for a recipe for vegan lasagna. My friend Maria is vegan.",
+        "response": "<memory_ask>Recipe for vegan lasagna</memory_ask><memory_ask>Who is Maria</memory_ask><memory_ask>Information about Maria being vegan</memory_ask>",
+        "id": 60
+      },
+      {
+        "input": "What is the 'Butterfly Effect'?",
+        "response": "<memory_ask>Definition of Butterfly Effect</memory_ask><memory_ask>Origin of Butterfly Effect (chaos theory, Edward Lorenz)</memory_ask>",
+        "id": 61
+      },
+      {
+        "input": "The 'Hubble Space Telescope'. What are some of its famous images?",
+        "response": "<memory_ask>Information about Hubble Space Telescope</memory_ask><memory_ask>Famous images taken by Hubble Space Telescope (e.g., Pillars of Creation)</memory_ask>",
+        "id": 62
+      },
+      {
+        "input": "My research paper on 'Quantum Entanglement in Nanostructures' is due next month. My advisor is Dr. Smith.",
+        "response": "<memory_ask>Information about user's research paper</memory_ask><memory_ask>Topic of research paper: Quantum Entanglement in Nanostructures</memory_ask><memory_ask>Due date for research paper: next month</memory_ask><memory_ask>User's advisor: Dr. Smith</memory_ask><memory_ask>Who is Dr. Smith</memory_ask>",
+        "id": 63
+      },
+      {
+        "input": "What is the speed of sound in air?",
+        "response": "<memory_ask>Speed of sound in air at standard conditions</memory_ask>",
+        "id": 64
+      },
+      {
+        "input": "The band 'Queen'. Who was their lead singer?",
+        "response": "<memory_ask>Information about band Queen</memory_ask><memory_ask>Lead singer of Queen (Freddie Mercury)</memory_ask>",
+        "id": 65
+      },
+      {
+        "input": "I need to change a flat tire on my 'Toyota Camry'. How do I do it?",
+        "response": "<memory_ask>Instructions for changing a flat tire</memory_ask><memory_ask>User's car: Toyota Camry</memory_ask><memory_ask>Specific considerations for changing tire on Toyota Camry</memory_ask>",
+        "id": 66
+      },
+      {
+        "input": "What is 'Artificial General Intelligence' (AGI)?",
+        "response": "<memory_ask>Definition of Artificial General Intelligence (AGI)</memory_ask><memory_ask>Difference between AGI and narrow AI</memory_ask>",
+        "id": 67
+      },
+      {
+        "input": "The 'Eiffel Tower' in Paris. When was it built?",
+        "response": "<memory_ask>Information about Eiffel Tower</memory_ask><memory_ask>Location of Eiffel Tower: Paris</memory_ask><memory_ask>Construction period of Eiffel Tower</memory_ask>",
+        "id": 68
+      },
+      {
+        "input": "My cat, Luna, is not eating. She's a Persian.",
+        "response": "<memory_ask>Information about user's cat Luna</memory_ask><memory_ask>Breed of Luna: Persian</memory_ask><memory_ask>Problem: Luna not eating</memory_ask><memory_ask>Potential reasons for cats not eating</memory_ask><memory_ask>When to take a cat to the vet for not eating</memory_ask>",
+        "id": 69
+      },
+      {
+        "input": "What is 'deja vu'?",
+        "response": "<memory_ask>Definition of deja vu</memory_ask><memory_ask>Possible explanations for deja vu phenomenon</memory_ask>",
+        "id": 70
+      },
+      {
+        "input": "The 'International Space Station' (ISS). How fast does it orbit Earth?",
+        "response": "<memory_ask>Information about International Space Station (ISS)</memory_ask><memory_ask>Orbital speed of International Space Station</memory_ask>",
+        "id": 71
+      },
+      {
+        "input": "I'm planning a party for my friend Tom. His birthday is next Saturday.",
+        "response": "<memory_ask>Information about party planning</memory_ask><memory_ask>Party for: Tom</memory_ask><memory_ask>Who is Tom</memory_ask><memory_ask>Occasion: Tom's birthday</memory_ask><memory_ask>Date of Tom's birthday: next Saturday</memory_ask>",
+        "id": 72
+      },
+      {
+        "input": "Tell me about the 'Mona Lisa's smile'.",
+        "response": "<memory_ask>Information about Mona Lisa painting</memory_ask><memory_ask>Analysis of Mona Lisa's smile</memory_ask><memory_ask>Artistic techniques used for Mona Lisa's smile</memory_ask>",
+        "id": 73
+      },
+      {
+        "input": "My flight is 'AA456'. Is it on time?",
+        "response": "<memory_ask>Information about flight AA456</memory_ask><memory_ask>Current status of flight AA456 (on time, delayed, cancelled)</memory_ask>",
+        "id": 74
+      },
+      {
+        "input": "The company 'Tesla'. Who is its CEO?",
+        "response": "<memory_ask>Information about Tesla company</memory_ask><memory_ask>CEO of Tesla (Elon Musk)</memory_ask>",
+        "id": 75
+      },
+      {
+        "input": "The city of Rome. What are some famous landmarks?",
+        "response": "<memory_ask>Information about Rome, Italy</memory_ask><memory_ask>Famous landmarks in Rome (e.g., Colosseum, Roman Forum, Trevi Fountain)</memory_ask>",
+        "id": 76
+      },
+      {
+        "input": "I want to paint my room blue. What shade should I pick?",
+        "response": "<memory_ask>Information about painting a room blue</memory_ask><memory_ask>Considerations for choosing a shade of blue paint</memory_ask><memory_ask>Different shades of blue paint and their effects</memory_ask>",
+        "id": 77
+      },
+      {
+        "input": "What is the 'Doppler Effect'?",
+        "response": "<memory_ask>Definition of Doppler Effect</memory_ask><memory_ask>Examples of Doppler Effect (sound waves, light waves)</memory_ask>",
+        "id": 78
+      },
+      {
+        "input": "The 'Amazon Rainforest'. Why is it important?",
+        "response": "<memory_ask>Information about Amazon Rainforest</memory_ask><memory_ask>Ecological importance of Amazon Rainforest (biodiversity, climate regulation)</memory_ask>",
+        "id": 79
+      },
+      {
+        "input": "I'm attending a conference 'AI Forward 2024' next week in San Francisco. Dr. Eva Rostova is a keynote speaker.",
+        "response": "<memory_ask>Information about AI Forward 2024 conference</memory_ask><memory_ask>Date of AI Forward 2024: next week</memory_ask><memory_ask>Location of AI Forward 2024: San Francisco</memory_ask><memory_ask>Keynote speaker at AI Forward 2024: Dr. Eva Rostova</memory_ask><memory_ask>Who is Dr. Eva Rostova</memory_ask>",
+        "id": 80
+      },
+      {
+        "input": "What is the 'Schrödinger equation' in quantum mechanics?",
+        "response": "<memory_ask>Explanation of Schrödinger equation</memory_ask><memory_ask>Role of Schrödinger equation in quantum mechanics</memory_ask><memory_ask>Time-dependent Schrödinger equation</memory_ask><memory_ask>Time-independent Schrödinger equation</memory_ask>",
+        "id": 81
+      },
+      {
+        "input": "The 'DeepMind AlphaFold' program. What problem does it solve?",
+        "response": "<memory_ask>Information about DeepMind AlphaFold program</memory_ask><memory_ask>Problem solved by AlphaFold (protein folding prediction)</memory_ask><memory_ask>Significance of AlphaFold's achievement</memory_ask>",
+        "id": 82
+      },
+      {
+        "input": "I'm trying to setup my 'SmartHome Hub X1000' from 'Connectify Inc.'. It won't connect to my 'NetSphere Router'.",
+        "response": "<memory_ask>Information about SmartHome Hub X1000</memory_ask><memory_ask>Manufacturer of SmartHome Hub X1000: Connectify Inc.</memory_ask><memory_ask>Problem: SmartHome Hub X1000 not connecting to NetSphere Router</memory_ask><memory_ask>Information about NetSphere Router</memory_ask><memory_ask>Troubleshooting steps for smart hub Wi-Fi connection issues</memory_ask>",
+        "id": 83
+      },
+      {
+        "input": "What is 'Cognitive Behavioral Therapy' (CBT)?",
+        "response": "<memory_ask>Definition of Cognitive Behavioral Therapy (CBT)</memory_ask><memory_ask>Principles of CBT</memory_ask><memory_ask>Conditions CBT is used to treat</memory_ask>",
+        "id": 84
+      },
+      {
+        "input": "The 'James Clerk Maxwell Telescope'. Where is it located?",
+        "response": "<memory_ask>Information about James Clerk Maxwell Telescope (JCMT)</memory_ask><memory_ask>Location of James Clerk Maxwell Telescope (Mauna Kea, Hawaii)</memory_ask>",
+        "id": 85
+      },
+      {
+        "input": "My report for 'Project Titan' is due to my manager, Ms. Jane Miller, by EOD Friday. I need to include sales data from Q2.",
+        "response": "<memory_ask>Information about Project Titan report</memory_ask><memory_ask>Recipient of report: Ms. Jane Miller (manager)</memory_ask><memory_ask>Who is Ms. Jane Miller</memory_ask><memory_ask>Deadline for Project Titan report: EOD Friday</memory_ask><memory_ask>Required content: Q2 sales data</memory_ask><memory_ask>Information about Q2 sales data</memory_ask>",
+        "id": 86
+      },
+      {
+        "input": "The 'Large Hadron Collider' (LHC) at CERN. What particles does it collide?",
+        "response": "<memory_ask>Information about Large Hadron Collider (LHC)</memory_ask><memory_ask>Location of LHC: CERN</memory_ask><memory_ask>Particles collided in LHC (e.g., protons, heavy ions)</memory_ask>",
+        "id": 87
+      },
+      {
+        "input": "I want to make a simple website. What are some tools for beginners? My friend uses 'WebFlow'.",
+        "response": "<memory_ask>Information about making a simple website</memory_ask><memory_ask>Tools for website beginners</memory_ask><memory_ask>Information about WebFlow website builder</memory_ask><memory_ask>User's friend's use of WebFlow</memory_ask>",
+        "id": 88
+      },
+      {
+        "input": "What is the 'Turing Test'?",
+        "response": "<memory_ask>Definition of Turing Test</memory_ask><memory_ask>Purpose of Turing Test (assessing machine intelligence)</memory_ask><memory_ask>Creator of Turing Test (Alan Turing)</memory_ask>",
+        "id": 89
+      },
+      {
+        "input": "The coffee shop 'Daily Grind' has a loyalty program. How do I sign up? My barista, Tom, mentioned it.",
+        "response": "<memory_ask>Information about Daily Grind coffee shop</memory_ask><memory_ask>Daily Grind loyalty program</memory_ask><memory_ask>How to sign up for Daily Grind loyalty program</memory_ask><memory_ask>Who is Tom, the barista</memory_ask><memory_ask>Tom's mention of loyalty program</memory_ask>",
+        "id": 90
+      },
+      {
+        "input": "What is 'OpenAI's DALL-E 2'?",
+        "response": "<memory_ask>Information about OpenAI's DALL-E 2</memory_ask><memory_ask>Function of DALL-E 2 (AI image generation from text)</memory_ask>",
+        "id": 91
+      },
+      {
+        "input": "The 'Human Genome Project'. When was it completed?",
+        "response": "<memory_ask>Information about Human Genome Project</memory_ask><memory_ask>Completion date of Human Genome Project</memory_ask>",
+        "id": 92
+      },
+      {
+        "input": "My new headphones 'SoundWave Pro' from 'AudioMax Corp' are not pairing with my 'Pixel Phone 8'.",
+        "response": "<memory_ask>Information about SoundWave Pro headphones</memory_ask><memory_ask>Manufacturer of SoundWave Pro: AudioMax Corp</memory_ask><memory_ask>Problem: SoundWave Pro not pairing with Pixel Phone 8</memory_ask><memory_ask>Information about Pixel Phone 8</memory_ask><memory_ask>Troubleshooting steps for Bluetooth pairing issues</memory_ask>",
+        "id": 93
+      },
+      {
+        "input": "Tell me about 'General Relativity'.",
+        "response": "<memory_ask>Explanation of General Relativity theory</memory_ask><memory_ask>Developer of General Relativity (Albert Einstein)</memory_ask>",
+        "id": 94
+      },
+      {
+        "input": "The 'SpaceX Starship'. What is its purpose?",
+        "response": "<memory_ask>Information about SpaceX Starship</memory_ask><memory_ask>Purpose of SpaceX Starship (e.g., Mars colonization, lunar missions, Earth orbit)</memory_ask>",
+        "id": 95
+      },
+      {
+        "input": "I need to buy a gift for my sister, Sarah. Her birthday is next month. She likes books and tea.",
+        "response": "<memory_ask>Information about buying a gift</memory_ask><memory_ask>Recipient: sister Sarah</memory_ask><memory_ask>Who is Sarah</memory_ask><memory_ask>Occasion: Sarah's birthday (next month)</memory_ask><memory_ask>Sarah's interests: books, tea</memory_ask><memory_ask>Gift ideas for someone who likes books and tea</memory_ask>",
+        "id": 96
+      },
+      {
+        "input": "What are 'NFTs'?",
+        "response": "<memory_ask>Definition of NFTs (Non-Fungible Tokens)</memory_ask><memory_ask>How NFTs work (blockchain technology)</memory_ask>",
+        "id": 97
+      },
+      {
+        "input": "The 'Kyoto Protocol'. What was its main goal?",
+        "response": "<memory_ask>Information about Kyoto Protocol</memory_ask><memory_ask>Main goal of Kyoto Protocol (reducing greenhouse gas emissions)</memory_ask>",
+        "id": 98
+      },
+      {
+        "input": "My 'FitBand 7' is not tracking my sleep accurately. It's made by 'HealthTech Wearables'.",
+        "response": "<memory_ask>Information about FitBand 7</memory_ask><memory_ask>Manufacturer of FitBand 7: HealthTech Wearables</memory_ask><memory_ask>Problem: FitBand 7 not tracking sleep accurately</memory_ask><memory_ask>Troubleshooting steps for wearable sleep tracking issues</memory_ask>",
+        "id": 99
+      },
+      {
+        "input": "Tell me about 'Nuclear Fusion'.",
+        "response": "<memory_ask>Explanation of nuclear fusion process</memory_ask><memory_ask>Potential of nuclear fusion as an energy source</memory_ask>",
+        "id": 100
+      },
+      {
+        "input": "The game 'Cyberpunk 2077'. What were the issues at launch?",
+        "response": "<memory_ask>Information about game Cyberpunk 2077</memory_ask><memory_ask>Issues with Cyberpunk 2077 at launch (bugs, performance)</memory_ask>",
+        "id": 101
+      },
+      {
+        "input": "I'm writing a story set in ancient Rome. What was daily life like for a common citizen?",
+        "response": "<memory_ask>Information about user's story writing</memory_ask><memory_ask>Setting: ancient Rome</memory_ask><memory_ask>Daily life for a common citizen in ancient Rome</memory_ask>",
+        "id": 102
+      },
+      {
+        "input": "What is 'Bitcoin'?",
+        "response": "<memory_ask>Definition of Bitcoin</memory_ask><memory_ask>Bitcoin as a cryptocurrency</memory_ask><memory_ask>Technology behind Bitcoin (blockchain)</memory_ask>",
+        "id": 103
+      },
+      {
+        "input": "The 'Suez Canal'. Why is it important for global trade?",
+        "response": "<memory_ask>Information about Suez Canal</memory_ask><memory_ask>Importance of Suez Canal for global trade</memory_ask>",
+        "id": 104
+      },
+      {
+        "input": "My presentation on 'Climate Solutions' for 'EcoCon 2024' is on Monday. My co-presenter is Dr. Lee.",
+        "response": "<memory_ask>Information about user's presentation</memory_ask><memory_ask>Topic of presentation: Climate Solutions</memory_ask><memory_ask>Conference: EcoCon 2024</memory_ask><memory_ask>Information about EcoCon 2024</memory_ask><memory_ask>Date of presentation: Monday</memory_ask><memory_ask>User's co-presenter: Dr. Lee</memory_ask><memory_ask>Who is Dr. Lee</memory_ask>",
+        "id": 105
+      },
+      {
+        "input": "What is the 'Great Red Spot' on Jupiter?",
+        "response": "<memory_ask>Information about Great Red Spot on Jupiter</memory_ask><memory_ask>Nature of Great Red Spot (anticyclonic storm)</memory_ask>",
+        "id": 106
+      },
+      {
+        "input": "I'm trying to connect my 'Smart Bulb X' by 'LightUp Corp' to 'Google Home'. It's not working.",
+        "response": "<memory_ask>Information about Smart Bulb X</memory_ask><memory_ask>Manufacturer of Smart Bulb X: LightUp Corp</memory_ask><memory_ask>Problem: Smart Bulb X not connecting to Google Home</memory_ask><memory_ask>Information about Google Home</memory_ask><memory_ask>Troubleshooting steps for connecting smart devices to Google Home</memory_ask>",
+        "id": 107
+      },
+      {
+        "input": "Tell me about 'Existentialism'.",
+        "response": "<memory_ask>Explanation of Existentialism philosophy</memory_ask><memory_ask>Key themes in Existentialism (e.g., freedom, responsibility, angst)</memory_ask><memory_ask>Major Existentialist philosophers (e.g., Sartre, Camus, Kierkegaard)</memory_ask>",
+        "id": 108
+      },
+      {
+        "input": "The 'Hadron Collider'. What is its purpose?",
+        "response": "<memory_ask>Information about hadron colliders (general)</memory_ask><memory_ask>Purpose of hadron colliders (particle physics research)</memory_ask><memory_ask>Example: Large Hadron Collider (LHC)</memory_ask>",
+        "id": 109
+      },
+      {
+        "input": "My online order 'ORD12345' from 'Shopzilla.com' hasn't arrived. It was supposed to be here yesterday. The delivery company is 'FastShip Couriers'.",
+        "response": "<memory_ask>Information about online order ORD12345</memory_ask><memory_ask>Retailer: Shopzilla.com</memory_ask><memory_ask>Information about Shopzilla.com</memory_ask><memory_ask>Problem: Order ORD12345 not arrived</memory_ask><memory_ask>Expected delivery date: yesterday</memory_ask><memory_ask>Delivery company: FastShip Couriers</memory_ask><memory_ask>Information about FastShip Couriers</memory_ask><memory_ask>How to track order ORD12345</memory_ask>",
+        "id": 110
+      },
+      {
+        "input": "What is 'String Theory' in physics?",
+        "response": "<memory_ask>Explanation of String Theory</memory_ask><memory_ask>Goal of String Theory (unifying general relativity and quantum mechanics)</memory_ask>",
+        "id": 111
+      },
+      {
+        "input": "The 'Chernobyl disaster'. When and where did it happen?",
+        "response": "<memory_ask>Information about Chernobyl disaster</memory_ask><memory_ask>Date of Chernobyl disaster</memory_ask><memory_ask>Location of Chernobyl disaster</memory_ask>",
+        "id": 112
+      },
+      {
+        "input": "I need to replace the battery in my 'Timex EasyReader' watch.",
+        "response": "<memory_ask>Information about replacing watch battery</memory_ask><memory_ask>Watch model: Timex EasyReader</memory_ask><memory_ask>Information about Timex EasyReader watch</memory_ask><memory_ask>Type of battery for Timex EasyReader</memory_ask><memory_ask>How to replace Timex EasyReader battery</memory_ask>",
+        "id": 113
+      },
+      {
+        "input": "What is 'Photosynthesis' in biology?",
+        "response": "<memory_ask>Definition of Photosynthesis in biology</memory_ask><memory_ask>Process of Photosynthesis</memory_ask>",
+        "id": 114
+      },
+      {
+        "input": "The 'Colosseum' in Rome. What was it used for?",
+        "response": "<memory_ask>Information about Colosseum in Rome</memory_ask><memory_ask>Uses of Colosseum in ancient Rome (e.g., gladiatorial contests, public spectacles)</memory_ask>",
+        "id": 115
+      },
+      {
+        "input": "My WiFi password for 'MyHomeNetwork' is not working. My router is a 'LinkSys Velop'. I think my neighbor John might know it.",
+        "response": "<memory_ask>Problem: WiFi password for MyHomeNetwork not working</memory_ask><memory_ask>Router model: LinkSys Velop</memory_ask><memory_ask>Information about LinkSys Velop router</memory_ask><memory_ask>Troubleshooting WiFi password issues</memory_ask><memory_ask>How to reset LinkSys Velop password</memory_ask><memory_ask>User's neighbor: John</memory_ask><memory_ask>Possibility of John knowing WiFi password</memory_ask>",
+        "id": 116
+      },
+      {
+        "input": "What is 'Machine Learning'?",
+        "response": "<memory_ask>Definition of Machine Learning</memory_ask><memory_ask>Types of Machine Learning (supervised, unsupervised, reinforcement)</memory_ask>",
+        "id": 117
+      },
+      {
+        "input": "The 'Berlin Wall'. When did it fall?",
+        "response": "<memory_ask>Information about Berlin Wall</memory_ask><memory_ask>Date of the fall of the Berlin Wall</memory_ask>",
+        "id": 118
+      },
+      {
+        "input": "My 'Smart Thermostat Z1' by 'WarmHome Tech' is showing an error code 'E05'.",
+        "response": "<memory_ask>Information about Smart Thermostat Z1</memory_ask><memory_ask>Manufacturer: WarmHome Tech</memory_ask><memory_ask>Problem: Error code E05 on Smart Thermostat Z1</memory_ask><memory_ask>Meaning of error code E05 for Smart Thermostat Z1</memory_ask><memory_ask>Troubleshooting steps for error code E05</memory_ask>",
+        "id": 119
+      },
+      {
+        "input": "What is 'Dark Energy' in cosmology?",
+        "response": "<memory_ask>Definition of Dark Energy</memory_ask><memory_ask>Role of Dark Energy in universe expansion</memory_ask>",
+        "id": 120
+      },
+      {
+        "input": "The 'Apollo 11' mission. Who were the astronauts?",
+        "response": "<memory_ask>Information about Apollo 11 mission</memory_ask><memory_ask>Astronauts on Apollo 11 (Neil Armstrong, Buzz Aldrin, Michael Collins)</memory_ask>",
+        "id": 121
+      },
+      {
+        "input": "I'm preparing for an exam on 'World War II'. What are the key dates I should know? My professor is Dr. Historia.",
+        "response": "<memory_ask>Information about preparing for World War II exam</memory_ask><memory_ask>Key dates of World War II</memory_ask><memory_ask>User's professor: Dr. Historia</memory_ask><memory_ask>Who is Dr. Historia</memory_ask>",
+        "id": 122
+      },
+      {
+        "input": "What is 'Blockchain' technology?",
+        "response": "<memory_ask>Explanation of Blockchain technology</memory_ask><memory_ask>Key features of Blockchain (decentralization, immutability, transparency)</memory_ask>",
+        "id": 123
+      },
+      {
+        "input": "The 'Nobel Prize'. Who founded it?",
+        "response": "<memory_ask>Information about Nobel Prize</memory_ask><memory_ask>Founder of Nobel Prize (Alfred Nobel)</memory_ask>",
+        "id": 124
+      },
+      {
+        "input": "My 'RoboVac 5000' from 'CleanBotics' is stuck under the sofa. Its name is Dusty.",
+        "response": "<memory_ask>Information about RoboVac 5000</memory_ask><memory_ask>Manufacturer: CleanBotics</memory_ask><memory_ask>Problem: RoboVac 5000 (Dusty) stuck under sofa</memory_ask><memory_ask>How to retrieve stuck robotic vacuum</memory_ask><memory_ask>Tips to prevent robotic vacuum from getting stuck</memory_ask>",
+        "id": 125
+      },
+      {
+        "input": "What is 'Quantum Computing'?",
+        "response": "<memory_ask>Explanation of Quantum Computing</memory_ask><memory_ask>Difference between quantum bits (qubits) and classical bits</memory_ask>",
+        "id": 126
+      },
+      {
+        "input": "The 'Statue of Liberty'. Where did it come from?",
+        "response": "<memory_ask>Information about Statue of Liberty</memory_ask><memory_ask>Origin of Statue of Liberty (gift from France)</memory_ask>",
+        "id": 127
+      },
+      {
+        "input": "I need to book a flight from New York to Los Angeles for next month, around the 15th. My preferred airline is 'United'.",
+        "response": "<memory_ask>Information about booking a flight</memory_ask><memory_ask>Origin: New York</memory_ask><memory_ask>Destination: Los Angeles</memory_ask><memory_ask>Travel date: next month, around 15th</memory_ask><memory_ask>Preferred airline: United</memory_ask><memory_ask>How to search for United flights from New York to Los Angeles for specific dates</memory_ask>",
+        "id": 128
+      },
+      {
+        "input": "What is 'The Matrix' movie about?",
+        "response": "<memory_ask>Plot summary of The Matrix movie</memory_ask><memory_ask>Key themes in The Matrix movie (reality, free will, AI)</memory_ask>",
+        "id": 129
+      },
+      {
+        "input": "The 'Paris Agreement' on climate change. What is its main objective?",
+        "response": "<memory_ask>Information about Paris Agreement (climate change)</memory_ask><memory_ask>Main objective of Paris Agreement (limiting global warming)</memory_ask>",
+        "id": 130
+      },
+      {
+        "input": "My printer, an 'HP DeskJet 2700', is out of black ink. The cartridge model is 'HP 67'.",
+        "response": "<memory_ask>Information about HP DeskJet 2700 printer</memory_ask><memory_ask>Problem: out of black ink</memory_ask><memory_ask>Ink cartridge model: HP 67 black</memory_ask><memory_ask>Where to buy HP 67 black ink cartridge</memory_ask><memory_ask>How to replace ink cartridge in HP DeskJet 2700</memory_ask>",
+        "id": 131
+      },
+      {
+        "input": "Tell me about 'Photosynthesis'.",
+        "response": "<memory_ask>Explanation of Photosynthesis process</memory_ask><memory_ask>Chemical equation for Photosynthesis</memory_ask>",
+        "id": 132
+      },
+      {
+        "input": "The 'Van Gogh Museum' in Amsterdam. What are its most famous paintings?",
+        "response": "<memory_ask>Information about Van Gogh Museum, Amsterdam</memory_ask><memory_ask>Most famous paintings by Vincent van Gogh in Van Gogh Museum</memory_ask>",
+        "id": 133
+      },
+      {
+        "input": "I need to backup my photos from my 'Samsung Galaxy S23' to my 'MacBook Pro'. How can I do this? My cloud storage on 'Google Photos' is full.",
+        "response": "<memory_ask>How to backup photos from Samsung Galaxy S23 to MacBook Pro</memory_ask><memory_ask>User's phone: Samsung Galaxy S23</memory_ask><memory_ask>User's computer: MacBook Pro</memory_ask><memory_ask>Cloud storage status: Google Photos full</memory_ask><memory_ask>Alternative methods for photo backup (e.g., USB cable, Samsung Smart Switch)</memory_ask>",
+        "id": 134
+      },
+      {
+        "input": "What is 'Stoicism'?",
+        "response": "<memory_ask>Definition of Stoicism philosophy</memory_ask><memory_ask>Key tenets of Stoicism (virtue, reason, apathy)</memory_ask><memory_ask>Famous Stoic philosophers (e.g., Seneca, Epictetus, Marcus Aurelius)</memory_ask>",
+        "id": 135
+      },
+      {
+        "input": "The 'Periodic Table of Elements'. Who created it?",
+        "response": "<memory_ask>Information about Periodic Table of Elements</memory_ask><memory_ask>Creator of the modern Periodic Table (Dmitri Mendeleev)</memory_ask>",
+        "id": 136
+      },
+      {
+        "input": "My 'Smart Lock X5' from 'SecureHome Systems' is not responding to the app 'LockControl'. The battery was changed yesterday by my spouse, Alex.",
+        "response": "<memory_ask>Information about Smart Lock X5</memory_ask><memory_ask>Manufacturer: SecureHome Systems</memory_ask><memory_ask>Problem: Smart Lock X5 not responding to LockControl app</memory_ask><memory_ask>Information about LockControl app</memory_ask><memory_ask>Battery changed yesterday by spouse Alex</memory_ask><memory_ask>Who is Alex</memory_ask><memory_ask>Troubleshooting steps for smart lock app connectivity issues</memory_ask>",
+        "id": 137
+      },
+      {
+        "input": "What is 'Deep Learning'?",
+        "response": "<memory_ask>Definition of Deep Learning</memory_ask><memory_ask>Relationship of Deep Learning to Machine Learning and AI</memory_ask><memory_ask>Key characteristic of Deep Learning (neural networks with multiple layers)</memory_ask>",
+        "id": 138
+      },
+      {
+        "input": "The 'Mount Everest'. How high is it?",
+        "response": "<memory_ask>Information about Mount Everest</memory_ask><memory_ask>Height of Mount Everest</memory_ask>",
+        "id": 139
+      },
+      {
+        "input": "I'm planning a hiking trip to 'Yosemite National Park' in July. What gear should I bring? My friend, an experienced hiker named David, suggested good boots.",
+        "response": "<memory_ask>Information about planning a hiking trip to Yosemite National Park</memory_ask><memory_ask>Time of trip: July</memory_ask><memory_ask>Recommended hiking gear for Yosemite in July</memory_ask><memory_ask>User's friend: David (experienced hiker)</memory_ask><memory_ask>David's suggestion: good boots</memory_ask><memory_ask>Importance of good hiking boots</memory_ask>",
+        "id": 140
+      },
+      {
+        "input": "What is 'Natural Selection'?",
+        "response": "<memory_ask>Definition of Natural Selection</memory_ask><memory_ask>Role of Natural Selection in evolution (Charles Darwin)</memory_ask>",
+        "id": 141
+      },
+      {
+        "input": "The 'Mars Rover Perseverance'. When did it land on Mars?",
+        "response": "<memory_ask>Information about Mars Rover Perseverance</memory_ask><memory_ask>Landing date of Perseverance on Mars</memory_ask>",
+        "id": 142
+      },
+      {
+        "input": "My 'Smart Coffee Maker CM200' by 'BrewGenius' is leaking water from the base. I bought it from 'KitchenEmporium'.",
+        "response": "<memory_ask>Information about Smart Coffee Maker CM200</memory_ask><memory_ask>Manufacturer: BrewGenius</memory_ask><memory_ask>Problem: CM200 leaking water from base</memory_ask><memory_ask>Place of purchase: KitchenEmporium</memory_ask><memory_ask>Information about KitchenEmporium</memory_ask><memory_ask>Troubleshooting steps for leaking coffee maker</memory_ask>",
+        "id": 143
+      },
+      {
+        "input": "Tell me about 'The Renaissance'.",
+        "response": "<memory_ask>Information about The Renaissance period</memory_ask><memory_ask>Key characteristics of The Renaissance (art, science, culture)</memory_ask><memory_ask>Time period and location of The Renaissance</memory_ask>",
+        "id": 144
+      },
+      {
+        "input": "The 'Theory of Relativity'. Who developed it?",
+        "response": "<memory_ask>Information about Theory of Relativity (Special and General)</memory_ask><memory_ask>Developer of Theory of Relativity (Albert Einstein)</memory_ask>",
+        "id": 145
+      },
+      {
+        "input": "I need to find a good Italian restaurant in downtown Seattle for a business dinner with Mr. Smith from 'Acme Widgets'. Budget is flexible.",
+        "response": "<memory_ask>Recommendations for Italian restaurants in downtown Seattle</memory_ask><memory_ask>Occasion: business dinner</memory_ask><memory_ask>Guest: Mr. Smith from Acme Widgets</memory_ask><memory_ask>Who is Mr. Smith</memory_ask><memory_ask>Information about Acme Widgets</memory_ask><memory_ask>Budget: flexible</memory_ask><memory_ask>Criteria for good business dinner restaurant</memory_ask>",
+        "id": 146
+      },
+      {
+        "input": "What is 'Quantum Entanglement'?",
+        "response": "<memory_ask>Explanation of Quantum Entanglement</memory_ask><memory_ask>Key properties of entangled particles</memory_ask>",
+        "id": 147
+      },
+      {
+        "input": "The 'Human Brain'. How many neurons does it have?",
+        "response": "<memory_ask>Information about the human brain</memory_ask><memory_ask>Approximate number of neurons in the human brain</memory_ask>",
+        "id": 148
+      },
+      {
+        "input": "My 'AutoLawn Mower Bot R5' by 'YardCare Tech' keeps going into my neighbor Mrs. Gable's flower bed.",
+        "response": "<memory_ask>Information about AutoLawn Mower Bot R5</memory_ask><memory_ask>Manufacturer: YardCare Tech</memory_ask><memory_ask>Problem: Mower Bot R5 going into neighbor's flower bed</memory_ask><memory_ask>Neighbor: Mrs. Gable</memory_ask><memory_ask>Information about Mrs. Gable's flower bed</memory_ask><memory_ask>Troubleshooting robotic lawn mower boundary issues</memory_ask><memory_ask>How to set up boundary wires for robotic mowers</memory_ask>",
+        "id": 149
+      },
+      {
+        "input": "Tell me about 'The Beatles'.",
+        "response": "<memory_ask>Information about the band The Beatles</memory_ask><memory_ask>Members of The Beatles</memory_ask><memory_ask>Impact of The Beatles on music and culture</memory_ask>",
+        "id": 150
+      },
+      {
+        "input": "What is the 'Big Bang Theory'?",
+        "response": "<memory_ask>Explanation of Big Bang Theory (cosmology)</memory_ask><memory_ask>Evidence supporting Big Bang Theory</memory_ask>",
+        "id": 151
+      },
+      {
+        "input": "I need to write a thank-you note to my aunt Sarah for the birthday gift. The gift was a book called 'Space Adventures'.",
+        "response": "<memory_ask>Information about writing a thank-you note</memory_ask><memory_ask>Recipient: aunt Sarah</memory_ask><memory_ask>Who is aunt Sarah</memory_ask><memory_ask>Occasion: birthday gift</memory_ask><memory_ask>Gift received: book Space Adventures</memory_ask><memory_ask>Information about book Space Adventures</memory_ask><memory_ask>Key elements of a good thank-you note</memory_ask>",
+        "id": 152
+      },
+      {
+        "input": "What is 'Fusion Power'?",
+        "response": "<memory_ask>Explanation of Fusion Power</memory_ask><memory_ask>Process of nuclear fusion for energy generation</memory_ask><memory_ask>Current research status of fusion power (e.g., ITER project)</memory_ask>",
+        "id": 153
+      },
+      {
+        "input": "The 'Chandra X-ray Observatory'. What does it observe?",
+        "response": "<memory_ask>Information about Chandra X-ray Observatory</memory_ask><memory_ask>Types of celestial objects observed by Chandra X-ray Observatory (e.g., black holes, supernovae, galaxy clusters)</memory_ask>",
+        "id": 154
+      },
+      {
+        "input": "My 'Smart Sprinkler System AquaFlow 2' by 'GreenThumb Automation' is watering on rainy days. The weather data is from 'AccuWeather'.",
+        "response": "<memory_ask>Information about Smart Sprinkler System AquaFlow 2</memory_ask><memory_ask>Manufacturer: GreenThumb Automation</memory_ask><memory_ask>Problem: AquaFlow 2 watering on rainy days</memory_ask><memory_ask>Weather data source: AccuWeather</memory_ask><memory_ask>Information about AccuWeather integration</memory_ask><memory_ask>Troubleshooting smart sprinkler rain sensor issues</memory_ask><memory_ask>How to adjust AquaFlow 2 rain delay settings</memory_ask>",
+        "id": 155
+      },
+      {
+        "input": "What is 'Geothermal Energy'?",
+        "response": "<memory_ask>Explanation of Geothermal Energy</memory_ask><memory_ask>How geothermal energy is harnessed</memory_ask>",
+        "id": 156
+      },
+      {
+        "input": "The 'Voynich Manuscript'. Has it been deciphered?",
+        "response": "<memory_ask>Information about Voynich Manuscript</memory_ask><memory_ask>Current status of Voynich Manuscript decipherment (largely undeciphered)</memory_ask><memory_ask>Theories about Voynich Manuscript's origin and content</memory_ask>",
+        "id": 157
+      },
+      {
+        "input": "I need to choose a new health insurance plan. My employer is 'Global Corp'. Open enrollment ends next week. My current plan is 'BlueShield PPO'.",
+        "response": "<memory_ask>Information about choosing a new health insurance plan</memory_ask><memory_ask>User's employer: Global Corp</memory_ask><memory_ask>Information about Global Corp health insurance options</memory_ask><memory_ask>Deadline: open enrollment ends next week</memory_ask><memory_ask>User's current plan: BlueShield PPO</memory_ask><memory_ask>Information about BlueShield PPO plan</memory_ask><memory_ask>Factors to consider when choosing health insurance</memory_ask>",
+        "id": 158
+      },
+      {
+        "input": "What is 'CRISPR-Cas9'?",
+        "response": "<memory_ask>Explanation of CRISPR-Cas9 gene editing system</memory_ask><memory_ask>Components of CRISPR-Cas9 (CRISPR RNA, Cas9 protein)</memory_ask><memory_ask>Applications of CRISPR-Cas9</memory_ask>",
+        "id": 159
+      },
+      {
+        "input": "The 'Hubble Deep Field' image. What is its significance?",
+        "response": "<memory_ask>Information about Hubble Deep Field image</memory_ask><memory_ask>Significance of Hubble Deep Field image (revealing distant galaxies)</memory_ask>",
+        "id": 160
+      },
+      {
+        "input": "My 'Smart Scale Model S' from 'WellFit Tech' is not syncing with the 'FitPal' app. My phone is an 'Android Galaxy Ultra'.",
+        "response": "<memory_ask>Information about Smart Scale Model S</memory_ask><memory_ask>Manufacturer: WellFit Tech</memory_ask><memory_ask>Problem: Smart Scale Model S not syncing with FitPal app</memory_ask><memory_ask>Information about FitPal app</memory_ask><memory_ask>User's phone: Android Galaxy Ultra</memory_ask><memory_ask>Troubleshooting steps for smart scale app syncing issues</memory_ask><memory_ask>Checking Bluetooth and Wi-Fi connectivity for smart scale</memory_ask>",
+        "id": 161
+      },
+      {
+        "input": "What is 'Solar Power'?",
+        "response": "<memory_ask>Explanation of Solar Power</memory_ask><memory_ask>How solar panels (photovoltaics) convert sunlight to electricity</memory_ask>",
+        "id": 162
+      },
+      {
+        "input": "The 'Roswell UFO incident'. What happened?",
+        "response": "<memory_ask>Information about Roswell UFO incident (1947)</memory_ask><memory_ask>Official explanation for Roswell incident (weather balloon)</memory_ask><memory_ask>UFO theories surrounding Roswell incident</memory_ask>",
+        "id": 163
+      },
+      {
+        "input": "I'm setting up a new 'DevEnvironment' for 'Project Omega' using 'Docker' and 'VS Code'. My team lead, Sarah, gave me the specs. The deadline is tomorrow.",
+        "response": "<memory_ask>Information about setting up DevEnvironment for Project Omega</memory_ask><memory_ask>Information about Project Omega</memory_ask><memory_ask>Tools used: Docker, VS Code</memory_ask><memory_ask>Information about Docker</memory_ask><memory_ask>Information about VS Code</memory_ask><memory_ask>Team lead: Sarah</memory_ask><memory_ask>Who is Sarah</memory_ask><memory_ask>Specs provided by Sarah</memory_ask><memory_ask>Deadline for setup: tomorrow</memory_ask>",
+        "id": 164
+      },
+      {
+        "input": "What is 'Hydroelectric Power'?",
+        "response": "<memory_ask>Explanation of Hydroelectric Power</memory_ask><memory_ask>How hydroelectric dams generate electricity</memory_ask>",
+        "id": 165
+      },
+      {
+        "input": "The 'Library of Alexandria'. What happened to it?",
+        "response": "<memory_ask>Information about Library of Alexandria</memory_ask><memory_ask>Destruction of the Library of Alexandria (theories and historical accounts)</memory_ask>",
+        "id": 166
+      },
+      {
+        "input": "My 'Smart Pet Feeder PF-300' by 'PetPal Gadgets' dispensed too much food for my cat, Whiskers. I set it via the 'PetNet' app.",
+        "response": "<memory_ask>Information about Smart Pet Feeder PF-300</memory_ask><memory_ask>Manufacturer: PetPal Gadgets</memory_ask><memory_ask>Problem: PF-300 dispensed too much food</memory_ask><memory_ask>User's cat: Whiskers</memory_ask><memory_ask>Configuration app: PetNet</memory_ask><memory_ask>Information about PetNet app</memory_ask><memory_ask>Troubleshooting smart pet feeder portion control</memory_ask><memory_ask>How to adjust feeding schedule/portions on PetNet app</memory_ask>",
+        "id": 167
+      },
+      {
+        "input": "What is 'Wind Power'?",
+        "response": "<memory_ask>Explanation of Wind Power</memory_ask><memory_ask>How wind turbines generate electricity</memory_ask>",
+        "id": 168
+      },
+      {
+        "input": "The 'Stonehenge' monument. Who built it and why?",
+        "response": "<memory_ask>Information about Stonehenge monument</memory_ask><memory_ask>Theories about builders of Stonehenge</memory_ask><memory_ask>Theories about purpose of Stonehenge</memory_ask>",
+        "id": 169
+      },
+      {
+        "input": "I need to schedule a meeting with the 'Marketing Team' to discuss the 'Q4 Campaign'. Participants are John, Alice, and Bob from 'Sales Dept'. My assistant is Mark.",
+        "response": "<memory_ask>Information about scheduling a meeting</memory_ask><memory_ask>Meeting with: Marketing Team</memory_ask><memory_ask>Topic: Q4 Campaign</memory_ask><memory_ask>Information about Q4 Campaign</memory_ask><memory_ask>Participants: John, Alice, Bob (Sales Dept)</memory_ask><memory_ask>Information about Sales Dept</memory_ask><memory_ask>Who is John</memory_ask><memory_ask>Who is Alice</memory_ask><memory_ask>Who is Bob</memory_ask><memory_ask>User's assistant: Mark</memory_ask><memory_ask>Who is Mark, user's assistant</memory_ask>",
+        "id": 170
+      },
+      {
+        "input": "What is 'Tidal Power'?",
+        "response": "<memory_ask>Explanation of Tidal Power</memory_ask><memory_ask>How tidal barrages or turbines generate electricity from tides</memory_ask>",
+        "id": 171
+      },
+      {
+        "input": "The 'Nazca Lines' in Peru. What are they?",
+        "response": "<memory_ask>Information about Nazca Lines in Peru</memory_ask><memory_ask>Description of Nazca Lines (geoglyphs)</memory_ask><memory_ask>Theories about purpose of Nazca Lines</memory_ask>",
+        "id": 172
+      },
+      {
+        "input": "My 'Smart Garden System SG-1' by 'FloraTech' is reporting low moisture for the tomato plants, but the soil feels damp. Sensor model is 'HydroSense Mini'.",
+        "response": "<memory_ask>Information about Smart Garden System SG-1</memory_ask><memory_ask>Manufacturer: FloraTech</memory_ask><memory_ask>Problem: SG-1 reporting low moisture for tomato plants, soil feels damp</memory_ask><memory_ask>Sensor model: HydroSense Mini</memory_ask><memory_ask>Information about HydroSense Mini sensor</memory_ask><memory_ask>Troubleshooting soil moisture sensor inaccuracies</memory_ask><memory_ask>How to calibrate HydroSense Mini sensor</memory_ask>",
+        "id": 173
+      },
+      {
+        "input": "What is 'Biomass Energy'?",
+        "response": "<memory_ask>Explanation of Biomass Energy</memory_ask><memory_ask>Sources of biomass (e.g., wood, agricultural waste, algae)</memory_ask><memory_ask>How biomass is converted to energy (e.g., combustion, gasification, biofuels)</memory_ask>",
+        "id": 174
+      },
+      {
+        "input": "The 'Terracotta Army' in China. Who was it made for?",
+        "response": "<memory_ask>Information about Terracotta Army in China</memory_ask><memory_ask>Purpose of Terracotta Army (tomb of Emperor Qin Shi Huang)</memory_ask>",
+        "id": 175
+      },
+      {
+        "input": "I'm creating a budget using 'Mint'. I need to track my expenses for 'Groceries' and 'Entertainment'. My bank is 'First National'.",
+        "response": "<memory_ask>Information about creating a budget with Mint</memory_ask><memory_ask>Information about Mint budgeting app</memory_ask><memory_ask>Tracking expenses for Groceries category</memory_ask><memory_ask>Tracking expenses for Entertainment category</memory_ask><memory_ask>User's bank: First National</memory_ask><memory_ask>Connecting First National bank to Mint</memory_ask>",
+        "id": 176
+      },
+      {
+        "input": "What is 'Nuclear Fission'?",
+        "response": "<memory_ask>Explanation of Nuclear Fission</memory_ask><memory_ask>Process of nuclear fission (splitting atomic nucleus)</memory_ask><memory_ask>Application of nuclear fission in nuclear power plants</memory_ask>",
+        "id": 177
+      },
+      {
+        "input": "The 'Machu Picchu' ruins. Which civilization built it?",
+        "response": "<memory_ask>Information about Machu Picchu ruins</memory_ask><memory_ask>Civilization that built Machu Picchu (Inca Empire)</memory_ask>",
+        "id": 178
+      },
+      {
+        "input": "My 'Smart Security Camera CamGuard Pro' from 'WatchfulEye Inc.' is not recording motion events. The sensitivity is set to high in the 'ViewSafe' app.",
+        "response": "<memory_ask>Information about Smart Security Camera CamGuard Pro</memory_ask><memory_ask>Manufacturer: WatchfulEye Inc.</memory_ask><memory_ask>Problem: CamGuard Pro not recording motion events</memory_ask><memory_ask>Sensitivity setting: high</memory_ask><memory_ask>App used: ViewSafe</memory_ask><memory_ask>Information about ViewSafe app</memory_ask><memory_ask>Troubleshooting security camera motion detection issues</memory_ask><memory_ask>Checking CamGuard Pro firmware and ViewSafe app updates</memory_ask>",
+        "id": 179
+      },
+      {
+        "input": "What is 'Dark Matter Halos'?",
+        "response": "<memory_ask>Definition of Dark Matter Halos</memory_ask><memory_ask>Role of Dark Matter Halos in galaxy formation and structure</memory_ask><memory_ask>Evidence for Dark Matter Halos</memory_ask>",
+        "id": 180
+      },
+      {
+        "input": "The 'Angkor Wat' temple complex. In which country is it located?",
+        "response": "<memory_ask>Information about Angkor Wat temple complex</memory_ask><memory_ask>Country where Angkor Wat is located (Cambodia)</memory_ask>",
+        "id": 181
+      },
+      {
+        "input": "I'm building a 'Lego Millennium Falcon' set #75192. I'm stuck on step 58. My son, Timmy, is helping.",
+        "response": "<memory_ask>Information about Lego Millennium Falcon set #75192</memory_ask><memory_ask>User stuck on step 58 of instructions</memory_ask><memory_ask>Assistance from son Timmy</memory_ask><memory_ask>Who is Timmy</memory_ask><memory_ask>How to find help for specific Lego instruction steps</memory_ask><memory_ask>Common difficult steps in Lego Millennium Falcon 75192</memory_ask>",
+        "id": 182
+      },
+      {
+        "input": "What is 'Quantum Supremacy' or 'Quantum Advantage'?",
+        "response": "<memory_ask>Definition of Quantum Supremacy (or Quantum Advantage)</memory_ask><memory_ask>Meaning of a quantum computer outperforming classical computers on a specific task</memory_ask><memory_ask>Examples of claimed Quantum Supremacy experiments (e.g., Google Sycamore)</memory_ask>",
+        "id": 183
+      },
+      {
+        "input": "The 'Petra' ancient city. What is it famous for?",
+        "response": "<memory_ask>Information about ancient city of Petra</memory_ask><memory_ask>Famous features of Petra (rock-cut architecture, Al-Khazneh 'The Treasury')</memory_ask>",
+        "id": 184
+      },
+      {
+        "input": "My 'Smart Air Purifier AP-500' by 'BreatheEasy Corp' is showing a 'Filter Change' warning, but I replaced the filter 'FiltroMax H13' last week. I bought the filter from 'PureAir Filters Online'.",
+        "response": "<memory_ask>Information about Smart Air Purifier AP-500</memory_ask><memory_ask>Manufacturer: BreatheEasy Corp</memory_ask><memory_ask>Problem: 'Filter Change' warning after recent filter replacement</memory_ask><memory_ask>Filter model: FiltroMax H13</memory_ask><memory_ask>Filter purchase location: PureAir Filters Online</memory_ask><memory_ask>Information about FiltroMax H13 filter</memory_ask><memory_ask>Information about PureAir Filters Online</memory_ask><memory_ask>How to reset filter indicator on Smart Air Purifier AP-500</memory_ask><memory_ask>Troubleshooting persistent filter change warnings</memory_ask>",
+        "id": 185
+      },
+      {
+        "input": "What is the 'Event Horizon' of a black hole?",
+        "response": "<memory_ask>Definition of Event Horizon of a black hole</memory_ask><memory_ask>Significance of Event Horizon (point of no return)</memory_ask><memory_ask>Relationship between Event Horizon and Schwarzschild radius</memory_ask>",
+        "id": 186
+      },
+      {
+        "input": "The 'Chichen Itza' Mayan ruins. What is the 'El Castillo' pyramid?",
+        "response": "<memory_ask>Information about Chichen Itza Mayan ruins</memory_ask><memory_ask>Information about El Castillo pyramid (Temple of Kukulcán) at Chichen Itza</memory_ask>",
+        "id": 187
+      },
+      {
+        "input": "I'm trying to learn 'Adobe Photoshop' for photo editing. What are some beginner tutorials? My goal is to improve my photos for 'Instagram'. My friend Jane is good at Photoshop.",
+        "response": "<memory_ask>Information about learning Adobe Photoshop</memory_ask><memory_ask>Beginner tutorials for Adobe Photoshop</memory_ask><memory_ask>User's goal: improve photos for Instagram</memory_ask><memory_ask>Using Photoshop for Instagram photo editing</memory_ask><memory_ask>User's friend: Jane</memory_ask><memory_ask>Jane's skill in Photoshop</memory_ask>",
+        "id": 188
+      },
+      {
+        "input": "What is 'Singularity' in the context of black holes and AI?",
+        "response": "<memory_ask>Definition of Singularity in black holes (gravitational singularity)</memory_ask><memory_ask>Definition of Singularity in AI (technological singularity)</memory_ask><memory_ask>Differences and similarities between gravitational and technological singularity</memory_ask>",
+        "id": 189
+      },
+      {
+        "input": "The 'Acropolis of Athens'. What is the Parthenon?",
+        "response": "<memory_ask>Information about Acropolis of Athens</memory_ask><memory_ask>Information about the Parthenon temple on the Acropolis</memory_ask>",
+        "id": 190
+      },
+      {
+        "input": "My 'Smart Doorbell Cam DVC-2' by 'SafeEntry Systems' is not sending notifications to my 'Android Pixel 7' when motion is detected. The app is 'SafeEntry Connect'. Wi-Fi is from 'Spectrum'.",
+        "response": "<memory_ask>Information about Smart Doorbell Cam DVC-2</memory_ask><memory_ask>Manufacturer: SafeEntry Systems</memory_ask><memory_ask>Problem: DVC-2 not sending motion notifications to Android Pixel 7</memory_ask><memory_ask>User's phone: Android Pixel 7</memory_ask><memory_ask>App used: SafeEntry Connect</memory_ask><memory_ask>Information about SafeEntry Connect app</memory_ask><memory_ask>Wi-Fi provider: Spectrum</memory_ask><memory_ask>Troubleshooting smart doorbell notification issues</memory_ask><memory_ask>Checking notification settings on Android Pixel 7 and SafeEntry Connect app</memory_ask>",
+        "id": 191
+      },
+      {
+        "input": "What are 'Gravitational Waves'?",
+        "response": "<memory_ask>Explanation of Gravitational Waves</memory_ask><memory_ask>Prediction of Gravitational Waves (Albert Einstein's General Relativity)</memory_ask><memory_ask>Detection of Gravitational Waves (e.g., LIGO, Virgo)</memory_ask>",
+        "id": 192
+      },
+      {
+        "input": "The 'Pompeii' archaeological site. What volcano destroyed it?",
+        "response": "<memory_ask>Information about Pompeii archaeological site</memory_ask><memory_ask>Volcano that destroyed Pompeii (Mount Vesuvius)</memory_ask><memory_ask>Date of Pompeii's destruction</memory_ask>",
+        "id": 193
+      },
+      {
+        "input": "I'm planning my wedding. The venue is 'Grand Hall'. The caterer is 'Fine Foods Catering'. My fiancé is Alex. Our wedding planner is Maria.",
+        "response": "<memory_ask>Information about wedding planning</memory_ask><memory_ask>Wedding venue: Grand Hall</memory_ask><memory_ask>Information about Grand Hall venue</memory_ask><memory_ask>Caterer: Fine Foods Catering</memory_ask><memory_ask>Information about Fine Foods Catering</memory_ask><memory_ask>User's fiancé: Alex</memory_ask><memory_ask>Who is Alex</memory_ask><memory_ask>Wedding planner: Maria</memory_ask><memory_ask>Who is Maria, wedding planner</memory_ask>",
+        "id": 194
+      },
+      {
+        "input": "What is 'Hawking Radiation'?",
+        "response": "<memory_ask>Explanation of Hawking Radiation</memory_ask><memory_ask>Theory of Hawking Radiation (Stephen Hawking)</memory_ask><memory_ask>Relationship of Hawking Radiation to black hole evaporation</memory_ask>",
+        "id": 195
+      },
+      {
+        "input": "The 'Easter Island' statues (Moai). Who made them?",
+        "response": "<memory_ask>Information about Easter Island statues (Moai)</memory_ask><memory_ask>Creators of Moai statues (Rapa Nui people)</memory_ask><memory_ask>Theories about purpose of Moai statues</memory_ask>",
+        "id": 196
+      },
+      {
+        "input": "My 'Smart Blinds Controller BC-1' by 'AutoShade Inc.' is not responding to voice commands via 'Amazon Alexa'. The skill 'AutoShade Control' is enabled.",
+        "response": "<memory_ask>Information about Smart Blinds Controller BC-1</memory_ask><memory_ask>Manufacturer: AutoShade Inc.</memory_ask><memory_ask>Problem: BC-1 not responding to voice commands via Amazon Alexa</memory_ask><memory_ask>Voice assistant: Amazon Alexa</memory_ask><memory_ask>Alexa skill: AutoShade Control (enabled)</memory_ask><memory_ask>Information about AutoShade Control skill</memory_ask><memory_ask>Troubleshooting smart device voice command issues with Alexa</memory_ask><memory_ask>Checking Alexa device discovery and skill linking</memory_ask>",
+        "id": 197
+      },
+      {
+        "input": "What is the 'Cosmic Microwave Background' (CMB)?",
+        "response": "<memory_ask>Explanation of Cosmic Microwave Background (CMB)</memory_ask><memory_ask>Significance of CMB as evidence for Big Bang Theory</memory_ask><memory_ask>Discovery of CMB (Penzias and Wilson)</memory_ask>",
+        "id": 198
+      },
+      {
+        "input": "The 'Taj Mahal'. Why was it built?",
+        "response": "<memory_ask>Information about Taj Mahal</memory_ask><memory_ask>Reason for building Taj Mahal (mausoleum for Mumtaz Mahal by Emperor Shah Jahan)</memory_ask>",
+        "id": 199
+      },
+      {
+        "input": "I'm updating my resume. My last job was 'Software Engineer' at 'Tech Solutions LLC' from 2020-2023. My manager was David Lee.",
+        "response": "<memory_ask>Information about updating a resume</memory_ask><memory_ask>User's last job: Software Engineer</memory_ask><memory_ask>Previous employer: Tech Solutions LLC</memory_ask><memory_ask>Information about Tech Solutions LLC</memory_ask><memory_ask>Employment period: 2020-2023</memory_ask><memory_ask>Previous manager: David Lee</memory_ask><memory_ask>Who is David Lee</memory_ask><memory_ask>How to list previous employment on resume</memory_ask>",
+        "id": 200
+      },
+      {
+        "input": "What is 'Redshift' in astronomy?",
+        "response": "<memory_ask>Definition of Redshift in astronomy</memory_ask><memory_ask>Causes of Redshift (Doppler effect, cosmological expansion)</memory_ask><memory_ask>Use of Redshift to measure distances and velocities of celestial objects</memory_ask>",
+        "id": 201
+      },
+      {
+        "input": "The 'Sphinx' in Egypt. How old is it?",
+        "response": "<memory_ask>Information about Great Sphinx of Giza</memory_ask><memory_ask>Estimated age of the Great Sphinx</memory_ask><memory_ask>Theories about builders and purpose of the Great Sphinx</memory_ask>",
+        "id": 202
+      },
+      {
+        "input": "My 'Smart Water Bottle HydroMate' by 'AquaTech' is not tracking my water intake correctly in the 'HydraApp'. The firmware version is 1.2. My phone is 'OnePlus Nord'.",
+        "response": "<memory_ask>Information about Smart Water Bottle HydroMate</memory_ask><memory_ask>Manufacturer: AquaTech</memory_ask><memory_ask>Problem: HydroMate not tracking water intake correctly in HydraApp</memory_ask><memory_ask>Information about HydraApp</memory_ask><memory_ask>Firmware version: 1.2</memory_ask><memory_ask>User's phone: OnePlus Nord</memory_ask><memory_ask>Troubleshooting smart water bottle tracking issues</memory_ask><memory_ask>How to calibrate or reset HydroMate water tracking</memory_ask>",
+        "id": 203
+      },
+      {
+        "input": "What is 'Blueshift' in astronomy?",
+        "response": "<memory_ask>Definition of Blueshift in astronomy</memory_ask><memory_ask>Causes of Blueshift (Doppler effect, object moving towards observer)</memory_ask><memory_ask>Examples of objects exhibiting blueshift (e.g., Andromeda Galaxy relative to Milky Way)</memory_ask>",
+        "id": 204
+      },
+      {
+        "input": "The 'Hanging Gardens of Babylon'. Did they really exist?",
+        "response": "<memory_ask>Information about Hanging Gardens of Babylon</memory_ask><memory_ask>Historical evidence for existence of Hanging Gardens of Babylon</memory_ask><memory_ask>Theories about location and appearance of Hanging Gardens of Babylon</memory_ask><memory_ask>Status as one of the Seven Wonders of the Ancient World</memory_ask>",
+        "id": 205
+      },
+      {
+        "input": "I'm developing a mobile app 'TaskFlow' using 'React Native'. I'm having trouble with state management using 'Redux'. My mentor is Sarah.",
+        "response": "<memory_ask>Information about mobile app TaskFlow development</memory_ask><memory_ask>Framework: React Native</memory_ask><memory_ask>Problem: trouble with state management using Redux</memory_ask><memory_ask>Information about Redux state management</memory_ask><memory_ask>User's mentor: Sarah</memory_ask><memory_ask>Who is Sarah, user's mentor</memory_ask><memory_ask>Common issues with Redux in React Native</memory_ask><memory_ask>Alternative state management solutions for React Native</memory_ask>",
+        "id": 206
+      },
+      {
+        "input": "What are 'Neutron Stars'?",
+        "response": "<memory_ask>Definition of Neutron Stars</memory_ask><memory_ask>Formation of Neutron Stars (from supernova explosions)</memory_ask><memory_ask>Properties of Neutron Stars (density, magnetic field)</memory_ask>",
+        "id": 207
+      },
+      {
+        "input": "The 'Lighthouse of Alexandria'. What happened to it?",
+        "response": "<memory_ask>Information about Lighthouse of Alexandria</memory_ask><memory_ask>Destruction of Lighthouse of Alexandria (earthquakes)</memory_ask><memory_ask>Status as one of the Seven Wonders of the Ancient World</memory_ask>",
+        "id": 208
+      },
+      {
+        "input": "My 'Smart Air Conditioner CoolWave Pro' by 'ArcticAir' is making a rattling noise. It's controlled by the 'CoolHome' app. The unit was installed by 'HVAC Masters'.",
+        "response": "<memory_ask>Information about Smart Air Conditioner CoolWave Pro</memory_ask><memory_ask>Manufacturer: ArcticAir</memory_ask><memory_ask>Problem: CoolWave Pro making rattling noise</memory_ask><memory_ask>Control app: CoolHome</memory_ask><memory_ask>Information about CoolHome app</memory_ask><memory_ask>Installer: HVAC Masters</memory_ask><memory_ask>Information about HVAC Masters</memory_ask><memory_ask>Potential causes for rattling noise in air conditioner</memory_ask><memory_ask>Troubleshooting rattling air conditioner</memory_ask>",
+        "id": 209
+      },
+      {
+        "input": "What are 'Pulsars'?",
+        "response": "<memory_ask>Definition of Pulsars</memory_ask><memory_ask>Nature of Pulsars (rotating neutron stars emitting beams of radiation)</memory_ask><memory_ask>Discovery of Pulsars (Jocelyn Bell Burnell)</memory_ask>",
+        "id": 210
+      },
+      {
+        "input": "The 'Colossus of Rhodes'. What was it?",
+        "response": "<memory_ask>Information about Colossus of Rhodes</memory_ask><memory_ask>Description of Colossus of Rhodes (statue of Helios)</memory_ask><memory_ask>Destruction of Colossus of Rhodes (earthquake)</memory_ask><memory_ask>Status as one of the Seven Wonders of the Ancient World</memory_ask>",
+        "id": 211
+      },
+      {
+        "input": "I'm learning to cook. I want to make a 'Caesar Salad'. What's in the dressing? My cookbook is 'Joy of Cooking'.",
+        "response": "<memory_ask>Information about learning to cook</memory_ask><memory_ask>Dish: Caesar Salad</memory_ask><memory_ask>Recipe for Caesar Salad dressing</memory_ask><memory_ask>Key ingredients in Caesar dressing (e.g., anchovies, Parmesan, egg yolk)</memory_ask><memory_ask>User's cookbook: Joy of Cooking</memory_ask><memory_ask>Information about Joy of Cooking cookbook</memory_ask>",
+        "id": 212
+      },
+      {
+        "input": "What are 'Quasars'?",
+        "response": "<memory_ask>Definition of Quasars (quasi-stellar radio sources)</memory_ask><memory_ask>Nature of Quasars (active galactic nuclei powered by supermassive black holes)</memory_ask><memory_ask>Characteristics of Quasars (high luminosity, large redshift)</memory_ask>",
+        "id": 213
+      },
+      {
+        "input": "The 'Mausoleum at Halicarnassus'. Who was it built for?",
+        "response": "<memory_ask>Information about Mausoleum at Halicarnassus</memory_ask><memory_ask>Purpose of Mausoleum at Halicarnassus (tomb for Mausolus)</memory_ask><memory_ask>Status as one of the Seven Wonders of the Ancient World</memory_ask>",
+        "id": 214
+      },
+      {
+        "input": "My 'Smart Robot Vacuum CleanMax V2' by 'AutoClean Solutions' isn't returning to its charging dock 'HomeBase X'. The app 'Clean Companion' shows low battery.",
+        "response": "<memory_ask>Information about Smart Robot Vacuum CleanMax V2</memory_ask><memory_ask>Manufacturer: AutoClean Solutions</memory_ask><memory_ask>Problem: CleanMax V2 not returning to charging dock HomeBase X</memory_ask><memory_ask>Information about HomeBase X charging dock</memory_ask><memory_ask>Control app: Clean Companion</memory_ask><memory_ask>Information about Clean Companion app</memory_ask><memory_ask>App status: shows low battery</memory_ask><memory_ask>Troubleshooting robotic vacuum docking issues</memory_ask><memory_ask>Checking HomeBase X placement and connectivity</memory_ask>",
+        "id": 215
+      },
+      {
+        "input": "What are 'Magnetars'?",
+        "response": "<memory_ask>Definition of Magnetars</memory_ask><memory_ask>Nature of Magnetars (type of neutron star with extremely strong magnetic field)</memory_ask><memory_ask>Phenomena associated with Magnetars (e.g., giant flares)</memory_ask>",
+        "id": 216
+      },
+      {
+        "input": "The 'Temple of Artemis at Ephesus'. What was it like?",
+        "response": "<memory_ask>Information about Temple of Artemis at Ephesus</memory_ask><memory_ask>Description and grandeur of Temple of Artemis</memory_ask><memory_ask>Destruction and rebuilding of Temple of Artemis</memory_ask><memory_ask>Status as one of the Seven Wonders of the Ancient World</memory_ask>",
+        "id": 217
+      },
+      {
+        "input": "I'm looking for a new TV. I want a '55-inch 4K OLED'. My budget is $1500. My current TV is a 'Sony Bravia'.",
+        "response": "<memory_ask>Information about buying a new TV</memory_ask><memory_ask>TV specifications: 55-inch, 4K, OLED</memory_ask><memory_ask>User's budget: $1500</memory_ask><memory_ask>User's current TV: Sony Bravia</memory_ask><memory_ask>Information about Sony Bravia TVs</memory_ask><memory_ask>Recommended 55-inch 4K OLED TVs under $1500</memory_ask><memory_ask>Key features to consider in OLED TVs</memory_ask>",
+        "id": 218
+      },
+      {
+        "input": "What are 'Blazars'?",
+        "response": "<memory_ask>Definition of Blazars</memory_ask><memory_ask>Nature of Blazars (type of active galactic nucleus with relativistic jet pointed towards Earth)</memory_ask><memory_ask>Characteristics of Blazars (rapid variability, high luminosity)</memory_ask>",
+        "id": 219
+      },
+      {
+        "input": "The 'Statue of Zeus at Olympia'. Who was the sculptor?",
+        "response": "<memory_ask>Information about Statue of Zeus at Olympia</memory_ask><memory_ask>Sculptor of Statue of Zeus (Phidias)</memory_ask><memory_ask>Description of Statue of Zeus</memory_ask><memory_ask>Status as one of the Seven Wonders of the Ancient World</memory_ask>",
+        "id": 220
+      },
+      {
+        "input": "My 'Smart Fridge FreezeWell 9000' from 'CoolTech Appliances' is displaying error 'F07'. The ice maker is also not working. The manual is missing. I bought it at 'BestBuy'.",
+        "response": "<memory_ask>Information about Smart Fridge FreezeWell 9000</memory_ask><memory_ask>Manufacturer: CoolTech Appliances</memory_ask><memory_ask>Problem: Error F07, ice maker not working</memory_ask><memory_ask>Manual status: missing</memory_ask><memory_ask>Place of purchase: BestBuy</memory_ask><memory_ask>Information about BestBuy appliance support</memory_ask><memory_ask>Meaning of error code F07 for FreezeWell 9000</memory_ask><memory_ask>Troubleshooting steps for FreezeWell 9000 error F07 and ice maker</memory_ask>",
+        "id": 221
+      },
+      {
+        "input": "What is 'Spaghettification' near a black hole?",
+        "response": "<memory_ask>Definition of Spaghettification</memory_ask><memory_ask>Cause of Spaghettification (tidal forces near a black hole)</memory_ask><memory_ask>Effect of Spaghettification on an object</memory_ask>",
+        "id": 222
+      },
+      {
+        "input": "The 'Area 51' US Air Force facility. What is it rumored to contain?",
+        "response": "<memory_ask>Information about Area 51</memory_ask><memory_ask>Official purpose of Area 51 (aircraft development and testing)</memory_ask><memory_ask>Rumors and conspiracy theories about Area 51 (e.g., UFOs, aliens)</memory_ask>",
+        "id": 223
+      },
+      {
+        "input": "I'm writing a Python script to analyze data from 'Salesforce'. I need to use the 'Simple Salesforce' library. My colleague, Mark, recommended it.",
+        "response": "<memory_ask>Information about writing Python script for Salesforce data analysis</memory_ask><memory_ask>Data source: Salesforce</memory_ask><memory_ask>Python library: Simple Salesforce</memory_ask><memory_ask>Information about Simple Salesforce library</memory_ask><memory_ask>User's colleague: Mark</memory_ask><memory_ask>Mark's recommendation of Simple Salesforce</memory_ask><memory_ask>How to use Simple Salesforce library to connect to Salesforce</memory_ask><memory_ask>How to query data from Salesforce using Simple Salesforce</memory_ask>",
+        "id": 224
+      },
+      {
+        "input": "What is 'Wormhole' in theoretical physics?",
+        "response": "<memory_ask>Definition of Wormhole (Einstein-Rosen bridge)</memory_ask><memory_ask>Theoretical basis of Wormholes (General Relativity)</memory_ask><memory_ask>Potential for Wormholes as shortcuts through spacetime</memory_ask><memory_ask>Challenges and speculative nature of Wormholes</memory_ask>",
+        "id": 225
+      },
+      {
+        "input": "The 'Bermuda Triangle'. What are the theories about disappearances there?",
+        "response": "<memory_ask>Information about Bermuda Triangle</memory_ask><memory_ask>Location of Bermuda Triangle</memory_ask><memory_ask>Theories about disappearances in Bermuda Triangle (natural explanations, paranormal theories)</memory_ask><memory_ask>Scientific assessment of Bermuda Triangle mystery</memory_ask>",
+        "id": 226
+      },
+      {
+        "input": "My 'Smart Home Assistant EchoSphere' by 'Amalgamated Tech' is not understanding my commands to control 'Philips Hue' lights. The skill 'Hue Connect' is enabled. My accent is British English.",
+        "response": "<memory_ask>Information about Smart Home Assistant EchoSphere</memory_ask><memory_ask>Manufacturer: Amalgamated Tech</memory_ask><memory_ask>Problem: EchoSphere not understanding commands for Philips Hue lights</memory_ask><memory_ask>Smart lights: Philips Hue</memory_ask><memory_ask>Information about Philips Hue lights</memory_ask><memory_ask>Skill: Hue Connect (enabled)</memory_ask><memory_ask>User's accent: British English</memory_ask><memory_ask>Troubleshooting voice command recognition issues with smart home assistants</memory_ask><memory_ask>Checking language and accent settings on EchoSphere</memory_ask>",
+        "id": 227
+      },
+      {
+        "input": "What is 'Multiverse' theory?",
+        "response": "<memory_ask>Explanation of Multiverse theory</memory_ask><memory_ask>Different types of Multiverse hypotheses (e.g., Level I-IV by Max Tegmark)</memory_ask><memory_ask>Scientific basis or speculation for Multiverse theories (e.g., string theory, eternal inflation)</memory_ask>",
+        "id": 228
+      },
+      {
+        "input": "The 'Atlantis' lost city. Is there any proof it existed?",
+        "response": "<memory_ask>Information about the legend of Atlantis</memory_ask><memory_ask>Origin of Atlantis story (Plato's dialogues)</memory_ask><memory_ask>Archaeological and historical evidence regarding Atlantis (lack of conclusive proof)</memory_ask><memory_ask>Theories about possible real locations or inspirations for Atlantis myth</memory_ask>",
+        "id": 229
+      },
+      {
+        "input": "I'm planning a road trip from 'Chicago' to 'New Orleans' in my 'Tesla Model Y'. What are some good charging station locations along the route? My friend Sarah did this trip last year.",
+        "response": "<memory_ask>Information about planning a road trip from Chicago to New Orleans</memory_ask><memory_ask>Vehicle: Tesla Model Y</memory_ask><memory_ask>Information about Tesla Model Y range and charging</memory_ask><memory_ask>Recommended Tesla Supercharger locations on Chicago to New Orleans route</memory_ask><memory_ask>Other EV charging network locations on route</memory_ask><memory_ask>User's friend: Sarah</memory_ask><memory_ask>Sarah's previous road trip experience</memory_ask><memory_ask>Tips for long-distance EV road trips</memory_ask>",
+        "id": 230
+      },
+      {
+        "input": "What is 'Time Dilation' in Einstein's theory of relativity?",
+        "response": "<memory_ask>Explanation of Time Dilation</memory_ask><memory_ask>Types of Time Dilation: Special Relativity (velocity-dependent)</memory_ask><memory_ask>Types of Time Dilation: General Relativity (gravity-dependent)</memory_ask><memory_ask>Experimental evidence for Time Dilation (e.g., Hafele-Keating experiment, GPS satellite corrections)</memory_ask>",
+        "id": 231
+      },
+      {
+        "input": "The 'Oak Island Money Pit' mystery. What is it?",
+        "response": "<memory_ask>Information about Oak Island Money Pit mystery</memory_ask><memory_ask>Location of Oak Island</memory_ask><memory_ask>History of treasure hunting at Oak Island Money Pit</memory_ask><memory_ask>Theories about what might be buried at Oak Island Money Pit</memory_ask>",
+        "id": 232
+      },
+      {
+        "input": "My 'Smart Fitness Tracker FitPro X' by 'ActiveLife Gear' is overcounting my steps. I work at a desk, according to my manager John.",
+        "response": "<memory_ask>Information about Smart Fitness Tracker FitPro X</memory_ask><memory_ask>Manufacturer: ActiveLife Gear</memory_ask><memory_ask>Problem: FitPro X overcounting steps</memory_ask><memory_ask>User's work environment: desk job</memory_ask><memory_ask>User's manager: John</memory_ask><memory_ask>John's statement about user's desk job</memory_ask><memory_ask>Troubleshooting inaccurate step counting on fitness trackers</memory_ask><memory_ask>How to calibrate FitPro X step counter</memory_ask><memory_ask>Wearing fitness tracker correctly for accurate step count</memory_ask>",
+        "id": 233
+      },
+      {
+        "input": "What is 'Length Contraction' in Special Relativity?",
+        "response": "<memory_ask>Explanation of Length Contraction in Special Relativity</memory_ask><memory_ask>Formula for Length Contraction</memory_ask><memory_ask>Relationship of Length Contraction to relative velocity</memory_ask><memory_ask>Length Contraction as a consequence of Lorentz transformations</memory_ask>",
+        "id": 234
+      },
+      {
+        "input": "The 'Lost Colony of Roanoke'. What happened to the colonists?",
+        "response": "<memory_ask>Information about Lost Colony of Roanoke</memory_ask><memory_ask>History of Roanoke Colony settlement</memory_ask><memory_ask>Disappearance of Roanoke colonists</memory_ask><memory_ask>Theories about fate of Roanoke colonists (e.g., assimilation, massacre, relocation)</memory_ask><memory_ask>Clue 'Croatoan' found at Roanoke site</memory_ask>",
+        "id": 235
+      },
+      {
+        "input": "I'm trying to automate a task in 'Excel' using 'VBA'. I need to copy data from 'Sheet1' to 'Sheet2' based on a condition in 'Column A'. My boss, Mr. Johnson, wants this by tomorrow.",
+        "response": "<memory_ask>Information about automating Excel task with VBA</memory_ask><memory_ask>Task: copy data from Sheet1 to Sheet2 based on condition in Column A</memory_ask><memory_ask>VBA code snippet for conditional data copying between Excel sheets</memory_ask><memory_ask>User's boss: Mr. Johnson</memory_ask><memory_ask>Who is Mr. Johnson</memory_ask><memory_ask>Deadline: tomorrow</memory_ask><memory_ask>Resources for learning Excel VBA</memory_ask>",
+        "id": 236
+      },
+      {
+        "input": "What is 'E=mc²' equation?",
+        "response": "<memory_ask>Explanation of E=mc² equation (mass-energy equivalence)</memory_ask><memory_ask>Variables in E=mc² (E for energy, m for mass, c for speed of light)</memory_ask><memory_ask>Origin of E=mc² (Albert Einstein's Special Relativity)</memory_ask><memory_ask>Implications of E=mc² (e.g., nuclear energy)</memory_ask>",
+        "id": 237
+      },
+      {
+        "input": "The 'Mary Celeste' ghost ship. What is the mystery?",
+        "response": "<memory_ask>Information about Mary Celeste ghost ship</memory_ask><memory_ask>Discovery of Mary Celeste abandoned at sea</memory_ask><memory_ask>Condition of Mary Celeste when found</memory_ask><memory_ask>Theories about what happened to crew of Mary Celeste</memory_ask>",
+        "id": 238
+      },
+      {
+        "input": "My 'Smart Coffee Grinder GrindMaster Z' by 'BeanPerfect Corp' is grinding too coarse for my 'AeroPress'. The setting is on 'Fine'. I use 'DarkRoast Supreme' beans.",
+        "response": "<memory_ask>Information about Smart Coffee Grinder GrindMaster Z</memory_ask><memory_ask>Manufacturer: BeanPerfect Corp</memory_ask><memory_ask>Problem: GrindMaster Z grinding too coarse for AeroPress, setting on Fine</memory_ask><memory_ask>Coffee maker: AeroPress</memory_ask><memory_ask>Information about AeroPress grind size requirements</memory_ask><memory_ask>Coffee beans: DarkRoast Supreme</memory_ask><memory_ask>Information about DarkRoast Supreme beans</memory_ask><memory_ask>Troubleshooting coffee grinder grind consistency issues</memory_ask><memory_ask>How to calibrate or clean GrindMaster Z for finer grind</memory_ask>",
+        "id": 239
+      },
+      {
+        "input": "What is the 'Twin Paradox' in Special Relativity?",
+        "response": "<memory_ask>Explanation of Twin Paradox in Special Relativity</memory_ask><memory_ask>Scenario of Twin Paradox (one twin travels at relativistic speed)</memory_ask><memory_ask>Resolution of Twin Paradox (asymmetry due to acceleration)</memory_ask><memory_ask>Role of time dilation in Twin Paradox</memory_ask>",
+        "id": 240
+      },
+      {
+        "input": "The 'Philadelphia Experiment'. What is the conspiracy theory?",
+        "response": "<memory_ask>Information about Philadelphia Experiment conspiracy theory</memory_ask><memory_ask>Alleged events of Philadelphia Experiment (USS Eldridge, invisibility, teleportation)</memory_ask><memory_ask>Origins of Philadelphia Experiment story (Carlos Allende/Carl Allen letters)</memory_ask><memory_ask>Lack of credible evidence for Philadelphia Experiment</memory_ask>",
+        "id": 241
+      },
+      {
+        "input": "I'm designing a logo for my startup 'EcoBloom' using 'Canva'. The company sells sustainable gardening supplies. My co-founder is Lisa.",
+        "response": "<memory_ask>Information about designing a logo with Canva</memory_ask><memory_ask>Information about Canva design tool</memory_ask><memory_ask>Startup name: EcoBloom</memory_ask><memory_ask>EcoBloom business: sustainable gardening supplies</memory_ask><memory_ask>User's co-founder: Lisa</memory_ask><memory_ask>Who is Lisa</memory_ask><memory_ask>Logo design principles for sustainable brands</memory_ask><memory_ask>Color palettes and imagery suitable for EcoBloom logo</memory_ask>",
+        "id": 242
+      },
+      {
+        "input": "What is 'Spacetime' in physics?",
+        "response": "<memory_ask>Definition of Spacetime in physics</memory_ask><memory_ask>Concept of Spacetime as a four-dimensional continuum (three spatial dimensions, one time dimension)</memory_ask><memory_ask>Role of Spacetime in Einstein's theories of relativity</memory_ask><memory_ask>How gravity is described as curvature of Spacetime in General Relativity</memory_ask>",
+        "id": 243
+      },
+      {
+        "input": "The 'Dyatlov Pass incident'. What are the theories about what happened?",
+        "response": "<memory_ask>Information about Dyatlov Pass incident</memory_ask><memory_ask>Events of Dyatlov Pass incident (death of nine hikers in Ural Mountains)</memory_ask><memory_ask>Mysterious circumstances surrounding Dyatlov Pass incident</memory_ask><memory_ask>Theories about cause of Dyatlov Pass incident (natural disaster, military involvement, paranormal)</memory_ask>",
+        "id": 244
+      },
+      {
+        "input": "My 'Smart Air Quality Monitor AQM-Pro' by 'PureLiving Tech' is showing high VOC levels. I just painted the living room with 'EcoPaint Brand' low-VOC paint. The windows are open.",
+        "response": "<memory_ask>Information about Smart Air Quality Monitor AQM-Pro</memory_ask><memory_ask>Manufacturer: PureLiving Tech</memory_ask><memory_ask>Problem: AQM-Pro showing high VOC levels</memory_ask><memory_ask>Recent activity: painted living room with EcoPaint Brand low-VOC paint</memory_ask><memory_ask>Information about EcoPaint Brand low-VOC paint</memory_ask><memory_ask>Windows status: open</memory_ask><memory_ask>Understanding VOC readings from air quality monitors</memory_ask><memory_ask>Potential sources of VOCs even with low-VOC paint</memory_ask><memory_ask>How long VOCs can off-gas after painting</memory_ask>",
+        "id": 245
+      },
+      {
+        "input": "What is a 'White Hole' in theoretical physics?",
+        "response": "<memory_ask>Definition of White Hole in theoretical physics</memory_ask><memory_ask>Theoretical nature of White Holes (time-reversed black holes)</memory_ask><memory_ask>Properties of White Holes (matter and light can only escape)</memory_ask><memory_ask>Lack of observational evidence for White Holes</memory_ask>",
+        "id": 246
+      },
+      {
+        "input": "The 'Tunguska event' in Siberia. What caused the explosion?",
+        "response": "<memory_ask>Information about Tunguska event (1908 Siberia explosion)</memory_ask><memory_ask>Scale and effects of Tunguska event explosion</memory_ask><memory_ask>Leading theories about cause of Tunguska event (meteoroid air burst)</memory_ask><memory_ask>Lack of impact crater at Tunguska site</memory_ask>",
+        "id": 247
+      },
+      {
+        "input": "I'm learning 'JavaScript' for web development. I'm working on a project 'InteractiveMap' using 'Leaflet.js' library. My coding buddy is Alex.",
+        "response": "<memory_ask>Information about learning JavaScript for web development</memory_ask><memory_ask>Project: InteractiveMap using Leaflet.js library</memory_ask><memory_ask>Information about Leaflet.js library</memory_ask><memory_ask>User's coding buddy: Alex</memory_ask><memory_ask>Who is Alex</memory_ask><memory_ask>Common challenges when using Leaflet.js for interactive maps</memory_ask><memory_ask>Resources for learning Leaflet.js</memory_ask>",
+        "id": 248
+      },
+      {
+        "input": "What is the 'Planck Length' or 'Planck Time'?",
+        "response": "<memory_ask>Definition of Planck Length</memory_ask><memory_ask>Definition of Planck Time</memory_ask><memory_ask>Significance of Planck units in physics (limits of applicability of current theories)</memory_ask><memory_ask>Relationship of Planck units to fundamental constants (G, h-bar, c)</memory_ask>",
+        "id": 249
+      }
+    ]
+  }

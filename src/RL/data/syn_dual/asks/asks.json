@@ -1,0 +1,620 @@
+{
+  "examples": [
+    {
+      "input": "The sky is blue today. What is the weather like tomorrow?",
+      "response": "<memory_ask>What is weather tomorrow</memory_ask>"
+    },
+    {
+      "input": "Elephants are large mammals. They live in Africa and Asia. Do they eat peanuts?",
+      "response": "<memory_ask>Elephants,eat,peanuts</memory_ask><memory_ask>Information about Elephants</memory_ask>"
+    },
+    {
+      "input": "My favorite color is green. My car is also green. What about yours?",
+      "response": "<memory_ask>Information about your favorite color</memory_ask><memory_ask>Information about your car color</memory_ask>"
+    },
+    {
+      "input": "The capital of France is Paris. Paris is known for the Eiffel Tower. Is it true that Paris has many museums?",
+      "response": "<memory_ask>Paris,has,many museums</memory_ask><memory_ask>Information about Paris</memory_ask><memory_ask>Information about Eiffel Tower</memory_ask>"
+    },
+    {
+      "input": "I read a book about dragons. Dragons are mythical creatures. Can dragons fly?",
+      "response": "<memory_ask>Dragons,can,fly</memory_ask><memory_ask>Information about dragons</memory_ask>"
+    },
+    {
+      "input": "The new AI model, GPT-5, was just announced. It has 10 trillion parameters. How does it compare to GPT-4 and what are its key new capabilities?",
+      "response": "<memory_ask>GPT-5,compare to,GPT-4</memory_ask><memory_ask>GPT-5,has key new capabilities,What</memory_ask><memory_ask>Information about GPT-5</memory_ask><memory_ask>GPT-5,has,10 trillion parameters</memory_ask>"
+    },
+    {
+      "input": "The Sun is a star. It is the center of our solar system. Many planets orbit the Sun, including Earth. Mars is also a planet in our solar system. Is Mars habitable and does it have water?",
+      "response": "<memory_ask>Mars,is,habitable</memory_ask><memory_ask>Mars,has,water</memory_ask><memory_ask>Information about Sun</memory_ask><memory_ask>Information about Solar System</memory_ask><memory_ask>Information about Earth</memory_ask><memory_ask>Information about Mars</memory_ask>"
+    },
+    {
+      "input": "The project deadline is next Friday. We need to complete the user interface, backend logic, and testing. Who is responsible for the database schema design and have they started working on it yet?",
+      "response": "<memory_ask>Who,is responsible for,database schema design</memory_ask><memory_ask>Database schema design,status,started</memory_ask><memory_ask>Information about project deadline</memory_ask><memory_ask>Information about user interface completion</memory_ask><memory_ask>Information about backend logic completion</memory_ask><memory_ask>Information about testing completion</memory_ask>"
+    },
+    {
+      "input": "The company launched a new product called 'Nova'. It's a health tracker. It monitors heart rate, sleep patterns, and activity levels. What is the price of Nova and where can I buy it?",
+      "response": "<memory_ask>Nova,price,What</memory_ask><memory_ask>Nova,can be bought,Where</memory_ask><memory_ask>Information about Nova</memory_ask>"
+    },
+    {
+      "input": "Carbon dioxide is a greenhouse gas. Its levels are rising in the atmosphere. This contributes to global warming. What are the primary sources of CO2 emissions and what are the most effective ways to reduce them?",
+      "response": "<memory_ask>CO2 emissions,primary sources,What</memory_ask><memory_ask>CO2 emissions,reduction methods,What are most effective</memory_ask><memory_ask>Information about Carbon Dioxide</memory_ask><memory_ask>Information about global warming</memory_ask>"
+    },
+    {
+      "input": "The human brain is complex. It has many regions like the cerebrum and cerebellum. What are the functions of the amygdala and hippocampus, and how do they contribute to memory formation?",
+      "response": "<memory_ask>Amygdala,functions,What</memory_ask><memory_ask>Hippocampus,functions,What</memory_ask><memory_ask>Amygdala,contributes to,memory formation</memory_ask><memory_ask>Hippocampus,contributes to,memory formation</memory_ask><memory_ask>Information about human brain</memory_ask><memory_ask>Information about cerebrum</memory_ask><memory_ask>Information about cerebellum</memory_ask>"
+    },
+    {
+      "input": "The Amazon rainforest is vast and biodiverse. It's facing threats from deforestation. Many indigenous communities live there. How does deforestation impact global climate patterns and what efforts are being made to protect the Amazon?",
+      "response": "<memory_ask>Deforestation,impacts,global climate patterns</memory_ask><memory_ask>Amazon rainforest,protection efforts,What</memory_ask><memory_ask>Information about Amazon rainforest</memory_ask><memory_ask>Information about deforestation</memory_ask><memory_ask>Information about indigenous communities in Amazon</memory_ask>"
+    },
+    {
+      "input": "The Renaissance was a period of great cultural change in Europe. It saw advancements in art, science, and philosophy. Who were some key figures of the Renaissance, what were their major contributions, and in which cities did it primarily flourish?",
+      "response": "<memory_ask>Renaissance,key figures,Who</memory_ask><memory_ask>Renaissance key figures,major contributions,What</memory_ask><memory_ask>Renaissance,flourished in cities,Which</memory_ask><memory_ask>Information about Renaissance</memory_ask>"
+    },
+    {
+      "input": "Quantum computing is an emerging field. It uses qubits instead of classical bits. This allows for solving certain problems much faster. What are some potential applications of quantum computing, and what are the biggest challenges in building a practical quantum computer?",
+      "response": "<memory_ask>Quantum computing,potential applications,What</memory_ask><memory_ask>Quantum computer,building challenges,What are biggest</memory_ask><memory_ask>Information about Quantum computing</memory_ask><memory_ask>Information about qubits</memory_ask>"
+    },
+    {
+      "input": "The new policy on data privacy will be effective next month. All employees must complete the training. What are the key changes in this policy compared to the old one, and what are the penalties for non-compliance?",
+      "response": "<memory_ask>New data privacy policy,key changes,What</memory_ask><memory_ask>New data privacy policy,non-compliance penalties,What</memory_ask><memory_ask>Information about new data privacy policy</memory_ask><memory_ask>Information about employee training for data privacy</memory_ask>"
+    },
+    {
+      "input": "The Andromeda Galaxy is the closest spiral galaxy to the Milky Way. It is on a collision course with our galaxy. When is the collision expected to happen, what will be the consequences for stars and planets, and will our solar system survive?",
+      "response": "<memory_ask>Andromeda-Milky Way collision,expected time,When</memory_ask><memory_ask>Andromeda-Milky Way collision,consequences for stars,What</memory_ask><memory_ask>Andromeda-Milky Way collision,consequences for planets,What</memory_ask><memory_ask>Solar system,survive,Andromeda-Milky Way collision</memory_ask><memory_ask>Information about Andromeda Galaxy</memory_ask><memory_ask>Information about Milky Way Galaxy</memory_ask>"
+    },
+    {
+      "input": "The city council approved the new park project. It will be located by the river. It will have a playground, a dog park, and walking trails. Who designed the park, what is the total budget, when will construction start, and when is it expected to be completed?",
+      "response": "<memory_ask>New park project,designer,Who</memory_ask><memory_ask>New park project,total budget,What</memory_ask><memory_ask>New park project,construction start date,When</memory_ask><memory_ask>New park project,completion date,When</memory_ask><memory_ask>Information about new park project location</memory_ask><memory_ask>Information about new park project features</memory_ask>"
+    },
+    {
+      "input": "Mount Everest is the highest mountain above sea level. It is located in the Himalayas. Many climbers attempt to summit it each year. What are the main dangers of climbing Everest, what equipment is essential, and who was the first to successfully summit it without supplemental oxygen?",
+      "response": "<memory_ask>Climbing Everest,main dangers,What</memory_ask><memory_ask>Climbing Everest,essential equipment,What</memory_ask><memory_ask>First to summit Everest without oxygen,Who</memory_ask><memory_ask>Information about Mount Everest</memory_ask><memory_ask>Information about Himalayas</memory_ask>"
+    },
+    {
+      "input": "The ancient city of Rome had a complex system of aqueducts. These supplied water to public baths and fountains. How were the aqueducts constructed, what materials were used, and how did they impact Roman society and engineering practices for future civilizations?",
+      "response": "<memory_ask>Roman aqueducts,construction method,How</memory_ask><memory_ask>Roman aqueducts,materials used,What</memory_ask><memory_ask>Roman aqueducts,impact on Roman society,How</memory_ask><memory_ask>Roman aqueducts,impact on future engineering,How</memory_ask><memory_ask>Information about ancient city of Rome</memory_ask><memory_ask>Information about Roman aqueducts</memory_ask>"
+    },
+    {
+      "input": "The restaurant 'The Golden Spoon' received a Michelin star. It's known for its innovative French cuisine. The head chef is Antoine Dubois. What are their signature dishes, what is the average price for a meal, and how far in advance do I need to book a reservation?",
+      "response": "<memory_ask>The Golden Spoon,signature dishes,What</memory_ask><memory_ask>The Golden Spoon,average meal price,What</memory_ask><memory_ask>The Golden Spoon,reservation booking time,How far in advance</memory_ask><memory_ask>Information about The Golden Spoon</memory_ask><memory_ask>Information about Antoine Dubois</memory_ask><memory_ask>Information about French cuisine</memory_ask>"
+    },
+    {
+      "input": "The Voyager 1 spacecraft is in interstellar space. It carries a Golden Record with sounds and images of Earth. What is its current distance from Earth, what is its primary mission now, and is it still transmitting data?",
+      "response": "<memory_ask>Voyager 1,current distance from Earth,What</memory_ask><memory_ask>Voyager 1,current primary mission,What</memory_ask><memory_ask>Voyager 1,is transmitting data,Still</memory_ask><memory_ask>Information about Voyager 1</memory_ask><memory_ask>Information about Golden Record</memory_ask><memory_ask>Information about interstellar space</memory_ask>"
+    },
+    {
+      "input": "The museum's new exhibit features Impressionist paintings. Artists like Monet and Degas are included. It runs until December. What are the museum's opening hours, is there an entrance fee for this exhibit, and are guided tours available?",
+      "response": "<memory_ask>Museum,opening hours,What</memory_ask><memory_ask>Impressionist exhibit,entrance fee,Is there</memory_ask><memory_ask>Impressionist exhibit,guided tours available,Are</memory_ask><memory_ask>Information about Impressionist paintings exhibit</memory_ask><memory_ask>Information about Monet</memory_ask><memory_ask>Information about Degas</memory_ask>"
+    },
+    {
+      "input": "The local library is hosting a summer reading program for children. Participants can win prizes. It aims to encourage reading during the holidays. How can one register for the program, what are the age groups, and what kinds of prizes are offered?",
+      "response": "<memory_ask>Summer reading program,registration method,How</memory_ask><memory_ask>Summer reading program,age groups,What</memory_ask><memory_ask>Summer reading program,prizes offered,What kinds</memory_ask><memory_ask>Information about summer reading program</memory_ask><memory_ask>Information about local library</memory_ask>"
+    },
+    {
+      "input": "The James Webb Space Telescope (JWST) has provided stunning images of the early universe. It observes in infrared. What are some of its key discoveries so far, how does its technology differ from Hubble, and what is its expected lifespan?",
+      "response": "<memory_ask>JWST,key discoveries,What</memory_ask><memory_ask>JWST technology,differs from,Hubble technology</memory_ask><memory_ask>JWST,expected lifespan,What</memory_ask><memory_ask>Information about JWST</memory_ask><memory_ask>Information about early universe</memory_ask><memory_ask>Information about infrared observation</memory_ask>"
+    },
+    {
+      "input": "The company's quarterly earnings report was released. Profits are up by 15%. The new product line exceeded sales expectations. What were the total revenues, which geographic market performed best, and what is the forecast for the next quarter?",
+      "response": "<memory_ask>Company quarterly earnings,total revenues,What</memory_ask><memory_ask>Company quarterly earnings,best performing geographic market,Which</memory_ask><memory_ask>Company quarterly earnings,next quarter forecast,What</memory_ask><memory_ask>Information about company quarterly earnings report</memory_ask><memory_ask>Information about company profits</memory_ask><memory_ask>Information about new product line sales</memory_ask>"
+    },
+    {
+      "input": "The film 'Cosmic Odyssey' won several awards. It's a science fiction epic directed by Jane Lee. The visual effects are groundbreaking. Who are the main actors, what is the plot summary, and where can I watch it?",
+      "response": "<memory_ask>Cosmic Odyssey,main actors,Who</memory_ask><memory_ask>Cosmic Odyssey,plot summary,What</memory_ask><memory_ask>Cosmic Odyssey,can be watched,Where</memory_ask><memory_ask>Information about Cosmic Odyssey film</memory_ask><memory_ask>Information about Jane Lee</memory_ask><memory_ask>Information about visual effects</memory_ask>"
+    },
+    {
+      "input": "The Arctic region is experiencing rapid warming. This affects sea ice and wildlife like polar bears. Permafrost is thawing. What are the long-term consequences of Arctic warming for global sea levels, and what international agreements are in place to address this issue?",
+      "response": "<memory_ask>Arctic warming,long-term consequences for global sea levels,What</memory_ask><memory_ask>Arctic warming,international agreements to address,What</memory_ask><memory_ask>Information about Arctic region</memory_ask><memory_ask>Information about sea ice</memory_ask><memory_ask>Information about polar bears</memory_ask><memory_ask>Information about permafrost thawing</memory_ask>"
+    },
+    {
+      "input": "The new programming language 'Flux' is gaining popularity. It's designed for concurrent systems. It has a simpler syntax than Erlang. Who created Flux, what are its main features, and are there any large projects using it yet?",
+      "response": "<memory_ask>Flux programming language,creator,Who</memory_ask><memory_ask>Flux programming language,main features,What</memory_ask><memory_ask>Flux programming language,large projects using it,Are there any</memory_ask><memory_ask>Information about Flux programming language</memory_ask><memory_ask>Information about concurrent systems</memory_ask><memory_ask>Information about Erlang syntax</memory_ask>"
+    },
+    {
+      "input": "The Great Wall of China is an ancient fortification. It was built over centuries by different dynasties. It stretches for thousands of miles. Why was the Great Wall built, what materials were predominantly used in its construction, and which sections are most visited by tourists today?",
+      "response": "<memory_ask>Great Wall of China,reason for building,Why</memory_ask><memory_ask>Great Wall of China,predominant construction materials,What</memory_ask><memory_ask>Great Wall of China,most visited sections by tourists,Which</memory_ask><memory_ask>Information about Great Wall of China</memory_ask><memory_ask>Information about Chinese dynasties</memory_ask>"
+    },
+    {
+      "input": "The concept of Universal Basic Income (UBI) is being debated. It involves providing a regular, unconditional payment to all citizens. What are the main arguments for UBI, what are the main arguments against it, and have any large-scale UBI experiments been conducted with conclusive results?",
+      "response": "<memory_ask>UBI,main arguments for,What</memory_ask><memory_ask>UBI,main arguments against,What</memory_ask><memory_ask>UBI experiments,large-scale conclusive results,Have any</memory_ask><memory_ask>Information about Universal Basic Income</memory_ask>"
+    },
+    {
+      "input": "The human genome project mapped all human genes. It was a massive international effort. It has led to advances in medicine. When was the project completed, what were its main goals, and how has it impacted personalized medicine?",
+      "response": "<memory_ask>Human Genome Project,completion date,When</memory_ask><memory_ask>Human Genome Project,main goals,What</memory_ask><memory_ask>Human Genome Project,impact on personalized medicine,How</memory_ask><memory_ask>Information about Human Genome Project</memory_ask><memory_ask>Information about human genes</memory_ask>"
+    },
+    {
+      "input": "The city is planning a new subway line. It will connect the downtown area with the airport. Construction is expected to take five years. What is the estimated cost of the new subway line, what will be its route and number of stations, and how will it affect traffic congestion?",
+      "response": "<memory_ask>New subway line,estimated cost,What</memory_ask><memory_ask>New subway line,route,What</memory_ask><memory_ask>New subway line,number of stations,What</memory_ask><memory_ask>New subway line,effect on traffic congestion,How</memory_ask><memory_ask>Information about new subway line plan</memory_ask><memory_ask>Information about construction duration</memory_ask>"
+    },
+    {
+      "input": "Dark matter and dark energy are mysterious components of the universe. They make up most of its mass-energy content. Scientists are trying to understand their nature. What is the evidence for dark matter, how does dark energy affect cosmic expansion, and what are the leading theories explaining them?",
+      "response": "<memory_ask>Dark matter,evidence for,What</memory_ask><memory_ask>Dark energy,affects,cosmic expansion</memory_ask><memory_ask>Dark matter,leading theories,What</memory_ask><memory_ask>Dark energy,leading theories,What</memory_ask><memory_ask>Information about dark matter</memory_ask><memory_ask>Information about dark energy</memory_ask><memory_ask>Information about universe mass-energy content</memory_ask>"
+    },
+    {
+      "input": "The new solar farm project will generate 100MW of power. It will be built on unused land. It's part of the region's renewable energy targets. How many solar panels will be used, what is the expected lifespan of the farm, and how will the energy be stored or distributed?",
+      "response": "<memory_ask>Solar farm project,number of solar panels,How many</memory_ask><memory_ask>Solar farm project,expected lifespan,What</memory_ask><memory_ask>Solar farm project,energy storage method,How</memory_ask><memory_ask>Solar farm project,energy distribution method,How</memory_ask><memory_ask>Information about new solar farm project</memory_ask><memory_ask>Information about renewable energy targets</memory_ask>"
+    },
+    {
+      "input": "The global supply chain is facing disruptions. This is due to various factors including pandemics and geopolitical events. It's affecting prices and availability of goods. What are the main choke points in the current global supply chain, which industries are most affected, and what strategies are companies adopting to mitigate these risks?",
+      "response": "<memory_ask>Global supply chain,main choke points,What</memory_ask><memory_ask>Global supply chain disruptions,most affected industries,Which</memory_ask><memory_ask>Companies,risk mitigation strategies for supply chain,What</memory_ask><memory_ask>Information about global supply chain disruptions</memory_ask><memory_ask>Information about effects on prices and availability</memory_ask>"
+    },
+    {
+      "input": "The historical site of Machu Picchu is in Peru. It was built by the Inca Empire. It's a popular tourist destination. What was the original purpose of Machu Picchu, how was it rediscovered in the 20th century, and what conservation efforts are in place to protect it?",
+      "response": "<memory_ask>Machu Picchu,original purpose,What</memory_ask><memory_ask>Machu Picchu,rediscovery in 20th century,How</memory_ask><memory_ask>Machu Picchu,conservation efforts,What</memory_ask><memory_ask>Information about Machu Picchu</memory_ask><memory_ask>Information about Inca Empire</memory_ask><memory_ask>Information about Peru</memory_ask>"
+    },
+    {
+      "input": "The development of artificial general intelligence (AGI) is a long-term goal for many researchers. It would possess human-like cognitive abilities. What are the potential benefits of AGI, what are the ethical concerns and risks associated with it, and what is the current progress towards achieving AGI?",
+      "response": "<memory_ask>AGI,potential benefits,What</memory_ask><memory_ask>AGI,ethical concerns,What</memory_ask><memory_ask>AGI,risks,What</memory_ask><memory_ask>AGI,current progress towards,What</memory_ask><memory_ask>Information about Artificial General Intelligence</memory_ask>"
+    },
+    {
+      "input": "The coral reefs are dying due to ocean acidification and warming. This impacts marine biodiversity. Many organizations are working on reef restoration. What are the most effective techniques for coral reef restoration, how does ocean acidification specifically harm corals, and what individual actions can help protect coral reefs?",
+      "response": "<memory_ask>Coral reef restoration,most effective techniques,What</memory_ask><memory_ask>Ocean acidification,harms,corals</memory_ask><memory_ask>Individual actions,can help protect,coral reefs</memory_ask><memory_ask>Information about coral reefs dying</memory_ask><memory_ask>Information about marine biodiversity impact</memory_ask><memory_ask>Information about ocean warming</memory_ask>"
+    },
+    {
+      "input": "What is the capital of Australia?",
+      "response": "<memory_ask>Capital of Australia,is,What</memory_ask>"
+    },
+    {
+      "input": "Who wrote 'Pride and Prejudice'?",
+      "response": "<memory_ask>Pride and Prejudice,author,Who</memory_ask>"
+    },
+    {
+      "input": "How does photosynthesis work?",
+      "response": "<memory_ask>Photosynthesis,mechanism,How</memory_ask><memory_ask>Information about Photosynthesis</memory_ask>"
+    },
+    {
+      "input": "When was the first moon landing?",
+      "response": "<memory_ask>First moon landing,date,When</memory_ask>"
+    },
+    {
+      "input": "Why is the sky blue?",
+      "response": "<memory_ask>Sky,is blue,Why</memory_ask>"
+    },
+    {
+      "input": "Tell me about the Roman Empire.",
+      "response": "<memory_ask>Information about Roman Empire</memory_ask>"
+    },
+    {
+      "input": "What are the symptoms of influenza and how is it treated?",
+      "response": "<memory_ask>Influenza,symptoms,What</memory_ask><memory_ask>Influenza,treatment,How</memory_ask>"
+    },
+    {
+      "input": "Who is the current CEO of Google and what is their background?",
+      "response": "<memory_ask>Google,current CEO,Who</memory_ask><memory_ask>Google current CEO,background,What</memory_ask>"
+    },
+    {
+      "input": "Explain the theory of relativity.",
+      "response": "<memory_ask>Information about Theory of Relativity</memory_ask><memory_ask>Theory of Relativity,explanation,What</memory_ask>"
+    },
+    {
+      "input": "What are the main components of a lithium-ion battery and how do they store energy?",
+      "response": "<memory_ask>Lithium-ion battery,main components,What</memory_ask><memory_ask>Lithium-ion battery components,store energy,How</memory_ask>"
+    },
+    {
+      "input": "Where is the Great Barrier Reef located and what threats does it face?",
+      "response": "<memory_ask>Great Barrier Reef,location,Where</memory_ask><memory_ask>Great Barrier Reef,faces threats,What</memory_ask>"
+    },
+    {
+      "input": "What is blockchain technology and how is it used in cryptocurrencies like Bitcoin?",
+      "response": "<memory_ask>Information about Blockchain technology</memory_ask><memory_ask>Blockchain technology,use in cryptocurrencies,How</memory_ask><memory_ask>Information about Bitcoin</memory_ask>"
+    },
+    {
+      "input": "Who discovered penicillin and what impact did it have on medicine?",
+      "response": "<memory_ask>Penicillin,discoverer,Who</memory_ask><memory_ask>Penicillin,impact on medicine,What</memory_ask>"
+    },
+    {
+      "input": "What are the different types of renewable energy sources and their pros and cons?",
+      "response": "<memory_ask>Renewable energy sources,types,What</memory_ask><memory_ask>Renewable energy source types,pros,What</memory_ask><memory_ask>Renewable energy source types,cons,What</memory_ask>"
+    },
+    {
+      "input": "How do vaccines work to protect against diseases?",
+      "response": "<memory_ask>Vaccines,work to protect against diseases,How</memory_ask><memory_ask>Information about Vaccines</memory_ask>"
+    },
+    {
+      "input": "What is the current population of Earth and how is it projected to change in the coming decades?",
+      "response": "<memory_ask>Earth,current population,What</memory_ask><memory_ask>Earth population,projected change in coming decades,How</memory_ask>"
+    },
+    {
+      "input": "Who painted the Mona Lisa and where is it currently displayed?",
+      "response": "<memory_ask>Mona Lisa,painter,Who</memory_ask><memory_ask>Mona Lisa,current display location,Where</memory_ask>"
+    },
+    {
+      "input": "What are black holes and how are they formed?",
+      "response": "<memory_ask>Information about Black holes</memory_ask><memory_ask>Black holes,formation process,How</memory_ask>"
+    },
+    {
+      "input": "What were the major causes and consequences of World War I?",
+      "response": "<memory_ask>World War I,major causes,What</memory_ask><memory_ask>World War I,major consequences,What</memory_ask>"
+    },
+    {
+      "input": "How does the internet work, from a user request to a webpage loading?",
+      "response": "<memory_ask>Internet,works,How</memory_ask><memory_ask>User request to webpage loading,process,What</memory_ask>"
+    },
+    {
+      "input": "What is artificial intelligence, machine learning, and deep learning, and how are they related?",
+      "response": "<memory_ask>Information about Artificial Intelligence</memory_ask><memory_ask>Information about Machine Learning</memory_ask><memory_ask>Information about Deep Learning</memory_ask><memory_ask>Artificial Intelligence,related to,Machine Learning</memory_ask><memory_ask>Machine Learning,related to,Deep Learning</memory_ask>"
+    },
+    {
+      "input": "Who are the main characters in Shakespeare's 'Hamlet' and what is the central theme of the play?",
+      "response": "<memory_ask>Hamlet,main characters,Who</memory_ask><memory_ask>Hamlet,central theme,What</memory_ask><memory_ask>Information about Hamlet play</memory_ask>"
+    },
+    {
+      "input": "What is climate change, what are its primary drivers, and what are its observed global impacts?",
+      "response": "<memory_ask>Information about Climate Change</memory_ask><memory_ask>Climate Change,primary drivers,What</memory_ask><memory_ask>Climate Change,observed global impacts,What</memory_ask>"
+    },
+    {
+      "input": "How is coffee beans processed from harvesting to the final roasted bean, and what factors affect its flavor profile?",
+      "response": "<memory_ask>Coffee beans,processing method,How</memory_ask><memory_ask>Coffee bean flavor profile,affecting factors,What</memory_ask><memory_ask>Information about coffee beans</memory_ask>"
+    },
+    {
+      "input": "What are the key principles of agile software development, and how do they differ from traditional waterfall models?",
+      "response": "<memory_ask>Agile software development,key principles,What</memory_ask><memory_ask>Agile principles,differ from,Waterfall model</memory_ask><memory_ask>Information about Agile software development</memory_ask><memory_ask>Information about Waterfall model</memory_ask>"
+    },
+    {
+      "input": "Who invented the telephone, when was it invented, and how did it revolutionize communication?",
+      "response": "<memory_ask>Telephone,inventor,Who</memory_ask><memory_ask>Telephone,invention date,When</memory_ask><memory_ask>Telephone,revolutionized communication,How</memory_ask>"
+    },
+    {
+      "input": "What are the different layers of the Earth's atmosphere, and what are their characteristics?",
+      "response": "<memory_ask>Earth atmosphere,layers,What</memory_ask><memory_ask>Earth atmosphere layers,characteristics,What</memory_ask>"
+    },
+    {
+      "input": "What is the process of nuclear fusion, how does it power the Sun, and what are the challenges in achieving controlled fusion on Earth?",
+      "response": "<memory_ask>Nuclear fusion,process,What</memory_ask><memory_ask>Nuclear fusion,powers the Sun,How</memory_ask><memory_ask>Controlled fusion on Earth,challenges,What</memory_ask><memory_ask>Information about Nuclear fusion</memory_ask>"
+    },
+    {
+      "input": "Who was Marie Curie, what were her major scientific contributions, and what awards did she receive?",
+      "response": "<memory_ask>Information about Marie Curie</memory_ask><memory_ask>Marie Curie,major scientific contributions,What</memory_ask><memory_ask>Marie Curie,awards received,What</memory_ask>"
+    },
+    {
+      "input": "What are the fundamental forces of nature, and which particles mediate them?",
+      "response": "<memory_ask>Fundamental forces of nature,What are</memory_ask><memory_ask>Fundamental forces of nature,mediating particles,Which</memory_ask>"
+    },
+    {
+      "input": "What is the history of the internet from ARPANET to the World Wide Web, and who were key figures in its development?",
+      "response": "<memory_ask>Internet,history,What</memory_ask><memory_ask>ARPANET,history,What</memory_ask><memory_ask>World Wide Web,history,What</memory_ask><memory_ask>Internet development,key figures,Who</memory_ask>"
+    },
+    {
+      "input": "How do search engines like Google rank web pages, what is SEO, and what are common SEO techniques?",
+      "response": "<memory_ask>Search engines,rank web pages,How</memory_ask><memory_ask>Information about SEO</memory_ask><memory_ask>SEO techniques,common,What</memory_ask><memory_ask>Information about Google search engine</memory_ask>"
+    },
+    {
+      "input": "What are the stages of the human sleep cycle, and why is sleep important for health?",
+      "response": "<memory_ask>Human sleep cycle,stages,What</memory_ask><memory_ask>Sleep,importance for health,Why</memory_ask>"
+    },
+    {
+      "input": "What are the main types of galaxies in the universe, and how do they differ in terms of structure and star formation activity?",
+      "response": "<memory_ask>Galaxies,main types,What</memory_ask><memory_ask>Galaxy types,differ in structure,How</memory_ask><memory_ask>Galaxy types,differ in star formation activity,How</memory_ask>"
+    },
+    {
+      "input": "What are the primary functions of the human liver, and what are common liver diseases?",
+      "response": "<memory_ask>Human liver,primary functions,What</memory_ask><memory_ask>Liver diseases,common,What</memory_ask>"
+    },
+    {
+      "input": "What is the significance of the Rosetta Stone, when was it discovered, and how did it help decipher Egyptian hieroglyphs?",
+      "response": "<memory_ask>Rosetta Stone,significance,What</memory_ask><memory_ask>Rosetta Stone,discovery date,When</memory_ask><memory_ask>Rosetta Stone,helped decipher Egyptian hieroglyphs,How</memory_ask>"
+    },
+    {
+      "input": "What are the differences between RNA and DNA in terms of structure and function, and what roles do they play in protein synthesis?",
+      "response": "<memory_ask>RNA,differs from DNA in structure,How</memory_ask><memory_ask>RNA,differs from DNA in function,How</memory_ask><memory_ask>RNA,role in protein synthesis,What</memory_ask><memory_ask>DNA,role in protein synthesis,What</memory_ask>"
+    },
+    {
+      "input": "What are the main arguments for and against vegetarianism and veganism, considering health, environmental, and ethical aspects?",
+      "response": "<memory_ask>Vegetarianism,arguments for,What</memory_ask><memory_ask>Vegetarianism,arguments against,What</memory_ask><memory_ask>Veganism,arguments for,What</memory_ask><memory_ask>Veganism,arguments against,What</memory_ask><memory_ask>Information about vegetarianism health aspects</memory_ask><memory_ask>Information about vegetarianism environmental aspects</memory_ask><memory_ask>Information about vegetarianism ethical aspects</memory_ask><memory_ask>Information about veganism health aspects</memory_ask><memory_ask>Information about veganism environmental aspects</memory_ask><memory_ask>Information about veganism ethical aspects</memory_ask>"
+    },
+    {
+      "input": "Who were the Vikings, where did they originate from, what were their major historical impacts through raiding and exploration, and what was their mythology like?",
+      "response": "<memory_ask>Information about Vikings</memory_ask><memory_ask>Vikings,originated from,Where</memory_ask><memory_ask>Vikings,major historical impacts from raiding,What</memory_ask><memory_ask>Vikings,major historical impacts from exploration,What</memory_ask><memory_ask>Viking mythology,description,What</memory_ask>"
+    },
+    {
+      "input": "The sky is blue today. What is the weather like tomorrow?",
+      "response": "<memory_ask>What is weather tomorrow</memory_ask>"
+    },
+    {
+      "input": "Elephants are large mammals. They live in Africa and Asia. Do they eat peanuts?",
+      "response": "<memory_ask>Elephants,eat,peanuts</memory_ask><memory_ask>Information about Elephants</memory_ask>"
+    },
+    {
+      "input": "My favorite color is green. My car is also green. What about yours?",
+      "response": "<memory_ask>Information about your favorite color</memory_ask><memory_ask>Information about your car color</memory_ask>"
+    },
+    {
+      "input": "The capital of France is Paris. Paris is known for the Eiffel Tower. Is it true that Paris has many museums?",
+      "response": "<memory_ask>Paris,has,many museums</memory_ask><memory_ask>Information about Paris</memory_ask><memory_ask>Information about Eiffel Tower</memory_ask>"
+    },
+    {
+      "input": "I read a book about dragons. Dragons are mythical creatures. Can dragons fly?",
+      "response": "<memory_ask>Dragons,can,fly</memory_ask><memory_ask>Information about dragons</memory_ask>"
+    },
+    {
+      "input": "The new AI model, GPT-5, was just announced. It has 10 trillion parameters. How does it compare to GPT-4 and what are its key new capabilities?",
+      "response": "<memory_ask>GPT-5,compare to,GPT-4</memory_ask><memory_ask>GPT-5,has key new capabilities,What</memory_ask><memory_ask>Information about GPT-5</memory_ask><memory_ask>GPT-5,has,10 trillion parameters</memory_ask>"
+    },
+    {
+      "input": "The Sun is a star. It is the center of our solar system. Many planets orbit the Sun, including Earth. Mars is also a planet in our solar system. Is Mars habitable and does it have water?",
+      "response": "<memory_ask>Mars,is,habitable</memory_ask><memory_ask>Mars,has,water</memory_ask><memory_ask>Information about Sun</memory_ask><memory_ask>Information about Solar System</memory_ask><memory_ask>Information about Earth</memory_ask><memory_ask>Information about Mars</memory_ask>"
+    },
+    {
+      "input": "The project deadline is next Friday. We need to complete the user interface, backend logic, and testing. Who is responsible for the database schema design and have they started working on it yet?",
+      "response": "<memory_ask>Who,is responsible for,database schema design</memory_ask><memory_ask>Database schema design,status,started</memory_ask><memory_ask>Information about project deadline</memory_ask><memory_ask>Information about user interface completion</memory_ask><memory_ask>Information about backend logic completion</memory_ask><memory_ask>Information about testing completion</memory_ask>"
+    },
+    {
+      "input": "The company launched a new product called 'Nova'. It's a health tracker. It monitors heart rate, sleep patterns, and activity levels. What is the price of Nova and where can I buy it?",
+      "response": "<memory_ask>Nova,price,What</memory_ask><memory_ask>Nova,can be bought,Where</memory_ask><memory_ask>Information about Nova</memory_ask>"
+    },
+    {
+      "input": "Carbon dioxide is a greenhouse gas. Its levels are rising in the atmosphere. This contributes to global warming. What are the primary sources of CO2 emissions and what are the most effective ways to reduce them?",
+      "response": "<memory_ask>CO2 emissions,primary sources,What</memory_ask><memory_ask>CO2 emissions,reduction methods,What are most effective</memory_ask><memory_ask>Information about Carbon Dioxide</memory_ask><memory_ask>Information about global warming</memory_ask>"
+    },
+    {
+      "input": "The human brain is complex. It has many regions like the cerebrum and cerebellum. What are the functions of the amygdala and hippocampus, and how do they contribute to memory formation?",
+      "response": "<memory_ask>Amygdala,functions,What</memory_ask><memory_ask>Hippocampus,functions,What</memory_ask><memory_ask>Amygdala,contributes to,memory formation</memory_ask><memory_ask>Hippocampus,contributes to,memory formation</memory_ask><memory_ask>Information about human brain</memory_ask><memory_ask>Information about cerebrum</memory_ask><memory_ask>Information about cerebellum</memory_ask>"
+    },
+    {
+      "input": "The Amazon rainforest is vast and biodiverse. It's facing threats from deforestation. Many indigenous communities live there. How does deforestation impact global climate patterns and what efforts are being made to protect the Amazon?",
+      "response": "<memory_ask>Deforestation,impacts,global climate patterns</memory_ask><memory_ask>Amazon rainforest,protection efforts,What</memory_ask><memory_ask>Information about Amazon rainforest</memory_ask><memory_ask>Information about deforestation</memory_ask><memory_ask>Information about indigenous communities in Amazon</memory_ask>"
+    },
+    {
+      "input": "The Renaissance was a period of great cultural change in Europe. It saw advancements in art, science, and philosophy. Who were some key figures of the Renaissance, what were their major contributions, and in which cities did it primarily flourish?",
+      "response": "<memory_ask>Renaissance,key figures,Who</memory_ask><memory_ask>Renaissance key figures,major contributions,What</memory_ask><memory_ask>Renaissance,flourished in cities,Which</memory_ask><memory_ask>Information about Renaissance</memory_ask>"
+    },
+    {
+      "input": "Quantum computing is an emerging field. It uses qubits instead of classical bits. This allows for solving certain problems much faster. What are some potential applications of quantum computing, and what are the biggest challenges in building a practical quantum computer?",
+      "response": "<memory_ask>Quantum computing,potential applications,What</memory_ask><memory_ask>Quantum computer,building challenges,What are biggest</memory_ask><memory_ask>Information about Quantum computing</memory_ask><memory_ask>Information about qubits</memory_ask>"
+    },
+    {
+      "input": "The new policy on data privacy will be effective next month. All employees must complete the training. What are the key changes in this policy compared to the old one, and what are the penalties for non-compliance?",
+      "response": "<memory_ask>New data privacy policy,key changes,What</memory_ask><memory_ask>New data privacy policy,non-compliance penalties,What</memory_ask><memory_ask>Information about new data privacy policy</memory_ask><memory_ask>Information about employee training for data privacy</memory_ask>"
+    },
+    {
+      "input": "The Andromeda Galaxy is the closest spiral galaxy to the Milky Way. It is on a collision course with our galaxy. When is the collision expected to happen, what will be the consequences for stars and planets, and will our solar system survive?",
+      "response": "<memory_ask>Andromeda-Milky Way collision,expected time,When</memory_ask><memory_ask>Andromeda-Milky Way collision,consequences for stars,What</memory_ask><memory_ask>Andromeda-Milky Way collision,consequences for planets,What</memory_ask><memory_ask>Solar system,survive,Andromeda-Milky Way collision</memory_ask><memory_ask>Information about Andromeda Galaxy</memory_ask><memory_ask>Information about Milky Way Galaxy</memory_ask>"
+    },
+    {
+      "input": "The city council approved the new park project. It will be located by the river. It will have a playground, a dog park, and walking trails. Who designed the park, what is the total budget, when will construction start, and when is it expected to be completed?",
+      "response": "<memory_ask>New park project,designer,Who</memory_ask><memory_ask>New park project,total budget,What</memory_ask><memory_ask>New park project,construction start date,When</memory_ask><memory_ask>New park project,completion date,When</memory_ask><memory_ask>Information about new park project location</memory_ask><memory_ask>Information about new park project features</memory_ask>"
+    },
+    {
+      "input": "Mount Everest is the highest mountain above sea level. It is located in the Himalayas. Many climbers attempt to summit it each year. What are the main dangers of climbing Everest, what equipment is essential, and who was the first to successfully summit it without supplemental oxygen?",
+      "response": "<memory_ask>Climbing Everest,main dangers,What</memory_ask><memory_ask>Climbing Everest,essential equipment,What</memory_ask><memory_ask>First to summit Everest without oxygen,Who</memory_ask><memory_ask>Information about Mount Everest</memory_ask><memory_ask>Information about Himalayas</memory_ask>"
+    },
+    {
+      "input": "The ancient city of Rome had a complex system of aqueducts. These supplied water to public baths and fountains. How were the aqueducts constructed, what materials were used, and how did they impact Roman society and engineering practices for future civilizations?",
+      "response": "<memory_ask>Roman aqueducts,construction method,How</memory_ask><memory_ask>Roman aqueducts,materials used,What</memory_ask><memory_ask>Roman aqueducts,impact on Roman society,How</memory_ask><memory_ask>Roman aqueducts,impact on future engineering,How</memory_ask><memory_ask>Information about ancient city of Rome</memory_ask><memory_ask>Information about Roman aqueducts</memory_ask>"
+    },
+    {
+      "input": "The restaurant 'The Golden Spoon' received a Michelin star. It's known for its innovative French cuisine. The head chef is Antoine Dubois. What are their signature dishes, what is the average price for a meal, and how far in advance do I need to book a reservation?",
+      "response": "<memory_ask>The Golden Spoon,signature dishes,What</memory_ask><memory_ask>The Golden Spoon,average meal price,What</memory_ask><memory_ask>The Golden Spoon,reservation booking time,How far in advance</memory_ask><memory_ask>Information about The Golden Spoon</memory_ask><memory_ask>Information about Antoine Dubois</memory_ask><memory_ask>Information about French cuisine</memory_ask>"
+    },
+    {
+      "input": "The Voyager 1 spacecraft is in interstellar space. It carries a Golden Record with sounds and images of Earth. What is its current distance from Earth, what is its primary mission now, and is it still transmitting data?",
+      "response": "<memory_ask>Voyager 1,current distance from Earth,What</memory_ask><memory_ask>Voyager 1,current primary mission,What</memory_ask><memory_ask>Voyager 1,is transmitting data,Still</memory_ask><memory_ask>Information about Voyager 1</memory_ask><memory_ask>Information about Golden Record</memory_ask><memory_ask>Information about interstellar space</memory_ask>"
+    },
+    {
+      "input": "The museum's new exhibit features Impressionist paintings. Artists like Monet and Degas are included. It runs until December. What are the museum's opening hours, is there an entrance fee for this exhibit, and are guided tours available?",
+      "response": "<memory_ask>Museum,opening hours,What</memory_ask><memory_ask>Impressionist exhibit,entrance fee,Is there</memory_ask><memory_ask>Impressionist exhibit,guided tours available,Are</memory_ask><memory_ask>Information about Impressionist paintings exhibit</memory_ask><memory_ask>Information about Monet</memory_ask><memory_ask>Information about Degas</memory_ask>"
+    },
+    {
+      "input": "The local library is hosting a summer reading program for children. Participants can win prizes. It aims to encourage reading during the holidays. How can one register for the program, what are the age groups, and what kinds of prizes are offered?",
+      "response": "<memory_ask>Summer reading program,registration method,How</memory_ask><memory_ask>Summer reading program,age groups,What</memory_ask><memory_ask>Summer reading program,prizes offered,What kinds</memory_ask><memory_ask>Information about summer reading program</memory_ask><memory_ask>Information about local library</memory_ask>"
+    },
+    {
+      "input": "The James Webb Space Telescope (JWST) has provided stunning images of the early universe. It observes in infrared. What are some of its key discoveries so far, how does its technology differ from Hubble, and what is its expected lifespan?",
+      "response": "<memory_ask>JWST,key discoveries,What</memory_ask><memory_ask>JWST technology,differs from,Hubble technology</memory_ask><memory_ask>JWST,expected lifespan,What</memory_ask><memory_ask>Information about JWST</memory_ask><memory_ask>Information about early universe</memory_ask><memory_ask>Information about infrared observation</memory_ask>"
+    },
+    {
+      "input": "The company's quarterly earnings report was released. Profits are up by 15%. The new product line exceeded sales expectations. What were the total revenues, which geographic market performed best, and what is the forecast for the next quarter?",
+      "response": "<memory_ask>Company quarterly earnings,total revenues,What</memory_ask><memory_ask>Company quarterly earnings,best performing geographic market,Which</memory_ask><memory_ask>Company quarterly earnings,next quarter forecast,What</memory_ask><memory_ask>Information about company quarterly earnings report</memory_ask><memory_ask>Information about company profits</memory_ask><memory_ask>Information about new product line sales</memory_ask>"
+    },
+    {
+      "input": "The film 'Cosmic Odyssey' won several awards. It's a science fiction epic directed by Jane Lee. The visual effects are groundbreaking. Who are the main actors, what is the plot summary, and where can I watch it?",
+      "response": "<memory_ask>Cosmic Odyssey,main actors,Who</memory_ask><memory_ask>Cosmic Odyssey,plot summary,What</memory_ask><memory_ask>Cosmic Odyssey,can be watched,Where</memory_ask><memory_ask>Information about Cosmic Odyssey film</memory_ask><memory_ask>Information about Jane Lee</memory_ask><memory_ask>Information about visual effects</memory_ask>"
+    },
+    {
+      "input": "The Arctic region is experiencing rapid warming. This affects sea ice and wildlife like polar bears. Permafrost is thawing. What are the long-term consequences of Arctic warming for global sea levels, and what international agreements are in place to address this issue?",
+      "response": "<memory_ask>Arctic warming,long-term consequences for global sea levels,What</memory_ask><memory_ask>Arctic warming,international agreements to address,What</memory_ask><memory_ask>Information about Arctic region</memory_ask><memory_ask>Information about sea ice</memory_ask><memory_ask>Information about polar bears</memory_ask><memory_ask>Information about permafrost thawing</memory_ask>"
+    },
+    {
+      "input": "The new programming language 'Flux' is gaining popularity. It's designed for concurrent systems. It has a simpler syntax than Erlang. Who created Flux, what are its main features, and are there any large projects using it yet?",
+      "response": "<memory_ask>Flux programming language,creator,Who</memory_ask><memory_ask>Flux programming language,main features,What</memory_ask><memory_ask>Flux programming language,large projects using it,Are there any</memory_ask><memory_ask>Information about Flux programming language</memory_ask><memory_ask>Information about concurrent systems</memory_ask><memory_ask>Information about Erlang syntax</memory_ask>"
+    },
+    {
+      "input": "The Great Wall of China is an ancient fortification. It was built over centuries by different dynasties. It stretches for thousands of miles. Why was the Great Wall built, what materials were predominantly used in its construction, and which sections are most visited by tourists today?",
+      "response": "<memory_ask>Great Wall of China,reason for building,Why</memory_ask><memory_ask>Great Wall of China,predominant construction materials,What</memory_ask><memory_ask>Great Wall of China,most visited sections by tourists,Which</memory_ask><memory_ask>Information about Great Wall of China</memory_ask><memory_ask>Information about Chinese dynasties</memory_ask>"
+    },
+    {
+      "input": "The concept of Universal Basic Income (UBI) is being debated. It involves providing a regular, unconditional payment to all citizens. What are the main arguments for UBI, what are the main arguments against it, and have any large-scale UBI experiments been conducted with conclusive results?",
+      "response": "<memory_ask>UBI,main arguments for,What</memory_ask><memory_ask>UBI,main arguments against,What</memory_ask><memory_ask>UBI experiments,large-scale conclusive results,Have any</memory_ask><memory_ask>Information about Universal Basic Income</memory_ask>"
+    },
+    {
+      "input": "The human genome project mapped all human genes. It was a massive international effort. It has led to advances in medicine. When was the project completed, what were its main goals, and how has it impacted personalized medicine?",
+      "response": "<memory_ask>Human Genome Project,completion date,When</memory_ask><memory_ask>Human Genome Project,main goals,What</memory_ask><memory_ask>Human Genome Project,impact on personalized medicine,How</memory_ask><memory_ask>Information about Human Genome Project</memory_ask><memory_ask>Information about human genes</memory_ask>"
+    },
+    {
+      "input": "The city is planning a new subway line. It will connect the downtown area with the airport. Construction is expected to take five years. What is the estimated cost of the new subway line, what will be its route and number of stations, and how will it affect traffic congestion?",
+      "response": "<memory_ask>New subway line,estimated cost,What</memory_ask><memory_ask>New subway line,route,What</memory_ask><memory_ask>New subway line,number of stations,What</memory_ask><memory_ask>New subway line,effect on traffic congestion,How</memory_ask><memory_ask>Information about new subway line plan</memory_ask><memory_ask>Information about construction duration</memory_ask>"
+    },
+    {
+      "input": "Dark matter and dark energy are mysterious components of the universe. They make up most of its mass-energy content. Scientists are trying to understand their nature. What is the evidence for dark matter, how does dark energy affect cosmic expansion, and what are the leading theories explaining them?",
+      "response": "<memory_ask>Dark matter,evidence for,What</memory_ask><memory_ask>Dark energy,affects,cosmic expansion</memory_ask><memory_ask>Dark matter,leading theories,What</memory_ask><memory_ask>Dark energy,leading theories,What</memory_ask><memory_ask>Information about dark matter</memory_ask><memory_ask>Information about dark energy</memory_ask><memory_ask>Information about universe mass-energy content</memory_ask>"
+    },
+    {
+      "input": "The new solar farm project will generate 100MW of power. It will be built on unused land. It's part of the region's renewable energy targets. How many solar panels will be used, what is the expected lifespan of the farm, and how will the energy be stored or distributed?",
+      "response": "<memory_ask>Solar farm project,number of solar panels,How many</memory_ask><memory_ask>Solar farm project,expected lifespan,What</memory_ask><memory_ask>Solar farm project,energy storage method,How</memory_ask><memory_ask>Solar farm project,energy distribution method,How</memory_ask><memory_ask>Information about new solar farm project</memory_ask><memory_ask>Information about renewable energy targets</memory_ask>"
+    },
+    {
+      "input": "The global supply chain is facing disruptions. This is due to various factors including pandemics and geopolitical events. It's affecting prices and availability of goods. What are the main choke points in the current global supply chain, which industries are most affected, and what strategies are companies adopting to mitigate these risks?",
+      "response": "<memory_ask>Global supply chain,main choke points,What</memory_ask><memory_ask>Global supply chain disruptions,most affected industries,Which</memory_ask><memory_ask>Companies,risk mitigation strategies for supply chain,What</memory_ask><memory_ask>Information about global supply chain disruptions</memory_ask><memory_ask>Information about effects on prices and availability</memory_ask>"
+    },
+    {
+      "input": "The historical site of Machu Picchu is in Peru. It was built by the Inca Empire. It's a popular tourist destination. What was the original purpose of Machu Picchu, how was it rediscovered in the 20th century, and what conservation efforts are in place to protect it?",
+      "response": "<memory_ask>Machu Picchu,original purpose,What</memory_ask><memory_ask>Machu Picchu,rediscovery in 20th century,How</memory_ask><memory_ask>Machu Picchu,conservation efforts,What</memory_ask><memory_ask>Information about Machu Picchu</memory_ask><memory_ask>Information about Inca Empire</memory_ask><memory_ask>Information about Peru</memory_ask>"
+    },
+    {
+      "input": "The development of artificial general intelligence (AGI) is a long-term goal for many researchers. It would possess human-like cognitive abilities. What are the potential benefits of AGI, what are the ethical concerns and risks associated with it, and what is the current progress towards achieving AGI?",
+      "response": "<memory_ask>AGI,potential benefits,What</memory_ask><memory_ask>AGI,ethical concerns,What</memory_ask><memory_ask>AGI,risks,What</memory_ask><memory_ask>AGI,current progress towards,What</memory_ask><memory_ask>Information about Artificial General Intelligence</memory_ask>"
+    },
+    {
+      "input": "The coral reefs are dying due to ocean acidification and warming. This impacts marine biodiversity. Many organizations are working on reef restoration. What are the most effective techniques for coral reef restoration, how does ocean acidification specifically harm corals, and what individual actions can help protect coral reefs?",
+      "response": "<memory_ask>Coral reef restoration,most effective techniques,What</memory_ask><memory_ask>Ocean acidification,harms,corals</memory_ask><memory_ask>Individual actions,can help protect,coral reefs</memory_ask><memory_ask>Information about coral reefs dying</memory_ask><memory_ask>Information about marine biodiversity impact</memory_ask><memory_ask>Information about ocean warming</memory_ask>"
+    },
+    {
+      "input": "What is the capital of Australia?",
+      "response": "<memory_ask>Capital of Australia,is,What</memory_ask>"
+    },
+    {
+      "input": "Who wrote 'Pride and Prejudice'?",
+      "response": "<memory_ask>Pride and Prejudice,author,Who</memory_ask>"
+    },
+    {
+      "input": "How does photosynthesis work?",
+      "response": "<memory_ask>Photosynthesis,mechanism,How</memory_ask><memory_ask>Information about Photosynthesis</memory_ask>"
+    },
+    {
+      "input": "When was the first moon landing?",
+      "response": "<memory_ask>First moon landing,date,When</memory_ask>"
+    },
+    {
+      "input": "Why is the sky blue?",
+      "response": "<memory_ask>Sky,is blue,Why</memory_ask>"
+    },
+    {
+      "input": "Tell me about the Roman Empire.",
+      "response": "<memory_ask>Information about Roman Empire</memory_ask>"
+    },
+    {
+      "input": "What are the symptoms of influenza and how is it treated?",
+      "response": "<memory_ask>Influenza,symptoms,What</memory_ask><memory_ask>Influenza,treatment,How</memory_ask>"
+    },
+    {
+      "input": "Who is the current CEO of Google and what is their background?",
+      "response": "<memory_ask>Google,current CEO,Who</memory_ask><memory_ask>Google current CEO,background,What</memory_ask>"
+    },
+    {
+      "input": "Explain the theory of relativity.",
+      "response": "<memory_ask>Information about Theory of Relativity</memory_ask><memory_ask>Theory of Relativity,explanation,What</memory_ask>"
+    },
+    {
+      "input": "What are the main components of a lithium-ion battery and how do they store energy?",
+      "response": "<memory_ask>Lithium-ion battery,main components,What</memory_ask><memory_ask>Lithium-ion battery components,store energy,How</memory_ask>"
+    },
+    {
+      "input": "Where is the Great Barrier Reef located and what threats does it face?",
+      "response": "<memory_ask>Great Barrier Reef,location,Where</memory_ask><memory_ask>Great Barrier Reef,faces threats,What</memory_ask>"
+    },
+    {
+      "input": "What is blockchain technology and how is it used in cryptocurrencies like Bitcoin?",
+      "response": "<memory_ask>Information about Blockchain technology</memory_ask><memory_ask>Blockchain technology,use in cryptocurrencies,How</memory_ask><memory_ask>Information about Bitcoin</memory_ask>"
+    },
+    {
+      "input": "Who discovered penicillin and what impact did it have on medicine?",
+      "response": "<memory_ask>Penicillin,discoverer,Who</memory_ask><memory_ask>Penicillin,impact on medicine,What</memory_ask>"
+    },
+    {
+      "input": "What are the different types of renewable energy sources and their pros and cons?",
+      "response": "<memory_ask>Renewable energy sources,types,What</memory_ask><memory_ask>Renewable energy source types,pros,What</memory_ask><memory_ask>Renewable energy source types,cons,What</memory_ask>"
+    },
+    {
+      "input": "How do vaccines work to protect against diseases?",
+      "response": "<memory_ask>Vaccines,work to protect against diseases,How</memory_ask><memory_ask>Information about Vaccines</memory_ask>"
+    },
+    {
+      "input": "What is the current population of Earth and how is it projected to change in the coming decades?",
+      "response": "<memory_ask>Earth,current population,What</memory_ask><memory_ask>Earth population,projected change in coming decades,How</memory_ask>"
+    },
+    {
+      "input": "Who painted the Mona Lisa and where is it currently displayed?",
+      "response": "<memory_ask>Mona Lisa,painter,Who</memory_ask><memory_ask>Mona Lisa,current display location,Where</memory_ask>"
+    },
+    {
+      "input": "What are black holes and how are they formed?",
+      "response": "<memory_ask>Information about Black holes</memory_ask><memory_ask>Black holes,formation process,How</memory_ask>"
+    },
+    {
+      "input": "What were the major causes and consequences of World War I?",
+      "response": "<memory_ask>World War I,major causes,What</memory_ask><memory_ask>World War I,major consequences,What</memory_ask>"
+    },
+    {
+      "input": "How does the internet work, from a user request to a webpage loading?",
+      "response": "<memory_ask>Internet,works,How</memory_ask><memory_ask>User request to webpage loading,process,What</memory_ask>"
+    },
+    {
+      "input": "What is artificial intelligence, machine learning, and deep learning, and how are they related?",
+      "response": "<memory_ask>Information about Artificial Intelligence</memory_ask><memory_ask>Information about Machine Learning</memory_ask><memory_ask>Information about Deep Learning</memory_ask><memory_ask>Artificial Intelligence,related to,Machine Learning</memory_ask><memory_ask>Machine Learning,related to,Deep Learning</memory_ask>"
+    },
+    {
+      "input": "Who are the main characters in Shakespeare's 'Hamlet' and what is the central theme of the play?",
+      "response": "<memory_ask>Hamlet,main characters,Who</memory_ask><memory_ask>Hamlet,central theme,What</memory_ask><memory_ask>Information about Hamlet play</memory_ask>"
+    },
+    {
+      "input": "What is climate change, what are its primary drivers, and what are its observed global impacts?",
+      "response": "<memory_ask>Information about Climate Change</memory_ask><memory_ask>Climate Change,primary drivers,What</memory_ask><memory_ask>Climate Change,observed global impacts,What</memory_ask>"
+    },
+    {
+      "input": "How is coffee beans processed from harvesting to the final roasted bean, and what factors affect its flavor profile?",
+      "response": "<memory_ask>Coffee beans,processing method,How</memory_ask><memory_ask>Coffee bean flavor profile,affecting factors,What</memory_ask><memory_ask>Information about coffee beans</memory_ask>"
+    },
+    {
+      "input": "What are the key principles of agile software development, and how do they differ from traditional waterfall models?",
+      "response": "<memory_ask>Agile software development,key principles,What</memory_ask><memory_ask>Agile principles,differ from,Waterfall model</memory_ask><memory_ask>Information about Agile software development</memory_ask><memory_ask>Information about Waterfall model</memory_ask>"
+    },
+    {
+      "input": "Who invented the telephone, when was it invented, and how did it revolutionize communication?",
+      "response": "<memory_ask>Telephone,inventor,Who</memory_ask><memory_ask>Telephone,invention date,When</memory_ask><memory_ask>Telephone,revolutionized communication,How</memory_ask>"
+    },
+    {
+      "input": "What are the different layers of the Earth's atmosphere, and what are their characteristics?",
+      "response": "<memory_ask>Earth atmosphere,layers,What</memory_ask><memory_ask>Earth atmosphere layers,characteristics,What</memory_ask>"
+    },
+    {
+      "input": "What is the process of nuclear fusion, how does it power the Sun, and what are the challenges in achieving controlled fusion on Earth?",
+      "response": "<memory_ask>Nuclear fusion,process,What</memory_ask><memory_ask>Nuclear fusion,powers the Sun,How</memory_ask><memory_ask>Controlled fusion on Earth,challenges,What</memory_ask><memory_ask>Information about Nuclear fusion</memory_ask>"
+    },
+    {
+      "input": "Who was Marie Curie, what were her major scientific contributions, and what awards did she receive?",
+      "response": "<memory_ask>Information about Marie Curie</memory_ask><memory_ask>Marie Curie,major scientific contributions,What</memory_ask><memory_ask>Marie Curie,awards received,What</memory_ask>"
+    },
+    {
+      "input": "What are the fundamental forces of nature, and which particles mediate them?",
+      "response": "<memory_ask>Fundamental forces of nature,What are</memory_ask><memory_ask>Fundamental forces of nature,mediating particles,Which</memory_ask>"
+    },
+    {
+      "input": "What is the history of the internet from ARPANET to the World Wide Web, and who were key figures in its development?",
+      "response": "<memory_ask>Internet,history,What</memory_ask><memory_ask>ARPANET,history,What</memory_ask><memory_ask>World Wide Web,history,What</memory_ask><memory_ask>Internet development,key figures,Who</memory_ask>"
+    },
+    {
+      "input": "How do search engines like Google rank web pages, what is SEO, and what are common SEO techniques?",
+      "response": "<memory_ask>Search engines,rank web pages,How</memory_ask><memory_ask>Information about SEO</memory_ask><memory_ask>SEO techniques,common,What</memory_ask><memory_ask>Information about Google search engine</memory_ask>"
+    },
+    {
+      "input": "What are the stages of the human sleep cycle, and why is sleep important for health?",
+      "response": "<memory_ask>Human sleep cycle,stages,What</memory_ask><memory_ask>Sleep,importance for health,Why</memory_ask>"
+    },
+    {
+      "input": "What are the main types of galaxies in the universe, and how do they differ in terms of structure and star formation activity?",
+      "response": "<memory_ask>Galaxies,main types,What</memory_ask><memory_ask>Galaxy types,differ in structure,How</memory_ask><memory_ask>Galaxy types,differ in star formation activity,How</memory_ask>"
+    },
+    {
+      "input": "What are the primary functions of the human liver, and what are common liver diseases?",
+      "response": "<memory_ask>Human liver,primary functions,What</memory_ask><memory_ask>Liver diseases,common,What</memory_ask>"
+    },
+    {
+      "input": "What is the significance of the Rosetta Stone, when was it discovered, and how did it help decipher Egyptian hieroglyphs?",
+      "response": "<memory_ask>Rosetta Stone,significance,What</memory_ask><memory_ask>Rosetta Stone,discovery date,When</memory_ask><memory_ask>Rosetta Stone,helped decipher Egyptian hieroglyphs,How</memory_ask>"
+    },
+    {
+      "input": "What are the differences between RNA and DNA in terms of structure and function, and what roles do they play in protein synthesis?",
+      "response": "<memory_ask>RNA,differs from DNA in structure,How</memory_ask><memory_ask>RNA,differs from DNA in function,How</memory_ask><memory_ask>RNA,role in protein synthesis,What</memory_ask><memory_ask>DNA,role in protein synthesis,What</memory_ask>"
+    },
+    {
+      "input": "What are the main arguments for and against vegetarianism and veganism, considering health, environmental, and ethical aspects?",
+      "response": "<memory_ask>Vegetarianism,arguments for,What</memory_ask><memory_ask>Vegetarianism,arguments against,What</memory_ask><memory_ask>Veganism,arguments for,What</memory_ask><memory_ask>Veganism,arguments against,What</memory_ask><memory_ask>Information about vegetarianism health aspects</memory_ask><memory_ask>Information about vegetarianism environmental aspects</memory_ask><memory_ask>Information about vegetarianism ethical aspects</memory_ask><memory_ask>Information about veganism health aspects</memory_ask><memory_ask>Information about veganism environmental aspects</memory_ask><memory_ask>Information about veganism ethical aspects</memory_ask>"
+    },
+    {
+      "input": "Who were the Vikings, where did they originate from, what were their major historical impacts through raiding and exploration, and what was their mythology like?",
+      "response": "<memory_ask>Information about Vikings</memory_ask><memory_ask>Vikings,originated from,Where</memory_ask><memory_ask>Vikings,major historical impacts from raiding,What</memory_ask><memory_ask>Vikings,major historical impacts from exploration,What</memory_ask><memory_ask>Viking mythology,description,What</memory_ask>"
+    }
+  ]
+}

@@ -1,0 +1,1254 @@
+{
+  "examples": [
+    {
+      "input": "What's the weather in London?",
+      "response": "<memory_ask>Weather in London</memory_ask>",
+      "id": 0
+    },
+    {
+      "input": "My printer 'HPJet Pro' is out of ink. The model is 'X500'.",
+      "response": "<memory_ask>Information about HPJet Pro printer model X500</memory_ask><memory_ask>Printer out of ink</memory_ask><memory_ask>Ink replacement for HPJet Pro X500</memory_ask>",
+      "id": 1
+    },
+    {
+      "input": "Tell me a joke.",
+      "response": "<memory_ask>Retrieve a joke</memory_ask>",
+      "id": 2
+    },
+    {
+      "input": "The new 'Galaxy Phone S25' was announced. What are its specs compared to the 'Pixel 9'?",
+      "response": "<memory_ask>Information about Galaxy Phone S25</memory_ask><memory_ask>Specifications of Galaxy Phone S25</memory_ask><memory_ask>Information about Pixel 9</memory_ask><memory_ask>Comparison of Galaxy Phone S25 and Pixel 9 specs</memory_ask>",
+      "id": 3
+    },
+    {
+      "input": "Define 'serendipity'.",
+      "response": "<memory_ask>Definition of serendipity</memory_ask>",
+      "id": 4
+    },
+    {
+      "input": "I need to book a flight to Paris for next Tuesday. My budget is $500. I prefer 'AirFrance'.",
+      "response": "<memory_ask>Flight booking to Paris</memory_ask><memory_ask>Travel date: next Tuesday</memory_ask><memory_ask>Flight budget: $500</memory_ask><memory_ask>Preferred airline: AirFrance</memory_ask><memory_ask>AirFrance flights to Paris next Tuesday under $500</memory_ask>",
+      "id": 5
+    },
+    {
+      "input": "fhqwhgads",
+      "response": "",
+      "id": 6
+    },
+    {
+      "input": "What is the recipe for a margarita? Does it need tequila?",
+      "response": "<memory_ask>Recipe for margarita</memory_ask><memory_ask>Ingredients for margarita (including tequila)</memory_ask>",
+      "id": 7
+    },
+    {
+      "input": "My car, a 'Ford Focus', won't start. The battery is new. It was serviced at 'Joe's Garage'.",
+      "response": "<memory_ask>User's car: Ford Focus</memory_ask><memory_ask>Problem: Ford Focus won't start</memory_ask><memory_ask>Ford Focus battery status: new</memory_ask><memory_ask>Previous service location: Joe's Garage</memory_ask><memory_ask>Information about Joe's Garage</memory_ask><memory_ask>Troubleshooting car starting issues with new battery</memory_ask>",
+      "id": 8
+    },
+    {
+      "input": "Who wrote 'Hamlet'?",
+      "response": "<memory_ask>Author of Hamlet</memory_ask>",
+      "id": 9
+    },
+    {
+      "input": "The 'Alpha Centauri' star system. How far is it?",
+      "response": "<memory_ask>Information about Alpha Centauri star system</memory_ask><memory_ask>Distance to Alpha Centauri</memory_ask>",
+      "id": 10
+    },
+    {
+      "input": "My 'Smart Light SL100' is flickering. I bought it from 'LightMart'. The app is 'SmartGlow'.",
+      "response": "<memory_ask>Information about Smart Light SL100</memory_ask><memory_ask>Problem: Smart Light SL100 flickering</memory_ask><memory_ask>Purchase location: LightMart</memory_ask><memory_ask>Control app: SmartGlow</memory_ask><memory_ask>Troubleshooting flickering smart lights</memory_ask>",
+      "id": 11
+    },
+    {
+      "input": "What is the capital of Japan?",
+      "response": "<memory_ask>Capital of Japan</memory_ask>",
+      "id": 12
+    },
+    {
+      "input": "I want to learn guitar. What's a good beginner acoustic guitar model? My friend Dave plays a 'Fender'.",
+      "response": "<memory_ask>Information about learning guitar</memory_ask><memory_ask>Good beginner acoustic guitar models</memory_ask><memory_ask>Who is Dave</memory_ask><memory_ask>Information about Fender acoustic guitars</memory_ask>",
+      "id": 13
+    },
+    {
+      "input": "Tell me about photosynthesis.",
+      "response": "<memory_ask>Explanation of photosynthesis</memory_ask>",
+      "id": 14
+    },
+    {
+      "input": "My order 'XYZ123' from 'Amazonia.com' is late. It was shipped via 'SpeedyShip'.",
+      "response": "<memory_ask>Information about order XYZ123</memory_ask><memory_ask>Retailer: Amazonia.com</memory_ask><memory_ask>Order status: late</memory_ask><memory_ask>Shipping company: SpeedyShip</memory_ask><memory_ask>Tracking information for order XYZ123 with SpeedyShip</memory_ask>",
+      "id": 15
+    },
+    {
+      "input": "lorem ipsum dolor sit amet",
+      "response": "<memory_ask>Meaning of Lorem Ipsum</memory_ask>",
+      "id": 16
+    },
+    {
+      "input": "What are black holes?",
+      "response": "<memory_ask>Definition of black holes</memory_ask><memory_ask>How black holes are formed</memory_ask>",
+      "id": 17
+    },
+    {
+      "input": "The 'Apollo 13' mission. What was the famous quote? Tom Hanks was in the movie.",
+      "response": "<memory_ask>Information about Apollo 13 mission</memory_ask><memory_ask>Famous quote from Apollo 13 ('Houston, we have a problem')</memory_ask><memory_ask>Information about Apollo 13 movie starring Tom Hanks</memory_ask>",
+      "id": 18
+    },
+    {
+      "input": "What's the boiling point of nitrogen?",
+      "response": "<memory_ask>Boiling point of nitrogen</memory_ask>",
+      "id": 19
+    },
+    {
+      "input": "I need to paint my fence. It's made of wood. The current color is white. I want it to be brown. The fence is 50 feet long.",
+      "response": "<memory_ask>Information about painting a wooden fence</memory_ask><memory_ask>Current fence color: white</memory_ask><memory_ask>Desired fence color: brown</memory_ask><memory_ask>Fence length: 50 feet</memory_ask><memory_ask>Estimating paint quantity for 50ft wooden fence</memory_ask><memory_ask>Steps for painting a wooden fence brown over white</memory_ask>",
+      "id": 20
+    },
+    {
+      "input": "The 'Mona Lisa'. Who painted it and where is it?",
+      "response": "<memory_ask>Painter of Mona Lisa</memory_ask><memory_ask>Location of Mona Lisa painting</memory_ask><memory_ask>Information about Mona Lisa</memory_ask>",
+      "id": 21
+    },
+    {
+      "input": "gobblydegook",
+      "response": "",
+      "id": 22
+    },
+    {
+      "input": "What is the 'Great Pacific Garbage Patch'?",
+      "response": "<memory_ask>Information about Great Pacific Garbage Patch</memory_ask>",
+      "id": 23
+    },
+    {
+      "input": "My 'Smart Thermostat EcoHeat' shows error 'E2'. The manufacturer is 'HomeComfort'.",
+      "response": "<memory_ask>Information about Smart Thermostat EcoHeat</memory_ask><memory_ask>Error code E2 on Smart Thermostat EcoHeat</memory_ask><memory_ask>Manufacturer: HomeComfort</memory_ask><memory_ask>Meaning of error E2 for EcoHeat thermostat</memory_ask><memory_ask>Troubleshooting error E2 on EcoHeat</memory_ask>",
+      "id": 24
+    },
+    {
+      "input": "Tell me about the planet Mars.",
+      "response": "<memory_ask>Information about planet Mars</memory_ask><memory_ask>Key characteristics of Mars</memory_ask>",
+      "id": 25
+    },
+    {
+      "input": "I need to buy a birthday gift for my dad, John. He likes golf and whiskey.",
+      "response": "<memory_ask>Gift ideas for dad who likes golf</memory_ask><memory_ask>Gift ideas for dad who likes whiskey</memory_ask><memory_ask>User's dad: John</memory_ask><memory_ask>Occasion: John's birthday</memory_ask>",
+      "id": 26
+    },
+    {
+      "input": "What is 'Quantum Mechanics'?",
+      "response": "<memory_ask>Explanation of Quantum Mechanics</memory_ask>",
+      "id": 27
+    },
+    {
+      "input": "The 'Perseverance Rover' on Mars. What is its mission?",
+      "response": "<memory_ask>Information about Perseverance Rover</memory_ask><memory_ask>Mission objectives of Perseverance Rover on Mars</memory_ask>",
+      "id": 28
+    },
+    {
+      "input": "My laptop, an 'Acer Aspire 5', is overheating when I play 'Valorant'.",
+      "response": "<memory_ask>Information about Acer Aspire 5 laptop</memory_ask><memory_ask>Problem: Acer Aspire 5 overheating during Valorant gameplay</memory_ask><memory_ask>Information about Valorant game system requirements</memory_ask><memory_ask>Troubleshooting laptop overheating issues</memory_ask>",
+      "id": 29
+    },
+    {
+      "input": "Who discovered penicillin?",
+      "response": "<memory_ask>Discoverer of penicillin (Alexander Fleming)</memory_ask>",
+      "id": 30
+    },
+    {
+      "input": "The 'FIFA World Cup'. When is the next one?",
+      "response": "<memory_ask>Information about FIFA World Cup</memory_ask><memory_ask>Date and location of next FIFA World Cup</memory_ask>",
+      "id": 31
+    },
+    {
+      "input": "My 'Smartwatch Series 8' by 'AppleClone' is not tracking my heart rate.",
+      "response": "<memory_ask>Information about Smartwatch Series 8 by AppleClone</memory_ask><memory_ask>Problem: Smartwatch Series 8 not tracking heart rate</memory_ask><memory_ask>Troubleshooting heart rate monitor on smartwatches</memory_ask>",
+      "id": 32
+    },
+    {
+      "input": "What is 'DNA'?",
+      "response": "<memory_ask>Definition of DNA (Deoxyribonucleic acid)</memory_ask><memory_ask>Structure of DNA</memory_ask><memory_ask>Function of DNA</memory_ask>",
+      "id": 33
+    },
+    {
+      "input": "I'm planning a BBQ. I need a recipe for potato salad. My friend Jane is allergic to eggs.",
+      "response": "<memory_ask>Recipe for potato salad</memory_ask><memory_ask>Egg-free potato salad recipe options</memory_ask><memory_ask>Who is Jane</memory_ask><memory_ask>Jane's egg allergy consideration</memory_ask>",
+      "id": 34
+    },
+    {
+      "input": "The 'Northern Lights'. Best place to see them?",
+      "response": "<memory_ask>Information about Northern Lights (Aurora Borealis)</memory_ask><memory_ask>Best places to see Northern Lights</memory_ask>",
+      "id": 35
+    },
+    {
+      "input": "My 'RoboCleaner 300' got stuck on the rug again. It's from 'HomeBots Inc.'",
+      "response": "<memory_ask>Information about RoboCleaner 300</memory_ask><memory_ask>Manufacturer: HomeBots Inc.</memory_ask><memory_ask>Problem: RoboCleaner 300 gets stuck on rug</memory_ask><memory_ask>Tips to prevent robot vacuums from getting stuck on rugs</memory_ask>",
+      "id": 36
+    },
+    {
+      "input": "What is 'Artificial Intelligence'?",
+      "response": "<memory_ask>Definition of Artificial Intelligence</memory_ask>",
+      "id": 37
+    },
+    {
+      "input": "The 'Theory of Evolution'. Who proposed it?",
+      "response": "<memory_ask>Information about Theory of Evolution</memory_ask><memory_ask>Proposer of Theory of Evolution by natural selection (Charles Darwin)</memory_ask>",
+      "id": 38
+    },
+    {
+      "input": "I need to send a package to London. It weighs 2kg. What are the shipping options from 'USPS' or 'FedEx'?",
+      "response": "<memory_ask>Information about sending a package to London</memory_ask><memory_ask>Package weight: 2kg</memory_ask><memory_ask>Shipping options from USPS to London for 2kg package</memory_ask><memory_ask>Shipping options from FedEx to London for 2kg package</memory_ask>",
+      "id": 39
+    },
+    {
+      "input": "What is 'Climate Change'?",
+      "response": "<memory_ask>Definition of Climate Change</memory_ask><memory_ask>Causes of Climate Change</memory_ask>",
+      "id": 40
+    },
+    {
+      "input": "The 'Golden Gate Bridge'. Where is it?",
+      "response": "<memory_ask>Information about Golden Gate Bridge</memory_ask><memory_ask>Location of Golden Gate Bridge (San Francisco, California)</memory_ask>",
+      "id": 41
+    },
+    {
+      "input": "My 'Smart Coffee Brewer Model Z' isn't heating water. The app 'BrewNow' says 'ready'.",
+      "response": "<memory_ask>Information about Smart Coffee Brewer Model Z</memory_ask><memory_ask>Problem: Model Z not heating water</memory_ask><memory_ask>Status in BrewNow app: ready</memory_ask><memory_ask>Information about BrewNow app</memory_ask><memory_ask>Troubleshooting coffee maker heating issues</memory_ask>",
+      "id": 42
+    },
+    {
+      "input": "Tell me about 'Stoic philosophy'.",
+      "response": "<memory_ask>Information about Stoic philosophy</memory_ask><memory_ask>Key tenets of Stoicism</memory_ask>",
+      "id": 43
+    },
+    {
+      "input": "The movie 'Inception'. What is it about?",
+      "response": "<memory_ask>Plot summary of movie Inception</memory_ask><memory_ask>Key concepts in Inception (dreams within dreams)</memory_ask>",
+      "id": 44
+    },
+    {
+      "input": "I need a hotel in New York City for 3 nights, from Dec 1st to Dec 4th. My budget is $200/night. Near Times Square.",
+      "response": "<memory_ask>Hotel booking in New York City</memory_ask><memory_ask>Stay duration: 3 nights (Dec 1st - Dec 4th)</memory_ask><memory_ask>Budget: $200 per night</memory_ask><memory_ask>Preferred location: near Times Square</memory_ask><memory_ask>Hotels near Times Square NYC under $200/night for Dec 1-4</memory_ask>",
+      "id": 45
+    },
+    {
+      "input": "What is 'Blockchain'?",
+      "response": "<memory_ask>Definition of Blockchain</memory_ask>",
+      "id": 46
+    },
+    {
+      "input": "The 'Standard Model' of particle physics. What are quarks?",
+      "response": "<memory_ask>Information about Standard Model of particle physics</memory_ask><memory_ask>What are quarks (elementary particles)</memory_ask><memory_ask>Types of quarks</memory_ask>",
+      "id": 47
+    },
+    {
+      "input": "My 'Smart Door Lock DLX5' is beeping continuously. The brand is 'SecureKey'.",
+      "response": "<memory_ask>Information about Smart Door Lock DLX5</memory_ask><memory_ask>Brand: SecureKey</memory_ask><memory_ask>Problem: DLX5 beeping continuously</memory_ask><memory_ask>Reasons for smart lock continuous beeping</memory_ask><memory_ask>Troubleshooting DLX5 beeping issue</memory_ask>",
+      "id": 48
+    },
+    {
+      "input": "What is 'Machine Vision'?",
+      "response": "<memory_ask>Definition of Machine Vision</memory_ask><memory_ask>Applications of Machine Vision</memory_ask>",
+      "id": 49
+    },
+    {
+      "input": "The author 'J.R.R. Tolkien'. What books did he write?",
+      "response": "<memory_ask>Information about author J.R.R. Tolkien</memory_ask><memory_ask>Books written by J.R.R. Tolkien (e.g., The Hobbit, The Lord of the Rings)</memory_ask>",
+      "id": 50
+    },
+    {
+      "input": "I need to fix a running toilet. It's a 'Kohler' brand.",
+      "response": "<memory_ask>How to fix a running toilet</memory_ask><memory_ask>Brand of toilet: Kohler</memory_ask><memory_ask>Common causes for Kohler running toilets</memory_ask><memory_ask>Parts for Kohler toilet repair</memory_ask>",
+      "id": 51
+    },
+    {
+      "input": "What is 'Natural Language Processing' (NLP)?",
+      "response": "<memory_ask>Definition of Natural Language Processing (NLP)</memory_ask>",
+      "id": 52
+    },
+    {
+      "input": "The 'Mount Rushmore' monument. Whose faces are on it?",
+      "response": "<memory_ask>Information about Mount Rushmore</memory_ask><memory_ask>Faces depicted on Mount Rushmore (Washington, Jefferson, Roosevelt, Lincoln)</memory_ask>",
+      "id": 53
+    },
+    {
+      "input": "My 'Smart Air Fryer AF200' from 'CrispyCook' smells like burning plastic. I used it once.",
+      "response": "<memory_ask>Information about Smart Air Fryer AF200</memory_ask><memory_ask>Manufacturer: CrispyCook</memory_ask><memory_ask>Problem: AF200 smells like burning plastic after one use</memory_ask><memory_ask>Potential reasons for new appliance smelling like burning plastic</memory_ask><memory_ask>Safety precautions for new air fryer use</memory_ask>",
+      "id": 54
+    },
+    {
+      "input": "What is 'Reinforcement Learning'?",
+      "response": "<memory_ask>Definition of Reinforcement Learning</memory_ask><memory_ask>Key concepts in Reinforcement Learning (agent, environment, reward)</memory_ask>",
+      "id": 55
+    },
+    {
+      "input": "The 'Colossus of Rhodes'. How tall was it?",
+      "response": "<memory_ask>Information about Colossus of Rhodes</memory_ask><memory_ask>Estimated height of Colossus of Rhodes</memory_ask>",
+      "id": 56
+    },
+    {
+      "input": "I'm planning a D&D campaign set in 'Forgotten Realms'. What are some key cities? My players are level 5.",
+      "response": "<memory_ask>Information about D&D campaign planning in Forgotten Realms</memory_ask><memory_ask>Key cities in Forgotten Realms suitable for level 5 D&D players</memory_ask><memory_ask>Adventure hooks for level 5 players in Forgotten Realms cities</memory_ask>",
+      "id": 57
+    },
+    {
+      "input": "What is 'Computer Vision'?",
+      "response": "<memory_ask>Definition of Computer Vision</memory_ask>",
+      "id": 58
+    },
+    {
+      "input": "The 'Parthenon' in Athens. What was its original purpose?",
+      "response": "<memory_ask>Information about Parthenon in Athens</memory_ask><memory_ask>Original purpose of Parthenon (temple to Athena)</memory_ask>",
+      "id": 59
+    },
+    {
+      "input": "My 'Smart Window Blinds AutoShade V1' by 'WindowControl Co.' are not closing fully via the 'ShadeApp'. They were installed by 'HomeInstall Pros'.",
+      "response": "<memory_ask>Information about Smart Window Blinds AutoShade V1</memory_ask><memory_ask>Manufacturer: WindowControl Co.</memory_ask><memory_ask>Problem: AutoShade V1 not closing fully via ShadeApp</memory_ask><memory_ask>Control app: ShadeApp</memory_ask><memory_ask>Information about ShadeApp</memory_ask><memory_ask>Installer: HomeInstall Pros</memory_ask><memory_ask>Information about HomeInstall Pros</memory_ask><memory_ask>Troubleshooting smart blinds closing issues</memory_ask><memory_ask>How to calibrate AutoShade V1 blind limits</memory_ask>",
+      "id": 60
+    },
+    {
+      "input": "What are 'Neural Networks'?",
+      "response": "<memory_ask>Definition of Neural Networks (Artificial Neural Networks)</memory_ask><memory_ask>Basic structure of a Neural Network (neurons, layers, connections)</memory_ask>",
+      "id": 61
+    },
+    {
+      "input": "The 'Taj Mahal'. How long did it take to build?",
+      "response": "<memory_ask>Information about Taj Mahal</memory_ask><memory_ask>Construction duration of Taj Mahal</memory_ask>",
+      "id": 62
+    },
+    {
+      "input": "I'm troubleshooting a 'Kubernetes' deployment for 'AppX' on 'AWS EKS'. The pods are in 'CrashLoopBackOff'. Logs show 'Error 503'. My colleague David is also looking into it.",
+      "response": "<memory_ask>Information about troubleshooting Kubernetes deployment for AppX</memory_ask><memory_ask>Platform: AWS EKS</memory_ask><memory_ask>Problem: Pods in CrashLoopBackOff state</memory_ask><memory_ask>Log error: Error 503</memory_ask><memory_ask>Common causes for Kubernetes CrashLoopBackOff</memory_ask><memory_ask>Meaning of HTTP Error 503 in Kubernetes context</memory_ask><memory_ask>User's colleague: David</memory_ask><memory_ask>David's involvement in troubleshooting</memory_ask>",
+      "id": 63
+    },
+    {
+      "input": "What is 'Big Data'?",
+      "response": "<memory_ask>Definition of Big Data</memory_ask><memory_ask>Characteristics of Big Data (Volume, Velocity, Variety, Veracity, Value)</memory_ask>",
+      "id": 64
+    },
+    {
+      "input": "The 'Machu Picchu'. When was it rediscovered?",
+      "response": "<memory_ask>Information about Machu Picchu</memory_ask><memory_ask>Rediscovery of Machu Picchu (Hiram Bingham, 1911)</memory_ask>",
+      "id": 65
+    },
+    {
+      "input": "My 'Smart Scale FitBalance Pro' by 'HealthMetrics Inc.' is giving inconsistent weight readings. I use it on a tile floor. The app 'BalanceTrack' shows fluctuations.",
+      "response": "<memory_ask>Information about Smart Scale FitBalance Pro</memory_ask><memory_ask>Manufacturer: HealthMetrics Inc.</memory_ask><memory_ask>Problem: FitBalance Pro giving inconsistent weight readings</memory_ask><memory_ask>Floor surface: tile</memory_ask><memory_ask>App used: BalanceTrack</memory_ask><memory_ask>Information about BalanceTrack app</memory_ask><memory_ask>App shows weight fluctuations</memory_ask><memory_ask>Troubleshooting inconsistent smart scale readings</memory_ask><memory_ask>Importance of flat, hard surface for smart scale accuracy</memory_ask>",
+      "id": 66
+    },
+    {
+      "input": "What is 'Cloud Computing'?",
+      "response": "<memory_ask>Definition of Cloud Computing</memory_ask><memory_ask>Types of Cloud Computing services (IaaS, PaaS, SaaS)</memory_ask>",
+      "id": 67
+    },
+    {
+      "input": "The 'Stonehenge'. What is its purpose?",
+      "response": "<memory_ask>Information about Stonehenge</memory_ask><memory_ask>Theories about the purpose of Stonehenge</memory_ask>",
+      "id": 68
+    },
+    {
+      "input": "I'm writing a song. The chorus is 'Sunlight on the water'. I need a rhyme for 'water'. My guitar is a 'Martin D-28'.",
+      "response": "<memory_ask>Information about songwriting</memory_ask><memory_ask>User's song chorus: Sunlight on the water</memory_ask><memory_ask>Rhymes for the word 'water'</memory_ask><memory_ask>User's guitar: Martin D-28</memory_ask><memory_ask>Information about Martin D-28 guitar</memory_ask>",
+      "id": 69
+    },
+    {
+      "input": "What is 'Cybersecurity'?",
+      "response": "<memory_ask>Definition of Cybersecurity</memory_ask>",
+      "id": 70
+    },
+    {
+      "input": "The 'Pyramids of Giza'. How many are there?",
+      "response": "<memory_ask>Information about Pyramids of Giza</memory_ask><memory_ask>Number of main pyramids at Giza (three: Khufu, Khafre, Menkaure)</memory_ask>",
+      "id": 71
+    },
+    {
+      "input": "My 'Smart Pet Door AutoFlap X' by 'PetAccess Tech' isn't recognizing my cat Fluffy's microchip 'ID123'. Fluffy is a Maine Coon.",
+      "response": "<memory_ask>Information about Smart Pet Door AutoFlap X</memory_ask><memory_ask>Manufacturer: PetAccess Tech</memory_ask><memory_ask>Problem: AutoFlap X not recognizing cat Fluffy's microchip ID123</memory_ask><memory_ask>User's cat: Fluffy (Maine Coon)</memory_ask><memory_ask>Fluffy's microchip ID: ID123</memory_ask><memory_ask>Troubleshooting smart pet door microchip recognition issues</memory_ask><memory_ask>How to register microchip ID123 with AutoFlap X</memory_ask>",
+      "id": 72
+    },
+    {
+      "input": "What is 'Quantum Entanglement' in simple terms?",
+      "response": "<memory_ask>Simple explanation of Quantum Entanglement</memory_ask>",
+      "id": 73
+    },
+    {
+      "input": "The 'Great Sphinx of Giza'. What is it made of?",
+      "response": "<memory_ask>Information about Great Sphinx of Giza</memory_ask><memory_ask>Material Great Sphinx is made of (limestone bedrock)</memory_ask>",
+      "id": 74
+    },
+    {
+      "input": "I'm baking a cake for my friend Anna's party. The recipe calls for 'buttermilk' but I only have 'milk' and 'lemon juice'. Will that work? The party is at 'The Community Hall'.",
+      "response": "<memory_ask>Information about baking a cake</memory_ask><memory_ask>Cake for: Anna's party</memory_ask><memory_ask>Who is Anna</memory_ask><memory_ask>Recipe requires buttermilk</memory_ask><memory_ask>User has milk and lemon juice</memory_ask><memory_ask>Substitute for buttermilk using milk and lemon juice</memory_ask><memory_ask>Party location: The Community Hall</memory_ask><memory_ask>Information about The Community Hall</memory_ask>",
+      "id": 75
+    },
+    {
+      "input": "What is 'General Artificial Intelligence' (GAI)?",
+      "response": "<memory_ask>Definition of General Artificial Intelligence (GAI or AGI)</memory_ask>",
+      "id": 76
+    },
+    {
+      "input": "The 'Valley of the Kings' in Egypt. Who is buried there?",
+      "response": "<memory_ask>Information about Valley of the Kings, Egypt</memory_ask><memory_ask>Types of individuals buried in Valley of the Kings (pharaohs, nobles of New Kingdom)</memory_ask><memory_ask>Famous pharaohs buried in Valley of the Kings (e.g., Tutankhamun, Ramses II)</memory_ask>",
+      "id": 77
+    },
+    {
+      "input": "My 'Smart Garage Door Opener GDO-Pro' by 'SecureLift' won't close using the 'MyGarage' app when I'm away from home. It works with the physical remote 'RemoteX'.",
+      "response": "<memory_ask>Information about Smart Garage Door Opener GDO-Pro</memory_ask><memory_ask>Manufacturer: SecureLift</memory_ask><memory_ask>Problem: GDO-Pro won't close using MyGarage app when away</memory_ask><memory_ask>Works with physical remote RemoteX</memory_ask><memory_ask>Information about RemoteX</memory_ask><memory_ask>App used: MyGarage</memory_ask><memory_ask>Information about MyGarage app</memory_ask><memory_ask>Troubleshooting remote operation of smart garage door openers</memory_ask><memory_ask>Checking GDO-Pro Wi-Fi connectivity and MyGarage app permissions</memory_ask>",
+      "id": 78
+    },
+    {
+      "input": "What is 'Supervised Learning' in ML?",
+      "response": "<memory_ask>Definition of Supervised Learning in Machine Learning</memory_ask><memory_ask>Key characteristic of Supervised Learning (uses labeled data)</memory_ask><memory_ask>Examples of Supervised Learning tasks (classification, regression)</memory_ask>",
+      "id": 79
+    },
+    {
+      "input": "The 'Karnak Temple Complex'. Where is it?",
+      "response": "<memory_ask>Information about Karnak Temple Complex</memory_ask><memory_ask>Location of Karnak Temple Complex (Luxor, Egypt)</memory_ask>",
+      "id": 80
+    },
+    {
+      "input": "I'm trying to install 'Ubuntu Linux' on my old 'Dell Inspiron' laptop alongside 'Windows 10'. I created a bootable USB using 'Rufus'. The laptop model is 15_3567. My goal is to learn coding for my class with Professor Davis.",
+      "response": "<memory_ask>Information about installing Ubuntu Linux alongside Windows 10</memory_ask><memory_ask>Laptop: Dell Inspiron 15_3567</memory_ask><memory_ask>Bootable USB creation tool: Rufus</memory_ask><memory_ask>Information about Rufus tool</memory_ask><memory_ask>Goal: learn coding for class with Professor Davis</memory_ask><memory_ask>Who is Professor Davis</memory_ask><memory_ask>Steps for dual-booting Ubuntu and Windows 10</memory_ask><memory_ask>Common issues when installing Linux dual-boot</memory_ask>",
+      "id": 81
+    },
+    {
+      "input": "What is 'Unsupervised Learning' in ML?",
+      "response": "<memory_ask>Definition of Unsupervised Learning in Machine Learning</memory_ask><memory_ask>Key characteristic of Unsupervised Learning (uses unlabeled data)</memory_ask><memory_ask>Examples of Unsupervised Learning tasks (clustering, dimensionality reduction)</memory_ask>",
+      "id": 82
+    },
+    {
+      "input": "The 'Abu Simbel temples'. Who built them?",
+      "response": "<memory_ask>Information about Abu Simbel temples</memory_ask><memory_ask>Builder of Abu Simbel temples (Pharaoh Ramesses II)</memory_ask><memory_ask>Relocation of Abu Simbel temples</memory_ask>",
+      "id": 83
+    },
+    {
+      "input": "My 'Smart Baby Monitor CamBaby S2' by 'ParentTech' has a blurry image at night. The night vision LEDs 'IR-Boost' seem to be on. The app is 'BabyView'.",
+      "response": "<memory_ask>Information about Smart Baby Monitor CamBaby S2</memory_ask><memory_ask>Manufacturer: ParentTech</memory_ask><memory_ask>Problem: CamBaby S2 has blurry image at night</memory_ask><memory_ask>Night vision LEDs: IR-Boost (seem to be on)</memory_ask><memory_ask>App used: BabyView</memory_ask><memory_ask>Information about BabyView app</memory_ask><memory_ask>Troubleshooting blurry night vision on baby monitors</memory_ask><memory_ask>Checking for lens cleanliness or IR reflection issues on CamBaby S2</memory_ask>",
+      "id": 84
+    },
+    {
+      "input": "What is 'Reinforcement Learning' in ML?",
+      "response": "<memory_ask>Definition of Reinforcement Learning in Machine Learning</memory_ask><memory_ask>Key concepts: agent, environment, actions, rewards, policy</memory_ask>",
+      "id": 85
+    },
+    {
+      "input": "The 'Luxor Temple'. What was its main purpose?",
+      "response": "<memory_ask>Information about Luxor Temple</memory_ask><memory_ask>Main purpose of Luxor Temple (religious worship, festivals like Opet)</memory_ask>",
+      "id": 86
+    },
+    {
+      "input": "I'm editing a video for 'YouTube' using 'DaVinci Resolve'. I need to add background music 'Track01.mp3' and text overlays. The video is about my trip to 'Hawaii'. My channel is 'TravelsWithTom'.",
+      "response": "<memory_ask>Information about video editing with DaVinci Resolve for YouTube</memory_ask><memory_ask>Information about DaVinci Resolve software</memory_ask><memory_ask>Adding background music Track01.mp3 in DaVinci Resolve</memory_ask><memory_ask>Adding text overlays in DaVinci Resolve</memory_ask><memory_ask>Video topic: trip to Hawaii</memory_ask><memory_ask>User's YouTube channel: TravelsWithTom</memory_ask>",
+      "id": 87
+    },
+    {
+      "input": "What are 'Convolutional Neural Networks' (CNNs)?",
+      "response": "<memory_ask>Definition of Convolutional Neural Networks (CNNs)</memory_ask><memory_ask>Key layers in CNNs (convolutional, pooling, fully connected)</memory_ask><memory_ask>Primary applications of CNNs (image recognition, computer vision)</memory_ask>",
+      "id": 88
+    },
+    {
+      "input": "The 'Saqqara' necropolis. What is the Step Pyramid of Djoser?",
+      "response": "<memory_ask>Information about Saqqara necropolis</memory_ask><memory_ask>Information about Step Pyramid of Djoser at Saqqara</memory_ask><memory_ask>Architect of Step Pyramid of Djoser (Imhotep)</memory_ask>",
+      "id": 89
+    },
+    {
+      "input": "My 'Smart Weather Station WS-Elite' by 'AtmosSense' is not reporting wind speed. Temperature and humidity readings from sensor 'THP-Module' are fine. The display unit is 'WeatherHub'.",
+      "response": "<memory_ask>Information about Smart Weather Station WS-Elite</memory_ask><memory_ask>Manufacturer: AtmosSense</memory_ask><memory_ask>Problem: WS-Elite not reporting wind speed</memory_ask><memory_ask>Temperature and humidity sensor: THP-Module (working fine)</memory_ask><memory_ask>Display unit: WeatherHub</memory_ask><memory_ask>Information about WeatherHub display</memory_ask><memory_ask>Troubleshooting wind speed sensor issues on weather stations</memory_ask><memory_ask>Checking anemometer for obstructions or damage on WS-Elite</memory_ask>",
+      "id": 90
+    },
+    {
+      "input": "What are 'Recurrent Neural Networks' (RNNs)?",
+      "response": "<memory_ask>Definition of Recurrent Neural Networks (RNNs)</memory_ask><memory_ask>Key characteristic of RNNs (ability to process sequential data, internal memory)</memory_ask><memory_ask>Applications of RNNs (natural language processing, speech recognition)</memory_ask>",
+      "id": 91
+    },
+    {
+      "input": "The 'Philae temple complex'. How was it saved from flooding?",
+      "response": "<memory_ask>Information about Philae temple complex</memory_ask><memory_ask>Relocation of Philae temple complex to save it from flooding (Aswan High Dam construction)</memory_ask>",
+      "id": 92
+    },
+    {
+      "input": "I'm creating a 'PowerPoint' presentation for 'BioConf 2024'. The topic is 'Gene Editing Ethics'. My slide #5 needs an image of a DNA helix. My colleague Dr. Smith is co-authoring.",
+      "response": "<memory_ask>Information about creating PowerPoint presentation for BioConf 2024</memory_ask><memory_ask>Information about BioConf 2024</memory_ask><memory_ask>Topic: Gene Editing Ethics</memory_ask><memory_ask>Requirement for slide #5: image of DNA helix</memory_ask><memory_ask>Sources for DNA helix images</memory_ask><memory_ask>User's co-author: Dr. Smith</memory_ask><memory_ask>Who is Dr. Smith</memory_ask>",
+      "id": 93
+    },
+    {
+      "input": "What are 'Transformers' in AI (like in GPT models)?",
+      "response": "<memory_ask>Explanation of Transformer architecture in AI</memory_ask><memory_ask>Key mechanism in Transformers (self-attention)</memory_ask><memory_ask>Role of Transformers in models like GPT</memory_ask>",
+      "id": 94
+    },
+    {
+      "input": "The 'Dead Sea'. Why is it so salty?",
+      "response": "<memory_ask>Information about the Dead Sea</memory_ask><memory_ask>Reasons for high salinity of the Dead Sea (no outlet, high evaporation)</memory_ask>",
+      "id": 95
+    },
+    {
+      "input": "My 'Smart Plant Pot GroBot' by 'PlantPal' is overwatering my succulent 'Echeveria'. The app 'PlantCare AI' setting is 'Desert Plant'.",
+      "response": "<memory_ask>Information about Smart Plant Pot GroBot</memory_ask><memory_ask>Manufacturer: PlantPal</memory_ask><memory_ask>Problem: GroBot overwatering succulent Echeveria</memory_ask><memory_ask>Information about Echeveria succulents</memory_ask><memory_ask>App used: PlantCare AI</memory_ask><memory_ask>Information about PlantCare AI app</memory_ask><memory_ask>App setting: Desert Plant</memory_ask><memory_ask>Troubleshooting smart plant pot overwatering issues</memory_ask><memory_ask>Adjusting watering schedule or moisture sensor calibration for GroBot</memory_ask>",
+      "id": 96
+    },
+    {
+      "input": "What are 'Generative Adversarial Networks' (GANs)?",
+      "response": "<memory_ask>Explanation of Generative Adversarial Networks (GANs)</memory_ask><memory_ask>Components of a GAN (generator, discriminator)</memory_ask><memory_ask>How GANs are trained</memory_ask><memory_ask>Applications of GANs (e.g., image generation)</memory_ask>",
+      "id": 97
+    },
+    {
+      "input": "The 'Galapagos Islands'. What famous scientist studied there?",
+      "response": "<memory_ask>Information about Galapagos Islands</memory_ask><memory_ask>Famous scientist who studied Galapagos Islands (Charles Darwin)</memory_ask><memory_ask>Darwin's observations in Galapagos and theory of evolution</memory_ask>",
+      "id": 98
+    },
+    {
+      "input": "I'm trying to set up parental controls on my child's 'iPad Air'. His name is Timmy. I want to limit screen time using 'ScreenTime App'.",
+      "response": "<memory_ask>Information about setting up parental controls on iPad Air</memory_ask><memory_ask>User's child: Timmy</memory_ask><memory_ask>Goal: limit screen time using ScreenTime App</memory_ask><memory_ask>Information about Apple's Screen Time feature</memory_ask><memory_ask>How to set screen time limits on iPad Air</memory_ask>",
+      "id": 99
+    },
+    {
+      "input": "What is 'Dimensionality Reduction' in machine learning?",
+      "response": "<memory_ask>Definition of Dimensionality Reduction in machine learning</memory_ask><memory_ask>Purpose of Dimensionality Reduction (e.g., reduce complexity, improve performance)</memory_ask><memory_ask>Common techniques for Dimensionality Reduction (e.g., PCA, t-SNE)</memory_ask>",
+      "id": 100
+    },
+    {
+      "input": "The 'Niagara Falls'. It's on the border of which two countries?",
+      "response": "<memory_ask>Information about Niagara Falls</memory_ask><memory_ask>Countries bordering Niagara Falls (USA and Canada)</memory_ask>",
+      "id": 101
+    },
+    {
+      "input": "My 'Smart Lock EntryGuard Pro' by 'Fortress Security' is not locking automatically when I leave. The 'GeoFence' feature in the 'SecureHome App' is enabled. My phone is an 'iPhone 14 Pro'.",
+      "response": "<memory_ask>Information about Smart Lock EntryGuard Pro</memory_ask><memory_ask>Manufacturer: Fortress Security</memory_ask><memory_ask>Problem: EntryGuard Pro not auto-locking on leave</memory_ask><memory_ask>GeoFence feature in SecureHome App: enabled</memory_ask><memory_ask>Information about SecureHome App</memory_ask><memory_ask>User's phone: iPhone 14 Pro</memory_ask><memory_ask>Troubleshooting smart lock auto-lock and GeoFence issues</memory_ask><memory_ask>Checking location services and app permissions on iPhone 14 Pro</memory_ask>",
+      "id": 102
+    },
+    {
+      "input": "What is 'Feature Engineering' in machine learning?",
+      "response": "<memory_ask>Definition of Feature Engineering in machine learning</memory_ask><memory_ask>Purpose of Feature Engineering (improving model performance by creating better input features)</memory_ask><memory_ask>Common techniques in Feature Engineering</memory_ask>",
+      "id": 103
+    },
+    {
+      "input": "The 'Grand Canyon'. Which river formed it?",
+      "response": "<memory_ask>Information about Grand Canyon</memory_ask><memory_ask>River that formed the Grand Canyon (Colorado River)</memory_ask>",
+      "id": 104
+    },
+    {
+      "input": "I'm writing a blog post about 'Sustainable Travel'. What are some key tips? My blog is 'WanderMore.com'. My editor is Jane.",
+      "response": "<memory_ask>Information about writing blog post on Sustainable Travel</memory_ask><memory_ask>Key tips for sustainable travel</memory_ask><memory_ask>User's blog: WanderMore.com</memory_ask><memory_ask>Information about WanderMore.com blog</memory_ask><memory_ask>User's editor: Jane</memory_ask><memory_ask>Who is Jane, user's editor</memory_ask>",
+      "id": 105
+    },
+    {
+      "input": "What is 'Model Evaluation' in machine learning?",
+      "response": "<memory_ask>Definition of Model Evaluation in machine learning</memory_ask><memory_ask>Purpose of Model Evaluation (assessing performance of a trained model)</memory_ask><memory_ask>Common metrics for Model Evaluation (e.g., accuracy, precision, recall, F1-score, AUC)</memory_ask>",
+      "id": 106
+    },
+    {
+      "input": "The 'Loch Ness Monster'. Is there any evidence?",
+      "response": "<memory_ask>Information about Loch Ness Monster legend</memory_ask><memory_ask>Evidence for Loch Ness Monster (lack of scientific proof, anecdotal sightings)</memory_ask><memory_ask>Scientific investigations of Loch Ness Monster sightings</memory_ask>",
+      "id": 107
+    },
+    {
+      "input": "My 'Smart Vacuum Bot VacMaster X' by 'RoboCleanse' is not cleaning the entire floor area. It misses spots near the 'Living Room Sofa'. The mapping feature in 'RoboApp' seems incomplete.",
+      "response": "<memory_ask>Information about Smart Vacuum Bot VacMaster X</memory_ask><memory_ask>Manufacturer: RoboCleanse</memory_ask><memory_ask>Problem: VacMaster X not cleaning entire floor, misses spots near Living Room Sofa</memory_ask><memory_ask>Information about Living Room Sofa area</memory_ask><memory_ask>Mapping feature in RoboApp: seems incomplete</memory_ask><memory_ask>Information about RoboApp</memory_ask><memory_ask>Troubleshooting robotic vacuum coverage issues</memory_ask><memory_ask>How to remap or improve mapping for VacMaster X using RoboApp</memory_ask>",
+      "id": 108
+    },
+    {
+      "input": "What is 'Overfitting' in machine learning?",
+      "response": "<memory_ask>Definition of Overfitting in machine learning</memory_ask><memory_ask>Causes of Overfitting (model too complex, insufficient training data)</memory_ask><memory_ask>Consequences of Overfitting (poor generalization to new data)</memory_ask><memory_ask>Techniques to prevent Overfitting (e.g., regularization, cross-validation, more data)</memory_ask>",
+      "id": 109
+    },
+    {
+      "input": "The 'Bigfoot' or 'Sasquatch' legend. Where is it primarily reported?",
+      "response": "<memory_ask>Information about Bigfoot (Sasquatch) legend</memory_ask><memory_ask>Primary regions where Bigfoot sightings are reported (Pacific Northwest of North America)</memory_ask><memory_ask>Physical descriptions of Bigfoot</memory_ask><memory_ask>Evidence for Bigfoot (footprints, eyewitness accounts, lack of conclusive proof)</memory_ask>",
+      "id": 110
+    },
+    {
+      "input": "I'm learning 'German' using 'Babbel'. I'm struggling with 'dative case'. My upcoming trip is to 'Berlin'. My friend Hans is German.",
+      "response": "<memory_ask>Information about learning German with Babbel</memory_ask><memory_ask>Information about Babbel language learning app</memory_ask><memory_ask>User struggling with German dative case</memory_ask><memory_ask>Explanation of German dative case</memory_ask><memory_ask>Tips for learning German dative case</memory_ask><memory_ask>User's upcoming trip to Berlin</memory_ask><memory_ask>Information about Berlin</memory_ask><memory_ask>User's friend: Hans (German)</memory_ask><memory_ask>Who is Hans</memory_ask>",
+      "id": 111
+    },
+    {
+      "input": "What is 'Underfitting' in machine learning?",
+      "response": "<memory_ask>Definition of Underfitting in machine learning</memory_ask><memory_ask>Causes of Underfitting (model too simple, insufficient training)</memory_ask><memory_ask>Consequences of Underfitting (poor performance on training and new data)</memory_ask><memory_ask>Techniques to address Underfitting (e.g., more complex model, feature engineering, more training)</memory_ask>",
+      "id": 112
+    },
+    {
+      "input": "The 'Yeti' or 'Abominable Snowman'. Where is it said to live?",
+      "response": "<memory_ask>Information about Yeti (Abominable Snowman) legend</memory_ask><memory_ask>Region where Yeti is said to live (Himalayas)</memory_ask><memory_ask>Physical descriptions of Yeti</memory_ask><memory_ask>Evidence for Yeti (footprints, local folklore, lack of conclusive proof)</memory_ask>",
+      "id": 113
+    },
+    {
+      "input": "My 'Smart Lighting System HuePlus' by 'Illuminate Corp' is not responding to the 'LightControl Pro' app after a power outage. All bulbs 'HueColor A19' are unresponsive.",
+      "response": "<memory_ask>Information about Smart Lighting System HuePlus</memory_ask><memory_ask>Manufacturer: Illuminate Corp</memory_ask><memory_ask>Problem: HuePlus not responding to LightControl Pro app after power outage</memory_ask><memory_ask>App used: LightControl Pro</memory_ask><memory_ask>Information about LightControl Pro app</memory_ask><memory_ask>Bulb model: HueColor A19 (all unresponsive)</memory_ask><memory_ask>Information about HueColor A19 bulbs</memory_ask><memory_ask>Troubleshooting smart lighting system issues after power outage</memory_ask><memory_ask>How to reset or re-pair HuePlus system with LightControl Pro app</memory_ask>",
+      "id": 114
+    },
+    {
+      "input": "What is 'Cross-Validation' in machine learning?",
+      "response": "<memory_ask>Definition of Cross-Validation in machine learning</memory_ask><memory_ask>Purpose of Cross-Validation (assessing model performance, preventing overfitting)</memory_ask><memory_ask>Common types of Cross-Validation (e.g., k-fold cross-validation)</memory_ask>",
+      "id": 115
+    },
+    {
+      "input": "The 'Chupacabra' legend. What does it supposedly attack?",
+      "response": "<memory_ask>Information about Chupacabra legend</memory_ask><memory_ask>Regions where Chupacabra sightings are reported (Americas)</memory_ask><memory_ask>Supposed attacks by Chupacabra (livestock, especially goats)</memory_ask><memory_ask>Physical descriptions of Chupacabra</memory_ask><memory_ask>Scientific explanations for Chupacabra sightings (e.g., mangy canids)</memory_ask>",
+      "id": 116
+    },
+    {
+      "input": "I'm setting up a 'Home Media Server' using 'Plex' on a 'Synology NAS' model DS220+. I want to stream movies to my 'Samsung Smart TV'. My router is 'Netgear Nighthawk'.",
+      "response": "<memory_ask>Information about setting up Home Media Server with Plex</memory_ask><memory_ask>Information about Plex Media Server</memory_ask><memory_ask>NAS device: Synology NAS DS220+</memory_ask><memory_ask>Information about Synology NAS DS220+</memory_ask><memory_ask>Goal: stream movies to Samsung Smart TV</memory_ask><memory_ask>Information about Samsung Smart TV Plex app</memory_ask><memory_ask>Router: Netgear Nighthawk</memory_ask><memory_ask>Information about Netgear Nighthawk router</memory_ask><memory_ask>Steps for installing and configuring Plex on Synology NAS</memory_ask>",
+      "id": 117
+    },
+    {
+      "input": "What is 'Hyperparameter Tuning' in machine learning?",
+      "response": "<memory_ask>Definition of Hyperparameter Tuning in machine learning</memory_ask><memory_ask>Difference between parameters and hyperparameters</memory_ask><memory_ask>Purpose of Hyperparameter Tuning (optimizing model performance)</memory_ask><memory_ask>Common techniques for Hyperparameter Tuning (e.g., grid search, random search, Bayesian optimization)</memory_ask>",
+      "id": 118
+    },
+    {
+      "input": "The 'Mothman' sightings in Point Pleasant. When did they occur?",
+      "response": "<memory_ask>Information about Mothman sightings in Point Pleasant, West Virginia</memory_ask><memory_ask>Time period of primary Mothman sightings (mid-1960s)</memory_ask><memory_ask>Description of Mothman creature</memory_ask><memory_ask>Connection of Mothman sightings to Silver Bridge collapse</memory_ask>",
+      "id": 119
+    },
+    {
+      "input": "My 'Smart Thermostat Nest E' is offline. The 'Nest App' cannot connect. My Wi-Fi network 'HomeNet2G' is working for other devices. The ISP is 'Verizon Fios'.",
+      "response": "<memory_ask>Information about Smart Thermostat Nest E</memory_ask><memory_ask>Problem: Nest E offline, Nest App cannot connect</memory_ask><memory_ask>Information about Nest App</memory_ask><memory_ask>Wi-Fi network: HomeNet2G (working for other devices)</memory_ask><memory_ask>ISP: Verizon Fios</memory_ask><memory_ask>Information about Verizon Fios</memory_ask><memory_ask>Troubleshooting Nest thermostat offline issues</memory_ask><memory_ask>How to reconnect Nest E to HomeNet2G Wi-Fi network</memory_ask>",
+      "id": 120
+    },
+    {
+      "input": "What is 'Ensemble Learning' in machine learning?",
+      "response": "<memory_ask>Definition of Ensemble Learning in machine learning</memory_ask><memory_ask>Purpose of Ensemble Learning (improving model performance and robustness)</memory_ask><memory_ask>Common Ensemble Learning methods (e.g., bagging, boosting, stacking, random forests)</memory_ask>",
+      "id": 121
+    },
+    {
+      "input": "The 'Jersey Devil' legend. In which US state is it centered?",
+      "response": "<memory_ask>Information about Jersey Devil legend</memory_ask><memory_ask>US state where Jersey Devil legend is centered (New Jersey, Pine Barrens)</memory_ask><memory_ask>Description of Jersey Devil creature</memory_ask><memory_ask>Origins of Jersey Devil legend</memory_ask>",
+      "id": 122
+    },
+    {
+      "input": "I'm planning a software release for 'Version 2.0' of 'MyApp'. The release date is 'August 15th'. Key features are 'Feature A' and 'Feature B'. The QA lead is Tom.",
+      "response": "<memory_ask>Information about software release planning for MyApp Version 2.0</memory_ask><memory_ask>Release date: August 15th</memory_ask><memory_ask>Key features in Version 2.0: Feature A, Feature B</memory_ask><memory_ask>Information about Feature A</memory_ask><memory_ask>Information about Feature B</memory_ask><memory_ask>QA lead: Tom</memory_ask><memory_ask>Who is Tom, QA lead</memory_ask>",
+      "id": 123
+    },
+    {
+      "input": "What is 'Principal Component Analysis' (PCA)?",
+      "response": "<memory_ask>Definition of Principal Component Analysis (PCA)</memory_ask><memory_ask>Purpose of PCA (dimensionality reduction, data visualization)</memory_ask><memory_ask>How PCA works (finding principal components that capture most variance)</memory_ask>",
+      "id": 124
+    },
+    {
+      "input": "The 'Bunyip' from Australian Aboriginal mythology. What is it described as?",
+      "response": "<memory_ask>Information about Bunyip in Australian Aboriginal mythology</memory_ask><memory_ask>Descriptions of Bunyip creature (varies, often aquatic monster)</memory_ask><memory_ask>Habitat of Bunyip (swamps, billabongs, creeks, riverbeds)</memory_ask>",
+      "id": 125
+    },
+    {
+      "input": "My 'Smart Fitness Watch FitTrack Pro' by 'BioHealth Monitors' is not syncing heart rate data with the 'MyWellness' app on my 'iPhone SE'. Bluetooth is on.",
+      "response": "<memory_ask>Information about Smart Fitness Watch FitTrack Pro</memory_ask><memory_ask>Manufacturer: BioHealth Monitors</memory_ask><memory_ask>Problem: FitTrack Pro not syncing heart rate data with MyWellness app</memory_ask><memory_ask>App used: MyWellness</memory_ask><memory_ask>Information about MyWellness app</memory_ask><memory_ask>User's phone: iPhone SE</memory_ask><memory_ask>Bluetooth status: on</memory_ask><memory_ask>Troubleshooting fitness tracker data syncing issues with app</memory_ask><memory_ask>Checking app permissions and Bluetooth connection for FitTrack Pro and MyWellness</memory_ask>",
+      "id": 126
+    },
+    {
+      "input": "What is 'k-Means Clustering'?",
+      "response": "<memory_ask>Definition of k-Means Clustering</memory_ask><memory_ask>Purpose of k-Means Clustering (unsupervised learning, partitioning data into k clusters)</memory_ask><memory_ask>Algorithm for k-Means Clustering</memory_ask>",
+      "id": 127
+    },
+    {
+      "input": "The 'Kappa' creature from Japanese folklore. What are its characteristics?",
+      "response": "<memory_ask>Information about Kappa in Japanese folklore</memory_ask><memory_ask>Characteristics of Kappa creature (e.g., humanoid, turtle-like shell, water-filled dish on head, loves cucumbers)</memory_ask><memory_ask>Habitat of Kappa (rivers, ponds)</memory_ask>",
+      "id": 128
+    },
+    {
+      "input": "I'm deploying a 'Node.js' application 'MyWebApp' to 'Heroku'. I'm getting a 'H10 App Crashed' error. The logs mention 'NPM_CONFIG_PRODUCTION=false'. My Procfile is 'web: node index.js'.",
+      "response": "<memory_ask>Information about deploying Node.js application MyWebApp to Heroku</memory_ask><memory_ask>Error: H10 App Crashed on Heroku</memory_ask><memory_ask>Log message: NPM_CONFIG_PRODUCTION=false</memory_ask><memory_ask>Procfile content: web: node index.js</memory_ask><memory_ask>Common causes for Heroku H10 error with Node.js apps</memory_ask><memory_ask>Troubleshooting Heroku H10 error</memory_ask><memory_ask>Significance of NPM_CONFIG_PRODUCTION environment variable</memory_ask>",
+      "id": 129
+    },
+    {
+      "input": "What is 'Support Vector Machines' (SVMs)?",
+      "response": "<memory_ask>Definition of Support Vector Machines (SVMs)</memory_ask><memory_ask>Purpose of SVMs (supervised learning, classification and regression)</memory_ask><memory_ask>Key concept in SVMs (finding optimal hyperplane, support vectors, kernels)</memory_ask>",
+      "id": 130
+    },
+    {
+      "input": "The 'Banshee' from Irish folklore. What does its cry signify?",
+      "response": "<memory_ask>Information about Banshee in Irish folklore</memory_ask><memory_ask>Significance of Banshee's cry (omen of death in a family)</memory_ask><memory_ask>Description of Banshee creature</memory_ask>",
+      "id": 131
+    },
+    {
+      "input": "My 'Smart Air Purifier PureFlow X' by 'AeroClean Tech' is making a high-pitched noise. The filter 'HEPA-Max' was just replaced. The app 'PureHome' shows normal status.",
+      "response": "<memory_ask>Information about Smart Air Purifier PureFlow X</memory_ask><memory_ask>Manufacturer: AeroClean Tech</memory_ask><memory_ask>Problem: PureFlow X making high-pitched noise</memory_ask><memory_ask>Filter model: HEPA-Max (just replaced)</memory_ask><memory_ask>Information about HEPA-Max filter</memory_ask><memory_ask>App used: PureHome</memory_ask><memory_ask>Information about PureHome app</memory_ask><memory_ask>App status: normal</memory_ask><memory_ask>Potential causes for high-pitched noise in air purifiers after filter change</memory_ask><memory_ask>Troubleshooting noise issues with PureFlow X</memory_ask>",
+      "id": 132
+    },
+    {
+      "input": "What are 'Decision Trees' in machine learning?",
+      "response": "<memory_ask>Definition of Decision Trees in machine learning</memory_ask><memory_ask>Structure of a Decision Tree (nodes, branches, leaves)</memory_ask><memory_ask>How Decision Trees are used for classification and regression</memory_ask>",
+      "id": 133
+    },
+    {
+      "input": "The 'Wendigo' legend from Algonquian folklore. What is it associated with?",
+      "response": "<memory_ask>Information about Wendigo legend in Algonquian folklore</memory_ask><memory_ask>Associations of Wendigo (cannibalism, insatiable greed, winter)</memory_ask><memory_ask>Description of Wendigo creature</memory_ask>",
+      "id": 134
+    },
+    {
+      "input": "I'm setting up 'Google Analytics 4' for my website 'MyAwesomeBlog.com'. I need to track 'page views' and 'button clicks' on the 'Subscribe' button. My CMS is 'WordPress'.",
+      "response": "<memory_ask>Information about setting up Google Analytics 4 (GA4)</memory_ask><memory_ask>Website: MyAwesomeBlog.com</memory_ask><memory_ask>Tracking requirements: page views, button clicks (Subscribe button)</memory_ask><memory_ask>CMS: WordPress</memory_ask><memory_ask>How to install GA4 on WordPress site</memory_ask><memory_ask>How to track button clicks as events in GA4</memory_ask>",
+      "id": 135
+    },
+    {
+      "input": "What are 'Random Forests' in machine learning?",
+      "response": "<memory_ask>Definition of Random Forests in machine learning</memory_ask><memory_ask>How Random Forests work (ensemble of decision trees)</memory_ask><memory_ask>Advantages of Random Forests (e.g., accuracy, robustness to overfitting)</memory_ask>",
+      "id": 136
+    },
+    {
+      "input": "The 'Skinwalker' legend from Navajo culture. What are its abilities?",
+      "response": "<memory_ask>Information about Skinwalker legend in Navajo culture</memory_ask><memory_ask>Abilities attributed to Skinwalkers (e.g., shapeshifting, malevolence)</memory_ask><memory_ask>Cultural significance and fear associated with Skinwalkers</memory_ask>",
+      "id": 137
+    },
+    {
+      "input": "My 'Smart Pet Collar Tracker PawsGPS' by 'FindMyPet Corp' is showing my dog Rex is at '123 Main St', but he's next to me at '456 Oak Ave'. The app is 'PetLocator'. Battery is full.",
+      "response": "<memory_ask>Information about Smart Pet Collar Tracker PawsGPS</memory_ask><memory_ask>Manufacturer: FindMyPet Corp</memory_ask><memory_ask>Problem: PawsGPS showing incorrect location for dog Rex</memory_ask><memory_ask>Dog's name: Rex</memory_ask><memory_ask>Incorrect location shown: 123 Main St</memory_ask><memory_ask>Actual location: 456 Oak Ave</memory_ask><memory_ask>App used: PetLocator</memory_ask><memory_ask>Information about PetLocator app</memory_ask><memory_ask>Battery status: full</memory_ask><memory_ask>Troubleshooting inaccurate GPS pet tracker location</memory_ask><memory_ask>How to recalibrate or reset PawsGPS tracker</memory_ask>",
+      "id": 138
+    },
+    {
+      "input": "What is 'Gradient Boosting' (like XGBoost, LightGBM)?",
+      "response": "<memory_ask>Explanation of Gradient Boosting in machine learning</memory_ask><memory_ask>How Gradient Boosting works (sequential ensemble method, correcting errors of previous models)</memory_ask><memory_ask>Examples of Gradient Boosting algorithms (XGBoost, LightGBM, CatBoost)</memory_ask><memory_ask>Information about XGBoost</memory_ask><memory_ask>Information about LightGBM</memory_ask>",
+      "id": 139
+    },
+    {
+      "input": "The 'Black Dog' ghostly apparition in British folklore. What does it often portend?",
+      "response": "<memory_ask>Information about Black Dog apparition in British folklore</memory_ask><memory_ask>Significance of Black Dog sightings (often an omen of death or misfortune)</memory_ask><memory_ask>Regional variations of Black Dog legends (e.g., Barghest, Black Shuck)</memory_ask>",
+      "id": 140
+    },
+    {
+      "input": "I'm trying to connect my 'PlayStation 5' to my 'Samsung QLED TV' model QN90A. I'm getting 'No Signal'. I'm using an 'HDMI 2.1' cable from 'CableTech'.",
+      "response": "<memory_ask>Information about connecting PlayStation 5 to Samsung QLED TV QN90A</memory_ask><memory_ask>Problem: No Signal on TV</memory_ask><memory_ask>HDMI cable: HDMI 2.1 from CableTech</memory_ask><memory_ask>Information about CableTech HDMI cables</memory_ask><memory_ask>Troubleshooting PlayStation 5 No Signal issue</memory_ask><memory_ask>Checking HDMI input on Samsung QN90A TV</memory_ask><memory_ask>Ensuring PS5 and TV firmware are updated</memory_ask>",
+      "id": 141
+    },
+    {
+      "input": "What is 'Naive Bayes' classifier?",
+      "response": "<memory_ask>Explanation of Naive Bayes classifier</memory_ask><memory_ask>Based on Bayes' theorem with 'naive' independence assumption</memory_ask><memory_ask>Applications of Naive Bayes (e.g., text classification, spam filtering)</memory_ask>",
+      "id": 142
+    },
+    {
+      "input": "The 'Will-o'-the-wisp' phenomenon. What are scientific explanations?",
+      "response": "<memory_ask>Information about Will-o'-the-wisp phenomenon (mysterious lights over swamps/marshes)</memory_ask><memory_ask>Scientific explanations for Will-o'-the-wisp (e.g., combustion of marsh gas like methane, bioluminescence)</memory_ask><memory_ask>Folklore associated with Will-o'-the-wisp</memory_ask>",
+      "id": 143
+    },
+    {
+      "input": "My 'Smart Sous Vide Cooker SV100' by 'AquaChef' is not maintaining a stable temperature. The 'ChefConnect' app shows fluctuations. I'm cooking a steak at 130°F.",
+      "response": "<memory_ask>Information about Smart Sous Vide Cooker SV100</memory_ask><memory_ask>Manufacturer: AquaChef</memory_ask><memory_ask>Problem: SV100 not maintaining stable temperature</memory_ask><memory_ask>App used: ChefConnect</memory_ask><memory_ask>Information about ChefConnect app</memory_ask><memory_ask>App shows temperature fluctuations</memory_ask><memory_ask>Target temperature: 130°F for steak</memory_ask><memory_ask>Troubleshooting sous vide temperature instability</memory_ask><memory_ask>Checking water circulation and water bath volume for SV100</memory_ask>",
+      "id": 144
+    },
+    {
+      "input": "What is 'Logistic Regression'?",
+      "response": "<memory_ask>Explanation of Logistic Regression</memory_ask><memory_ask>Purpose of Logistic Regression (binary classification problems)</memory_ask><memory_ask>Use of sigmoid function in Logistic Regression</memory_ask>",
+      "id": 145
+    },
+    {
+      "input": "The 'Doppelgänger' concept. What does it mean?",
+      "response": "<memory_ask>Definition of Doppelgänger</memory_ask><memory_ask>Meaning of Doppelgänger (look-alike or double of a living person)</memory_ask><memory_ask>Folklore and literary representations of Doppelgängers (often as an omen or paranormal phenomenon)</memory_ask>",
+      "id": 146
+    },
+    {
+      "input": "I'm creating a 'Discord' server for my gaming community 'Pixel Warriors'. I need to set up roles like 'Admin', 'Moderator', and 'Member'. My friend, who uses username 'DiscordMaster', can help.",
+      "response": "<memory_ask>Information about creating a Discord server for Pixel Warriors gaming community</memory_ask><memory_ask>Information about Pixel Warriors community</memory_ask><memory_ask>Setting up roles in Discord (Admin, Moderator, Member)</memory_ask><memory_ask>How to configure permissions for Discord roles</memory_ask><memory_ask>User's friend: DiscordMaster (username)</memory_ask><memory_ask>DiscordMaster's potential help with server setup</memory_ask>",
+      "id": 147
+    },
+    {
+      "input": "What is 'Linear Regression'?",
+      "response": "<memory_ask>Explanation of Linear Regression</memory_ask><memory_ask>Purpose of Linear Regression (modeling relationship between dependent and independent variables)</memory_ask><memory_ask>Simple Linear Regression vs Multiple Linear Regression</memory_ask>",
+      "id": 148
+    },
+    {
+      "input": "The 'Poltergeist' phenomenon. What are its characteristics?",
+      "response": "<memory_ask>Information about Poltergeist phenomenon</memory_ask><memory_ask>Characteristics of Poltergeist activity (e.g., unexplained noises, moving objects, physical attacks)</memory_ask><memory_ask>Proposed explanations for Poltergeist phenomenon (paranormal, psychological, misinterpretation of natural events)</memory_ask>",
+      "id": 149
+    },
+    {
+      "input": "My 'Smart Coffee Scale ScaleBrew Pro' by 'PerfectPour Tech' is not connecting to the 'BrewControl' app via Bluetooth. My phone is a 'Samsung Galaxy Fold'. The scale battery is new.",
+      "response": "<memory_ask>Information about Smart Coffee Scale ScaleBrew Pro</memory_ask><memory_ask>Manufacturer: PerfectPour Tech</memory_ask><memory_ask>Problem: ScaleBrew Pro not connecting to BrewControl app via Bluetooth</memory_ask><memory_ask>App used: BrewControl</memory_ask><memory_ask>Information about BrewControl app</memory_ask><memory_ask>User's phone: Samsung Galaxy Fold</memory_ask><memory_ask>Scale battery status: new</memory_ask><memory_ask>Troubleshooting Bluetooth connectivity issues for smart scales</memory_ask><memory_ask>Checking Bluetooth permissions and ensuring devices are in pairing mode</memory_ask>",
+      "id": 150
+    },
+    {
+      "input": "What are 'Latent Variables' in statistics?",
+      "response": "<memory_ask>Definition of Latent Variables in statistics</memory_ask><memory_ask>Characteristic of Latent Variables (not directly observed, inferred from other variables)</memory_ask><memory_ask>Examples of Latent Variables (e.g., intelligence, socioeconomic status, personality traits)</memory_ask><memory_ask>Methods for modeling Latent Variables (e.g., factor analysis, structural equation modeling)</memory_ask>",
+      "id": 151
+    },
+    {
+      "input": "The 'Phantom Hitchhiker' urban legend. What is the typical story?",
+      "response": "<memory_ask>Information about Phantom Hitchhiker urban legend</memory_ask><memory_ask>Typical storyline of Phantom Hitchhiker legend (hitchhiker vanishes from car, later identified as deceased)</memory_ask><memory_ask>Variations of Phantom Hitchhiker legend across different cultures</memory_ask>",
+      "id": 152
+    },
+    {
+      "input": "I'm trying to use 'GitHub Actions' for CI/CD for my 'React' project 'WebAppX'. The build is failing on the 'npm test' step. The error is 'Jest encountered an unexpected token'. My repo is 'user/webappx'.",
+      "response": "<memory_ask>Information about using GitHub Actions for CI/CD with React project WebAppX</memory_ask><memory_ask>Problem: Build failing on 'npm test' step in GitHub Actions</memory_ask><memory_ask>Error message: Jest encountered an unexpected token</memory_ask><memory_ask>Repository: user/webappx</memory_ask><memory_ask>Common causes for 'Jest encountered an unexpected token' error</memory_ask><memory_ask>Troubleshooting Jest configuration for React projects in GitHub Actions</memory_ask><memory_ask>Ensuring correct Node.js version and Babel setup in GitHub Actions workflow</memory_ask>",
+      "id": 153
+    },
+    {
+      "input": "What is 'Bayes' Theorem'?",
+      "response": "<memory_ask>Explanation of Bayes' Theorem</memory_ask><memory_ask>Formula for Bayes' Theorem</memory_ask><memory_ask>Application of Bayes' Theorem in probability and statistics (updating beliefs based on new evidence)</memory_ask>",
+      "id": 154
+    },
+    {
+      "input": "The 'Bloody Mary' folklore. How is the ritual supposedly performed?",
+      "response": "<memory_ask>Information about Bloody Mary folklore/legend</memory_ask><memory_ask>Supposed ritual for summoning Bloody Mary (chanting name in front of mirror in darkened room)</memory_ask><memory_ask>Variations and origins of Bloody Mary legend</memory_ask>",
+      "id": 155
+    },
+    {
+      "input": "My 'Smart Air Fryer Oven CrisperXL' by 'KitchenPro Gadgets' is not turning on. The power cord 'PowerCord Plus' is plugged in and the outlet is working. I bought it from 'HomeGoods Central'.",
+      "response": "<memory_ask>Information about Smart Air Fryer Oven CrisperXL</memory_ask><memory_ask>Manufacturer: KitchenPro Gadgets</memory_ask><memory_ask>Problem: CrisperXL not turning on</memory_ask><memory_ask>Power cord: PowerCord Plus (plugged in)</memory_ask><memory_ask>Outlet status: working</memory_ask><memory_ask>Place of purchase: HomeGoods Central</memory_ask><memory_ask>Information about HomeGoods Central</memory_ask><memory_ask>Troubleshooting steps for an appliance that won't turn on</memory_ask><memory_ask>Checking for tripped circuit breaker or internal fuse in CrisperXL</memory_ask>",
+      "id": 156
+    },
+    {
+      "input": "What is 'P-value' in statistics?",
+      "response": "<memory_ask>Definition of P-value in statistics</memory_ask><memory_ask>Role of P-value in hypothesis testing</memory_ask><memory_ask>Interpretation of P-value (probability of observing data as extreme or more extreme if null hypothesis is true)</memory_ask><memory_ask>Common misconceptions about P-values</memory_ask>",
+      "id": 157
+    },
+    {
+      "input": "The 'Slender Man' creepypasta character. What are its defining features?",
+      "response": "<memory_ask>Information about Slender Man creepypasta character</memory_ask><memory_ask>Defining features of Slender Man (tall, thin, featureless face, black suit, tentacles/appendages)</memory_ask><memory_ask>Origin and evolution of Slender Man legend (internet phenomenon)</memory_ask>",
+      "id": 158
+    },
+    {
+      "input": "I'm trying to learn 'SQL' for database management. I'm using 'PostgreSQL' and 'pgAdmin'. What are some basic 'SELECT' queries? My tutorial is from 'SQLAcademy.com'.",
+      "response": "<memory_ask>Information about learning SQL for database management</memory_ask><memory_ask>Database system: PostgreSQL</memory_ask><memory_ask>Management tool: pgAdmin</memory_ask><memory_ask>Information about PostgreSQL</memory_ask><memory_ask>Information about pgAdmin</memory_ask><memory_ask>Basic SQL SELECT query examples</memory_ask><memory_ask>Tutorial source: SQLAcademy.com</memory_ask><memory_ask>Information about SQLAcademy.com</memory_ask>",
+      "id": 159
+    },
+    {
+      "input": "What is 'Confidence Interval' in statistics?",
+      "response": "<memory_ask>Definition of Confidence Interval in statistics</memory_ask><memory_ask>Purpose of Confidence Interval (estimating range of plausible values for a population parameter)</memory_ask><memory_ask>Interpretation of a Confidence Interval (e.g., 95% confidence interval)</memory_ask>",
+      "id": 160
+    },
+    {
+      "input": "The 'Men in Black' (MIB) conspiracy theory. Who are they supposed to be?",
+      "response": "<memory_ask>Information about Men in Black (MIB) conspiracy theory</memory_ask><memory_ask>Supposed identity and role of Men in Black (silencing UFO witnesses, government agents or aliens)</memory_ask><memory_ask>Origins of Men in Black theory (UFO folklore)</memory_ask>",
+      "id": 161
+    },
+    {
+      "input": "My 'Smart Humidifier AquaMist H500' by 'ComfortHome' is leaking from the tank seal 'SealRing Pro'. The app 'HumidifyNow' shows normal operation. I bought a replacement seal from 'AppliancePartsOnline'.",
+      "response": "<memory_ask>Information about Smart Humidifier AquaMist H500</memory_ask><memory_ask>Manufacturer: ComfortHome</memory_ask><memory_ask>Problem: AquaMist H500 leaking from tank seal SealRing Pro</memory_ask><memory_ask>Information about SealRing Pro</memory_ask><memory_ask>App used: HumidifyNow</memory_ask><memory_ask>Information about HumidifyNow app</memory_ask><memory_ask>App status: normal operation</memory_ask><memory_ask>Replacement seal bought from: AppliancePartsOnline</memory_ask><memory_ask>Information about AppliancePartsOnline</memory_ask><memory_ask>Troubleshooting humidifier tank seal leaks</memory_ask><memory_ask>How to properly install SealRing Pro on AquaMist H500</memory_ask>",
+      "id": 162
+    },
+    {
+      "input": "What is 'Standard Deviation' in statistics?",
+      "response": "<memory_ask>Definition of Standard Deviation in statistics</memory_ask><memory_ask>Purpose of Standard Deviation (measuring dispersion or spread of data around the mean)</memory_ask><memory_ask>Formula for calculating Standard Deviation</memory_ask>",
+      "id": 163
+    },
+    {
+      "input": "The 'Flat Earth' theory. What are its main tenets?",
+      "response": "<memory_ask>Information about Flat Earth theory</memory_ask><memory_ask>Main tenets of Flat Earth theory (Earth is a flat disc, not a sphere)</memory_ask><memory_ask>Arguments used by Flat Earth proponents</memory_ask><memory_ask>Scientific evidence refuting Flat Earth theory</memory_ask>",
+      "id": 164
+    },
+    {
+      "input": "I'm developing a 'Flutter' app 'TravelPal'. I need to integrate 'Google Maps API' to show user's current location. My API key is 'AIzaSy...'. My colleague Jane has experience with this.",
+      "response": "<memory_ask>Information about developing Flutter app TravelPal</memory_ask><memory_ask>Integrating Google Maps API in Flutter app</memory_ask><memory_ask>Showing user's current location using Google Maps API in Flutter</memory_ask><memory_ask>User's API key: AIzaSy...</memory_ask><memory_ask>User's colleague: Jane</memory_ask><memory_ask>Jane's experience with Google Maps API integration</memory_ask><memory_ask>Flutter packages for Google Maps integration (e.g., google_maps_flutter)</memory_ask>",
+      "id": 165
+    },
+    {
+      "input": "What is 'Variance' in statistics?",
+      "response": "<memory_ask>Definition of Variance in statistics</memory_ask><memory_ask>Purpose of Variance (measuring dispersion or spread of data, square of standard deviation)</memory_ask><memory_ask>Formula for calculating Variance</memory_ask>",
+      "id": 166
+    },
+    {
+      "input": "The 'Chemtrails' conspiracy theory. What does it allege?",
+      "response": "<memory_ask>Information about Chemtrails conspiracy theory</memory_ask><memory_ask>Allegations of Chemtrails theory (persistent contrails are chemical/biological agents deliberately sprayed)</memory_ask><memory_ask>Scientific explanation for persistent contrails</memory_ask><memory_ask>Lack of evidence for Chemtrails theory</memory_ask>",
+      "id": 167
+    },
+    {
+      "input": "My 'Smart Dehumidifier DryZone 70' by 'AirComfort Pro' is not collecting water. The collection bucket 'BucketMax' is empty. The 'DryHome' app shows humidity at 70%.",
+      "response": "<memory_ask>Information about Smart Dehumidifier DryZone 70</memory_ask><memory_ask>Manufacturer: AirComfort Pro</memory_ask><memory_ask>Problem: DryZone 70 not collecting water</memory_ask><memory_ask>Collection bucket: BucketMax (empty)</memory_ask><memory_ask>App used: DryHome</memory_ask><memory_ask>Information about DryHome app</memory_ask><memory_ask>App shows humidity at 70%</memory_ask><memory_ask>Troubleshooting dehumidifier not collecting water</memory_ask><memory_ask>Checking DryZone 70 filter, coils, and ambient temperature</memory_ask>",
+      "id": 168
+    },
+    {
+      "input": "What is 'Correlation Coefficient' (like Pearson's r)?",
+      "response": "<memory_ask>Definition of Correlation Coefficient (e.g., Pearson's r)</memory_ask><memory_ask>Purpose of Correlation Coefficient (measuring strength and direction of linear relationship between two variables)</memory_ask><memory_ask>Interpretation of Correlation Coefficient values (-1 to +1)</memory_ask>",
+      "id": 169
+    },
+    {
+      "input": "The 'Anti-vaccination' movement. What are common unfounded claims?",
+      "response": "<memory_ask>Information about Anti-vaccination movement</memory_ask><memory_ask>Common unfounded claims made by Anti-vaccination movement (e.g., vaccines cause autism, contain harmful toxins)</memory_ask><memory_ask>Scientific consensus on vaccine safety and efficacy</memory_ask><memory_ask>Debunking common anti-vaccine myths</memory_ask>",
+      "id": 170
+    },
+    {
+      "input": "I'm configuring a 'Raspberry Pi 4' as a 'Pi-hole' ad blocker. I'm following a tutorial from 'PiMyLifeUp.com'. My router is 'TP-Link Archer C7'. My ISP is 'Spectrum'.",
+      "response": "<memory_ask>Information about configuring Raspberry Pi 4 as Pi-hole</memory_ask><memory_ask>Information about Raspberry Pi 4</memory_ask><memory_ask>Information about Pi-hole ad blocker</memory_ask><memory_ask>Tutorial source: PiMyLifeUp.com</memory_ask><memory_ask>Information about PiMyLifeUp.com tutorials</memory_ask><memory_ask>Router: TP-Link Archer C7</memory_ask><memory_ask>Information about TP-Link Archer C7 router</memory_ask><memory_ask>ISP: Spectrum</memory_ask><memory_ask>Steps for setting up Pi-hole on Raspberry Pi 4</memory_ask><memory_ask>Configuring router DNS settings to use Pi-hole</memory_ask>",
+      "id": 171
+    },
+    {
+      "input": "What is 'Regression Analysis'?",
+      "response": "<memory_ask>Definition of Regression Analysis</memory_ask><memory_ask>Purpose of Regression Analysis (modeling relationship between a dependent variable and one or more independent variables)</memory_ask><memory_ask>Types of Regression Analysis (e.g., linear, logistic, polynomial)</memory_ask>",
+      "id": 172
+    },
+    {
+      "input": "The 'Illuminati' conspiracy theory. What is it about?",
+      "response": "<memory_ask>Information about Illuminati conspiracy theory</memory_ask><memory_ask>Allegations of Illuminati theory (secret society controlling the world)</memory_ask><memory_ask>Historical Bavarian Illuminati vs modern conspiracy theories</memory_ask>",
+      "id": 173
+    },
+    {
+      "input": "My 'Smart Robot Mop MopBot Supreme' by 'FloorShine Tech' is leaving streaks on my 'Hardwood Floor'. I'm using 'ShineX' cleaning solution. The app 'MopControl' is set to 'Light Mop'.",
+      "response": "<memory_ask>Information about Smart Robot Mop MopBot Supreme</memory_ask><memory_ask>Manufacturer: FloorShine Tech</memory_ask><memory_ask>Problem: MopBot Supreme leaving streaks on Hardwood Floor</memory_ask><memory_ask>Cleaning solution used: ShineX</memory_ask><memory_ask>Information about ShineX cleaning solution</memory_ask><memory_ask>App used: MopControl</memory_ask><memory_ask>Information about MopControl app</memory_ask><memory_ask>App setting: Light Mop</memory_ask><memory_ask>Troubleshooting robot mop streaking issues on hardwood floors</memory_ask><memory_ask>Checking MopBot Supreme mop pad and water dispenser settings</memory_ask>",
+      "id": 174
+    },
+    {
+      "input": "What is 'Hypothesis Testing' in statistics?",
+      "response": "<memory_ask>Definition of Hypothesis Testing in statistics</memory_ask><memory_ask>Steps in Hypothesis Testing (formulating null and alternative hypotheses, choosing test statistic, setting significance level, making decision)</memory_ask><memory_ask>Type I and Type II errors in Hypothesis Testing</memory_ask>",
+      "id": 175
+    },
+    {
+      "input": "The 'QAnon' conspiracy theory. What are its core beliefs?",
+      "response": "<memory_ask>Information about QAnon conspiracy theory</memory_ask><memory_ask>Core beliefs of QAnon (e.g., deep state cabal, 'The Storm', Donald Trump fighting evil)</memory_ask><memory_ask>Origins and spread of QAnon theory</memory_ask>",
+      "id": 176
+    },
+    {
+      "input": "I'm streaming on 'Twitch' playing 'Fortnite'. My stream on 'OBS Studio' is lagging. My internet upload speed is 10 Mbps from 'AT&T Fiber'. My PC has an 'Nvidia RTX 3070'.",
+      "response": "<memory_ask>Information about streaming Fortnite on Twitch using OBS Studio</memory_ask><memory_ask>Problem: OBS Studio stream lagging</memory_ask><memory_ask>Internet upload speed: 10 Mbps (AT&T Fiber)</memory_ask><memory_ask>Information about AT&T Fiber internet</memory_ask><memory_ask>PC GPU: Nvidia RTX 3070</memory_ask><memory_ask>Information about Nvidia RTX 3070</memory_ask><memory_ask>Troubleshooting OBS Studio stream lag</memory_ask><memory_ask>Optimizing OBS settings for 10 Mbps upload speed and RTX 3070</memory_ask>",
+      "id": 177
+    },
+    {
+      "input": "What is 'Time Series Analysis'?",
+      "response": "<memory_ask>Definition of Time Series Analysis</memory_ask><memory_ask>Purpose of Time Series Analysis (analyzing time-ordered data points, forecasting)</memory_ask><memory_ask>Components of a Time Series (trend, seasonality, cyclicity, irregularity)</memory_ask><memory_ask>Common models for Time Series Analysis (e.g., ARIMA, Exponential Smoothing)</memory_ask>",
+      "id": 178
+    },
+    {
+      "input": "The 'New World Order' (NWO) conspiracy theory. What does it typically involve?",
+      "response": "<memory_ask>Information about New World Order (NWO) conspiracy theory</memory_ask><memory_ask>Typical elements of NWO theory (secretly emerging totalitarian world government)</memory_ask><memory_ask>Groups often associated with NWO conspiracy theories</memory_ask>",
+      "id": 179
+    },
+    {
+      "input": "My 'Smart Pet Water Fountain AquaPure F1' by 'HydratePet' is not dispensing water. The pump 'PumpFlow Mini' seems to be running. The app 'PetHydration' shows full water level.",
+      "response": "<memory_ask>Information about Smart Pet Water Fountain AquaPure F1</memory_ask><memory_ask>Manufacturer: HydratePet</memory_ask><memory_ask>Problem: AquaPure F1 not dispensing water</memory_ask><memory_ask>Pump status: PumpFlow Mini seems to be running</memory_ask><memory_ask>Information about PumpFlow Mini</memory_ask><memory_ask>App used: PetHydration</memory_ask><memory_ask>Information about PetHydration app</memory_ask><memory_ask>App shows full water level</memory_ask><memory_ask>Troubleshooting pet water fountain dispensing issues</memory_ask><memory_ask>Checking for blockages or pump priming issues in AquaPure F1</memory_ask>",
+      "id": 180
+    },
+    {
+      "input": "What is 'Survival Analysis' in statistics?",
+      "response": "<memory_ask>Definition of Survival Analysis in statistics</memory_ask><memory_ask>Purpose of Survival Analysis (analyzing time-to-event data)</memory_ask><memory_ask>Key concepts in Survival Analysis (e.g., survival function, hazard function, censoring)</memory_ask><memory_ask>Common methods in Survival Analysis (e.g., Kaplan-Meier estimator, Cox proportional hazards model)</memory_ask>",
+      "id": 181
+    },
+    {
+      "input": "The 'Reptilian Elite' conspiracy theory. Who are they supposed to be?",
+      "response": "<memory_ask>Information about Reptilian Elite conspiracy theory</memory_ask><memory_ask>Supposed identity of Reptilian Elite (shape-shifting reptilian humanoids controlling Earth)</memory_ask><memory_ask>Promoter of Reptilian Elite theory (David Icke)</memory_ask>",
+      "id": 182
+    },
+    {
+      "input": "I'm recording a podcast 'TechTalks' using 'Audacity' and a 'Blue Yeti' microphone. There's a background hum. My co-host is Ben.",
+      "response": "<memory_ask>Information about recording podcast TechTalks with Audacity and Blue Yeti mic</memory_ask><memory_ask>Information about Audacity audio software</memory_ask><memory_ask>Information about Blue Yeti microphone</memory_ask><memory_ask>Problem: background hum in recording</memory_ask><memory_ask>User's co-host: Ben</memory_ask><memory_ask>Who is Ben</memory_ask><memory_ask>Troubleshooting background hum in audio recordings</memory_ask><memory_ask>Using Audacity noise reduction features for hum removal</memory_ask>",
+      "id": 183
+    },
+    {
+      "input": "What is 'A/B Testing'?",
+      "response": "<memory_ask>Definition of A/B Testing (split testing)</memory_ask><memory_ask>Purpose of A/B Testing (comparing two versions of a webpage, app, etc., to see which performs better)</memory_ask><memory_ask>Process of A/B Testing</memory_ask>",
+      "id": 184
+    },
+    {
+      "input": "The 'Pizzagate' conspiracy theory. What did it falsely allege?",
+      "response": "<memory_ask>Information about Pizzagate conspiracy theory</memory_ask><memory_ask>False allegations of Pizzagate theory (connecting Democratic Party figures to human trafficking ring via Comet Ping Pong pizzeria)</memory_ask><memory_ask>Debunking of Pizzagate theory</memory_ask>",
+      "id": 185
+    },
+    {
+      "input": "My 'Smart Home Hub CentralNode Z' by 'ConnectSphere' is not discovering new 'Zigbee' devices like 'SensorDot Temp'. The existing 'ZWave' device 'LightSwitch Pro' works fine. The app is 'HomeOS'.",
+      "response": "<memory_ask>Information about Smart Home Hub CentralNode Z</memory_ask><memory_ask>Manufacturer: ConnectSphere</memory_ask><memory_ask>Problem: CentralNode Z not discovering new Zigbee devices (SensorDot Temp)</memory_ask><memory_ask>Information about SensorDot Temp Zigbee device</memory_ask><memory_ask>Existing ZWave device LightSwitch Pro works fine</memory_ask><memory_ask>Information about LightSwitch Pro ZWave device</memory_ask><memory_ask>App used: HomeOS</memory_ask><memory_ask>Information about HomeOS app</memory_ask><memory_ask>Troubleshooting Zigbee device discovery issues with smart home hub</memory_ask><memory_ask>Checking Zigbee network range and potential interference for CentralNode Z</memory_ask>",
+      "id": 186
+    },
+    {
+      "input": "What is 'Sentiment Analysis'?",
+      "response": "<memory_ask>Definition of Sentiment Analysis (opinion mining)</memory_ask><memory_ask>Purpose of Sentiment Analysis (determining emotional tone behind text - positive, negative, neutral)</memory_ask><memory_ask>Techniques used in Sentiment Analysis (NLP, machine learning)</memory_ask>",
+      "id": 187
+    },
+    {
+      "input": "The 'Paul is dead' Beatles conspiracy theory. What is the premise?",
+      "response": "<memory_ask>Information about 'Paul is dead' Beatles conspiracy theory</memory_ask><memory_ask>Premise of 'Paul is dead' theory (Paul McCartney died in 1966 and was replaced by a look-alike)</memory_ask><memory_ask>Supposed clues in Beatles albums supporting 'Paul is dead' theory</memory_ask><memory_ask>Debunking of 'Paul is dead' theory</memory_ask>",
+      "id": 188
+    },
+    {
+      "input": "I'm using 'Final Cut Pro' to edit a documentary 'Wilderness Within'. I need to color grade footage shot on 'Sony A7S III' in 'S-Log3'. My monitor is 'Dell UltraSharp U2720Q'. My producer is Jane.",
+      "response": "<memory_ask>Information about editing documentary Wilderness Within in Final Cut Pro</memory_ask><memory_ask>Information about Final Cut Pro software</memory_ask><memory_ask>Task: color grade footage shot on Sony A7S III in S-Log3</memory_ask><memory_ask>Information about Sony A7S III camera and S-Log3 profile</memory_ask><memory_ask>Monitor: Dell UltraSharp U2720Q</memory_ask><memory_ask>Information about Dell UltraSharp U2720Q monitor</memory_ask><memory_ask>User's producer: Jane</memory_ask><memory_ask>Who is Jane, producer</memory_ask><memory_ask>Workflow for color grading S-Log3 footage in Final Cut Pro</memory_ask><memory_ask>Using LUTs for S-Log3 in Final Cut Pro</memory_ask>",
+      "id": 189
+    },
+    {
+      "input": "What is 'Topic Modeling' (like LDA)?",
+      "response": "<memory_ask>Definition of Topic Modeling</memory_ask><memory_ask>Purpose of Topic Modeling (discovering abstract 'topics' in a collection of documents)</memory_ask><memory_ask>Common algorithms for Topic Modeling (e.g., Latent Dirichlet Allocation - LDA)</memory_ask><memory_ask>Information about Latent Dirichlet Allocation (LDA)</memory_ask>",
+      "id": 190
+    },
+    {
+      "input": "The 'Denver Airport' conspiracy theories. What are some common claims?",
+      "response": "<memory_ask>Information about Denver International Airport (DIA) conspiracy theories</memory_ask><memory_ask>Common claims in DIA conspiracy theories (e.g., underground bunkers, New World Order headquarters, sinister artwork)</memory_ask><memory_ask>Explanations for unusual features of DIA</memory_ask>",
+      "id": 191
+    },
+    {
+      "input": "My 'Smart Sprinkler Controller AquaLogic X1' by 'HydroSense Systems' is not connecting to Wi-Fi network 'GardenNet'. The password is 'WaterFlows!'. The app 'HydroApp' shows 'Offline'.",
+      "response": "<memory_ask>Information about Smart Sprinkler Controller AquaLogic X1</memory_ask><memory_ask>Manufacturer: HydroSense Systems</memory_ask><memory_ask>Problem: AquaLogic X1 not connecting to Wi-Fi network GardenNet</memory_ask><memory_ask>Wi-Fi password: WaterFlows!</memory_ask><memory_ask>App used: HydroApp</memory_ask><memory_ask>Information about HydroApp</memory_ask><memory_ask>App status: Offline</memory_ask><memory_ask>Troubleshooting smart sprinkler controller Wi-Fi connectivity</memory_ask><memory_ask>Checking Wi-Fi signal strength at AquaLogic X1 location and router settings</memory_ask>",
+      "id": 192
+    },
+    {
+      "input": "What is 'Named Entity Recognition' (NER)?",
+      "response": "<memory_ask>Definition of Named Entity Recognition (NER)</memory_ask><memory_ask>Purpose of NER (identifying and categorizing named entities in text - e.g., persons, organizations, locations)</memory_ask><memory_ask>Techniques used in NER (NLP, machine learning)</memory_ask>",
+      "id": 193
+    },
+    {
+      "input": "The 'HAARP' project conspiracy theories. What is HAARP accused of?",
+      "response": "<memory_ask>Information about HAARP (High-frequency Active Auroral Research Program)</memory_ask><memory_ask>Actual purpose of HAARP (ionospheric research)</memory_ask><memory_ask>Conspiracy theories about HAARP (e.g., weather control, mind control, earthquake weapon)</memory_ask><memory_ask>Scientific refutation of HAARP conspiracy theories</memory_ask>",
+      "id": 194
+    },
+    {
+      "input": "I'm using 'Ableton Live' for music production. My 'MIDI controller Akai MPK Mini' is not being detected. I'm on 'Windows 11'. My audio interface is 'Focusrite Scarlett 2i2'.",
+      "response": "<memory_ask>Information about music production with Ableton Live</memory_ask><memory_ask>Information about Ableton Live software</memory_ask><memory_ask>MIDI controller: Akai MPK Mini</memory_ask><memory_ask>Information about Akai MPK Mini</memory_ask><memory_ask>Problem: Akai MPK Mini not detected in Ableton Live</memory_ask><memory_ask>Operating system: Windows 11</memory_ask><memory_ask>Audio interface: Focusrite Scarlett 2i2</memory_ask><memory_ask>Information about Focusrite Scarlett 2i2</memory_ask><memory_ask>Troubleshooting MIDI controller detection issues in Ableton Live on Windows 11</memory_ask><memory_ask>Checking Akai MPK Mini drivers and Ableton MIDI settings</memory_ask>",
+      "id": 195
+    },
+    {
+      "input": "What is 'Optical Character Recognition' (OCR)?",
+      "response": "<memory_ask>Definition of Optical Character Recognition (OCR)</memory_ask><memory_ask>Purpose of OCR (converting images of text into machine-encoded text)</memory_ask><memory_ask>Applications of OCR</memory_ask>",
+      "id": 196
+    },
+    {
+      "input": "The 'Majestic 12' (MJ-12) documents. What do they supposedly reveal?",
+      "response": "<memory_ask>Information about Majestic 12 (MJ-12) documents</memory_ask><memory_ask>Supposed content of MJ-12 documents (secret US government committee on UFOs)</memory_ask><memory_ask>Controversy over authenticity of MJ-12 documents (widely considered a hoax)</memory_ask>",
+      "id": 197
+    },
+    {
+      "input": "My 'Smart Pet Food Dispenser FeedWell Auto' by 'PetLife Tech' is dispensing food at the wrong times. The schedule in 'FeedPal App' is set for 8 AM and 6 PM. My timezone is 'PST'.",
+      "response": "<memory_ask>Information about Smart Pet Food Dispenser FeedWell Auto</memory_ask><memory_ask>Manufacturer: PetLife Tech</memory_ask><memory_ask>Problem: FeedWell Auto dispensing food at wrong times</memory_ask><memory_ask>Schedule in FeedPal App: 8 AM and 6 PM</memory_ask><memory_ask>Information about FeedPal App</memory_ask><memory_ask>User's timezone: PST</memory_ask><memory_ask>Troubleshooting smart pet feeder scheduling issues</memory_ask><memory_ask>Checking timezone settings on FeedWell Auto and FeedPal App</memory_ask>",
+      "id": 198
+    },
+    {
+      "input": "What is 'Speech Recognition' (ASR)?",
+      "response": "<memory_ask>Definition of Speech Recognition (Automatic Speech Recognition - ASR)</memory_ask><memory_ask>Purpose of Speech Recognition (converting spoken language into text)</memory_ask><memory_ask>Technologies used in Speech Recognition (NLP, machine learning, acoustic modeling, language modeling)</memory_ask>",
+      "id": 199
+    },
+    {
+      "input": "The 'Crop Circles' phenomenon. What are proposed explanations?",
+      "response": "<memory_ask>Information about Crop Circles phenomenon</memory_ask><memory_ask>Description of Crop Circles (geometric patterns in crop fields)</memory_ask><memory_ask>Proposed explanations for Crop Circles (human-made hoaxes, natural phenomena, extraterrestrial activity)</memory_ask><memory_ask>Evidence for human creation of many crop circles</memory_ask>",
+      "id": 200
+    },
+    {
+      "input": "I'm using 'Unity' game engine to develop a 2D platformer 'JumpQuest'. I'm having issues with 'Tilemap Collider 2D'. My character 'Jumpy' falls through platforms. My physics material is 'PlayerMaterial'.",
+      "response": "<memory_ask>Information about developing 2D platformer JumpQuest in Unity</memory_ask><memory_ask>Information about Unity game engine</memory_ask><memory_ask>Problem: Character Jumpy falls through platforms with Tilemap Collider 2D</memory_ask><memory_ask>Information about Tilemap Collider 2D in Unity</memory_ask><memory_ask>Character name: Jumpy</memory_ask><memory_ask>Physics material: PlayerMaterial</memory_ask><memory_ask>Troubleshooting 2D platformer collision issues in Unity</memory_ask><memory_ask>Checking Tilemap Collider 2D settings, layer collisions, and character Rigidbody2D settings</memory_ask>",
+      "id": 201
+    },
+    {
+      "input": "What is 'Image Segmentation'?",
+      "response": "<memory_ask>Definition of Image Segmentation</memory_ask><memory_ask>Purpose of Image Segmentation (partitioning a digital image into multiple segments or sets of pixels)</memory_ask><memory_ask>Types of Image Segmentation (e.g., semantic segmentation, instance segmentation)</memory_ask>",
+      "id": 202
+    },
+    {
+      "input": "The 'Ball Lightning' phenomenon. What are its reported characteristics?",
+      "response": "<memory_ask>Information about Ball Lightning phenomenon</memory_ask><memory_ask>Reported characteristics of Ball Lightning (luminous spheres, erratic movement, association with thunderstorms)</memory_ask><memory_ask>Scientific theories and proposed explanations for Ball Lightning</memory_ask><memory_ask>Difficulty in studying Ball Lightning due to rarity and unpredictability</memory_ask>",
+      "id": 203
+    },
+    {
+      "input": "My 'Smart Robot Lawn Mower MowBot Pro X' by 'GrassGuard Tech' is not following the boundary wire 'PerimeterWire Plus'. It keeps going into the street 'Elm St'. The app 'MowControl' shows the wire is active.",
+      "response": "<memory_ask>Information about Smart Robot Lawn Mower MowBot Pro X</memory_ask><memory_ask>Manufacturer: GrassGuard Tech</memory_ask><memory_ask>Problem: MowBot Pro X not following boundary wire PerimeterWire Plus</memory_ask><memory_ask>Information about PerimeterWire Plus</memory_ask><memory_ask>Mower going into street Elm St</memory_ask><memory_ask>App used: MowControl</memory_ask><memory_ask>Information about MowControl app</memory_ask><memory_ask>App shows wire is active</memory_ask><memory_ask>Troubleshooting robotic lawn mower boundary wire issues</memory_ask><memory_ask>Checking for breaks or signal interference in PerimeterWire Plus</memory_ask>",
+      "id": 204
+    },
+    {
+      "input": "What is 'Object Detection' in computer vision?",
+      "response": "<memory_ask>Definition of Object Detection in computer vision</memory_ask><memory_ask>Purpose of Object Detection (identifying and locating objects within an image or video)</memory_ask><memory_ask>Difference between Object Detection and Image Classification</memory_ask><memory_ask>Common algorithms for Object Detection (e.g., YOLO, SSD, Faster R-CNN)</memory_ask>",
+      "id": 205
+    },
+    {
+      "input": "The 'Spontaneous Human Combustion' (SHC) alleged phenomenon. Is there scientific evidence?",
+      "response": "<memory_ask>Information about Spontaneous Human Combustion (SHC) alleged phenomenon</memory_ask><memory_ask>Claims of SHC (body burning without apparent external ignition source)</memory_ask><memory_ask>Scientific explanations for alleged SHC cases (e.g., wick effect, overlooked ignition sources)</memory_ask><memory_ask>Lack of credible scientific evidence for SHC as a distinct phenomenon</memory_ask>",
+      "id": 206
+    },
+    {
+      "input": "I'm using 'Blender' for 3D modeling a character 'Zara' for my game 'Star Chaser'. I'm having trouble with rigging the arms using 'Armature X'. My tutorial is from 'BlenderGuru'.",
+      "response": "<memory_ask>Information about 3D modeling character Zara in Blender for game Star Chaser</memory_ask><memory_ask>Information about Blender 3D software</memory_ask><memory_ask>Game name: Star Chaser</memory_ask><memory_ask>Problem: trouble with rigging arms using Armature X</memory_ask><memory_ask>Information about rigging in Blender</memory_ask><memory_ask>Tutorial source: BlenderGuru</memory_ask><memory_ask>Information about BlenderGuru tutorials</memory_ask><memory_ask>Common issues with character rigging in Blender</memory_ask><memory_ask>Tips for rigging arms with Armature X in Blender</memory_ask>",
+      "id": 207
+    },
+    {
+      "input": "What is 'Face Recognition' technology?",
+      "response": "<memory_ask>Definition of Face Recognition technology</memory_ask><memory_ask>How Face Recognition works (identifying or verifying a person from a digital image or video frame)</memory_ask><memory_ask>Applications of Face Recognition (e.g., security, authentication, photo tagging)</memory_ask><memory_ask>Ethical concerns and privacy implications of Face Recognition</memory_ask>",
+      "id": 208
+    },
+    {
+      "input": "The 'Global Consciousness Project' (GCP). What does it study?",
+      "response": "<memory_ask>Information about Global Consciousness Project (GCP)</memory_ask><memory_ask>Goal of GCP (studying potential effects of global events on random number generators)</memory_ask><memory_ask>Methodology of Global Consciousness Project</memory_ask><memory_ask>Scientific reception and criticisms of Global Consciousness Project</memory_ask>",
+      "id": 209
+    },
+    {
+      "input": "My 'Smart Sous Vide Immersion Circulator AquaCook Precision' by 'ChefTech Pro' is displaying 'Err Wat Low' but the water bath 'WaterVessel Pro' is full. The app 'SousVidePal' is also showing the error.",
+      "response": "<memory_ask>Information about Smart Sous Vide Immersion Circulator AquaCook Precision</memory_ask><memory_ask>Manufacturer: ChefTech Pro</memory_ask><memory_ask>Problem: AquaCook Precision displaying 'Err Wat Low' with full water bath WaterVessel Pro</memory_ask><memory_ask>Information about WaterVessel Pro</memory_ask><memory_ask>App used: SousVidePal</memory_ask><memory_ask>Information about SousVidePal app</memory_ask><memory_ask>App also showing error</memory_ask><memory_ask>Troubleshooting 'low water' errors on sous vide circulators with full bath</memory_ask><memory_ask>Checking water level sensor or flow issues in AquaCook Precision</memory_ask>",
+      "id": 210
+    },
+    {
+      "input": "What is 'Anomaly Detection'?",
+      "response": "<memory_ask>Definition of Anomaly Detection (outlier detection)</memory_ask><memory_ask>Purpose of Anomaly Detection (identifying rare items, events, or observations that deviate significantly from the majority of the data)</memory_ask><memory_ask>Applications of Anomaly Detection (e.g., fraud detection, network intrusion detection, system health monitoring)</memory_ask>",
+      "id": 211
+    },
+    {
+      "input": "The 'Electronic Voice Phenomenon' (EVP). What is it claimed to be?",
+      "response": "<memory_ask>Information about Electronic Voice Phenomenon (EVP)</memory_ask><memory_ask>Claims of EVP (electronically captured sounds interpreted as spirit voices)</memory_ask><memory_ask>Methods for attempting to capture EVP (audio recorders in allegedly haunted locations)</memory_ask><memory_ask>Scientific explanations for EVP (e.g., auditory pareidolia, radio interference, recording artifacts)</memory_ask>",
+      "id": 212
+    },
+    {
+      "input": "I'm setting up a 'Home Assistant' server on a 'Raspberry Pi 3B+'. I want to integrate my 'Philips Hue' lights and 'Sonos' speakers. My Wi-Fi router is 'Google Wifi'.",
+      "response": "<memory_ask>Information about setting up Home Assistant server on Raspberry Pi 3B+</memory_ask><memory_ask>Information about Home Assistant software</memory_ask><memory_ask>Device: Raspberry Pi 3B+</memory_ask><memory_ask>Integrating Philips Hue lights with Home Assistant</memory_ask><memory_ask>Information about Philips Hue lights</memory_ask><memory_ask>Integrating Sonos speakers with Home Assistant</memory_ask><memory_ask>Information about Sonos speakers</memory_ask><memory_ask>Wi-Fi router: Google Wifi</memory_ask><memory_ask>Information about Google Wifi router</memory_ask>",
+      "id": 213
+    },
+    {
+      "input": "What is 'Data Mining'?",
+      "response": "<memory_ask>Definition of Data Mining</memory_ask><memory_ask>Purpose of Data Mining (discovering patterns, anomalies, correlations in large datasets)</memory_ask><memory_ask>Techniques used in Data Mining (e.g., classification, clustering, regression, association rule mining)</memory_ask>",
+      "id": 214
+    },
+    {
+      "input": "The 'Stigmata' phenomenon. What are the reported manifestations?",
+      "response": "<memory_ask>Information about Stigmata phenomenon</memory_ask><memory_ask>Reported manifestations of Stigmata (bodily marks, sores, or sensations of pain in locations corresponding to crucifixion wounds of Jesus Christ)</memory_ask><memory_ask>Religious and psychological interpretations of Stigmata</memory_ask><memory_ask>Notable cases of individuals claiming Stigmata</memory_ask>",
+      "id": 215
+    },
+    {
+      "input": "My 'Smart Pet Treat Dispenser TreatBot Deluxe' by 'Pawsitive Tech' is not connecting to the 'TreatTime' app. The Wi-Fi light 'WiFiLED Green' is blinking. My network is 'HomeNet_5G'.",
+      "response": "<memory_ask>Information about Smart Pet Treat Dispenser TreatBot Deluxe</memory_ask><memory_ask>Manufacturer: Pawsitive Tech</memory_ask><memory_ask>Problem: TreatBot Deluxe not connecting to TreatTime app</memory_ask><memory_ask>App used: TreatTime</memory_ask><memory_ask>Information about TreatTime app</memory_ask><memory_ask>Wi-Fi light status: WiFiLED Green blinking</memory_ask><memory_ask>Network SSID: HomeNet_5G</memory_ask><memory_ask>Troubleshooting smart pet device Wi-Fi connectivity issues</memory_ask><memory_ask>Interpreting blinking WiFiLED Green light on TreatBot Deluxe</memory_ask>",
+      "id": 216
+    },
+    {
+      "input": "What is 'Predictive Maintenance'?",
+      "response": "<memory_ask>Definition of Predictive Maintenance</memory_ask><memory_ask>Purpose of Predictive Maintenance (predicting equipment failures to perform maintenance proactively)</memory_ask><memory_ask>Techniques used in Predictive Maintenance (e.g., sensor data analysis, machine learning)</memory_ask>",
+      "id": 217
+    },
+    {
+      "input": "The 'Near-Death Experience' (NDE). What are common reported elements?",
+      "response": "<memory_ask>Information about Near-Death Experience (NDE)</memory_ask><memory_ask>Common reported elements of NDEs (e.g., out-of-body experience, tunnel of light, life review, meeting deceased relatives or spiritual beings)</memory_ask><memory_ask>Scientific, psychological, and spiritual explanations for NDEs</memory_ask>",
+      "id": 218
+    },
+    {
+      "input": "I'm using 'Adobe Premiere Pro' to edit a wedding video for my clients, The Smiths. I need to sync audio from an external recorder 'Zoom H5' with camera footage from 'Sony FX3'. The wedding was at 'Sunset Hills Vineyard'.",
+      "response": "<memory_ask>Information about editing wedding video in Adobe Premiere Pro</memory_ask><memory_ask>Clients: The Smiths</memory_ask><memory_ask>Task: Sync audio from Zoom H5 with Sony FX3 footage</memory_ask><memory_ask>Information about Zoom H5 audio recorder</memory_ask><memory_ask>Information about Sony FX3 camera</memory_ask><memory_ask>Wedding location: Sunset Hills Vineyard</memory_ask><memory_ask>Information about Sunset Hills Vineyard</memory_ask><memory_ask>How to sync external audio in Adobe Premiere Pro</memory_ask>",
+      "id": 219
+    },
+    {
+      "input": "What is 'Recommender Systems'?",
+      "response": "<memory_ask>Definition of Recommender Systems</memory_ask><memory_ask>Purpose of Recommender Systems (predicting user preferences and recommending items)</memory_ask><memory_ask>Types of Recommender Systems (e.g., collaborative filtering, content-based filtering, hybrid)</memory_ask>",
+      "id": 220
+    },
+    {
+      "input": "The 'Alien Hand Syndrome'. What is this neurological disorder?",
+      "response": "<memory_ask>Information about Alien Hand Syndrome</memory_ask><memory_ask>Symptoms of Alien Hand Syndrome (uncontrolled, purposeful-seeming movements of one hand)</memory_ask><memory_ask>Neurological causes of Alien Hand Syndrome (e.g., damage to corpus callosum, frontal lobe lesions)</memory_ask>",
+      "id": 221
+    },
+    {
+      "input": "My 'Smart Air Freshener ScentMist Pro' by 'AromaHome' is not dispensing scent. The cartridge 'Lavender Bliss' is new. The 'ScentControl' app shows 'Ready to Spray'.",
+      "response": "<memory_ask>Information about Smart Air Freshener ScentMist Pro</memory_ask><memory_ask>Manufacturer: AromaHome</memory_ask><memory_ask>Problem: ScentMist Pro not dispensing scent</memory_ask><memory_ask>Scent cartridge: Lavender Bliss (new)</memory_ask><memory_ask>Information about Lavender Bliss cartridge</memory_ask><memory_ask>App used: ScentControl</memory_ask><memory_ask>Information about ScentControl app</memory_ask><memory_ask>App status: Ready to Spray</memory_ask><memory_ask>Troubleshooting smart air freshener dispensing issues</memory_ask><memory_ask>Checking ScentMist Pro nozzle for clogs or cartridge installation</memory_ask>",
+      "id": 222
+    },
+    {
+      "input": "What is 'Expert Systems' in AI?",
+      "response": "<memory_ask>Definition of Expert Systems in AI</memory_ask><memory_ask>Purpose of Expert Systems (emulating decision-making ability of a human expert in a specific domain)</memory_ask><memory_ask>Components of an Expert System (knowledge base, inference engine, user interface)</memory_ask>",
+      "id": 223
+    },
+    {
+      "input": "The 'Cotard Delusion' (Walking Corpse Syndrome). What are its symptoms?",
+      "response": "<memory_ask>Information about Cotard Delusion (Walking Corpse Syndrome)</memory_ask><memory_ask>Symptoms of Cotard Delusion (nihilistic delusions, e.g., belief of being dead, putrefying, or non-existent)</memory_ask><memory_ask>Association of Cotard Delusion with other psychiatric conditions (e.g., depression, schizophrenia)</memory_ask>",
+      "id": 224
+    },
+    {
+      "input": "I'm using 'Figma' to design a user interface for 'MobileAppY'. I need to create a 'Reusable Component' for a 'User Profile Card'. My design system is 'Material You'. My client is 'StartupX'.",
+      "response": "<memory_ask>Information about designing UI for MobileAppY in Figma</memory_ask><memory_ask>Information about Figma design tool</memory_ask><memory_ask>Task: Create Reusable Component for User Profile Card</memory_ask><memory_ask>Design system: Material You</memory_ask><memory_ask>Information about Material You design system</memory_ask><memory_ask>Client: StartupX</memory_ask><memory_ask>Information about StartupX</memory_ask><memory_ask>How to create reusable components in Figma</memory_ask>",
+      "id": 225
+    },
+    {
+      "input": "What is 'Fuzzy Logic'?",
+      "response": "<memory_ask>Definition of Fuzzy Logic</memory_ask><memory_ask>Concept of Fuzzy Logic (dealing with reasoning that is approximate rather than fixed and exact)</memory_ask><memory_ask>Difference from Boolean logic (degrees of truth)</memory_ask><memory_ask>Applications of Fuzzy Logic (e.g., control systems, decision making)</memory_ask>",
+      "id": 226
+    },
+    {
+      "input": "The 'Capgras Delusion'. What is the main belief associated with it?",
+      "response": "<memory_ask>Information about Capgras Delusion</memory_ask><memory_ask>Main belief associated with Capgras Delusion (belief that a familiar person has been replaced by an identical imposter)</memory_ask><memory_ask>Neurological and psychological theories about Capgras Delusion</memory_ask>",
+      "id": 227
+    },
+    {
+      "input": "My 'Smart Pool Cleaner AquaBot X7' by 'PoolPal Robotics' is stuck in the shallow end 'ShallowStep'. The 'PoolPilot' app shows it's cleaning. The pool type is 'Vinyl Liner'.",
+      "response": "<memory_ask>Information about Smart Pool Cleaner AquaBot X7</memory_ask><memory_ask>Manufacturer: PoolPal Robotics</memory_ask><memory_ask>Problem: AquaBot X7 stuck in shallow end ShallowStep</memory_ask><memory_ask>App used: PoolPilot</memory_ask><memory_ask>Information about PoolPilot app</memory_ask><memory_ask>App status: cleaning</memory_ask><memory_ask>Pool type: Vinyl Liner</memory_ask><memory_ask>Troubleshooting robotic pool cleaner getting stuck in shallow areas</memory_ask><memory_ask>Checking AquaBot X7 wheels, brushes, and navigation settings</memory_ask>",
+      "id": 228
+    },
+    {
+      "input": "What is 'Genetic Algorithms'?",
+      "response": "<memory_ask>Definition of Genetic Algorithms</memory_ask><memory_ask>Inspired by process of natural selection (evolutionary algorithms)</memory_ask><memory_ask>Key operators in Genetic Algorithms (selection, crossover, mutation)</memory_ask><memory_ask>Applications of Genetic Algorithms (optimization, search problems)</memory_ask>",
+      "id": 229
+    },
+    {
+      "input": "The 'Fregoli Delusion'. How does it differ from Capgras Delusion?",
+      "response": "<memory_ask>Information about Fregoli Delusion</memory_ask><memory_ask>Main belief associated with Fregoli Delusion (belief that different people are actually a single person in disguise)</memory_ask><memory_ask>Difference between Fregoli Delusion and Capgras Delusion</memory_ask>",
+      "id": 230
+    },
+    {
+      "input": "I'm setting up a 'WordPress' website 'MyPortfolio.art' on 'Bluehost'. I need to install a theme 'Astra' and a plugin 'Elementor'. My domain registrar is 'GoDaddy'.",
+      "response": "<memory_ask>Information about setting up WordPress website MyPortfolio.art on Bluehost</memory_ask><memory_ask>Information about WordPress CMS</memory_ask><memory_ask>Hosting provider: Bluehost</memory_ask><memory_ask>Information about Bluehost hosting</memory_ask><memory_ask>Installing Astra theme on WordPress</memory_ask><memory_ask>Information about Astra theme</memory_ask><memory_ask>Installing Elementor plugin on WordPress</memory_ask><memory_ask>Information about Elementor plugin</memory_ask><memory_ask>Domain registrar: GoDaddy</memory_ask><memory_ask>Pointing GoDaddy domain to Bluehost hosting</memory_ask>",
+      "id": 231
+    },
+    {
+      "input": "What is 'Swarm Intelligence'?",
+      "response": "<memory_ask>Definition of Swarm Intelligence</memory_ask><memory_ask>Inspired by collective behavior of decentralized, self-organized systems (e.g., ant colonies, bird flocks)</memory_ask><memory_ask>Algorithms based on Swarm Intelligence (e.g., Ant Colony Optimization, Particle Swarm Optimization)</memory_ask>",
+      "id": 232
+    },
+    {
+      "input": "The 'Reduplicative Paramnesia'. What does this misidentification syndrome involve?",
+      "response": "<memory_ask>Information about Reduplicative Paramnesia</memory_ask><memory_ask>Core feature of Reduplicative Paramnesia (belief that a place or location has been duplicated, existing in two or more places simultaneously, or relocated)</memory_ask><memory_ask>Association with brain injury</memory_ask>",
+      "id": 233
+    },
+    {
+      "input": "My 'Smart Air Conditioner Window Unit AC-Cool Pro' by 'ChillTech' is dripping water inside. The drain hose 'DrainFlow EZ' seems clear. The app 'ChillControl' shows 'Cooling Mode'.",
+      "response": "<memory_ask>Information about Smart Air Conditioner Window Unit AC-Cool Pro</memory_ask><memory_ask>Manufacturer: ChillTech</memory_ask><memory_ask>Problem: AC-Cool Pro dripping water inside</memory_ask><memory_ask>Drain hose status: DrainFlow EZ seems clear</memory_ask><memory_ask>App used: ChillControl</memory_ask><memory_ask>Information about ChillControl app</memory_ask><memory_ask>App status: Cooling Mode</memory_ask><memory_ask>Troubleshooting window air conditioner dripping water inside</memory_ask><memory_ask>Checking AC-Cool Pro for clogged drain pan, incorrect tilt, or frozen evaporator coil</memory_ask>",
+      "id": 234
+    },
+    {
+      "input": "What is 'Case-Based Reasoning' (CBR)?",
+      "response": "<memory_ask>Definition of Case-Based Reasoning (CBR)</memory_ask><memory_ask>Process of CBR (solving new problems by retrieving and adapting solutions to similar past problems - cases)</memory_ask><memory_ask>Four steps of CBR: Retrieve, Reuse, Revise, Retain</memory_ask>",
+      "id": 235
+    },
+    {
+      "input": "The 'Truman Show Delusion'. What is the belief?",
+      "response": "<memory_ask>Information about Truman Show Delusion</memory_ask><memory_ask>Core belief of Truman Show Delusion (belief that one's life is a staged reality TV show or play)</memory_ask><memory_ask>Named after the movie 'The Truman Show'</memory_ask>",
+      "id": 236
+    },
+    {
+      "input": "I'm using 'Shopify' to build an e-commerce store 'CraftyGoods.com'. I need to add a payment gateway 'Stripe' and set up shipping rates for 'USPS Priority Mail'. My theme is 'Debut'.",
+      "response": "<memory_ask>Information about building e-commerce store CraftyGoods.com on Shopify</memory_ask><memory_ask>Information about Shopify platform</memory_ask><memory_ask>Adding Stripe payment gateway to Shopify</memory_ask><memory_ask>Information about Stripe payment gateway</memory_ask><memory_ask>Setting up USPS Priority Mail shipping rates in Shopify</memory_ask><memory_ask>Information about USPS Priority Mail</memory_ask><memory_ask>Theme used: Debut</memory_ask><memory_ask>Information about Debut Shopify theme</memory_ask>",
+      "id": 237
+    },
+    {
+      "input": "What is 'Inductive Logic Programming' (ILP)?",
+      "response": "<memory_ask>Definition of Inductive Logic Programming (ILP)</memory_ask><memory_ask>Subfield of AI combining machine learning with logic programming</memory_ask><memory_ask>Goal of ILP (inducing hypotheses from observations and background knowledge in the form of logic programs)</memory_ask>",
+      "id": 238
+    },
+    {
+      "input": "The 'Mirrored-Self Misidentification'. What does it entail?",
+      "response": "<memory_ask>Information about Mirrored-Self Misidentification</memory_ask><memory_ask>Core feature of Mirrored-Self Misidentification (inability to recognize one's own reflection in a mirror, believing it to be another person)</memory_ask><memory_ask>Association with dementia and other neurological conditions</memory_ask>",
+      "id": 239
+    },
+    {
+      "input": "My 'Smart Bladeless Fan CoolBreeze Tower' by 'AeroFlow Dynamics' is making a clicking sound. The oscillation feature 'OscilloGlide' is on. The app 'FanRemote Pro' controls it.",
+      "response": "<memory_ask>Information about Smart Bladeless Fan CoolBreeze Tower</memory_ask><memory_ask>Manufacturer: AeroFlow Dynamics</memory_ask><memory_ask>Problem: CoolBreeze Tower making clicking sound</memory_ask><memory_ask>Oscillation feature: OscilloGlide (on)</memory_ask><memory_ask>App used: FanRemote Pro</memory_ask><memory_ask>Information about FanRemote Pro app</memory_ask><memory_ask>Troubleshooting clicking sounds in bladeless fans</memory_ask><memory_ask>Checking CoolBreeze Tower for loose parts or obstructions in oscillation mechanism</memory_ask>",
+      "id": 240
+    },
+    {
+      "input": "What is 'Knowledge Representation and Reasoning' (KRR)?",
+      "response": "<memory_ask>Definition of Knowledge Representation and Reasoning (KRR)</memory_ask><memory_ask>Field of AI concerned with how knowledge can be represented symbolically and manipulated in an automated way</memory_ask><memory_ask>Common KRR formalisms (e.g., logic, ontologies, semantic networks)</memory_ask>",
+      "id": 241
+    },
+    {
+      "input": "The 'Ekbom Syndrome' (Delusional Parasitosis). What is the primary delusion?",
+      "response": "<memory_ask>Information about Ekbom Syndrome (Delusional Parasitosis)</memory_ask><memory_ask>Primary delusion in Ekbom Syndrome (mistaken belief of being infested with parasites, insects, or other small creatures)</memory_ask><memory_ask>Associated symptoms (e.g., formication - sensation of insects crawling on skin)</memory_ask>",
+      "id": 242
+    },
+    {
+      "input": "I'm using 'Unreal Engine 5' to create a cinematic short film 'Nebula's Dream'. I need to set up 'Lumen' for global illumination and 'Nanite' for a detailed asteroid model 'Asteroid_01.fbx'. My GPU is 'Nvidia RTX 4090'.",
+      "response": "<memory_ask>Information about creating cinematic short film Nebula's Dream in Unreal Engine 5</memory_ask><memory_ask>Information about Unreal Engine 5</memory_ask><memory_ask>Setting up Lumen for global illumination in UE5</memory_ask><memory_ask>Information about Lumen global illumination</memory_ask><memory_ask>Setting up Nanite for detailed asteroid model Asteroid_01.fbx in UE5</memory_ask><memory_ask>Information about Nanite virtualized geometry</memory_ask><memory_ask>User's GPU: Nvidia RTX 4090</memory_ask><memory_ask>Information about Nvidia RTX 4090 GPU</memory_ask>",
+      "id": 243
+    },
+    {
+      "input": "What is 'Automated Planning and Scheduling' in AI?",
+      "response": "<memory_ask>Definition of Automated Planning and Scheduling in AI</memory_ask><memory_ask>Concerned with the realization of strategies or action sequences, typically for execution by intelligent agents, autonomous robots and unmanned vehicles</memory_ask><memory_ask>Common planning algorithms (e.g., STRIPS, PDDL)</memory_ask>",
+      "id": 244
+    },
+    {
+      "input": "The 'Clinical Lycanthropy' delusion. What belief characterizes it?",
+      "response": "<memory_ask>Information about Clinical Lycanthropy delusion</memory_ask><memory_ask>Characteristic belief in Clinical Lycanthropy (delusion that the affected person can transform, or has transformed, into an animal, often a wolf)</memory_ask><memory_ask>Psychiatric context of Clinical Lycanthropy</memory_ask>",
+      "id": 245
+    },
+    {
+      "input": "My 'Smart Robot Window Cleaner WinBot Pro' by 'GlassShine Robotics' is leaving streaks on the 'Kitchen Window'. I'm using 'SparkleClean' solution. The app 'WinControl' is set to 'Deep Clean'.",
+      "response": "<memory_ask>Information about Smart Robot Window Cleaner WinBot Pro</memory_ask><memory_ask>Manufacturer: GlassShine Robotics</memory_ask><memory_ask>Problem: WinBot Pro leaving streaks on Kitchen Window</memory_ask><memory_ask>Cleaning solution used: SparkleClean</memory_ask><memory_ask>Information about SparkleClean solution</memory_ask><memory_ask>App used: WinControl</memory_ask><memory_ask>Information about WinControl app</memory_ask><memory_ask>App setting: Deep Clean</memory_ask><memory_ask>Troubleshooting robot window cleaner streaking issues</memory_ask><memory_ask>Checking WinBot Pro cleaning pads and squeegee condition</memory_ask>",
+      "id": 246
+    },
+    {
+      "input": "What is 'Multi-Agent Systems' (MAS)?",
+      "response": "<memory_ask>Definition of Multi-Agent Systems (MAS)</memory_ask><memory_ask>Composed of multiple interacting intelligent agents within an environment</memory_ask><memory_ask>Key aspects of MAS (agent autonomy, interaction, coordination, negotiation)</memory_ask><memory_ask>Applications of MAS (e.g., distributed problem solving, simulations, robotics)</memory_ask>",
+      "id": 247
+    },
+    {
+      "input": "The 'Bibliomania' condition. What is it an obsession with?",
+      "response": "<memory_ask>Information about Bibliomania condition</memory_ask><memory_ask>Obsession in Bibliomania (collecting or hoarding books, often to the point of social or physical detriment)</memory_ask><memory_ask>Distinction from normal book collecting</memory_ask>",
+      "id": 248
+    },
+    {
+      "input": "I'm creating a presentation for 'Project Apollo_Next'. The deadline is tomorrow by 9 AM for CEO Ms. Eva Rostova. I need the latest budget figures from 'FinanceDB' and progress report from 'Jira ticket PNX-123'. The presentation template is 'CorpBlue.pptx'. My team includes John and Maria.",
+      "response": "<memory_ask>Information about presentation for Project Apollo_Next</memory_ask><memory_ask>Deadline: tomorrow 9 AM</memory_ask><memory_ask>Recipient: CEO Ms. Eva Rostova</memory_ask><memory_ask>Who is Ms. Eva Rostova</memory_ask><memory_ask>Required data: latest budget figures from FinanceDB</memory_ask><memory_ask>Information about FinanceDB</memory_ask><memory_ask>Required data: progress report from Jira ticket PNX-123</memory_ask><memory_ask>Information about Jira ticket PNX-123</memory_ask><memory_ask>Presentation template: CorpBlue.pptx</memory_ask><memory_ask>Team members: John, Maria</memory_ask><memory_ask>Who is John</memory_ask><memory_ask>Who is Maria</memory_ask>",
+      "id": 249
+    }
+  ]
+}
