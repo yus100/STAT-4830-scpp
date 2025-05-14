@@ -1,0 +1,204 @@
+{
+  "examples": [
+    {
+      "input": "What is John's favorite color?",
+      "response": "<memory_ask> What is John's favorite color? </memory_ask>"
+    },
+    {
+      "input": "John likes blue. Later, he mentions he also likes green.",
+      "response": "<memory_write> John likes blue and green. </memory_write>"
+    },
+    {
+      "input": "Where did Sarah go for vacation last year?",
+      "response": "<memory_ask> Where did Sarah go for vacation last year? </memory_ask>"
+    },
+    {
+      "input": "Sarah visited Japan in 2023 and loved Kyoto.",
+      "response": "<memory_write> Sarah vacationed in Japan (Kyoto) in 2023. </memory_write>"
+    },
+    {
+      "input": "What's the CEO's email address?",
+      "response": "<memory_ask> What is the CEO's email address? </memory_ask>"
+    },
+    {
+      "input": "The CEO's contact is ceo@company.com. Office hours are 9-5.",
+      "response": "<memory_write> CEO email: ceo@company.com. </memory_write>"
+    },
+    {
+      "input": "When is the project deadline?",
+      "response": "<memory_ask> When is the project deadline? </memory_ask>"
+    },
+    {
+      "input": "Deadline extended to March 15th. Client requested additional features.",
+      "response": "<memory_write> Project deadline updated to March 15th. </memory_write>"
+    },
+    {
+      "input": "What's the Wi-Fi password?",
+      "response": "<memory_ask> What is the Wi-Fi password? </memory_ask>"
+    },
+    {
+      "input": "New Wi-Fi password: SecureNet@2024. Previous one expired.",
+      "response": "<memory_write> Wi-Fi password: SecureNet@2024. </memory_write>"
+    },
+    {
+      "input": "How tall is Mount Everest?",
+      "response": "<memory_ask> What is the height of Mount Everest? </memory_ask>"
+    },
+    {
+      "input": "Mount Everest is 8,849 meters tall. It grows 4mm yearly.",
+      "response": "<memory_write> Mount Everest height: 8,849 meters. </memory_write>"
+    },
+    {
+      "input": "What's Mia's dietary preference?",
+      "response": "<memory_ask> What dietary preferences does Mia have? </memory_ask>"
+    },
+    {
+      "input": "Mia is allergic to peanuts and follows a vegan diet.",
+      "response": "<memory_write> Mia: vegan, peanut allergy. </memory_write>"
+    },
+    {
+      "input": "What time is the team meeting tomorrow?",
+      "response": "<memory_ask> When is tomorrow's team meeting? </memory_ask>"
+    },
+    {
+      "input": "Tomorrow's meeting moved to 11 AM due to timezone conflicts.",
+      "response": "<memory_write> Team meeting rescheduled to 11 AM. </memory_write>"
+    },
+    {
+      "input": "What engine is in the 2024 Tesla Model S?",
+      "response": "<memory_ask> What engine does the 2024 Tesla Model S have? </memory_ask>"
+    },
+    {
+      "input": "2024 Tesla Model S uses a dual-motor electric powertrain.",
+      "response": "<memory_write> Tesla Model S 2024: dual-motor electric. </memory_write>"
+    },
+    {
+      "input": "What's the client's budget for the campaign?",
+      "response": "<memory_ask> What is the client's campaign budget? </memory_ask>"
+    },
+    {
+      "input": "Client increased campaign budget to $50,000. Approval pending.",
+      "response": "<memory_write> Campaign budget updated to $50,000. </memory_write>"
+    },
+    {
+      "input": "What's the capital of Canada?",
+      "response": "Ottawa is the capital of Canada."
+    },
+    {
+      "input": "User prefers dark mode. System settings updated.",
+      "response": "Dark mode is now enabled."
+    },
+    {
+      "input": "The sky is blue. Roses are red.",
+      "response": "<memory_write> Sky is blue. </memory_write> <memory_write> Roses are red. </memory_write>"
+    },
+    {
+      "input": "Coffee is brewed. The meeting starts at 10.",
+      "response": "<memory_write> Coffee brewed. </memory_write> <memory_write> Meeting at 10. </memory_write>"
+    },
+    {
+      "input": "What is the weather today?",
+      "response": "It might rain later."
+    },
+    {
+      "input": "Alex's phone number is 555-1234. He works in accounting.",
+      "response": "Alex can be reached at 555-1234."
+    },
+    {
+      "input": "Lunch is at 12:30 PM. Sandwiches are available.",
+      "response": "<memory_write> Lunch at 12:30 PM. </memory_write> <memory_write> Sandwiches available. </memory_write>"
+    },
+    {
+      "input": "When does the concert start?",
+      "response": "Doors open at 7 PM."
+    },
+    {
+      "input": "The server IP is 192.168.1.1. Port 8080 is open.",
+      "response": "Server details: IP 192.168.1.1, port 8080."
+    },
+    {
+      "input": "Train delayed by 15 minutes. Platform changed to 3.",
+      "response": "<memory_write> Train delay: 15 minutes. </memory_write> <memory_write> Platform 3. </memory_write>"
+    },
+    {
+      "input": "What's the recipe for pancakes?",
+      "response": "Mix flour, eggs, milk, and baking powder."
+    },
+    {
+      "input": "New policy: Remote work allowed on Fridays.",
+      "response": "Policy updated for remote work."
+    },
+    {
+      "input": "The cat is on the mat. The dog is outside.",
+      "response": "<memory_write> Cat on mat. </memory_write> <memory_write> Dog outside. </memory_write>"
+    },
+    {
+      "input": "When is the report due?",
+      "response": "The deadline is next week."
+    },
+    {
+      "input": "Emily's flight arrives at 8 PM. She needs a pickup.",
+      "response": "<memory_write> Emily's flight arrives at 8 PM. </memory_write> <memory_write> Pickup required. </memory_write>"
+    },
+    {
+      "input": "What's the stock price of ABC Corp?",
+      "response": "Stocks fluctuate daily."
+    },
+    {
+      "input": "Server maintenance scheduled for midnight. Duration: 2 hours.",
+      "response": "Maintenance at midnight for 2 hours."
+    },
+    {
+      "input": "The library closes at 9 PM. Holidays may affect hours.",
+      "response": "<memory_write> Library closes at 9 PM. </memory_write> <memory_write> Holiday hours vary. </memory_write>"
+    },
+    {
+      "input": "How do I reset my password?",
+      "response": "Visit the account recovery page."
+    },
+    {
+      "input": "Tom's address is 456 Oak Street. He moved last month.",
+      "response": "Tom lives at 456 Oak Street."
+    },
+    {
+      "input": "New employee: Lisa, role: Developer, start date: Monday.",
+      "response": "<memory_write> Lisa hired as Developer starting Monday. </memory_write> <memory_write> Role confirmed. </memory_write>"
+    },
+    {
+      "input": "What's the pH of pure water?",
+      "response": "Pure water has a pH of 7."
+    },
+    {
+      "input": "The conference theme is AI Ethics. Keynote at 9 AM.",
+      "response": "Theme: AI Ethics. Keynote at 9."
+    },
+    {
+      "input": "Parking is free on weekends. Weekdays cost $5.",
+      "response": "<memory_write> Free weekend parking. </memory_write> <memory_write> Weekday fee: $5. </memory_write>"
+    },
+    {
+      "input": "How long to cook a turkey?",
+      "response": "Typically 15 minutes per pound."
+    },
+    {
+      "input": "Flight CX789 canceled. Rebooking required.",
+      "response": "Your flight has been canceled."
+    },
+    {
+      "input": "The seminar is in Room 205. Handouts provided.",
+      "response": "<memory_write> Seminar in Room 205. </memory_write> <memory_write> Handouts available. </memory_write>"
+    },
+    {
+      "input": "What's the return policy?",
+      "response": "Returns accepted within 30 days."
+    },
+    {
+      "input": "New software update fixes security bugs. Install ASAP.",
+      "response": "Update patches security issues."
+    },
+    {
+      "input": "The store opens at 8 AM. Sale starts tomorrow.",
+      "response": "<memory_write> Store opens 8 AM. </memory_write> <memory_write> Sale begins tomorrow. </memory_write>"
+    }
+  ]
+}

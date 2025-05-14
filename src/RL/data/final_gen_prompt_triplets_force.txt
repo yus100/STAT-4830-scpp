@@ -1,0 +1,57 @@
+I'm writing a dataset to fine-tune an RL local-LLM for my needs. The local LLM is optimized for using and writing to a graph RAG-like system for improved learning and memory. It has 2 functions: recall (<memory_ask>) and write (<memory_write>).
+Based on the user input, it should call the right function. It should NEVER answer the question, or write anything else. If there is more than one function needed, it can stack them. All stacked functions should be homogenous (i.e. do not mix asks and writes.)
+Make sure that if the model cannot write/ask anything from the prompt, it DOES NOT. If there is no information to write, it does not have to write anything, same thing with asks. For example, a prompt with random content like: k2ek2kl2kl, does not read or write anything most likely, so just return an empty string.
+Below is the order it should evaluate (the first one with the highest priority and decreasing)
+If the input has "Output Generated. Write Memory." it should ALWAYS do <memory_write>. The input will be of the format
+"
+Output Generated. Write Memory.
+Input Question: ....
+Memory:
+Memory 1:
+Memory 2: ...
+Memory 3: ...
+Memory N: ...
+Generated Thinking and Response: ...
+"
+in this case.
+In other cases (below), it gets just the input question.
+If the input is a question: it should ALWAYS do <memory_ask>
+If the input is a statement: it should ALWAYS do <memory_write>
+If the input has both a statement and a question: it should ALWAYS do <memory_ask>
+If there is something that can't really be posed as a question, just write <memory_ask>Information about [thing]</memory_ask>. It's just basically a multiquery to be used to query a RAG database anyways.
+All memories recalled, and all memory writes should be in the triplet form. That is [subject],[action],[noun]. The triplets should be in the simplest / most basic form. You can include as many as neccessary to cover the entire prompt. Oftentimes the response will reveal new information, make sure to include that in your writes. Try not to duplicate verbs in the dataset (but it is fine if the alternatives will change the meaning or be too weird/unusual), but nouns/subjects are fine/encouraged to manage the graph structure.
+There is no limits to the number of writes / asks, so please include examples of all lengths. For the purposes of this dataset, you can assume a max of 15 asks, and a max of 50 writes, so please include a lot of variability, but focus on <10 of each (but include at least 20% of the examples in the higher ranges).
+Please generate synthetic data to train this model. I need at least 50 of EACH type (all 4) and a total of 300, of varying sizes, varying domains/questions, varying amount of memory retrieved, varying iunput questions, varying complexity, varying output questions, varying amount of stacked functions, etc... VARY EVERYTHING. BE UNIQUE. I will give you examples, but you can stray and generate with creativity, these are meant to guide you, NOT constrain you. However, follow the spirit of this prompt. I will ask for 1500 TOTAL Examples, in batches of 300. Try not to duplicate your examples.
+If some information contradicts old information, it should write that to memory. It does not need to write information already in memory if it is not contradicting / unchanged. If it fixing contradicting memory, it should repeat the entire memory, with the changed information.
+Include some randomness, edge cases, uniquness, but include a solid core of examples for stability. Add as much variability as you can for a robust model. Oftentimes the recalled memories include information not relevant to the prompt, so include that.
+output your response as JSON in this format
+{
+examples: [
+"input": "..."
+"response": "..."
+"id": 1
+]
+}
+make sure id increments naturally, starting at 1, and incrementing for each new example.
+
+Examples (these don't include number):
+input: what color is John's car
+response: <memory_ask>Who is John</memory_ask><memory_ask>What is John's Car</memory_ask><memory_ask>What color is John's Car</memory_ask>
+input: The blue toilet is in the bathroom. The bathroom is next to the living room.
+response: <memory_write>The toliet,is in,the bathroom</memory_write><memory_write>The toliet,is,blue</memory_write><memory_write>The bathroom,is next to,the living room</memory_write>
+input: There is a hospital with 100 patients as 12 Harrison Ln in New Jersey. New Jersey is a great state isnt it? The hospital has a lot of doctors. Doctor's are great aren't they? There is one doctor named Dr. Gray. What role does Dr. Gray play? Also Dr.Gray's car is blue.
+response: <memory_ask>What is the hospital</memory_ask><memory_ask>What is at 12 Harrison Ln in New Jersey</memory_ask><memory_ask>Information about New Jersey?</memory_ask><memory_ask>Information about Doctors?</memory_ask><memory_ask>Information about Doctors</memory_ask><memory_ask>Who is Dr. Gray</memory_ask><memory_ask>What role does Dr. Gray play?</memory_ask><memory_ask>What is Dr. Gray's car</memory_ask>
+input:
+"
+Output Generated. Write Memory.
+Input Question: How old is Jimmy. Jimmy lives next to Kate. Jimmy goes to school at UT Austin. Jimmy is a female.
+Memory:
+Memory 1: Jimmy,is,male
+Memory 2: Jimmy,lives in,Texas
+Memory 3:Jimmy's parents,own,a nice house
+Memory 4:Jummy's parents,own,a Honda Civic
+Memory 5: Jimmy,attends,the University of Texas at Austin
+Memory 6: An apple,is on,the Teacher's desk
+Generated Thinking and Response: I do not have information about Jimmy's age.
+"
+response: <memory_write>Jimmy,lives next to,Kate</memory_write><memory_write>Jimmy,is,Male</memory_write> 

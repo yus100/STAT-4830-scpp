@@ -1,0 +1,4 @@
+{
+    "input": "John likes blue. Later he mentions he also likes green.",
+    "response": "<memory_write> John,likes,blue</memory_write><memory_write>John,likes,green</memory_write>"
+}

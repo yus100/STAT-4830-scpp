@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGS Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <div id="left-panel">
+            <div id="load-area">
+                <h2>Load World Model</h2>
+                <textarea id="game-text-input" placeholder="Paste your game text here..."></textarea>
+                <button id="load-button">Generate World Graph</button>
+                 <button id="reset-button">Reset World</button>
+            </div>
+            <div id="chat-area">
+                <h2>Chat History / World Updates</h2>
+                <div id="chat-history">
+                    <div class="system-message">Welcome! Paste game text above or interact below.</div>
+                </div>
+                <div id="input-area">
+                    <input type="text" id="user-input" placeholder="Ask a question or make a statement...">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="right-panel">
+            <h2>World Graph Visualization</h2>
+            <div id="graph-container">
+                </div>
+             <div id="graph-info">
+                <p>Nodes: <span id="node-count">0</span> | Edges: <span id="edge-count">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

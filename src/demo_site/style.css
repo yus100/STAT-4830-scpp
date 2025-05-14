@@ -1,0 +1,42 @@
+/* Basic Reset & Font */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; overflow: hidden; }
+h2 { color: #005a9c; margin-bottom: 15px; font-weight: 600; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+
+/* Main Layout */
+#app-container { display: flex; height: 100vh; }
+#left-panel { flex: 0 0 40%; padding: 20px; display: flex; flex-direction: column; border-right: 2px solid #ccc; background-color: #fff; overflow: hidden; }
+#right-panel { flex: 1; padding: 20px; display: flex; flex-direction: column; background-color: #e9edf0; overflow: hidden; }
+
+/* Hyperparams */
+#hyperparams { margin-bottom: 20px; }
+#hyperparams .param { margin-bottom: 10px; display: flex; align-items: center; }
+#hyperparams label { flex: 1; }
+#hyperparams input[type="range"] { flex: 2; margin-left: 10px; }
+#hyperparams input[type="number"] { width: 80px; margin-left: 10px; }
+
+/* Left Panel Sections */
+#load-area { margin-bottom: 20px; }
+#chat-area { flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+/* Input Elements */
+textarea#game-text-input { width: 100%; min-height: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; font-size: 0.9em; resize: vertical; }
+input#user-input { flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px; font-size: 1em; }
+button { padding: 10px 15px; background-color: #0078d4; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; transition: background-color 0.2s ease; margin-top: 5px; }
+button:hover { background-color: #005a9c; }
+#reset-button { background-color: #d9534f; }
+#reset-button:hover { background-color: #c9302c; }
+
+/* Chat History */
+#chat-history { flex-grow: 1; border: 1px solid #eee; background-color: #fdfdfd; padding: 10px; overflow-y: auto; margin-bottom: 15px; border-radius: 4px; }
+.chat-message { padding: 8px 12px; margin-bottom: 8px; border-radius: 5px; max-width: 90%; word-wrap: break-word; }
+.user-message { background-color: #e1f5fe; margin-left: auto; text-align: right; }
+.system-message { background-color: #f0f0f0; margin-right: auto; }
+.error-message { background-color: #fddede; color: #d9534f; font-weight: bold; margin-right: auto; }
+
+/* Input Area */
+#input-area { display: flex; align-items: center; }
+
+/* Right Panel Graph */
+#graph-container { flex: 1 1 0; min-height: 0; width: 100%; height: 100%; border: 1px solid #ccc; background-color: #fff; border-radius: 4px; position: relative; margin-bottom: 10px; }
+#graph-info { text-align: center; font-size: 0.9em; color: #555; }

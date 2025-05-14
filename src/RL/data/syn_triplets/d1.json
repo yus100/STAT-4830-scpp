@@ -1,0 +1,412 @@
+{
+    "examples": [
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The new server, SRV-001, is now online in Rack A, Slot 3. It has 256GB RAM and 4TB SSD storage. Its OS is Ubuntu 22.04. The old server, SRV-000, was decommissioned.\n\nMemory:\nMemory 1: SRV-001,status,pending deployment\nMemory 2: SRV-000,status,online\nMemory 3: Rack A,location,Datacenter North\n\nGenerated Thinking and Response: Server SRV-001 has been successfully deployed and SRV-000 has been decommissioned. All details noted.",
+        "response": "<memory_write>SRV-001,is,online</memory_write><memory_write>SRV-001,located in,Rack A</memory_write><memory_write>SRV-001,located in,Slot 3</memory_write><memory_write>SRV-001,has,256GB RAM</memory_write><memory_write>SRV-001,has,4TB SSD storage</memory_write><memory_write>SRV-001,runs,Ubuntu 22.04</memory_write><memory_write>SRV-000,status,decommissioned</memory_write>"
+      },
+      {
+        "input": "What is the process for photosynthesis and which organisms perform it?",
+        "response": "<memory_ask>What is photosynthesis process</memory_ask><memory_ask>Which organisms perform photosynthesis</memory_ask>"
+      },
+      {
+        "input": "The red fox jumped over the lazy dog. The lazy dog was brown and white. The fox was quick.",
+        "response": "<memory_write>red fox,jumped over,lazy dog</memory_write><memory_write>lazy dog,was,brown</memory_write><memory_write>lazy dog,was,white</memory_write><memory_write>fox,was,quick</memory_write><memory_write>fox,is,red</memory_write>"
+      },
+      {
+        "input": "Project Phoenix is scheduled to launch next quarter. It aims to revolutionize solar panel efficiency. What are the key milestones for Project Phoenix?",
+        "response": "<memory_ask>Information about Project Phoenix</memory_ask><memory_ask>When is Project Phoenix scheduled to launch</memory_ask><memory_ask>What is Project Phoenix's aim</memory_ask><memory_ask>What are key milestones for Project Phoenix</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: Dr. Emily Carter presented her findings on quantum entanglement. Her paper suggests a new method for stabilizing qubits. The experiment was conducted at CERN.\n\nMemory:\nMemory 1: Dr. Emily Carter,field,particle physics\nMemory 2: Qubit stabilization,is,a major challenge\n\nGenerated Thinking and Response: Dr. Carter's findings are significant. The new method for qubit stabilization appears promising.",
+        "response": "<memory_write>Dr. Emily Carter,presented findings on,quantum entanglement</memory_write><memory_write>Dr. Emily Carter's paper,suggests,new method for stabilizing qubits</memory_write><memory_write>Dr. Emily Carter's experiment,conducted at,CERN</memory_write>"
+      },
+      {
+        "input": "Who invented the telephone and in what year was it patented?",
+        "response": "<memory_ask>Who invented telephone</memory_ask><memory_ask>What year was telephone patented</memory_ask>"
+      },
+      {
+        "input": "The library is quiet. Books line the shelves. A student is reading at a table.",
+        "response": "<memory_write>library,is,quiet</memory_write><memory_write>books,line,shelves</memory_write><memory_write>student,is reading at,table</memory_write>"
+      },
+      {
+        "input": "The new software update version 3.5 includes security patches and performance improvements. Is it compatible with Windows 11?",
+        "response": "<memory_ask>Information about software update version 3.5</memory_ask><memory_ask>What does software update version 3.5 include</memory_ask><memory_ask>Is software update version 3.5 compatible with Windows 11</memory_ask>"
+      },
+      {
+        "input": "asdfjkl; qweriouyp zxcvbnm,",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The company's Q3 revenue was $5 million, exceeding the target of $4.5 million. However, net profit was $500k, below the expected $700k due to increased marketing spend.\n\nMemory:\nMemory 1: Company Q3 revenue target,is,$4.5 million\nMemory 2: Company Q3 net profit target,is,$700k\n\nGenerated Thinking and Response: Q3 financial results show mixed performance. Revenue target was exceeded, but profit fell short.",
+        "response": "<memory_write>Company Q3 revenue,was,$5 million</memory_write><memory_write>Company Q3 revenue,exceeded,target</memory_write><memory_write>Company Q3 net profit,was,$500k</memory_write><memory_write>Company Q3 net profit,was below,target</memory_write><memory_write>Company Q3 net profit shortfall,due to,increased marketing spend</memory_write>"
+      },
+      {
+        "input": "What are the primary ingredients in a Margherita pizza?",
+        "response": "<memory_ask>What are primary ingredients in Margherita pizza</memory_ask>"
+      },
+      {
+        "input": "The Eiffel Tower is in Paris, France. It was completed in 1889. It is made of wrought iron.",
+        "response": "<memory_write>Eiffel Tower,is in,Paris</memory_write><memory_write>Paris,is in,France</memory_write><memory_write>Eiffel Tower,completed in,1889</memory_write><memory_write>Eiffel Tower,is made of,wrought iron</memory_write>"
+      },
+      {
+        "input": "Our team just adopted a new project management tool called 'TaskMaster'. It features Kanban boards and Gantt charts. How does it integrate with Slack?",
+        "response": "<memory_ask>Information about TaskMaster tool</memory_ask><memory_ask>What features does TaskMaster have</memory_ask><memory_ask>How does TaskMaster integrate with Slack</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The patient, John Doe, reported allergies to penicillin. His current medication is amoxicillin.\n\nMemory:\nMemory 1: John Doe,allergy,none recorded\nMemory 2: John Doe,current medication,aspirin\n\nGenerated Thinking and Response: Updated patient John Doe's record. Penicillin allergy noted. Amoxicillin is current medication, but this contradicts his penicillin allergy. This needs immediate review by a doctor! For now, recording stated current medication as amoxicillin, and allergy as penicillin.",
+        "response": "<memory_write>John Doe,has allergy to,penicillin</memory_write><memory_write>John Doe,current medication is,amoxicillin</memory_write><memory_write>John Doe's medication,needs,immediate review</memory_write>"
+      },
+      {
+        "input": "Describe the lifecycle of a butterfly.",
+        "response": "<memory_ask>Information about butterfly lifecycle</memory_ask>"
+      },
+      {
+        "input": "The city of Atlantis was a mythical island mentioned in Plato's dialogues. It was said to be an advanced civilization that eventually sank into the ocean.",
+        "response": "<memory_write>City of Atlantis,was,mythical island</memory_write><memory_write>City of Atlantis,mentioned in,Plato's dialogues</memory_write><memory_write>City of Atlantis,was,advanced civilization</memory_write><memory_write>City of Atlantis,sank into,ocean</memory_write>"
+      },
+      {
+        "input": "Mars is the fourth planet from the Sun. It is often called the Red Planet. Does Mars have moons?",
+        "response": "<memory_ask>Information about Mars</memory_ask><memory_ask>What is Mars' position from Sun</memory_ask><memory_ask>What is Mars' nickname</memory_ask><memory_ask>Does Mars have moons</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The new AI model, 'GenAI-5', can write poetry and code. It was trained on 500 billion parameters. Its primary developer is 'AI Corp'.\n\nMemory:\nMemory 1: GenAI-5,capabilities,text generation\nMemory 2: GenAI-5,trained on,unknown parameters\n\nGenerated Thinking and Response: GenAI-5 has impressive new capabilities. Parameters updated.",
+        "response": "<memory_write>GenAI-5,can write,poetry</memory_write><memory_write>GenAI-5,can write,code</memory_write><memory_write>GenAI-5,was trained on,500 billion parameters</memory_write><memory_write>GenAI-5,primary developer is,AI Corp</memory_write>"
+      },
+      {
+        "input": "What were the major causes of World War I?",
+        "response": "<memory_ask>What were major causes of World War I</memory_ask>"
+      },
+      {
+        "input": "The Earth revolves around the Sun. The Moon revolves around the Earth. The Sun is a star.",
+        "response": "<memory_write>Earth,revolves around,Sun</memory_write><memory_write>Moon,revolves around,Earth</memory_write><memory_write>Sun,is,a star</memory_write>"
+      },
+      {
+        "input": "The Amazon rainforest is the largest tropical rainforest in the world. It's home to a vast number of species. What is its approximate size?",
+        "response": "<memory_ask>Information about Amazon rainforest</memory_ask><memory_ask>What is size of Amazon rainforest</memory_ask><memory_ask>What is Amazon rainforest home to</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: Customer ID 789, Jane Smith, changed her address to 123 Oak Lane, Anytown, USA. Her previous address was 456 Pine St.\n\nMemory:\nMemory 1: Customer ID 789,name,Jane Smith\nMemory 2: Customer ID 789,address,456 Pine St\n\nGenerated Thinking and Response: Customer address updated successfully.",
+        "response": "<memory_write>Customer ID 789,address is,123 Oak Lane</memory_write><memory_write>Customer ID 789,city is,Anytown</memory_write><memory_write>Customer ID 789,country is,USA</memory_write>"
+      },
+      {
+        "input": "How does a blockchain work?",
+        "response": "<memory_ask>How does blockchain work</memory_ask>"
+      },
+      {
+        "input": "The Great Wall of China is over 13,000 miles long. Construction started in the 7th century BC. It was built to protect against invasions.",
+        "response": "<memory_write>Great Wall of China,length is,over 13,000 miles</memory_write><memory_write>Great Wall of China,construction started in,7th century BC</memory_write><memory_write>Great Wall of China,was built for,protection against invasions</memory_write>"
+      },
+      {
+        "input": "My cat, Whiskers, loves tuna. She sleeps on a fluffy bed. What is the average lifespan of a domestic cat?",
+        "response": "<memory_ask>Information about Whiskers the cat</memory_ask><memory_ask>What does Whiskers love</memory_ask><memory_ask>Where does Whiskers sleep</memory_ask><memory_ask>What is average lifespan of domestic cat</memory_ask>"
+      },
+      {
+        "input": "qwerty uiop asdfgh jklzxcv bnm",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The flight AA101 from JFK to LAX is delayed by 2 hours. Original departure was 10:00 AM. New departure is 12:00 PM.\n\nMemory:\nMemory 1: Flight AA101,status,on time\nMemory 2: Flight AA101,departure time,10:00 AM\n\nGenerated Thinking and Response: Flight AA101 status updated to delayed. New departure time noted.",
+        "response": "<memory_write>Flight AA101,is,delayed</memory_write><memory_write>Flight AA101,delay is,2 hours</memory_write><memory_write>Flight AA101,new departure time is,12:00 PM</memory_write><memory_write>Flight AA101,origin is,JFK</memory_write><memory_write>Flight AA101,destination is,LAX</memory_write>"
+      },
+      {
+        "input": "What is the chemical formula for water and what are its states of matter?",
+        "response": "<memory_ask>What is chemical formula for water</memory_ask><memory_ask>What are water's states of matter</memory_ask>"
+      },
+      {
+        "input": "The meeting is scheduled for 3 PM in Conference Room B. Agenda items include budget review and project updates. All team members are required to attend.",
+        "response": "<memory_write>meeting,scheduled for,3 PM</memory_write><memory_write>meeting,location,Conference Room B</memory_write><memory_write>meeting agenda,includes,budget review</memory_write><memory_write>meeting agenda,includes,project updates</memory_write><memory_write>all team members,are required to attend,meeting</memory_write>"
+      },
+      {
+        "input": "The Andromeda Galaxy is the nearest major galaxy to the Milky Way. It is approximately 2.5 million light-years away. Is it on a collision course with our galaxy?",
+        "response": "<memory_ask>Information about Andromeda Galaxy</memory_ask><memory_ask>What is Andromeda Galaxy's distance from Milky Way</memory_ask><memory_ask>Is Andromeda Galaxy on collision course with Milky Way</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: Item #B765, 'Wireless Mouse', is out of stock. Expected restock date is next Friday. Current price is $25.99.\n\nMemory:\nMemory 1: Item #B765,name,Wireless Mouse\nMemory 2: Item #B765,stock status,in stock\nMemory 3: Item #B765,price,$24.99\n\nGenerated Thinking and Response: Inventory and price for Item #B765 updated. Restock date noted.",
+        "response": "<memory_write>Item #B765,stock status,out of stock</memory_write><memory_write>Item #B765,expected restock date,next Friday</memory_write><memory_write>Item #B765,price,$25.99</memory_write>"
+      },
+      {
+        "input": "List ten countries in Africa and their capitals.",
+        "response": "<memory_ask>Capital of Nigeria</memory_ask><memory_ask>Capital of Egypt</memory_ask><memory_ask>Capital of South Africa</memory_ask><memory_ask>Capital of Kenya</memory_ask><memory_ask>Capital of Ethiopia</memory_ask><memory_ask>Capital of Ghana</memory_ask><memory_ask>Capital of Morocco</memory_ask><memory_ask>Capital of Algeria</memory_ask><memory_ask>Capital of Sudan</memory_ask><memory_ask>Capital of Tanzania</memory_ask><memory_ask>Information about countries in Africa</memory_ask>"
+      },
+      {
+        "input": "The new smartphone model 'X11' features a 120Hz display, a triple-camera system, and 5G connectivity. It runs on the 'OmegaOS' operating system and has a battery capacity of 5000mAh. Pre-orders start next week.",
+        "response": "<memory_write>Smartphone X11,features,120Hz display</memory_write><memory_write>Smartphone X11,features,triple-camera system</memory_write><memory_write>Smartphone X11,features,5G connectivity</memory_write><memory_write>Smartphone X11,runs on,OmegaOS</memory_write><memory_write>Smartphone X11,has battery capacity,5000mAh</memory_write><memory_write>Smartphone X11,pre-orders start,next week</memory_write>"
+      },
+      {
+        "input": "The Sahara Desert is the largest hot desert in the world. It covers much of North Africa. What is its average annual rainfall?",
+        "response": "<memory_ask>Information about Sahara Desert</memory_ask><memory_ask>Where is Sahara Desert located</memory_ask><memory_ask>What is Sahara Desert's average annual rainfall</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The 'Blue Dragon' project has completed Phase 1. Key deliverable for Phase 1 was the prototype. Phase 2 will focus on user testing.\n\nMemory:\nMemory 1: Blue Dragon project,status,Phase 1 ongoing\nMemory 2: Blue Dragon project Phase 1,deliverable,requirements document\n\nGenerated Thinking and Response: Project 'Blue Dragon' status updated. Phase 1 completion and deliverable noted. Phase 2 focus is user testing.",
+        "response": "<memory_write>Blue Dragon project,completed,Phase 1</memory_write><memory_write>Blue Dragon project Phase 1,key deliverable was,prototype</memory_write><memory_write>Blue Dragon project Phase 2,will focus on,user testing</memory_write>"
+      },
+      {
+        "input": "What are the differences between renewable and non-renewable energy sources? Provide three examples of each.",
+        "response": "<memory_ask>What are differences between renewable and non-renewable energy</memory_ask><memory_ask>Example 1 of renewable energy</memory_ask><memory_ask>Example 2 of renewable energy</memory_ask><memory_ask>Example 3 of renewable energy</memory_ask><memory_ask>Example 1 of non-renewable energy</memory_ask><memory_ask>Example 2 of non-renewable energy</memory_ask><memory_ask>Example 3 of non-renewable energy</memory_ask>"
+      },
+      {
+        "input": "The local bakery, 'Sweet Treats', opens at 7 AM. They sell fresh bread, pastries, and custom cakes. Their specialty is the chocolate croissant. The owner is Maria.",
+        "response": "<memory_write>Sweet Treats bakery,opens at,7 AM</memory_write><memory_write>Sweet Treats bakery,sells,fresh bread</memory_write><memory_write>Sweet Treats bakery,sells,pastries</memory_write><memory_write>Sweet Treats bakery,sells,custom cakes</memory_write><memory_write>Sweet Treats bakery,specialty is,chocolate croissant</memory_write><memory_write>Sweet Treats bakery,owner is,Maria</memory_write>"
+      },
+      {
+        "input": "Jupiter is the largest planet in our solar system. It has a Great Red Spot, which is a giant storm. How many moons does Jupiter have, and what are the names of its four largest moons?",
+        "response": "<memory_ask>Information about Jupiter</memory_ask><memory_ask>What is Jupiter's Great Red Spot</memory_ask><memory_ask>How many moons does Jupiter have</memory_ask><memory_ask>What are names of Jupiter's four largest moons</memory_ask>"
+      },
+      {
+        "input": "...",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: User 'alpha_user' reported a bug in module 'Auth'. Bug ID #5501 created. The bug causes login failures with special characters in passwords. A temporary workaround is to avoid special characters.\n\nMemory:\nMemory 1: Module Auth,status,stable\nMemory 2: User alpha_user,activity,normal\n\nGenerated Thinking and Response: Bug #5501 has been logged for module 'Auth' based on alpha_user's report. Details include login failures with special characters and a temporary workaround.",
+        "response": "<memory_write>Bug ID #5501,reported by,alpha_user</memory_write><memory_write>Bug ID #5501,in module,Auth</memory_write><memory_write>Bug ID #5501,causes,login failures with special characters in passwords</memory_write><memory_write>Bug ID #5501,temporary workaround is,avoid special characters in passwords</memory_write>"
+      },
+      {
+        "input": "Can you explain the theory of relativity by Albert Einstein?",
+        "response": "<memory_ask>Explain theory of relativity</memory_ask><memory_ask>Who is Albert Einstein</memory_ask>"
+      },
+      {
+        "input": "The research paper on climate change indicates a 1.5-degree Celsius rise in global temperatures over the past century. Key contributors are greenhouse gas emissions from industrial activities and deforestation. The ocean acidification levels have also increased by 30%.",
+        "response": "<memory_write>Global temperatures,rose by,1.5-degree Celsius in past century</memory_write><memory_write>Temperature rise contributors,are,greenhouse gas emissions</memory_write><memory_write>Temperature rise contributors,are,deforestation</memory_write><memory_write>Greenhouse gas emissions,from,industrial activities</memory_write><memory_write>Ocean acidification levels,increased by,30%</memory_write>"
+      },
+      {
+        "input": "The International Space Station (ISS) orbits the Earth. It serves as a microgravity and space environment research laboratory. Which countries are primary partners in the ISS program?",
+        "response": "<memory_ask>Information about International Space Station</memory_ask><memory_ask>What is purpose of ISS</memory_ask><memory_ask>Which countries are primary partners in ISS program</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The film 'Cosmic Odyssey' will be released on July 4th. Directed by Eva Rostova. Starring Leo Max and Anya Sharma. Genre: Sci-Fi Adventure.\n\nMemory:\nMemory 1: Film Cosmic Odyssey,release date,TBD\nMemory 2: Eva Rostova,known for,Drama films\n\nGenerated Thinking and Response: Release details for 'Cosmic Odyssey' noted. This marks Eva Rostova's first Sci-Fi Adventure film.",
+        "response": "<memory_write>Film Cosmic Odyssey,release date,July 4th</memory_write><memory_write>Film Cosmic Odyssey,directed by,Eva Rostova</memory_write><memory_write>Film Cosmic Odyssey,stars,Leo Max</memory_write><memory_write>Film Cosmic Odyssey,stars,Anya Sharma</memory_write><memory_write>Film Cosmic Odyssey,genre,Sci-Fi Adventure</memory_write><memory_write>Eva Rostova,directs,Sci-Fi Adventure film Cosmic Odyssey</memory_write>"
+      },
+      {
+        "input": "What is the capital of Australia, and what are three major landmarks there?",
+        "response": "<memory_ask>What is capital of Australia</memory_ask><memory_ask>Major landmark 1 in Australian capital</memory_ask><memory_ask>Major landmark 2 in Australian capital</memory_ask><memory_ask>Major landmark 3 in Australian capital</memory_ask>"
+      },
+      {
+        "input": "The new AI algorithm, 'PathFinder', can optimize delivery routes by 20%. It considers traffic, weather, and vehicle capacity. It was developed by 'LogiTech Inc.' and will be deployed next month. The algorithm uses a hybrid approach of machine learning and heuristics.",
+        "response": "<memory_write>AI algorithm PathFinder,can optimize,delivery routes by 20%</memory_write><memory_write>AI algorithm PathFinder,considers,traffic</memory_write><memory_write>AI algorithm PathFinder,considers,weather</memory_write><memory_write>AI algorithm PathFinder,considers,vehicle capacity</memory_write><memory_write>AI algorithm PathFinder,developed by,LogiTech Inc.</memory_write><memory_write>AI algorithm PathFinder,will be deployed,next month</memory_write><memory_write>AI algorithm PathFinder,uses,hybrid approach</memory_write><memory_write>Hybrid approach,combines,machine learning</memory_write><memory_write>Hybrid approach,combines,heuristics</memory_write>"
+      },
+      {
+        "input": "Mount Everest is the highest mountain above sea level. It is located in the Himalayas. What is its exact height, and who were the first people to successfully summit it?",
+        "response": "<memory_ask>Information about Mount Everest</memory_ask><memory_ask>Where is Mount Everest located</memory_ask><memory_ask>What is Mount Everest's exact height</memory_ask><memory_ask>Who first summited Mount Everest</memory_ask>"
+      },
+      {
+        "input": "just some random words that dont make sense together book tree sky fast",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: Order #9876 for 'Super Blender X' has been cancelled by the customer. Reason: Found a better price elsewhere. The item was scheduled to ship tomorrow. Refund of $89.99 processed.\n\nMemory:\nMemory 1: Order #9876,item,Super Blender X\nMemory 2: Order #9876,status,Processing\nMemory 3: Order #9876,shipping date,tomorrow\nMemory 4: Order #9876,total,$89.99\n\nGenerated Thinking and Response: Order #9876 cancelled. Refund processed. Shipping will be stopped.",
+        "response": "<memory_write>Order #9876,status,cancelled</memory_write><memory_write>Order #9876,cancellation reason,Found better price elsewhere</memory_write><memory_write>Order #9876,refund processed for,$89.99</memory_write>"
+      },
+      {
+        "input": "Tell me about the history of the internet, its key pioneers, and major milestones.",
+        "response": "<memory_ask>Information about history of the internet</memory_ask><memory_ask>Who are key pioneers of the internet</memory_ask><memory_ask>What are major milestones of the internet</memory_ask>"
+      },
+      {
+        "input": "The novel 'Silent Mountain' is a historical fiction set in 19th century Alps. The protagonist is a young cartographer named Elara. She discovers a hidden valley. The book explores themes of adventure and discovery. It was written by an anonymous author.",
+        "response": "<memory_write>Novel Silent Mountain,is,historical fiction</memory_write><memory_write>Novel Silent Mountain,set in,19th century Alps</memory_write><memory_write>Novel Silent Mountain,protagonist is,Elara</memory_write><memory_write>Elara,is,young cartographer</memory_write><memory_write>Elara,discovers,hidden valley</memory_write><memory_write>Novel Silent Mountain,explores theme,adventure</memory_write><memory_write>Novel Silent Mountain,explores theme,discovery</memory_write><memory_write>Novel Silent Mountain,written by,anonymous author</memory_write>"
+      },
+      {
+        "input": "The human brain has approximately 86 billion neurons. It controls our thoughts, emotions, and actions. What are the main parts of the brain and their functions?",
+        "response": "<memory_ask>Information about human brain</memory_ask><memory_ask>How many neurons in human brain</memory_ask><memory_ask>What does human brain control</memory_ask><memory_ask>What are main parts of brain</memory_ask><memory_ask>What are functions of main brain parts</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The new drug 'CardioWell' has passed Phase III trials. It reduces LDL cholesterol by an average of 25%. Side effects are mild and include headaches in 5% of patients. FDA submission is planned for Q1 next year.\n\nMemory:\nMemory 1: Drug CardioWell,status,Phase II trials\nMemory 2: Drug CardioWell,effectiveness,unknown\n\nGenerated Thinking and Response: Significant progress for CardioWell. Phase III trial results are positive. LDL reduction and side effect profile noted. FDA submission timeline confirmed.",
+        "response": "<memory_write>Drug CardioWell,passed,Phase III trials</memory_write><memory_write>Drug CardioWell,reduces,LDL cholesterol by 25%</memory_write><memory_write>Drug CardioWell,side effects are,mild</memory_write><memory_write>Drug CardioWell,side effect includes,headaches in 5% of patients</memory_write><memory_write>Drug CardioWell,FDA submission planned for,Q1 next year</memory_write>"
+      },
+      {
+        "input": "What are the seven wonders of the ancient world? List them and their locations.",
+        "response": "<memory_ask>What are seven wonders of ancient world</memory_ask><memory_ask>Location of Great Pyramid of Giza</memory_ask><memory_ask>Location of Hanging Gardens of Babylon</memory_ask><memory_ask>Location of Statue of Zeus at Olympia</memory_ask><memory_ask>Location of Temple of Artemis at Ephesus</memory_ask><memory_ask>Location of Mausoleum at Halicarnassus</memory_ask><memory_ask>Location of Colossus of Rhodes</memory_ask><memory_ask>Location of Lighthouse of Alexandria</memory_ask>"
+      },
+      {
+        "input": "The 'Solaris' space probe is en route to Jupiter. Its mission is to study Jupiter's atmosphere and magnetic field. It carries ten scientific instruments, including a plasma spectrometer and a magnetometer. The mission duration is planned for 5 years. Communications are handled via the Deep Space Network.",
+        "response": "<memory_write>Solaris space probe,is en route to,Jupiter</memory_write><memory_write>Solaris space probe,mission is to study,Jupiter's atmosphere</memory_write><memory_write>Solaris space probe,mission is to study,Jupiter's magnetic field</memory_write><memory_write>Solaris space probe,carries,ten scientific instruments</memory_write><memory_write>Solaris space probe,instrument includes,plasma spectrometer</memory_write><memory_write>Solaris space probe,instrument includes,magnetometer</memory_write><memory_write>Solaris space probe,mission duration is,5 years</memory_write><memory_write>Solaris space probe,communications via,Deep Space Network</memory_write>"
+      },
+      {
+        "input": "The concept of 'dark matter' was proposed to explain galactic rotation curves. It does not emit, absorb, or reflect light. What are the leading candidates for dark matter particles?",
+        "response": "<memory_ask>Information about dark matter</memory_ask><memory_ask>Why was dark matter proposed</memory_ask><memory_ask>What are properties of dark matter</memory_ask><memory_ask>What are leading candidates for dark matter particles</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The 'GreenEarth' initiative aims to plant 1 million trees by 2030. Current count is 150,000 trees. New corporate sponsor 'EcoCorp' joined, pledging 50,000 trees. The initiative also focuses on reforestation in Brazil.\n\nMemory:\nMemory 1: GreenEarth initiative,target,1 million trees by 2030\nMemory 2: GreenEarth initiative,current count,100,000 trees\nMemory 3: GreenEarth initiative,focus area,global reforestation\n\nGenerated Thinking and Response: GreenEarth initiative progress updated. New sponsor EcoCorp and their pledge recorded. Specific focus on Brazil noted.",
+        "response": "<memory_write>GreenEarth initiative,current count,150,000 trees</memory_write><memory_write>EcoCorp,is new sponsor for,GreenEarth initiative</memory_write><memory_write>EcoCorp,pledged,50,000 trees</memory_write><memory_write>GreenEarth initiative,focuses on,reforestation in Brazil</memory_write>"
+      },
+      {
+        "input": "Explain the main principles of Agile software development. Name at least five common Agile methodologies.",
+        "response": "<memory_ask>What are main principles of Agile software development</memory_ask><memory_ask>Name Agile methodology 1</memory_ask><memory_ask>Name Agile methodology 2</memory_ask><memory_ask>Name Agile methodology 3</memory_ask><memory_ask>Name Agile methodology 4</memory_ask><memory_ask>Name Agile methodology 5</memory_ask>"
+      },
+      {
+        "input": "The coffee shop 'Morning Brew' offers a variety of espresso drinks, teas, and pastries. It has free Wi-Fi and comfortable seating. It's located at 50 Main Street. Their signature drink is the 'Caramel Cloud Latte'. They source their beans from Colombia and Ethiopia.",
+        "response": "<memory_write>Morning Brew,offers,espresso drinks</memory_write><memory_write>Morning Brew,offers,teas</memory_write><memory_write>Morning Brew,offers,pastries</memory_write><memory_write>Morning Brew,has,free Wi-Fi</memory_write><memory_write>Morning Brew,has,comfortable seating</memory_write><memory_write>Morning Brew,located at,50 Main Street</memory_write><memory_write>Morning Brew,signature drink is,Caramel Cloud Latte</memory_write><memory_write>Morning Brew,sources beans from,Colombia</memory_write><memory_write>Morning Brew,sources beans from,Ethiopia</memory_write>"
+      },
+      {
+        "input": "The human genome contains approximately 3 billion base pairs. It is organized into 23 pairs of chromosomes. What is the purpose of the Human Genome Project, and when was it completed?",
+        "response": "<memory_ask>Information about human genome</memory_ask><memory_ask>How many base pairs in human genome</memory_ask><memory_ask>How many chromosome pairs in human genome</memory_ask><memory_ask>What was purpose of Human Genome Project</memory_ask><memory_ask>When was Human Genome Project completed</memory_ask>"
+      },
+      {
+        "input": "!! Gibberish input to test no action !!",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The marketing campaign 'SummerSplash' achieved a 15% increase in engagement. Key channels were Instagram and TikTok. The budget was $50,000. The campaign duration was 6 weeks, ending last Sunday. Next campaign is 'AutumnGlow'.\n\nMemory:\nMemory 1: SummerSplash campaign,target engagement increase,10%\nMemory 2: SummerSplash campaign,channels,Facebook, Instagram\nMemory 3: SummerSplash campaign,status,ongoing\n\nGenerated Thinking and Response: 'SummerSplash' campaign results are in and positive. Engagement and channel information updated. Duration confirmed. Noted next campaign.",
+        "response": "<memory_write>SummerSplash campaign,achieved,15% increase in engagement</memory_write><memory_write>SummerSplash campaign,key channels were,Instagram</memory_write><memory_write>SummerSplash campaign,key channels were,TikTok</memory_write><memory_write>SummerSplash campaign,budget was,$50,000</memory_write><memory_write>SummerSplash campaign,duration was,6 weeks</memory_write><memory_write>SummerSplash campaign,ended,last Sunday</memory_write><memory_write>Next marketing campaign,is,AutumnGlow</memory_write>"
+      },
+      {
+        "input": "What are the different types of machine learning? Describe supervised, unsupervised, and reinforcement learning with one example for each.",
+        "response": "<memory_ask>What are different types of machine learning</memory_ask><memory_ask>Describe supervised learning</memory_ask><memory_ask>Example of supervised learning</memory_ask><memory_ask>Describe unsupervised learning</memory_ask><memory_ask>Example of unsupervised learning</memory_ask><memory_ask>Describe reinforcement learning</memory_ask><memory_ask>Example of reinforcement learning</memory_ask>"
+      },
+      {
+        "input": "The new electric vehicle 'Voltix EV' has a range of 300 miles. It features autonomous driving level 3. The battery can be charged to 80% in 30 minutes. The interior uses sustainable materials. Production will begin in Q4 this year at the new Gigafactory in Nevada. It will have three variants: Standard, Long Range, and Performance.",
+        "response": "<memory_write>Voltix EV,has range of,300 miles</memory_write><memory_write>Voltix EV,features,autonomous driving level 3</memory_write><memory_write>Voltix EV,battery charges to,80% in 30 minutes</memory_write><memory_write>Voltix EV,interior uses,sustainable materials</memory_write><memory_write>Voltix EV,production begins in,Q4 this year</memory_write><memory_write>Voltix EV,production at,Gigafactory in Nevada</memory_write><memory_write>Voltix EV,will have variant,Standard</memory_write><memory_write>Voltix EV,will have variant,Long Range</memory_write><memory_write>Voltix EV,will have variant,Performance</memory_write>"
+      },
+      {
+        "input": "The Byzantine Empire, also known as the Eastern Roman Empire, lasted for over a thousand years. Its capital was Constantinople. What were some of its major contributions to art and law?",
+        "response": "<memory_ask>Information about Byzantine Empire</memory_ask><memory_ask>What was capital of Byzantine Empire</memory_ask><memory_ask>What were Byzantine Empire contributions to art</memory_ask><memory_ask>What were Byzantine Empire contributions to law</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The Arctic ice cap reached its minimum extent last week, covering 3.5 million square kilometers. This is the second-lowest extent on record. The 2012 record was 3.4 million sq km. Permafrost thaw is accelerating in Siberia.\n\nMemory:\nMemory 1: Arctic ice cap minimum extent (previous year),was,4.0 million sq km\nMemory 2: Permafrost thaw,status,stable\n\nGenerated Thinking and Response: Arctic conditions updated. Minimum ice extent is alarmingly low. Accelerated permafrost thaw in Siberia also noted.",
+        "response": "<memory_write>Arctic ice cap,minimum extent last week,3.5 million square kilometers</memory_write><memory_write>Arctic ice cap minimum extent,is,second-lowest on record</memory_write><memory_write>Arctic ice cap record low extent,was,3.4 million sq km in 2012</memory_write><memory_write>Permafrost thaw,is accelerating in,Siberia</memory_write>"
+      },
+      {
+        "input": "What are the primary functions of the World Health Organization (WHO)? List five current global health issues they are addressing.",
+        "response": "<memory_ask>What are primary functions of WHO</memory_ask><memory_ask>Current global health issue 1 WHO addresses</memory_ask><memory_ask>Current global health issue 2 WHO addresses</memory_ask><memory_ask>Current global health issue 3 WHO addresses</memory_ask><memory_ask>Current global health issue 4 WHO addresses</memory_ask><memory_ask>Current global health issue 5 WHO addresses</memory_ask>"
+      },
+      {
+        "input": "The 'Chronos' satellite network will provide global internet coverage. It consists of 500 low Earth orbit (LEO) satellites. Each satellite weighs 250 kg and has a lifespan of 7 years. The first batch of 50 satellites will launch next month from Cape Canaveral. The project is funded by 'Global Connect Inc.' and aims to bridge the digital divide.",
+        "response": "<memory_write>Chronos satellite network,will provide,global internet coverage</memory_write><memory_write>Chronos satellite network,consists of,500 LEO satellites</memory_write><memory_write>Chronos satellite,weighs,250 kg</memory_write><memory_write>Chronos satellite,has lifespan of,7 years</memory_write><memory_write>Chronos satellite network,first batch launch,next month</memory_write><memory_write>Chronos satellite network,first batch size,50 satellites</memory_write><memory_write>Chronos satellite network,first batch launch from,Cape Canaveral</memory_write><memory_write>Chronos satellite network,funded by,Global Connect Inc.</memory_write><memory_write>Chronos satellite network,aims to,bridge digital divide</memory_write>"
+      },
+      {
+        "input": "The Renaissance was a period of great cultural change and artistic development in Europe. It began in Italy in the 14th century. Who are three famous artists from this period and one of their major works each?",
+        "response": "<memory_ask>Information about Renaissance period</memory_ask><memory_ask>When did Renaissance begin</memory_ask><memory_ask>Where did Renaissance begin</memory_ask><memory_ask>Famous Renaissance artist 1</memory_ask><memory_ask>Major work of Renaissance artist 1</memory_ask><memory_ask>Famous Renaissance artist 2</memory_ask><memory_ask>Major work of Renaissance artist 2</memory_ask><memory_ask>Famous Renaissance artist 3</memory_ask><memory_ask>Major work of Renaissance artist 3</memory_ask>"
+      },
+      {
+        "input": "This is not a question nor a statement with extractable facts.",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: Recipe for 'Vegan Chili': Ingredients include 2 cans kidney beans, 1 can diced tomatoes, 1 onion, 2 carrots, 1 bell pepper, chili powder, cumin. Sauté vegetables, add beans and tomatoes, simmer for 30 mins. Serves 4.\n\nMemory:\nMemory 1: Vegan Chili recipe,serves,2\nMemory 2: Vegan Chili recipe,main ingredient,black beans\n\nGenerated Thinking and Response: Updated Vegan Chili recipe details. Ingredients and serving size corrected. Simmer time confirmed.",
+        "response": "<memory_write>Vegan Chili recipe,ingredient,2 cans kidney beans</memory_write><memory_write>Vegan Chili recipe,ingredient,1 can diced tomatoes</memory_write><memory_write>Vegan Chili recipe,ingredient,1 onion</memory_write><memory_write>Vegan Chili recipe,ingredient,2 carrots</memory_write><memory_write>Vegan Chili recipe,ingredient,1 bell pepper</memory_write><memory_write>Vegan Chili recipe,ingredient,chili powder</memory_write><memory_write>Vegan Chili recipe,ingredient,cumin</memory_write><memory_write>Vegan Chili recipe,instruction,Sauté vegetables</memory_write><memory_write>Vegan Chili recipe,instruction,add beans and tomatoes</memory_write><memory_write>Vegan Chili recipe,instruction,simmer for 30 mins</memory_write><memory_write>Vegan Chili recipe,serves,4</memory_write>"
+      },
+      {
+        "input": "Who are the current leaders of the G7 countries (Canada, France, Germany, Italy, Japan, UK, USA) and what is one major domestic policy initiative for each?",
+        "response": "<memory_ask>Current leader of Canada</memory_ask><memory_ask>Major domestic policy initiative of Canada leader</memory_ask><memory_ask>Current leader of France</memory_ask><memory_ask>Major domestic policy initiative of France leader</memory_ask><memory_ask>Current leader of Germany</memory_ask><memory_ask>Major domestic policy initiative of Germany leader</memory_ask><memory_ask>Current leader of Italy</memory_ask><memory_ask>Major domestic policy initiative of Italy leader</memory_ask><memory_ask>Current leader of Japan</memory_ask><memory_ask>Major domestic policy initiative of Japan leader</memory_ask><memory_ask>Current leader of UK</memory_ask><memory_ask>Major domestic policy initiative of UK leader</memory_ask><memory_ask>Current leader of USA</memory_ask><memory_ask>Major domestic policy initiative of USA leader</memory_ask><memory_ask>Information about G7 countries</memory_ask>"
+      },
+      {
+        "input": "The 'AquaFarm' vertical farming system can grow lettuce and herbs indoors using hydroponics. It reduces water usage by 90% compared to traditional farming. Each unit occupies 10 square meters and produces 500 kg of greens annually. The system uses LED lighting optimized for plant growth. It is controlled by an AI that monitors nutrient levels and environmental conditions.",
+        "response": "<memory_write>AquaFarm system,grows,lettuce</memory_write><memory_write>AquaFarm system,grows,herbs</memory_write><memory_write>AquaFarm system,grows indoors using,hydroponics</memory_write><memory_write>AquaFarm system,reduces water usage by,90%</memory_write><memory_write>AquaFarm unit,occupies,10 square meters</memory_write><memory_write>AquaFarm unit,produces,500 kg of greens annually</memory_write><memory_write>AquaFarm system,uses,LED lighting</memory_write><memory_write>LED lighting,is optimized for,plant growth</memory_write><memory_write>AquaFarm system,is controlled by,AI</memory_write><memory_write>AI,monitors,nutrient levels</memory_write><memory_write>AI,monitors,environmental conditions</memory_write>"
+      },
+      {
+        "input": "The discovery of penicillin by Alexander Fleming revolutionized medicine. It is an antibiotic used to treat bacterial infections. What year was it discovered, and how does it work?",
+        "response": "<memory_ask>Information about penicillin</memory_ask><memory_ask>Who discovered penicillin</memory_ask><memory_ask>What is penicillin used for</memory_ask><memory_ask>What year was penicillin discovered</memory_ask><memory_ask>How does penicillin work</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The city council approved the 'Green Parks' project. Budget allocated is $2 million. Project includes 3 new parks and renovating 2 existing ones. Completion target is 2 years. Mayor Johnson announced the plan. The project aims to increase green space by 15%.\n\nMemory:\nMemory 1: Green Parks project,status,proposal pending\nMemory 2: Green Parks project,budget,$1.5 million\nMemory 3: Mayor Johnson,supports,urban development\n\nGenerated Thinking and Response: 'Green Parks' project approved and details updated. Budget increased, scope clarified. Mayor Johnson's announcement is consistent.",
+        "response": "<memory_write>Green Parks project,is,approved by city council</memory_write><memory_write>Green Parks project,budget allocated,$2 million</memory_write><memory_write>Green Parks project,includes,3 new parks</memory_write><memory_write>Green Parks project,includes,renovating 2 existing parks</memory_write><memory_write>Green Parks project,completion target,2 years</memory_write><memory_write>Mayor Johnson,announced,Green Parks project plan</memory_write><memory_write>Green Parks project,aims to increase,green space by 15%</memory_write>"
+      },
+      {
+        "input": "What is string theory and what are its main predictions or implications for our understanding of the universe? Also, who are some of the key physicists involved in its development?",
+        "response": "<memory_ask>What is string theory</memory_ask><memory_ask>What are main predictions of string theory</memory_ask><memory_ask>What are main implications of string theory</memory_ask><memory_ask>Who are key physicists in string theory development</memory_ask>"
+      },
+      {
+        "input": "The 'DeepDive' submersible is designed for Mariana Trench exploration. It can withstand pressures of 1,000 atmospheres. Its crew capacity is three. It has a titanium alloy hull and multiple high-resolution cameras. Its first test dive to 5,000 meters was successful last month. The project lead is Dr. Aris Thorne. Power source is lithium-ion batteries providing 12 hours of operation.",
+        "response": "<memory_write>DeepDive submersible,designed for,Mariana Trench exploration</memory_write><memory_write>DeepDive submersible,can withstand pressures of,1,000 atmospheres</memory_write><memory_write>DeepDive submersible,crew capacity is,three</memory_write><memory_write>DeepDive submersible,has,titanium alloy hull</memory_write><memory_write>DeepDive submersible,has,multiple high-resolution cameras</memory_write><memory_write>DeepDive submersible,first test dive to 5000m,successful last month</memory_write><memory_write>DeepDive submersible,project lead is,Dr. Aris Thorne</memory_write><memory_write>DeepDive submersible,power source,lithium-ion batteries</memory_write><memory_write>DeepDive submersible,battery operation time,12 hours</memory_write>"
+      },
+      {
+        "input": "The Treaty of Versailles officially ended World War I. It was signed in 1919. What were some of its key terms and their consequences?",
+        "response": "<memory_ask>Information about Treaty of Versailles</memory_ask><memory_ask>When was Treaty of Versailles signed</memory_ask><memory_ask>What did Treaty of Versailles end</memory_ask><memory_ask>What were key terms of Treaty of Versailles</memory_ask><memory_ask>What were consequences of Treaty of Versailles terms</memory_ask>"
+      },
+      {
+        "input": "1a2b3c4d5e6f7g8h9i0j",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The 'CyberGuard' software version 2.5 is now available. It includes enhanced ransomware protection and a new phishing detection module. It fixes a critical vulnerability CVE-2024-12345 found in version 2.4. The update is free for existing users. New license costs $49.99.\n\nMemory:\nMemory 1: CyberGuard software,current version,2.4\nMemory 2: CyberGuard software,features,basic malware protection\nMemory 3: CVE-2024-12345,status,unpatched in CyberGuard\n\nGenerated Thinking and Response: CyberGuard v2.5 details recorded. Enhanced features, vulnerability fix, and pricing information updated.",
+        "response": "<memory_write>CyberGuard software,version 2.5 is,available</memory_write><memory_write>CyberGuard software v2.5,includes,enhanced ransomware protection</memory_write><memory_write>CyberGuard software v2.5,includes,new phishing detection module</memory_write><memory_write>CyberGuard software v2.5,fixes,vulnerability CVE-2024-12345</memory_write><memory_write>CyberGuard software v2.5,update is,free for existing users</memory_write><memory_write>CyberGuard software v2.5,new license costs,$49.99</memory_write><memory_write>CVE-2024-12345,status,patched in CyberGuard v2.5</memory_write>"
+      },
+      {
+        "input": "Describe the process of cellular respiration, including its main stages (glycolysis, Krebs cycle, electron transport chain) and the net ATP production.",
+        "response": "<memory_ask>Information about cellular respiration process</memory_ask><memory_ask>What is glycolysis stage of cellular respiration</memory_ask><memory_ask>What is Krebs cycle stage of cellular respiration</memory_ask><memory_ask>What is electron transport chain stage of cellular respiration</memory_ask><memory_ask>What is net ATP production from cellular respiration</memory_ask>"
+      },
+      {
+        "input": "The 'Ocean Cleanup Array' project aims to remove plastic from the Great Pacific Garbage Patch. System 002, currently deployed, consists of a 600-meter long floater and a 3-meter deep skirt. It passively collects plastic using ocean currents and wind. Collected plastic is then transported to shore for recycling. The project estimates it can remove 50% of the patch every 5 years with a full fleet.",
+        "response": "<memory_write>Ocean Cleanup Array project,aims to remove,plastic from Great Pacific Garbage Patch</memory_write><memory_write>Ocean Cleanup Array System 002,is,currently deployed</memory_write><memory_write>Ocean Cleanup Array System 002,floater length,600-meter</memory_write><memory_write>Ocean Cleanup Array System 002,skirt depth,3-meter</memory_write><memory_write>Ocean Cleanup Array System 002,passively collects,plastic</memory_write><memory_write>Ocean Cleanup Array System 002,uses,ocean currents for collection</memory_write><memory_write>Ocean Cleanup Array System 002,uses,wind for collection</memory_write><memory_write>Collected plastic,is transported to,shore for recycling</memory_write><memory_write>Ocean Cleanup Array project,estimates removal of,50% of patch every 5 years with full fleet</memory_write>"
+      },
+      {
+        "input": "The Voyager 1 spacecraft is the most distant human-made object from Earth. It was launched in 1977. What is its current mission status, and what data is it still transmitting?",
+        "response": "<memory_ask>Information about Voyager 1 spacecraft</memory_ask><memory_ask>When was Voyager 1 launched</memory_ask><memory_ask>What is Voyager 1 current mission status</memory_ask><memory_ask>What data is Voyager 1 still transmitting</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: Employee #E7890, Dr. Lena Hanson, has been promoted to 'Senior Research Scientist'. Her previous role was 'Research Scientist'. She joined the company 5 years ago. Her new salary is $120,000. She is an expert in material science.\n\nMemory:\nMemory 1: Employee #E7890,name,Dr. Lena Hanson\nMemory 2: Employee #E7890,role,Research Scientist\nMemory 3: Employee #E7890,salary,$95,000\nMemory 4: Dr. Lena Hanson,expertise,nanotechnology\n\nGenerated Thinking and Response: Dr. Hanson's promotion and new salary recorded. Her expertise in material science is noted, which complements her known nanotechnology expertise. Tenure confirmed.",
+        "response": "<memory_write>Employee #E7890,promoted to,Senior Research Scientist</memory_write><memory_write>Employee #E7890,new salary is,$120,000</memory_write><memory_write>Dr. Lena Hanson,joined company,5 years ago</memory_write><memory_write>Dr. Lena Hanson,is expert in,material science</memory_write>"
+      },
+      {
+        "input": "What are the main components of a typical computer system (hardware and software)? Explain the function of CPU, RAM, storage devices, operating system, and application software.",
+        "response": "<memory_ask>What are main hardware components of computer system</memory_ask><memory_ask>What are main software components of computer system</memory_ask><memory_ask>What is function of CPU</memory_ask><memory_ask>What is function of RAM</memory_ask><memory_ask>What is function of storage devices</memory_ask><memory_ask>What is function of operating system</memory_ask><memory_ask>What is function of application software</memory_ask>"
+      },
+      {
+        "input": "The 'TerraNova' colonization ship is designed for a 100-year journey to Proxima Centauri b. It has a closed-loop life support system, an Alcubierre drive for FTL travel (theoretical), and carries 5,000 cryogenically frozen colonists. The ship's structure is made of carbon nanotubes and is powered by a fusion reactor. Its AI, 'Oracle', manages all ship systems and navigation. Project lead is Dr. Evelyn Hayes.",
+        "response": "<memory_write>TerraNova ship,is,colonization ship</memory_write><memory_write>TerraNova ship,designed for,100-year journey</memory_write><memory_write>TerraNova ship,destination,Proxima Centauri b</memory_write><memory_write>TerraNova ship,has,closed-loop life support system</memory_write><memory_write>TerraNova ship,has,Alcubierre drive</memory_write><memory_write>Alcubierre drive,is for,FTL travel</memory_write><memory_write>TerraNova ship,carries,5,000 frozen colonists</memory_write><memory_write>TerraNova ship,structure made of,carbon nanotubes</memory_write><memory_write>TerraNova ship,powered by,fusion reactor</memory_write><memory_write>TerraNova ship,AI is,Oracle</memory_write><memory_write>Oracle AI,manages,ship systems</memory_write><memory_write>Oracle AI,manages,navigation</memory_write><memory_write>TerraNova ship,project lead is,Dr. Evelyn Hayes</memory_write>"
+      },
+      {
+        "input": "The James Webb Space Telescope (JWST) is a successor to the Hubble Space Telescope. It primarily observes in infrared. What are its main scientific objectives, and where is it located?",
+        "response": "<memory_ask>Information about James Webb Space Telescope</memory_ask><memory_ask>What does JWST primarily observe in</memory_ask><memory_ask>What are JWST main scientific objectives</memory_ask><memory_ask>Where is JWST located</memory_ask>"
+      },
+      {
+        "input": "kthxbye",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The 'Global Food Initiative' reports that 50 million people were lifted out of extreme poverty in the last decade due to their programs. Key interventions include sustainable farming education and micro-loan provisions. However, climate change now threatens these gains in Sub-Saharan Africa. New focus is on drought-resistant crops.\n\nMemory:\nMemory 1: Global Food Initiative,impact,20 million people out of poverty\nMemory 2: Global Food Initiative,key intervention,food aid distribution\nMemory 3: Climate change impact,on GFI gains,not specified\n\nGenerated Thinking and Response: Global Food Initiative impact updated. Key interventions clarified. Threat of climate change and new focus on drought-resistant crops are important new details.",
+        "response": "<memory_write>Global Food Initiative,lifted,50 million people out of extreme poverty in last decade</memory_write><memory_write>Global Food Initiative,intervention includes,sustainable farming education</memory_write><memory_write>Global Food Initiative,intervention includes,micro-loan provisions</memory_write><memory_write>Climate change,threatens,Global Food Initiative gains in Sub-Saharan Africa</memory_write><memory_write>Global Food Initiative,new focus is on,drought-resistant crops</memory_write>"
+      },
+      {
+        "input": "Explain the concept of a Quantum Computer. How does it differ from a classical computer? What are some potential applications and current challenges in building large-scale quantum computers?",
+        "response": "<memory_ask>What is a Quantum Computer</memory_ask><memory_ask>How does Quantum Computer differ from classical computer</memory_ask><memory_ask>What are potential applications of Quantum Computers</memory_ask><memory_ask>What are current challenges in building Quantum Computers</memory_ask>"
+      },
+      {
+        "input": "The 'Aethelred' manuscript, dated to 980 AD, describes early English farming techniques. It mentions crop rotation with wheat, barley, and fallow periods. It also details the use of the heavy plough and a system of open-field farming. The manuscript is currently held at the Bodleian Library. It was rediscovered in a monastery in 1885. It also contains illustrations of farm tools.",
+        "response": "<memory_write>Aethelred manuscript,dated to,980 AD</memory_write><memory_write>Aethelred manuscript,describes,early English farming techniques</memory_write><memory_write>Aethelred manuscript,mentions,crop rotation with wheat</memory_write><memory_write>Aethelred manuscript,mentions,crop rotation with barley</memory_write><memory_write>Aethelred manuscript,mentions,crop rotation with fallow periods</memory_write><memory_write>Aethelred manuscript,details use of,heavy plough</memory_write><memory_write>Aethelred manuscript,details,system of open-field farming</memory_write><memory_write>Aethelred manuscript,held at,Bodleian Library</memory_write><memory_write>Aethelred manuscript,rediscovered in,monastery in 1885</memory_write><memory_write>Aethelred manuscript,contains,illustrations of farm tools</memory_write>"
+      },
+      {
+        "input": "The city of El Dorado is a mythical lost city of gold, supposedly located in South America. Many expeditions have searched for it over centuries. What are the origins of this legend, and what evidence (if any) supports its existence?",
+        "response": "<memory_ask>Information about El Dorado</memory_ask><memory_ask>Where is El Dorado supposedly located</memory_ask><memory_ask>What are origins of El Dorado legend</memory_ask><memory_ask>What evidence supports El Dorado's existence</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: New AI regulation framework 'AIR-2025' proposed by EU. Key points: risk-based approach (high, medium, low risk AI systems), mandatory conformity assessments for high-risk AI, transparency requirements for AI interacting with humans. Fines for non-compliance up to 6% of global turnover.\n\nMemory:\nMemory 1: AI regulation EU,status,under discussion\nMemory 2: AI risk categories,defined as,general purpose AI, specific AI\n\nGenerated Thinking and Response: Details of EU's proposed 'AIR-2025' framework recorded. Risk-based approach, conformity assessments, transparency, and fines are key elements. This updates previous understanding of risk categories.",
+        "response": "<memory_write>AIR-2025,is,new AI regulation framework proposed by EU</memory_write><memory_write>AIR-2025,uses,risk-based approach</memory_write><memory_write>AIR-2025 risk categories,are,high risk AI systems</memory_write><memory_write>AIR-2025 risk categories,are,medium risk AI systems</memory_write><memory_write>AIR-2025 risk categories,are,low risk AI systems</memory_write><memory_write>AIR-2025,requires,mandatory conformity assessments for high-risk AI</memory_write><memory_write>AIR-2025,requires,transparency requirements for AI interacting with humans</memory_write><memory_write>AIR-2025,fines for non-compliance up to,6% of global turnover</memory_write>"
+      },
+      {
+        "input": "List 15 major cities in Asia and their respective countries. For five of them, also list a famous landmark.",
+        "response": "<memory_ask>Major city 1 in Asia</memory_ask><memory_ask>Country of major city 1 in Asia</memory_ask><memory_ask>Famous landmark in major city 1 Asia</memory_ask><memory_ask>Major city 2 in Asia</memory_ask><memory_ask>Country of major city 2 in Asia</memory_ask><memory_ask>Famous landmark in major city 2 Asia</memory_ask><memory_ask>Major city 3 in Asia</memory_ask><memory_ask>Country of major city 3 in Asia</memory_ask><memory_ask>Famous landmark in major city 3 Asia</memory_ask><memory_ask>Major city 4 in Asia</memory_ask><memory_ask>Country of major city 4 in Asia</memory_ask><memory_ask>Famous landmark in major city 4 Asia</memory_ask><memory_ask>Major city 5 in Asia</memory_ask><memory_ask>Country of major city 5 in Asia</memory_ask><memory_ask>Famous landmark in major city 5 Asia</memory_ask><memory_ask>Major city 6 in Asia</memory_ask><memory_ask>Country of major city 6 in Asia</memory_ask><memory_ask>Major city 7 in Asia</memory_ask><memory_ask>Country of major city 7 in Asia</memory_ask><memory_ask>Major city 8 in Asia</memory_ask><memory_ask>Country of major city 8 in Asia</memory_ask><memory_ask>Major city 9 in Asia</memory_ask><memory_ask>Country of major city 9 in Asia</memory_ask><memory_ask>Major city 10 in Asia</memory_ask><memory_ask>Country of major city 10 in Asia</memory_ask><memory_ask>Major city 11 in Asia</memory_ask><memory_ask>Country of major city 11 in Asia</memory_ask><memory_ask>Major city 12 in Asia</memory_ask><memory_ask>Country of major city 12 in Asia</memory_ask><memory_ask>Major city 13 in Asia</memory_ask><memory_ask>Country of major city 13 in Asia</memory_ask><memory_ask>Major city 14 in Asia</memory_ask><memory_ask>Country of major city 14 in Asia</memory_ask><memory_ask>Major city 15 in Asia</memory_ask><memory_ask>Country of major city 15 in Asia</memory_ask>"
+      },
+      {
+        "input": "The 'BioSynth' project has successfully created synthetic blood type O-negative. This was achieved using genetically engineered yeast and a novel bioreactor design. The process takes 7 days to produce 1 liter. Lead scientist is Dr. Anya Sharma. Clinical trials are scheduled for next year. This synthetic blood has a shelf life of 60 days, compared to 42 days for donated blood. The project also developed a new filtration system to ensure purity. Cost per liter is currently $500, aiming for $100.",
+        "response": "<memory_write>BioSynth project,created,synthetic blood type O-negative</memory_write><memory_write>Synthetic blood creation,achieved using,genetically engineered yeast</memory_write><memory_write>Synthetic blood creation,achieved using,novel bioreactor design</memory_write><memory_write>Synthetic blood,production time for 1 liter,7 days</memory_write><memory_write>BioSynth project,lead scientist,Dr. Anya Sharma</memory_write><memory_write>Synthetic blood,clinical trials scheduled for,next year</memory_write><memory_write>Synthetic blood,shelf life,60 days</memory_write><memory_write>Donated blood,shelf life,42 days</memory_write><memory_write>BioSynth project,developed,new filtration system</memory_write><memory_write>New filtration system,ensures,purity</memory_write><memory_write>Synthetic blood,current cost per liter,$500</memory_write><memory_write>Synthetic blood,target cost per liter,$100</memory_write>"
+      },
+      {
+        "input": "The concept of a Dyson Sphere, a megastructure enclosing a star to capture its energy, was popularized by Freeman Dyson. What are the theoretical types of Dyson Spheres? What are the engineering challenges and potential implications if one were ever built?",
+        "response": "<memory_ask>Information about Dyson Sphere</memory_ask><memory_ask>Who popularized Dyson Sphere concept</memory_ask><memory_ask>What are theoretical types of Dyson Spheres</memory_ask><memory_ask>What are engineering challenges of Dyson Sphere</memory_ask><memory_ask>What are potential implications of Dyson Sphere</memory_ask>"
+      },
+      {
+        "input": "for (i=0; i<10; i++) { console.log(i); }",
+        "response": ""
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The 'OceanGuard' marine drone autonomously monitors coral reef health using hyperspectral imaging. It detected a 2% coral bleaching increase in the 'Azure Reef' area last month. Data is transmitted daily to the Marine Biology Institute. The drone is solar-powered and has an operational depth of 50 meters. It also identified a new species of sea slug, 'Glaucus azureus'.\n\nMemory:\nMemory 1: OceanGuard drone,monitors,fish populations\nMemory 2: Azure Reef,coral bleaching status,stable (0.5% increase last quarter)\nMemory 3: Marine Biology Institute,receives data,weekly\nMemory 4: New species discovery,in Azure Reef,none recent\n\nGenerated Thinking and Response: OceanGuard drone's monitoring focus and capabilities updated. Significant coral bleaching increase in Azure Reef recorded. Data transmission frequency corrected. New sea slug species 'Glaucus azureus' discovery is a notable event.",
+        "response": "<memory_write>OceanGuard drone,monitors,coral reef health</memory_write><memory_write>OceanGuard drone,uses,hyperspectral imaging</memory_write><memory_write>OceanGuard drone,detected,2% coral bleaching increase in Azure Reef last month</memory_write><memory_write>OceanGuard drone,transmits data,daily to Marine Biology Institute</memory_write><memory_write>OceanGuard drone,is,solar-powered</memory_write><memory_write>OceanGuard drone,operational depth,50 meters</memory_write><memory_write>OceanGuard drone,identified,new species of sea slug Glaucus azureus</memory_write><memory_write>Azure Reef,coral bleaching status,2% increase last month</memory_write>"
+      },
+      {
+        "input": "What are the fundamental forces of nature according to the Standard Model of particle physics? For each force, name its mediating particle(s) and its relative strength and range.",
+        "response": "<memory_ask>What are fundamental forces of nature in Standard Model</memory_ask><memory_ask>Mediating particle of strong nuclear force</memory_ask><memory_ask>Relative strength of strong nuclear force</memory_ask><memory_ask>Range of strong nuclear force</memory_ask><memory_ask>Mediating particle of weak nuclear force</memory_ask><memory_ask>Relative strength of weak nuclear force</memory_ask><memory_ask>Range of weak nuclear force</memory_ask><memory_ask>Mediating particle of electromagnetic force</memory_ask><memory_ask>Relative strength of electromagnetic force</memory_ask><memory_ask>Range of electromagnetic force</memory_ask><memory_ask>Mediating particle of gravitational force (hypothetical in SM context)</memory_ask><memory_ask>Relative strength of gravitational force</memory_ask><memory_ask>Range of gravitational force</memory_ask>"
+      },
+      {
+        "input": "The 'Project Nightingale' AI, developed by 'Althea Corp', can predict protein folding structures with 95% accuracy within minutes. It uses a transformer-based neural network trained on a dataset of 100,000 known protein structures and their amino acid sequences. This breakthrough is expected to accelerate drug discovery for diseases like Alzheimer's and Parkinson's. The AI also identifies potential binding sites for drug candidates. The research was published in 'Nature AI Journal'. The system requires a cluster of 128 high-performance GPUs to run effectively.",
+        "response": "<memory_write>Project Nightingale AI,developed by,Althea Corp</memory_write><memory_write>Project Nightingale AI,can predict,protein folding structures</memory_write><memory_write>Project Nightingale AI,prediction accuracy,95%</memory_write><memory_write>Project Nightingale AI,prediction speed,within minutes</memory_write><memory_write>Project Nightingale AI,uses,transformer-based neural network</memory_write><memory_write>Project Nightingale AI,trained on,100,000 known protein structures</memory_write><memory_write>Project Nightingale AI,trained on,amino acid sequences</memory_write><memory_write>Project Nightingale AI,expected to accelerate,drug discovery</memory_write><memory_write>Project Nightingale AI,can accelerate drug discovery for,Alzheimer's disease</memory_write><memory_write>Project Nightingale AI,can accelerate drug discovery for,Parkinson's disease</memory_write><memory_write>Project Nightingale AI,identifies,potential binding sites for drug candidates</memory_write><memory_write>Project Nightingale AI research,published in,Nature AI Journal</memory_write><memory_write>Project Nightingale AI,requires,cluster of 128 high-performance GPUs</memory_write>"
+      },
+      {
+        "input": "The Library of Alexandria was one of the largest and most significant libraries of the ancient world. It was located in Egypt. When was it founded, who founded it, and what were the main reasons for its decline and destruction?",
+        "response": "<memory_ask>Information about Library of Alexandria</memory_ask><memory_ask>Where was Library of Alexandria located</memory_ask><memory_ask>When was Library of Alexandria founded</memory_ask><memory_ask>Who founded Library of Alexandria</memory_ask><memory_ask>What were main reasons for Library of Alexandria decline</memory_ask><memory_ask>What were main reasons for Library of Alexandria destruction</memory_ask>"
+      },
+      {
+        "input": "Output Generated. Write Memory.\n\nInput Question: The 'SmartGrid X' initiative aims to upgrade the national power grid. Phase 1 involves installing 10,000 smart meters and 500 new substations across five states. Budget is $5 billion, completion by 2028. It will improve efficiency by 15% and support renewable energy integration. Current grid efficiency is 80%. New efficiency will be 95%. Project director is Maria Chen. Old substations used analog controls.\n\nMemory:\nMemory 1: SmartGrid X,focus,residential solar panel subsidies\nMemory 2: SmartGrid X,budget,$2 billion\nMemory 3: National power grid,efficiency,85%\nMemory 4: Maria Chen,role,chief engineer for old grid\n\nGenerated Thinking and Response: 'SmartGrid X' initiative details significantly updated. Focus shifted to infrastructure upgrade. Budget, scope, efficiency targets, and director role clarified. New substations will use digital controls.",
+        "response": "<memory_write>SmartGrid X,aims to,upgrade national power grid</memory_write><memory_write>SmartGrid X Phase 1,involves installing,10,000 smart meters</memory_write><memory_write>SmartGrid X Phase 1,involves installing,500 new substations</memory_write><memory_write>SmartGrid X Phase 1,spans,five states</memory_write><memory_write>SmartGrid X,budget,$5 billion</memory_write><memory_write>SmartGrid X,completion by,2028</memory_write><memory_write>SmartGrid X,will improve efficiency by,15%</memory_write><memory_write>SmartGrid X,will support,renewable energy integration</memory_write><memory_write>Current national power grid,efficiency is,80%</memory_write><memory_write>SmartGrid X,new efficiency will be,95%</memory_write><memory_write>SmartGrid X,project director is,Maria Chen</memory_write><memory_write>Old substations,used,analog controls</memory_write><memory_write>New substations,will use,digital controls</memory_write>"
+      }
+    ]
+  }

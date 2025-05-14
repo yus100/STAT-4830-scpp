@@ -4,3 +4,19 @@ docs/figures/*
 !docs/figures/*.tex
 
 local/
+**/local/
+**/models/
+**/trained_models/
+**/trained_ppo_model/
+**/transformers/
+**/large_datasets
+**/__pycache__/
+**/model_checkpoints/
+**/test_models
+**/gemma
+**/cpoints
+venv/
+**/venv/
+venv3.10/
+venv3.11/
+f/

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAGS Demo</title>
+  <style>
+    /* Basic Reset & Font */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; overflow: hidden; }
+    h2 { color: #005a9c; margin-bottom: 15px; font-weight: 600; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+    /* Main Layout */
+    #app-container { display: flex; height: 100vh; }
+    #left-panel { flex: 0 0 40%; padding: 20px; display: flex; flex-direction: column; border-right: 2px solid #ccc; background-color: #fff; overflow: hidden; }
+    #right-panel { flex: 1; padding: 20px; display: flex; flex-direction: column; background-color: #e9edf0; overflow: hidden; }
+    /* Hyperparams */
+    #hyperparams { margin-bottom: 20px; }
+    #hyperparams .param { margin-bottom: 10px; display: flex; align-items: center; }
+    #hyperparams label { flex: 1; }
+    #hyperparams input[type="range"] { flex: 2; margin-left: 10px; }
+    #hyperparams input[type="number"] { width: 80px; margin-left: 10px; }
+    /* Left Panel Sections */
+    #load-area { margin-bottom: 20px; }
+    #chat-area { flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
+    /* Input Elements */
+    textarea#game-text-input { width: 100%; min-height: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; font-size: 0.9em; resize: vertical; }
+    input#user-input { flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px; font-size: 1em; }
+    button { padding: 10px 15px; background-color: #0078d4; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; transition: background-color 0.2s ease; margin-top: 5px; }
+    button:hover { background-color: #005a9c; }
+    #reset-button { background-color: #d9534f; }
+    #reset-button:hover { background-color: #c9302c; }
+    /* Chat History */
+    #chat-history { flex-grow: 1; border: 1px solid #eee; background-color: #fdfdfd; padding: 10px; overflow-y: auto; margin-bottom: 15px; border-radius: 4px; }
+    .chat-message { padding: 8px 12px; margin-bottom: 8px; border-radius: 5px; max-width: 90%; word-wrap: break-word; }
+    .user-message { background-color: #e1f5fe; margin-left: auto; text-align: right; }
+    .system-message { background-color: #f0f0f0; margin-right: auto; }
+    .error-message { background-color: #fddede; color: #d9534f; font-weight: bold; margin-right: auto; }
+    /* Input Area */
+    #input-area { display: flex; align-items: center; }
+    /* Right Panel Graph */
+    #graph-container { flex: 1 1 0; min-height: 0; width: 100%; height: 100%; border: 1px solid #ccc; background-color: #fff; border-radius: 4px; position: relative; margin-bottom: 10px; }
+    #graph-info { text-align: center; font-size: 0.9em; color: #555; }
+  </style>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <div id="app-container">
+    <div id="left-panel">
+      <div id="load-area">
+        <h2>Load World Model</h2>
+        <textarea id="game-text-input" placeholder="Paste your game text here..."></textarea>
+        <button id="load-button">Generate World Graph</button>
+        <button id="reset-button">Reset World</button>
+      </div>
+      <div id="hyperparams">
+        <h2>Hyperparameters</h2>
+        <div class="param">
+          <label for="decay-rate">Decay Rate: <span id="decay-rate-val">0.99</span></label>
+          <input type="range" id="decay-rate" min="0" max="1" step="0.01" value="0.99">
+        </div>
+        <div class="param">
+          <label for="strengthen-rate">Strengthen Rate: <span id="strengthen-rate-val">1.03</span></label>
+          <input type="range" id="strengthen-rate" min="1" max="3" step="0.01" value="1.03">
+        </div>
+        <div class="param">
+          <label for="max-nodes">Max Nodes:</label>
+          <input type="number" id="max-nodes" min="1" value="100">
+        </div>
+        <div class="param">
+          <label for="max-edges">Max Edges:</label>
+          <input type="number" id="max-edges" min="1" value="250">
+        </div>
+        <div class="param">
+          <label for="max-outdegree">Max Single Outdegree:</label>
+          <input type="number" id="max-outdegree" min="1" value="10">
+        </div>
+        <div class="param">
+          <label for="forget-threshold">Forget Threshold: <span id="forget-threshold-val">0.20</span></label>
+          <input type="range" id="forget-threshold" min="0" max="1" step="0.01" value="0.20">
+        </div>
+        <div class="param">
+          <label for="permanence-threshold">Permanence Threshold: <span id="permanence-threshold-val">3.00</span></label>
+          <input type="range" id="permanence-threshold" min="0" max="5" step="0.01" value="3.00">
+        </div>
+      </div>
+      <div id="chat-area">
+        <h2>Chat History / World Updates</h2>
+        <div id="chat-history"><div class="system-message">Welcome! Paste game text above or interact below.</div></div>
+        <div id="input-area">
+          <input type="text" id="user-input" placeholder="Ask a question or make a statement...">
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+    </div>
+    <div id="right-panel">
+      <h2>World Graph Visualization</h2>
+      <div id="graph-container"></div>
+      <div id="graph-info"><p>Nodes: <span id="node-count">0</span> | Edges: <span id="edge-count">0</span></p></div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // DOM Elements
+      const gameTextInput = document.getElementById('game-text-input');
+      const loadButton = document.getElementById('load-button');
+      const resetButton = document.getElementById('reset-button');
+      const chatHistory = document.getElementById('chat-history');
+      const userInput = document.getElementById('user-input');
+      const sendButton = document.getElementById('send-button');
+      const graphContainer = document.getElementById('graph-container');
+      const nodeCountSpan = document.getElementById('node-count');
+      const edgeCountSpan = document.getElementById('edge-count');
+      // Hyperparams
+      const decaySlider = document.getElementById('decay-rate');
+      const strengthenSlider = document.getElementById('strengthen-rate');
+      const maxNodesInput = document.getElementById('max-nodes');
+      const maxEdgesInput = document.getElementById('max-edges');
+      const maxOutInput = document.getElementById('max-outdegree');
+      const forgetSlider = document.getElementById('forget-threshold');
+      const permSlider = document.getElementById('permanence-threshold');
+      const decayVal = document.getElementById('decay-rate-val');
+      const strengthenVal = document.getElementById('strengthen-rate-val');
+      const forgetVal = document.getElementById('forget-threshold-val');
+      const permVal = document.getElementById('permanence-threshold-val');
+      // update slider displays
+      [[decaySlider, decayVal], [strengthenSlider, strengthenVal], [forgetSlider, forgetVal], [permSlider, permVal]].forEach(([s,d])=>{ d.textContent=s.value; s.addEventListener('input',()=>d.textContent=s.value); });
+      // Graph State
+      let nodes = new vis.DataSet([]);
+      let edges = new vis.DataSet([]);
+      let network = null;
+      let worldTriplets = [];
+      let edgeIdCounter = 0;
+      // Initialize Graph
+      function initializeGraph() {
+        const data = { nodes, edges };
+        const options = { nodes: { shape:'dot', font:{size:12,color:'#333'},borderWidth:2, color:{border:'#2B7CE9',background:'#D2E5FF',highlight:{border:'#2B7CE9',background:'#FFD569'}} }, edges:{font:{size:10,align:'middle',background:'rgba(255,255,255,0.7)',color:'#666'},arrows:{to:{enabled:true,scaleFactor:0.7}},color:{color:'#848484',highlight:'#0078d4'}}, physics:{forceAtlas2Based:{gravitationalConstant:-26,centralGravity:0.005,springLength:230,springConstant:0.18,avoidOverlap:1.5},maxVelocity:146,solver:'forceAtlas2Based',timestep:0.35,stabilization:{iterations:150}}, interaction:{tooltipDelay:200,hideEdgesOnDrag:true,hover:true} };
+        network = new vis.Network(graphContainer, data, options);
+        updateGraphInfo();
+        // add player node
+        nodes.add({ id:'player', label:'Player', title:'Entity: player\nWeight: 1.00', weight:1, size:16 });
+      }
+      // counts
+      function updateGraphInfo() { nodeCountSpan.textContent=nodes.length; edgeCountSpan.textContent=edges.length; }
+      // chat
+      function addMessageToChat(msg,type){ const el=document.createElement('div'); el.classList.add('chat-message',type+'-message'); el.textContent=msg; chatHistory.appendChild(el); chatHistory.scrollTop=chatHistory.scrollHeight; }
+      // build graph from triplets (reset weights)
+      function updateGraphVisualization(triplets){ const uniq=new Set(), newE=[]; triplets.forEach(([s,r,o])=>{ uniq.add(s); uniq.add(o); newE.push({from:s,to:o,label:r}); }); edgeIdCounter=0; nodes.clear(); edges.clear(); uniq.forEach(id=>nodes.add({id,label:id,title:`Entity: ${id}\nWeight: 1.00`,weight:1,size:16})); newE.forEach(e=>{ const eid=`e${edgeIdCounter++}`; edges.add({id:eid,from:e.from,to:e.to,label:e.label,title:`Weight: 1.00`,weight:1,width:2}); }); network.fit(); network.redraw(); updateGraphInfo(); }
+      // hyperparam logic
+      function applyDecayAndStrengthen(question){ const decay=parseFloat(decaySlider.value), strengthen=parseFloat(strengthenSlider.value), maxNodes=parseInt(maxNodesInput.value), maxEdges=parseInt(maxEdgesInput.value), maxOut=parseInt(maxOutInput.value), forget=parseFloat(forgetSlider.value), perm=parseFloat(permSlider.value);
+        // decay
+        nodes.get().forEach(n=>nodes.update({id:n.id,weight:n.weight*decay}));
+        edges.get().forEach(e=>edges.update({id:e.id,weight:e.weight*decay}));
+        // strengthen used
+        const used=nodes.getIds().filter(id=>question.toLowerCase().includes(id.toLowerCase()));
+        used.forEach(id=>{ const n=nodes.get(id); nodes.update({id,weight:n.weight*strengthen}); });
+        edges.get().forEach(e=>{ if(used.includes(e.from)||used.includes(e.to)){ edges.update({id:e.id,weight:e.weight*strengthen}); }});
+        // remove forget
+        nodes.get().forEach(n=>{ if(n.weight<forget && n.weight<=perm){ nodes.remove(n.id); edges.get({filter:ed=>ed.from===n.id||ed.to===n.id}).forEach(ed=>edges.remove(ed.id)); }});
+        // prune maxNodes
+        if(nodes.length>maxNodes){ let eligible=nodes.get().filter(n=>n.weight<=perm).sort((a,b)=>a.weight-b.weight); while(nodes.length>maxNodes && eligible.length){ const rem=eligible.shift(); nodes.remove(rem.id); edges.get({filter:ed=>ed.from===rem.id||ed.to===rem.id}).forEach(ed=>edges.remove(ed.id)); }}
+        // prune maxEdges
+        if(edges.length>maxEdges){ let eligibleE=edges.get().filter(e=>e.weight<=perm).sort((a,b)=>a.weight-b.weight); while(edges.length>maxEdges && eligibleE.length){ edges.remove(eligibleE.shift().id); }}
+        // prune outdegree
+        nodes.get().forEach(n=>{ let outs=edges.get({filter:e=>e.from===n.id}); if(outs.length>maxOut){ let elig=outs.filter(e=>e.weight<=perm).sort((a,b)=>a.weight-b.weight); while(edges.get({filter:e=>e.from===n.id}).length>maxOut && elig.length){ edges.remove(elig.shift().id); } }});
+        // update visuals
+        nodes.get().forEach(n=>nodes.update({id:n.id,size:Math.max(10,16*n.weight),title:`Entity: ${n.id}\nWeight: ${n.weight.toFixed(2)}`}));
+        edges.get().forEach(e=>edges.update({id:e.id,width:Math.max(1,2*e.weight),title:`Weight: ${e.weight.toFixed(2)}`}));
+        network.fit(); network.redraw(); updateGraphInfo(); }
+      // OpenAI
+      const OPENAI_API_KEY=""; const OPENAI_API_URL="https://api.openai.com/v1/chat/completions"; const OPENAI_MODEL="gpt-4o";
+      async function callOpenAI(messages){ if(!OPENAI_API_KEY||OPENAI_API_KEY.startsWith("sk-YOUR")) throw new Error("OpenAI API Key not configured."); const res=await fetch(OPENAI_API_URL,{method:"POST",headers:{"Content-Type":"application/json","Authorization":`Bearer ${OPENAI_API_KEY}`},body:JSON.stringify({model:OPENAI_MODEL,messages,temperature:0.5,response_format:{type:"json_object"}})}); const data=await res.json(); if(!res.ok) throw new Error(data.error?.message||`HTTP ${res.status}`); return data.choices[0].message.content; }
+      async function llm_extractTriplets(text){ const sys=`You are an expert knowledge graph extractor. Extract factual triplets in form [subject, relation, object] under key triplets.`; const usr=`Extract triplets from:\n\n${text}`; const msgs=[{role:"system",content:sys},{role:"user",content:usr}]; const resp=await callOpenAI(msgs); let parsed=JSON.parse(resp); if(parsed.triplets) parsed=parsed.triplets; if(!Array.isArray(parsed)) throw new Error("Invalid triplet format"); return parsed; }
+      async function llm_reconcileTriplets(newT,existing){ const sys=`You are a knowledge graph reconciliation engine. Merge existing and new lists under key result.`; const usr=`Existing Triplets:\n${JSON.stringify(existing)}\nNew Triplets:\n${JSON.stringify(newT)}`; const msgs=[{role:"system",content:sys},{role:"user",content:usr}]; const resp=await callOpenAI(msgs); let parsed=JSON.parse(resp); if(parsed.result) parsed=parsed.result; if(!Array.isArray(parsed)) throw new Error("Invalid reconciliation"); return parsed; }
+      async function llm_answerQuestion(question,currentTriplets){ const sys=`You are an assistant answering strictly based on provided triplets.`; const usr=`World Knowledge:\n${JSON.stringify(currentTriplets,null,2)}\nQuestion: ${question}`; const msgs=[{role:"system",content:sys},{role:"user",content:usr}]; const body={model:OPENAI_MODEL,messages:msgs,temperature:0.7}; const res=await fetch(OPENAI_API_URL,{method:"POST",headers:{"Content-Type":"application/json","Authorization":`Bearer ${OPENAI_API_KEY}`},body:JSON.stringify(body)}); const data=await res.json(); if(!res.ok) throw new Error(data.error?.message||`HTTP ${res.status}`); return data.choices[0].message.content.trim(); }
+      // Events
+      loadButton.addEventListener('click',async()=>{ const text=gameTextInput.value.trim(); if(!text){ addMessageToChat('Please paste some game text first.','error-message'); return;} addMessageToChat('Generating world model from text...','system-message'); loadButton.disabled=true; resetButton.disabled=true; try{ const initial=await llm_extractTriplets(text); worldTriplets=await llm_reconcileTriplets(initial,[]); updateGraphVisualization(worldTriplets); addMessageToChat(`World model generated with ${nodes.length} entities and ${edges.length} relationships.`,'system-message'); gameTextInput.value=''; }catch(e){ addMessageToChat('Error generating world model.','error-message'); }finally{ loadButton.disabled=false; resetButton.disabled=false; }});
+      resetButton.addEventListener('click',()=>{ worldTriplets=[]; nodes.clear(); edges.clear(); chatHistory.innerHTML=''; addMessageToChat('World reset.','system-message'); gameTextInput.value=''; initializeGraph(); });
+      async function handleUserInput(){ const text=userInput.value.trim(); if(!text) return; addMessageToChat(text,'user-message'); userInput.value=''; sendButton.disabled=true; try{ const isQuestion=text.endsWith('?')||/^(what|where|who|is|are|does|do|can|list)\s/i.test(text); if(isQuestion){ addMessageToChat('Thinking...','system-message'); const answer=await llm_answerQuestion(text,worldTriplets); addMessageToChat(answer,'system-message'); applyDecayAndStrengthen(text); }else{ addMessageToChat('Updating world model...','system-message'); const newT=await llm_extractTriplets(text); if(newT.length>0){ worldTriplets=await llm_reconcileTriplets(newT,worldTriplets); updateGraphVisualization(worldTriplets); addMessageToChat('World model updated.','system-message'); }else{ addMessageToChat("Couldn't extract new information from that statement.",'system-message'); } } }catch(e){ addMessageToChat('Error processing input.','error-message'); }finally{ sendButton.disabled=false; userInput.focus(); }}
+      sendButton.addEventListener('click',handleUserInput);
+      userInput.addEventListener('keypress',e=>{ if(e.key==='Enter') handleUserInput(); });
+      // initialize
+      initializeGraph();
+    });
+  </script>
+</body>
+</html>

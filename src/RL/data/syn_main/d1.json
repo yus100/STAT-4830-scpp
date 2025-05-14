@@ -1,0 +1,528 @@
+{
+  "examples": [
+    {
+      "input": "Hi",
+      "response": ""
+    },
+    {
+      "input": "Thanks for the update.",
+      "response": ""
+    },
+    {
+      "input": "Okay, I understand.",
+      "response": ""
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The project deadline is next Friday. Alice is leading the design phase. The client requested a new feature: dark mode.\n\nMemory:\nMemory 1: The project deadline is next Thursday.\nMemory 2: Bob is leading the design phase.\nMemory 3: The project is for Client X.\n\nGenerated Thinking and Response: I have updated the project information regarding the deadline, design lead, and the new dark mode feature request.\n",
+      "response": "<memory_write>The project deadline is next Friday.</memory_write><memory_write>Alice is leading the design phase.</memory_write><memory_write>The client requested a new feature: dark mode.</memory_write>"
+    },
+    {
+      "input": "What is the capital of France and when was the Eiffel Tower built?",
+      "response": "<memory_ask>What is the capital of France?</memory_ask><memory_ask>When was the Eiffel Tower built?</memory_ask>"
+    },
+    {
+      "input": "My cat, Whiskers, is a Siamese. Siamese cats are known for being vocal. Whiskers loves tuna.",
+      "response": "<memory_write>My cat is named Whiskers.</memory_write><memory_write>Whiskers is a Siamese cat.</memory_write><memory_write>Siamese cats are known for being vocal.</memory_write><memory_write>Whiskers loves tuna.</memory_write>"
+    },
+    {
+      "input": "The Poodle, Fifi, won the dog show. Poodles are intelligent dogs, aren't they? What other breeds are considered highly intelligent?",
+      "response": "<memory_ask>Information about Poodles</memory_ask><memory_ask>What breeds of dogs are considered highly intelligent?</memory_ask><memory_ask>Did Fifi the Poodle win the dog show?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The meeting is rescheduled to 3 PM. The location is now Conference Room B. John needs to bring the projector.\n\nMemory:\nMemory 1: The meeting is at 2 PM in Conference Room A.\nMemory 2: John needs to bring the minutes.\nMemory 3: Sarah is attending the meeting.\n\nGenerated Thinking and Response: Noted the changes to the meeting time, location, and John's responsibility. Sarah's attendance is still confirmed.\n",
+      "response": "<memory_write>The meeting is rescheduled to 3 PM.</memory_write><memory_write>The meeting location is Conference Room B.</memory_write><memory_write>John needs to bring the projector to the meeting.</memory_write>"
+    },
+    {
+      "input": "Who invented the telephone and in what year?",
+      "response": "<memory_ask>Who invented the telephone?</memory_ask><memory_ask>In what year was the telephone invented?</memory_ask>"
+    },
+    {
+      "input": "The Earth revolves around the Sun. This is a well-known fact. The Sun is a star.",
+      "response": "<memory_write>The Earth revolves around the Sun.</memory_write><memory_write>The Sun is a star.</memory_write>"
+    },
+    {
+      "input": "Our team's new software, 'Nova Suite', is set for beta release next month. It includes features for project management and data analysis. Is it compatible with older operating systems?",
+      "response": "<memory_ask>Information about 'Nova Suite' software</memory_ask><memory_ask>When is 'Nova Suite' beta release?</memory_ask><memory_ask>What are the features of 'Nova Suite'?</memory_ask><memory_ask>Is 'Nova Suite' compatible with older operating systems?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Dr. Smith's patient, Mr. Jones, has an appointment at 10 AM. Mr. Jones is allergic to penicillin. The appointment is for a routine check-up.\n\nMemory:\nMemory 1: Dr. Smith's patient, Mr. Jones, has an appointment at 11 AM.\nMemory 2: Mr. Jones has no known allergies.\nMemory 3: The appointment is for a consultation.\n\nGenerated Thinking and Response: Updated Mr. Jones's appointment time, allergy information, and reason for visit.\n",
+      "response": "<memory_write>Dr. Smith's patient, Mr. Jones, has an appointment at 10 AM.</memory_write><memory_write>Mr. Jones is allergic to penicillin.</memory_write><memory_write>Mr. Jones's appointment is for a routine check-up.</memory_write>"
+    },
+    {
+      "input": "What are the main ingredients in a Margherita pizza?",
+      "response": "<memory_ask>What are the main ingredients in a Margherita pizza?</memory_ask>"
+    },
+    {
+      "input": "The library is open until 8 PM on weekdays. On weekends, it closes at 5 PM. It has a large collection of history books.",
+      "response": "<memory_write>The library is open until 8 PM on weekdays.</memory_write><memory_write>The library closes at 5 PM on weekends.</memory_write><memory_write>The library has a large collection of history books.</memory_write>"
+    },
+    {
+      "input": "The new AI model 'Orion' can generate images from text. It was trained on a dataset of 1 billion images. How does it compare to other models like DALL-E or Midjourney?",
+      "response": "<memory_ask>Information about AI model 'Orion'</memory_ask><memory_ask>What can AI model 'Orion' do?</memory_ask><memory_ask>What dataset was AI model 'Orion' trained on?</memory_ask><memory_ask>How does AI model 'Orion' compare to DALL-E?</memory_ask><memory_ask>How does AI model 'Orion' compare to Midjourney?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The company's stock price is $150. Last quarter's revenue was $5 million. The CEO announced a new partnership with TechCorp.\n\nMemory:\nMemory 1: The company's stock price is $145.\nMemory 2: Last quarter's revenue was $4.8 million.\nMemory 3: The company is looking for partnerships.\n\nGenerated Thinking and Response: I've updated the stock price and revenue figures. The new partnership with TechCorp is also noted.\n",
+      "response": "<memory_write>The company's stock price is $150.</memory_write><memory_write>Last quarter's revenue for the company was $5 million.</memory_write><memory_write>The company CEO announced a new partnership with TechCorp.</memory_write>"
+    },
+    {
+      "input": "Can you explain the theory of relativity in simple terms?",
+      "response": "<memory_ask>Explain the theory of relativity in simple terms.</memory_ask>"
+    },
+    {
+      "input": "My favorite book is 'To Kill a Mockingbird'. It was written by Harper Lee. The main character is Scout Finch.",
+      "response": "<memory_write>My favorite book is 'To Kill a Mockingbird'.</memory_write><memory_write>'To Kill a Mockingbird' was written by Harper Lee.</memory_write><memory_write>The main character in 'To Kill a Mockingbird' is Scout Finch.</memory_write>"
+    },
+    {
+      "input": "The city of Kyoto is famous for its temples and gardens. It was once the imperial capital of Japan. Is it a good place to visit during spring?",
+      "response": "<memory_ask>Information about Kyoto</memory_ask><memory_ask>Why is Kyoto famous?</memory_ask><memory_ask>Was Kyoto the imperial capital of Japan?</memory_ask><memory_ask>Is Kyoto a good place to visit during spring?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The recipe requires 2 cups of flour, 1 cup of sugar, and 3 eggs. The oven should be preheated to 350 degrees F. The original recipe stated 375 degrees F.\n\nMemory:\nMemory 1: The recipe requires 2.5 cups of flour.\nMemory 2: The oven should be preheated to 375 degrees F.\nMemory 3: The recipe is for chocolate cake.\n\nGenerated Thinking and Response: Updated flour quantity and oven temperature. The cake type remains chocolate.\n",
+      "response": "<memory_write>The recipe requires 2 cups of flour.</memory_write><memory_write>The recipe requires 1 cup of sugar.</memory_write><memory_write>The recipe requires 3 eggs.</memory_write><memory_write>The oven should be preheated to 350 degrees F for the recipe.</memory_write>"
+    },
+    {
+      "input": "What is the chemical formula for water and what are its main properties?",
+      "response": "<memory_ask>What is the chemical formula for water?</memory_ask><memory_ask>What are the main properties of water?</memory_ask>"
+    },
+    {
+      "input": "The conference will be held in Berlin. It starts on June 10th and ends on June 12th. Keynote speakers include Dr. Eva Schmidt and Professor Kenji Tanaka.",
+      "response": "<memory_write>The conference will be held in Berlin.</memory_write><memory_write>The conference starts on June 10th.</memory_write><memory_write>The conference ends on June 12th.</memory_write><memory_write>Dr. Eva Schmidt is a keynote speaker at the conference.</memory_write><memory_write>Professor Kenji Tanaka is a keynote speaker at the conference.</memory_write>"
+    },
+    {
+      "input": "Mars is the fourth planet from the Sun. It's known as the Red Planet. Scientists are exploring the possibility of life on Mars, right? What missions are currently active there?",
+      "response": "<memory_ask>Information about Mars</memory_ask><memory_ask>What is Mars's position from the Sun?</memory_ask><memory_ask>Why is Mars known as the Red Planet?</memory_ask><memory_ask>Is there a possibility of life on Mars?</memory_ask><memory_ask>What missions are currently active on Mars?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The user's car is a blue Toyota Camry. The car is 5 years old. It was previously noted as being red.\n\nMemory:\nMemory 1: The user's car is a red Toyota Camry.\nMemory 2: The user's car is 3 years old.\nMemory 3: The user also owns a bicycle.\n\nGenerated Thinking and Response: User's car color and age have been updated. Bicycle ownership remains unchanged.\n",
+      "response": "<memory_write>The user's car is a blue Toyota Camry.</memory_write><memory_write>The user's car is 5 years old.</memory_write>"
+    },
+    {
+      "input": "How does photosynthesis work?",
+      "response": "<memory_ask>How does photosynthesis work?</memory_ask>"
+    },
+    {
+      "input": "The capital of Australia is Canberra. Sydney is its largest city. Melbourne is known for its coffee culture.",
+      "response": "<memory_write>The capital of Australia is Canberra.</memory_write><memory_write>Sydney is the largest city in Australia.</memory_write><memory_write>Melbourne is known for its coffee culture.</memory_write>"
+    },
+    {
+      "input": "The new smartphone 'Galaxy Z' has a foldable screen. Its battery life is reportedly 20 hours. Does it support 5G connectivity?",
+      "response": "<memory_ask>Information about smartphone 'Galaxy Z'</memory_ask><memory_ask>What kind of screen does 'Galaxy Z' have?</memory_ask><memory_ask>What is the battery life of 'Galaxy Z'?</memory_ask><memory_ask>Does 'Galaxy Z' support 5G connectivity?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Customer ID 789, John Doe, reported an issue with his internet connection. His current plan is 'Fiber Gold'. He mentioned his modem model is XG-1000. Previously, we thought he was on the 'Silver' plan.\n\nMemory:\nMemory 1: Customer ID 789, John Doe, is on the 'Fiber Silver' plan.\nMemory 2: John Doe's modem model is ZY-500.\nMemory 3: John Doe lives in New York.\n\nGenerated Thinking and Response: Updated John Doe's internet plan to 'Fiber Gold' and modem model to XG-1000. His address is still New York.\n",
+      "response": "<memory_write>Customer ID 789, John Doe, reported an issue with his internet connection.</memory_write><memory_write>Customer ID 789, John Doe's current plan is 'Fiber Gold'.</memory_write><memory_write>Customer ID 789, John Doe's modem model is XG-1000.</memory_write>"
+    },
+    {
+      "input": "What were the major causes of World War I?",
+      "response": "<memory_ask>What were the major causes of World War I?</memory_ask>"
+    },
+    {
+      "input": "The Amazon rainforest is the largest tropical rainforest in the world. It is home to a vast number of species. It plays a crucial role in regulating the global climate.",
+      "response": "<memory_write>The Amazon rainforest is the largest tropical rainforest in the world.</memory_write><memory_write>The Amazon rainforest is home to a vast number of species.</memory_write><memory_write>The Amazon rainforest plays a crucial role in regulating the global climate.</memory_write>"
+    },
+    {
+      "input": "The restaurant 'Pasta Bella' offers a new vegan menu. Their signature dish is a mushroom risotto. Is it open on Sundays?",
+      "response": "<memory_ask>Information about restaurant 'Pasta Bella'</memory_ask><memory_ask>Does 'Pasta Bella' offer a vegan menu?</memory_ask><memory_ask>What is the signature dish at 'Pasta Bella'?</memory_ask><memory_ask>Is 'Pasta Bella' open on Sundays?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Flight BA245 is delayed by 2 hours. The new departure time is 4:30 PM. The gate remains C12. The original departure was 2:30 PM.\n\nMemory:\nMemory 1: Flight BA245 departs at 2:30 PM from gate C12.\nMemory 2: Flight BA245 is destined for London.\n\nGenerated Thinking and Response: Flight BA245 departure time updated. Gate and destination remain the same.\n",
+      "response": "<memory_write>Flight BA245 is delayed by 2 hours.</memory_write><memory_write>The new departure time for Flight BA245 is 4:30 PM.</memory_write>"
+    },
+    {
+      "input": "Who wrote 'Pride and Prejudice' and what is its main plot?",
+      "response": "<memory_ask>Who wrote 'Pride and Prejudice'?</memory_ask><memory_ask>What is the main plot of 'Pride and Prejudice'?</memory_ask>"
+    },
+    {
+      "input": "Mount Everest is the highest mountain above sea level. It is located in the Himalayas. Climbing it is extremely dangerous.",
+      "response": "<memory_write>Mount Everest is the highest mountain above sea level.</memory_write><memory_write>Mount Everest is located in the Himalayas.</memory_write><memory_write>Climbing Mount Everest is extremely dangerous.</memory_write>"
+    },
+    {
+      "input": "The documentary 'Planet Earth III' showcases stunning wildlife cinematography. It is narrated by David Attenborough. How many episodes are in this series?",
+      "response": "<memory_ask>Information about the documentary 'Planet Earth III'</memory_ask><memory_ask>What does 'Planet Earth III' showcase?</memory_ask><memory_ask>Who narrates 'Planet Earth III'?</memory_ask><memory_ask>How many episodes are in 'Planet Earth III'?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The solar panel installation on Green Tech building will now use 300 panels, not 250. The efficiency rating is 22%. The supplier is SolarMax Inc.\n\nMemory:\nMemory 1: Green Tech building solar panel installation uses 250 panels.\nMemory 2: The efficiency rating for Green Tech panels is 20%.\nMemory 3: The supplier for Green Tech panels is SunPower Co.\n\nGenerated Thinking and Response: Updated panel count, efficiency, and supplier for Green Tech building's solar installation.\n",
+      "response": "<memory_write>The solar panel installation on Green Tech building will now use 300 panels.</memory_write><memory_write>The efficiency rating for Green Tech building's solar panels is 22%.</memory_write><memory_write>The supplier for Green Tech building's solar panels is SolarMax Inc.</memory_write>"
+    },
+    {
+      "input": "What is the process of mummification in ancient Egypt?",
+      "response": "<memory_ask>What is the process of mummification in ancient Egypt?</memory_ask>"
+    },
+    {
+      "input": "The human brain has approximately 86 billion neurons. The cerebrum is the largest part. The cerebellum is responsible for motor control.",
+      "response": "<memory_write>The human brain has approximately 86 billion neurons.</memory_write><memory_write>The cerebrum is the largest part of the human brain.</memory_write><memory_write>The cerebellum is responsible for motor control.</memory_write>"
+    },
+    {
+      "input": "The artist Van Gogh painted 'Starry Night'. He was a Post-Impressionist painter. Where can 'Starry Night' be viewed today?",
+      "response": "<memory_ask>Information about Van Gogh</memory_ask><memory_ask>Who painted 'Starry Night'?</memory_ask><memory_ask>What artistic movement was Van Gogh part of?</memory_ask><memory_ask>Where can 'Starry Night' be viewed today?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The patient in Room 302 is Clara. She prefers vegetarian meals. Her medication schedule was updated this morning, moving her 10am dose to 11am.\n\nMemory:\nMemory 1: The patient in Room 302 is named David.\nMemory 2: The patient in Room 302 has no dietary restrictions.\nMemory 3: The patient in Room 302's 10am medication is due.\n\nGenerated Thinking and Response: Patient identity in Room 302, dietary preference, and medication time updated.\n",
+      "response": "<memory_write>The patient in Room 302 is Clara.</memory_write><memory_write>Clara (patient in Room 302) prefers vegetarian meals.</memory_write><memory_write>Clara's (patient in Room 302) 10am medication dose has been moved to 11am.</memory_write>"
+    },
+    {
+      "input": "Describe the water cycle.",
+      "response": "<memory_ask>Information about the water cycle</memory_ask><memory_ask>Describe the water cycle.</memory_ask>"
+    },
+    {
+      "input": "The speed of light in a vacuum is approximately 299,792 kilometers per second. Nothing with mass can travel faster than light. This was established by Einstein's theory of special relativity.",
+      "response": "<memory_write>The speed of light in a vacuum is approximately 299,792 kilometers per second.</memory_write><memory_write>Nothing with mass can travel faster than light.</memory_write><memory_write>The principle that nothing with mass can travel faster than light was established by Einstein's theory of special relativity.</memory_write>"
+    },
+    {
+      "input": "The Great Wall of China was built over centuries. Its primary purpose was defense. Is it visible from space with the naked eye?",
+      "response": "<memory_ask>Information about The Great Wall of China</memory_ask><memory_ask>Why was the Great Wall of China built?</memory_ask><memory_ask>Is the Great Wall of China visible from space with the naked eye?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The chemical compound H2O is water. Its molar mass is 18.015 g/mol. It was previously listed that its state at STP is gas.\n\nMemory:\nMemory 1: The chemical compound H2O is dihydrogen monoxide.\nMemory 2: The molar mass of H2O is 18.02 g/mol.\nMemory 3: H2O is a gas at Standard Temperature and Pressure (STP).\n\nGenerated Thinking and Response: The common name is water. Molar mass updated. Corrected state at STP to liquid.\n",
+      "response": "<memory_write>The chemical compound H2O is water.</memory_write><memory_write>The molar mass of H2O is 18.015 g/mol.</memory_write><memory_write>H2O is a liquid at Standard Temperature and Pressure (STP).</memory_write>"
+    },
+    {
+      "input": "What are the symptoms and treatment for the common cold?",
+      "response": "<memory_ask>What are the symptoms of the common cold?</memory_ask><memory_ask>What is the treatment for the common cold?</memory_ask>"
+    },
+    {
+      "input": "The Python programming language was created by Guido van Rossum. It is known for its readability. It is an interpreted language.",
+      "response": "<memory_write>The Python programming language was created by Guido van Rossum.</memory_write><memory_write>Python is known for its readability.</memory_write><memory_write>Python is an interpreted language.</memory_write>"
+    },
+    {
+      "input": "The Sahara Desert is the largest hot desert in the world. It spans across North Africa. What kind of animals live there?",
+      "response": "<memory_ask>Information about the Sahara Desert</memory_ask><memory_ask>Where is the Sahara Desert located?</memory_ask><memory_ask>What kind of animals live in the Sahara Desert?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Item #45B, the 'Chronos Watch', is priced at $299. It was $350. It now comes with a free leather strap, not a metal one.\n\nMemory:\nMemory 1: Item #45B, 'Chronos Watch', price is $350.\nMemory 2: Item #45B comes with a metal strap.\nMemory 3: Item #45B is available in silver and black.\n\nGenerated Thinking and Response: Updated price and included strap for 'Chronos Watch'. Color availability remains.\n",
+      "response": "<memory_write>Item #45B, the 'Chronos Watch', is priced at $299.</memory_write><memory_write>Item #45B, the 'Chronos Watch', now comes with a free leather strap.</memory_write>"
+    },
+    {
+      "input": "How do you make a simple omelette?",
+      "response": "<memory_ask>How do you make a simple omelette?</memory_ask><memory_ask>What are the ingredients for a simple omelette?</memory_ask><memory_ask>What are the steps to make a simple omelette?</memory_ask>"
+    },
+    {
+      "input": "The Moon is Earth's only natural satellite. Its gravitational pull causes tides on Earth. Neil Armstrong was the first person to walk on the Moon.",
+      "response": "<memory_write>The Moon is Earth's only natural satellite.</memory_write><memory_write>The Moon's gravitational pull causes tides on Earth.</memory_write><memory_write>Neil Armstrong was the first person to walk on the Moon.</memory_write>"
+    },
+    {
+      "input": "The company 'EcoSolutions' launched a new biodegradable packaging. It is made from cornstarch. How does its cost compare to traditional plastic packaging?",
+      "response": "<memory_ask>Information about 'EcoSolutions' company</memory_ask><memory_ask>What new product did 'EcoSolutions' launch?</memory_ask><memory_ask>What is 'EcoSolutions' biodegradable packaging made from?</memory_ask><memory_ask>How does the cost of 'EcoSolutions' biodegradable packaging compare to traditional plastic packaging?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The 'Odyssey' server maintenance is scheduled for Sunday at 2 AM UTC, not Saturday. It will last for 4 hours. All services except email will be affected.\n\nMemory:\nMemory 1: 'Odyssey' server maintenance is Saturday at 3 AM UTC.\nMemory 2: Maintenance will last 3 hours.\nMemory 3: All 'Odyssey' services will be down.\n\nGenerated Thinking and Response: Corrected maintenance day and time for 'Odyssey' server, updated duration, and clarified service impact.\n",
+      "response": "<memory_write>The 'Odyssey' server maintenance is scheduled for Sunday at 2 AM UTC.</memory_write><memory_write>The 'Odyssey' server maintenance will last for 4 hours.</memory_write><memory_write>All 'Odyssey' server services except email will be affected during maintenance.</memory_write>"
+    },
+    {
+      "input": "Explain the concept of blockchain technology.",
+      "response": "<memory_ask>Explain blockchain technology.</memory_ask><memory_ask>What are the key features of blockchain?</memory_ask><memory_ask>What are some use cases for blockchain?</memory_ask>"
+    },
+    {
+      "input": "Jupiter is the largest planet in our solar system. It has a Great Red Spot, which is a giant storm. It has dozens of moons, including Ganymede.",
+      "response": "<memory_write>Jupiter is the largest planet in our solar system.</memory_write><memory_write>Jupiter has a Great Red Spot.</memory_write><memory_write>The Great Red Spot on Jupiter is a giant storm.</memory_write><memory_write>Jupiter has dozens of moons.</memory_write><memory_write>Ganymede is one of Jupiter's moons.</memory_write>"
+    },
+    {
+      "input": "The novel 'Dune' is a science fiction classic written by Frank Herbert. It explores themes of politics, religion, and ecology. Are there any recent film adaptations?",
+      "response": "<memory_ask>Information about the novel 'Dune'</memory_ask><memory_ask>Who wrote 'Dune'?</memory_ask><memory_ask>What themes does 'Dune' explore?</memory_ask><memory_ask>Are there recent film adaptations of 'Dune'?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The 'Evergreen' software update version 3.5 is now live. It includes security patches and a new UI theme. The previous version was 3.4 and the UI was green.\n\nMemory:\nMemory 1: 'Evergreen' software current version is 3.4.\nMemory 2: 'Evergreen' software has a green UI theme.\nMemory 3: 'Evergreen' software is for accounting.\n\nGenerated Thinking and Response: 'Evergreen' version updated to 3.5, noting security patches and new UI theme. Its purpose as accounting software remains.\n",
+      "response": "<memory_write>The 'Evergreen' software update version 3.5 is now live.</memory_write><memory_write>'Evergreen' software version 3.5 includes security patches.</memory_write><memory_write>'Evergreen' software version 3.5 includes a new UI theme.</memory_write>"
+    },
+    {
+      "input": "What is the difference between nuclear fission and fusion?",
+      "response": "<memory_ask>What is nuclear fission?</memory_ask><memory_ask>What is nuclear fusion?</memory_ask><memory_ask>What are the differences between nuclear fission and fusion?</memory_ask>"
+    },
+    {
+      "input": "Honeybees communicate through a dance language. The queen bee is the only one that lays eggs. Bees produce honey from nectar.",
+      "response": "<memory_write>Honeybees communicate through a dance language.</memory_write><memory_write>The queen bee is the only bee in a hive that lays eggs.</memory_write><memory_write>Bees produce honey from nectar.</memory_write>"
+    },
+    {
+      "input": "The new electric car, 'Voltix', has a range of 300 miles. It features autonomous driving capabilities. What is its charging time?",
+      "response": "<memory_ask>Information about the electric car 'Voltix'</memory_ask><memory_ask>What is the range of the 'Voltix' electric car?</memory_ask><memory_ask>What features does the 'Voltix' electric car have?</memory_ask><memory_ask>What is the charging time for the 'Voltix' electric car?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The Element X now has an atomic weight of 42.5. It was previously recorded as 42.3. Its symbol is still X and it's a noble gas.\n\nMemory:\nMemory 1: Element X has an atomic weight of 42.3.\nMemory 2: Element X's symbol is X.\nMemory 3: Element X is a halogen.\n\nGenerated Thinking and Response: Atomic weight for Element X updated. Its classification has also been corrected to noble gas from halogen.\n",
+      "response": "<memory_write>Element X has an atomic weight of 42.5.</memory_write><memory_write>Element X is a noble gas.</memory_write>"
+    },
+    {
+      "input": "What are the seven wonders of the ancient world?",
+      "response": "<memory_ask>What are the seven wonders of the ancient world?</memory_ask><memory_ask>List the seven wonders of the ancient world.</memory_ask>"
+    },
+    {
+      "input": "The coffee shop on Main Street is called 'The Daily Grind'. It opens at 7 AM. They serve organic coffee and pastries.",
+      "response": "<memory_write>The coffee shop on Main Street is called 'The Daily Grind'.</memory_write><memory_write>'The Daily Grind' opens at 7 AM.</memory_write><memory_write>'The Daily Grind' serves organic coffee.</memory_write><memory_write>'The Daily Grind' serves pastries.</memory_write>"
+    },
+    {
+      "input": "The historical site of Machu Picchu is in Peru. It was built by the Inca Empire. Is it considered a UNESCO World Heritage site?",
+      "response": "<memory_ask>Information about Machu Picchu</memory_ask><memory_ask>Where is Machu Picchu located?</memory_ask><memory_ask>Who built Machu Picchu?</memory_ask><memory_ask>Is Machu Picchu a UNESCO World Heritage site?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: My contact, Sarah Miller, changed her phone number to 555-0123. Her email is still sarah.miller@example.com. She used to live in Boston but now lives in Chicago.\n\nMemory:\nMemory 1: Sarah Miller's phone number is 555-9876.\nMemory 2: Sarah Miller's email is sarah.miller@example.com.\nMemory 3: Sarah Miller lives in Boston.\n\nGenerated Thinking and Response: Updated Sarah Miller's phone number and city of residence. Email remains the same.\n",
+      "response": "<memory_write>My contact, Sarah Miller, changed her phone number to 555-0123.</memory_write><memory_write>My contact, Sarah Miller, now lives in Chicago.</memory_write>"
+    },
+    {
+      "input": "Can you tell me about the history of the internet?",
+      "response": "<memory_ask>Information about the history of the internet</memory_ask><memory_ask>When did the internet start?</memory_ask><memory_ask>Who were key figures in the development of the internet?</memory_ask>"
+    },
+    {
+      "input": "The new game 'CyberRealm' is a multiplayer RPG. It is set in a futuristic city called Neo-Kyoto. Character customization is a key feature.",
+      "response": "<memory_write>The new game 'CyberRealm' is a multiplayer RPG.</memory_write><memory_write>'CyberRealm' is set in a futuristic city called Neo-Kyoto.</memory_write><memory_write>Character customization is a key feature in 'CyberRealm'.</memory_write>"
+    },
+    {
+      "input": "The Andromeda Galaxy is the nearest major galaxy to the Milky Way. It is approximately 2.5 million light-years away. Are they expected to collide?",
+      "response": "<memory_ask>Information about the Andromeda Galaxy</memory_ask><memory_ask>How far is the Andromeda Galaxy from the Milky Way?</memory_ask><memory_ask>Are the Andromeda Galaxy and Milky Way expected to collide?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The blue whale is the largest animal on Earth. It was previously noted that the African Elephant was the largest. The blue whale primarily eats krill.\n\nMemory:\nMemory 1: The African Elephant is the largest animal on Earth.\nMemory 2: The blue whale is a mammal.\nMemory 3: Krill are small crustaceans.\n\nGenerated Thinking and Response: Corrected the information about the largest animal on Earth to be the blue whale. Noted its diet.\n",
+      "response": "<memory_write>The blue whale is the largest animal on Earth.</memory_write><memory_write>The blue whale primarily eats krill.</memory_write>"
+    },
+    {
+      "input": "What is quantum computing and how does it differ from classical computing?",
+      "response": "<memory_ask>What is quantum computing?</memory_ask><memory_ask>How does quantum computing differ from classical computing?</memory_ask>"
+    },
+    {
+      "input": "My dog, Max, is a Golden Retriever. He loves to play fetch in the park. He is three years old.",
+      "response": "<memory_write>My dog is named Max.</memory_write><memory_write>Max is a Golden Retriever.</memory_write><memory_write>Max loves to play fetch in the park.</memory_write><memory_write>Max is three years old.</memory_write>"
+    },
+    {
+      "input": "The upcoming music festival 'SoundWave' will feature over 50 artists. It will take place from July 15th to July 17th. Where is it being held?",
+      "response": "<memory_ask>Information about 'SoundWave' music festival</memory_ask><memory_ask>How many artists will feature at 'SoundWave'?</memory_ask><memory_ask>When will 'SoundWave' take place?</memory_ask><memory_ask>Where is 'SoundWave' music festival being held?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Account 12345, belonging to 'Alpha Corp', has had its credit limit increased to $100,000. It was $75,000. The primary contact is now Jane Doe, not John Smith.\n\nMemory:\nMemory 1: Account 12345 (Alpha Corp) credit limit is $75,000.\nMemory 2: Account 12345 (Alpha Corp) primary contact is John Smith.\nMemory 3: Alpha Corp is in the manufacturing sector.\n\nGenerated Thinking and Response: Updated credit limit and primary contact for Alpha Corp's account. Sector information remains correct.\n",
+      "response": "<memory_write>Account 12345, belonging to 'Alpha Corp', has had its credit limit increased to $100,000.</memory_write><memory_write>The primary contact for Account 12345 (Alpha Corp) is now Jane Doe.</memory_write>"
+    },
+    {
+      "input": "How does a car engine work?",
+      "response": "<memory_ask>How does a car engine work?</memory_ask><memory_ask>What are the main components of a car engine?</memory_ask><memory_ask>What is the four-stroke cycle?</memory_ask>"
+    },
+    {
+      "input": "The film 'Inception' was directed by Christopher Nolan. It stars Leonardo DiCaprio. The plot involves dreaming and subconscious exploration.",
+      "response": "<memory_write>The film 'Inception' was directed by Christopher Nolan.</memory_write><memory_write>'Inception' stars Leonardo DiCaprio.</memory_write><memory_write>The plot of 'Inception' involves dreaming and subconscious exploration.</memory_write>"
+    },
+    {
+      "input": "The city of Venice is known for its canals and gondolas. It is located in northeastern Italy. Is it sinking?",
+      "response": "<memory_ask>Information about Venice</memory_ask><memory_ask>What is Venice known for?</memory_ask><memory_ask>Where is Venice located?</memory_ask><memory_ask>Is Venice sinking?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: System alert: Server 'Omega' CPU usage is at 95%. It was previously stable at 50%. Disk space is at 40% full. A new process 'analyzer.exe' is consuming high CPU.\n\nMemory:\nMemory 1: Server 'Omega' CPU usage is stable at 50%.\nMemory 2: Server 'Omega' disk space is 60% full.\nMemory 3: Server 'Omega' runs critical applications.\n\nGenerated Thinking and Response: Updated CPU usage for Server 'Omega', noted the new process. Also updated disk space to 40%.\n",
+      "response": "<memory_write>System alert: Server 'Omega' CPU usage is at 95%.</memory_write><memory_write>Server 'Omega' disk space is at 40% full.</memory_write><memory_write>A new process 'analyzer.exe' is consuming high CPU on Server 'Omega'.</memory_write>"
+    },
+    {
+      "input": "What is the significance of the Rosetta Stone?",
+      "response": "<memory_ask>What is the Rosetta Stone?</memory_ask><memory_ask>What is the significance of the Rosetta Stone?</memory_ask><memory_ask>What languages are on the Rosetta Stone?</memory_ask>"
+    },
+    {
+      "input": "The human heart beats about 100,000 times a day. It has four chambers. It pumps blood throughout the body.",
+      "response": "<memory_write>The human heart beats about 100,000 times a day.</memory_write><memory_write>The human heart has four chambers.</memory_write><memory_write>The human heart pumps blood throughout the body.</memory_write>"
+    },
+    {
+      "input": "The new book 'Whispers of Time' is a historical fiction set in ancient Rome. The author is Elena Petrova. When will it be released?",
+      "response": "<memory_ask>Information about the book 'Whispers of Time'</memory_ask><memory_ask>What genre is 'Whispers of Time'?</memory_ask><memory_ask>Where is 'Whispers of Time' set?</memory_ask><memory_ask>Who is the author of 'Whispers of Time'?</memory_ask><memory_ask>When will 'Whispers of Time' be released?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Recipe for 'Solaris Soup' now calls for 1.5 liters of vegetable broth, not 1 liter. And add a pinch of saffron. Original recipe said 1 liter broth and no saffron.\n\nMemory:\nMemory 1: 'Solaris Soup' recipe uses 1 liter vegetable broth.\nMemory 2: 'Solaris Soup' requires carrots and celery.\nMemory 3: 'Solaris Soup' serves 4 people.\n\nGenerated Thinking and Response: Updated broth quantity and added saffron to 'Solaris Soup' recipe. Other details are current.\n",
+      "response": "<memory_write>Recipe for 'Solaris Soup' now calls for 1.5 liters of vegetable broth.</memory_write><memory_write>Add a pinch of saffron to the 'Solaris Soup' recipe.</memory_write>"
+    },
+    {
+      "input": "How is glass made?",
+      "response": "<memory_ask>How is glass made?</memory_ask><memory_ask>What are the raw materials for glass production?</memory_ask><memory_ask>What is the process of making glass?</memory_ask>"
+    },
+    {
+      "input": "The Atacama Desert is one of the driest places on Earth. It is located in South America. Some areas receive no measurable rainfall for years.",
+      "response": "<memory_write>The Atacama Desert is one of the driest places on Earth.</memory_write><memory_write>The Atacama Desert is located in South America.</memory_write><memory_write>Some areas of the Atacama Desert receive no measurable rainfall for years.</memory_write>"
+    },
+    {
+      "input": "The 'QuantumLeap' processor is twice as fast as its predecessor. It uses a 3nm manufacturing process. Will it be available in laptops this year?",
+      "response": "<memory_ask>Information about 'QuantumLeap' processor</memory_ask><memory_ask>How fast is the 'QuantumLeap' processor compared to its predecessor?</memory_ask><memory_ask>What manufacturing process does 'QuantumLeap' processor use?</memory_ask><memory_ask>Will 'QuantumLeap' processor be available in laptops this year?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Employee ID E7890, Mark Chen, is now on the 'Delta' team. He was on 'Gamma'. His role is Senior Developer. His manager is now Lisa Ray.\n\nMemory:\nMemory 1: Employee E7890 (Mark Chen) is on 'Gamma' team.\nMemory 2: Employee E7890 (Mark Chen) role is Developer.\nMemory 3: Employee E7890 (Mark Chen) manager is Tom Wu.\n\nGenerated Thinking and Response: Mark Chen's team, role, and manager have been updated.\n",
+      "response": "<memory_write>Employee ID E7890, Mark Chen, is now on the 'Delta' team.</memory_write><memory_write>Employee ID E7890, Mark Chen's role is Senior Developer.</memory_write><memory_write>Employee ID E7890, Mark Chen's manager is now Lisa Ray.</memory_write>"
+    },
+    {
+      "input": "What is dark matter and why do scientists believe it exists?",
+      "response": "<memory_ask>What is dark matter?</memory_ask><memory_ask>Why do scientists believe dark matter exists?</memory_ask><memory_ask>What is the evidence for dark matter?</memory_ask>"
+    },
+    {
+      "input": "Sharks are fish. They have skeletons made of cartilage, not bone. The Great White Shark is an apex predator.",
+      "response": "<memory_write>Sharks are fish.</memory_write><memory_write>Sharks have skeletons made of cartilage, not bone.</memory_write><memory_write>The Great White Shark is an apex predator.</memory_write>"
+    },
+    {
+      "input": "The new art exhibition 'ColorScapes' features works by contemporary artists. It is being held at the City Art Gallery until August 31st. Is there an entrance fee?",
+      "response": "<memory_ask>Information about 'ColorScapes' art exhibition</memory_ask><memory_ask>What kind of art does 'ColorScapes' feature?</memory_ask><memory_ask>Where is 'ColorScapes' being held?</memory_ask><memory_ask>How long is 'ColorScapes' open for?</memory_ask><memory_ask>Is there an entrance fee for 'ColorScapes'?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The 'Orion Nebula' is approximately 1,344 light-years away. Our previous estimate was 1,500 light-years. It is a stellar nursery. Its apparent magnitude is 4.\n\nMemory:\nMemory 1: The 'Orion Nebula' is 1,500 light-years away.\nMemory 2: The 'Orion Nebula' is a diffuse nebula.\nMemory 3: The 'Orion Nebula' is visible to the naked eye.\n\nGenerated Thinking and Response: Updated distance to 'Orion Nebula'. Added that it's a stellar nursery and its apparent magnitude. It being a diffuse nebula and visible to the naked eye are consistent.\n",
+      "response": "<memory_write>The 'Orion Nebula' is approximately 1,344 light-years away.</memory_write><memory_write>The 'Orion Nebula' is a stellar nursery.</memory_write><memory_write>The 'Orion Nebula's apparent magnitude is 4.</memory_write>"
+    },
+    {
+      "input": "Tell me something interesting.",
+      "response": "<memory_ask>Information about interesting facts</memory_ask>"
+    },
+    {
+      "input": "The current plan is to visit the museum and then the park. The museum opens at 10 AM. The park is always open.",
+      "response": "<memory_write>The current plan is to visit the museum and then the park.</memory_write><memory_write>The museum opens at 10 AM.</memory_write><memory_write>The park is always open.</memory_write>"
+    },
+    {
+      "input": "The new policy states that all employees must complete the security training by end of month. This training is online. Will there be a test at the end?",
+      "response": "<memory_ask>Information about the new policy</memory_ask><memory_ask>What must all employees complete?</memory_ask><memory_ask>When must employees complete security training?</memory_ask><memory_ask>How is the security training delivered?</memory_ask><memory_ask>Will there be a test at the end of the security training?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The Sun is a G-type main-sequence star. It was incorrectly classified as an F-type. Its age is about 4.6 billion years.\n\nMemory:\nMemory 1: The Sun is an F-type main-sequence star.\nMemory 2: The Sun's age is approximately 4.5 billion years.\nMemory 3: The Sun is at the center of our solar system.\n\nGenerated Thinking and Response: Corrected Sun's spectral type to G-type and updated its age slightly. Its central position is correct.\n",
+      "response": "<memory_write>The Sun is a G-type main-sequence star.</memory_write><memory_write>The Sun's age is about 4.6 billion years.</memory_write>"
+    },
+    {
+      "input": "What's the weather like today?",
+      "response": "<memory_ask>What is the weather like today?</memory_ask>"
+    },
+    {
+      "input": "A platypus is a mammal that lays eggs. It is native to eastern Australia. It has a bill like a duck.",
+      "response": "<memory_write>A platypus is a mammal that lays eggs.</memory_write><memory_write>The platypus is native to eastern Australia.</memory_write><memory_write>A platypus has a bill like a duck.</memory_write>"
+    },
+    {
+      "input": "The new electric scooter 'GlideFast' has a top speed of 25 mph. Its range is 30 miles on a single charge. Is it legal to ride on sidewalks in California?",
+      "response": "<memory_ask>Information about 'GlideFast' electric scooter</memory_ask><memory_ask>What is the top speed of 'GlideFast'?</memory_ask><memory_ask>What is the range of 'GlideFast'?</memory_ask><memory_ask>Is 'GlideFast' legal to ride on sidewalks in California?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Project 'Phoenix' scope now includes an analytics dashboard. This was not in the original plan. The budget has been increased by 10% to $55,000.\n\nMemory:\nMemory 1: Project 'Phoenix' original scope is mobile app development.\nMemory 2: Project 'Phoenix' budget is $50,000.\nMemory 3: Project 'Phoenix' deadline is Q4.\n\nGenerated Thinking and Response: Added analytics dashboard to Project 'Phoenix' scope and updated budget. Deadline remains Q4.\n",
+      "response": "<memory_write>Project 'Phoenix' scope now includes an analytics dashboard.</memory_write><memory_write>The budget for Project 'Phoenix' has been increased by 10% to $55,000.</memory_write>"
+    },
+    {
+      "input": "Why is the sky blue?",
+      "response": "<memory_ask>Why is the sky blue?</memory_ask><memory_ask>Information about Rayleigh scattering</memory_ask>"
+    },
+    {
+      "input": "The book I'm reading is 'The Martian' by Andy Weir. It's about an astronaut stranded on Mars. It was made into a movie.",
+      "response": "<memory_write>I am reading 'The Martian' by Andy Weir.</memory_write><memory_write>'The Martian' is about an astronaut stranded on Mars.</memory_write><memory_write>'The Martian' was made into a movie.</memory_write>"
+    },
+    {
+      "input": "The 'TerraForm' initiative aims to plant one million trees by 2030. They are focusing on reforestation in degraded areas. How can one volunteer or donate?",
+      "response": "<memory_ask>Information about the 'TerraForm' initiative</memory_ask><memory_ask>What is the goal of the 'TerraForm' initiative?</memory_ask><memory_ask>Where is 'TerraForm' focusing its efforts?</memory_ask><memory_ask>How can one volunteer for 'TerraForm'?</memory_ask><memory_ask>How can one donate to 'TerraForm'?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The 'AquaPure' water filter model X500 now has a lifespan of 8 months. It was 6 months. The price remains $49.99. It removes 99.9% of bacteria.\n\nMemory:\nMemory 1: 'AquaPure' water filter model X500 lifespan is 6 months.\nMemory 2: 'AquaPure' model X500 price is $49.99.\nMemory 3: 'AquaPure' model X500 removes 99% of chlorine.\n\nGenerated Thinking and Response: Updated lifespan for 'AquaPure' X500 and noted bacteria removal percentage. Price and chlorine removal info adjusted or confirmed.\n",
+      "response": "<memory_write>The 'AquaPure' water filter model X500 now has a lifespan of 8 months.</memory_write><memory_write>The 'AquaPure' water filter model X500 removes 99.9% of bacteria.</memory_write>"
+    },
+    {
+      "input": "What are black holes?",
+      "response": "<memory_ask>What are black holes?</memory_ask><memory_ask>How are black holes formed?</memory_ask><memory_ask>What is an event horizon?</memory_ask>"
+    },
+    {
+      "input": "My new address is 123 Oak Street, Anytown, USA. The apartment number is 4B. My previous address was 789 Pine Lane.",
+      "response": "<memory_write>My new address is 123 Oak Street, Anytown, USA.</memory_write><memory_write>My apartment number at 123 Oak Street is 4B.</memory_write><memory_write>My previous address was 789 Pine Lane.</memory_write>"
+    },
+    {
+      "input": "The 'SolarSail' spacecraft is a NASA project testing solar propulsion. It was launched last year. What are its mission objectives?",
+      "response": "<memory_ask>Information about the 'SolarSail' spacecraft</memory_ask><memory_ask>What is the 'SolarSail' spacecraft testing?</memory_ask><memory_ask>When was 'SolarSail' launched?</memory_ask><memory_ask>What are the mission objectives of 'SolarSail'?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The patient, Lisa, has a fever of 102F. Yesterday it was 100F. She reports a sore throat. Her blood pressure is 120/80 mmHg.\n\nMemory:\nMemory 1: Lisa's temperature yesterday was 100F.\nMemory 2: Lisa's blood pressure is 110/70 mmHg.\nMemory 3: Lisa has no reported symptoms other than fever.\n\nGenerated Thinking and Response: Lisa's current fever is 102F. Noted sore throat. Updated blood pressure.\n",
+      "response": "<memory_write>The patient, Lisa, has a fever of 102F.</memory_write><memory_write>Lisa reports a sore throat.</memory_write><memory_write>Lisa's blood pressure is 120/80 mmHg.</memory_write>"
+    },
+    {
+      "input": "Could you summarize the plot of Hamlet?",
+      "response": "<memory_ask>Summarize the plot of Hamlet.</memory_ask><memory_ask>Who are the main characters in Hamlet?</memory_ask><memory_ask>What are the major themes in Hamlet?</memory_ask>"
+    },
+    {
+      "input": "The car needs an oil change every 5,000 miles. The current mileage is 4,800 miles. The tires were rotated at 3,000 miles.",
+      "response": "<memory_write>The car needs an oil change every 5,000 miles.</memory_write><memory_write>The car's current mileage is 4,800 miles.</memory_write><memory_write>The car's tires were rotated at 3,000 miles.</memory_write>"
+    },
+    {
+      "input": "The new 'BioSphere' research facility is studying climate change impacts on marine life. It is located in Monterey, California. What specific research projects are underway?",
+      "response": "<memory_ask>Information about 'BioSphere' research facility</memory_ask><memory_ask>What is 'BioSphere' studying?</memory_ask><memory_ask>Where is 'BioSphere' located?</memory_ask><memory_ask>What specific research projects are underway at 'BioSphere'?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The 'Zenith' telescope discovered a new exoplanet, Kepler-X9. It was previously thought that region of space was empty. Kepler-X9 is a gas giant.\n\nMemory:\nMemory 1: The 'Zenith' telescope is searching for comets.\nMemory 2: The region of space around star Kepler-X was thought to be empty of planets.\nMemory 3: Gas giants are large planets mostly composed of helium and/or hydrogen.\n\nGenerated Thinking and Response: Noted discovery of exoplanet Kepler-X9 by 'Zenith' telescope, its type, and the update to our understanding of that space region. The telescope's general mission might include this.\n",
+      "response": "<memory_write>The 'Zenith' telescope discovered a new exoplanet, Kepler-X9.</memory_write><memory_write>The region of space around star Kepler-X was not empty; it contains exoplanet Kepler-X9.</memory_write><memory_write>Kepler-X9 is a gas giant.</memory_write>"
+    },
+    {
+      "input": "What is AI ethics?",
+      "response": "<memory_ask>What is AI ethics?</memory_ask><memory_ask>What are some key ethical concerns related to AI?</memory_ask>"
+    },
+    {
+      "input": "The Eiffel Tower is in Paris, France. It was completed in 1889. It is made of wrought iron.",
+      "response": "<memory_write>The Eiffel Tower is in Paris, France.</memory_write><memory_write>The Eiffel Tower was completed in 1889.</memory_write><memory_write>The Eiffel Tower is made of wrought iron.</memory_write>"
+    },
+    {
+      "input": "The 'DeepDive' submersible can reach depths of 10,000 meters. It is used for oceanographic research. What kind of sensors does it have?",
+      "response": "<memory_ask>Information about 'DeepDive' submersible</memory_ask><memory_ask>What is the maximum depth 'DeepDive' can reach?</memory_ask><memory_ask>What is 'DeepDive' used for?</memory_ask><memory_ask>What kind of sensors does 'DeepDive' have?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The Earth's axial tilt is 23.5 degrees. This was misremembered as 25 degrees. This tilt causes the seasons.\n\nMemory:\nMemory 1: Earth's axial tilt is 25 degrees.\nMemory 2: Earth's axial tilt is responsible for seasons.\nMemory 3: Earth orbits the Sun.\n\nGenerated Thinking and Response: Corrected Earth's axial tilt to 23.5 degrees. The cause of seasons is correctly associated.\n",
+      "response": "<memory_write>The Earth's axial tilt is 23.5 degrees.</memory_write>"
+    },
+    {
+      "input": "That's all for now.",
+      "response": ""
+    },
+    {
+      "input": "Noted.",
+      "response": ""
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The meeting on Friday is still on. John will present. \n\nMemory:\nMemory 1: The meeting on Friday is confirmed.\nMemory 2: John Smith will present at the meeting.\nMemory 3: The meeting is about Q3 results.\n\nGenerated Thinking and Response: All information is consistent with current memory.\n",
+      "response": ""
+    },
+    {
+      "input": "What time is it?",
+      "response": "<memory_ask>What is the current time?</memory_ask>"
+    },
+    {
+      "input": "The sky is currently overcast and grey. It might rain later according to the forecast.",
+      "response": "<memory_write>The sky is currently overcast and grey.</memory_write><memory_write>It might rain later according to the forecast.</memory_write>"
+    },
+    {
+      "input": "My favorite color is blue. Blue is a primary color. What are the other primary colors?",
+      "response": "<memory_ask>Information about primary colors</memory_ask><memory_ask>What are the primary colors other than blue?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: Client Alpha's project is on track. They requested no changes this week. Their main contact is still Bob.\n\nMemory:\nMemory 1: Client Alpha's project is on track.\nMemory 2: Client Alpha's main contact is Bob.\nMemory 3: Client Alpha is based in New York.\n\nGenerated Thinking and Response: No new information or contradictions found for Client Alpha project this week.\n",
+      "response": ""
+    },
+    {
+      "input": "Who won the last soccer world cup and which country hosted it?",
+      "response": "<memory_ask>Who won the last soccer world cup?</memory_ask><memory_ask>Which country hosted the last soccer world cup?</memory_ask>"
+    },
+    {
+      "input": "Penguins are flightless birds. They live primarily in the Southern Hemisphere. Emperor penguins are the largest species.",
+      "response": "<memory_write>Penguins are flightless birds.</memory_write><memory_write>Penguins live primarily in the Southern Hemisphere.</memory_write><memory_write>Emperor penguins are the largest species of penguin.</memory_write>"
+    },
+    {
+      "input": "The new 'AeroGlide' drone has a flight time of 45 minutes. It features a 4K camera. What is its maximum control range?",
+      "response": "<memory_ask>Information about 'AeroGlide' drone</memory_ask><memory_ask>What is the flight time of 'AeroGlide' drone?</memory_ask><memory_ask>What kind of camera does 'AeroGlide' drone have?</memory_ask><memory_ask>What is the maximum control range of 'AeroGlide' drone?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The speed of sound in air is approximately 343 meters per second. It was noted as 330 m/s. This speed can vary with temperature.\n\nMemory:\nMemory 1: The speed of sound in air is 330 meters per second.\nMemory 2: The speed of sound varies with temperature.\nMemory 3: Sound travels faster in water than in air.\n\nGenerated Thinking and Response: Updated speed of sound in air. The temperature dependency is correct.\n",
+      "response": "<memory_write>The speed of sound in air is approximately 343 meters per second.</memory_write>"
+    },
+    {
+      "input": "Explain general relativity.",
+      "response": "<memory_ask>Explain general relativity.</memory_ask><memory_ask>What is the principle of equivalence?</memory_ask><memory_ask>How does gravity affect spacetime?</memory_ask>"
+    },
+    {
+      "input": "My grocery list includes apples, bananas, and milk. I also need to buy bread. The store closes at 9 PM.",
+      "response": "<memory_write>My grocery list includes apples, bananas, and milk.</memory_write><memory_write>I also need to buy bread.</memory_write><memory_write>The grocery store closes at 9 PM.</memory_write>"
+    },
+    {
+      "input": "The 'CryoSleep' project aims to develop long-term human stasis for space travel. It is funded by a private consortium. What are the main ethical considerations?",
+      "response": "<memory_ask>Information about the 'CryoSleep' project</memory_ask><memory_ask>What is the aim of the 'CryoSleep' project?</memory_ask><memory_ask>Who funds the 'CryoSleep' project?</memory_ask><memory_ask>What are the main ethical considerations of the 'CryoSleep' project?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: The library's new operating hours are 9 AM to 7 PM on weekdays. Previously it was 10 AM to 6 PM. Weekend hours (12 PM to 5 PM) remain unchanged.\n\nMemory:\nMemory 1: Library weekday hours are 10 AM to 6 PM.\nMemory 2: Library weekend hours are 12 PM to 5 PM.\nMemory 3: The library has free Wi-Fi.\n\nGenerated Thinking and Response: Weekday operating hours for the library have been updated. Weekend hours and Wi-Fi availability are still current.\n",
+      "response": "<memory_write>The library's new operating hours are 9 AM to 7 PM on weekdays.</memory_write>"
+    },
+    {
+      "input": "What's the capital of Canada?",
+      "response": "<memory_ask>What is the capital of Canada?</memory_ask>"
+    },
+    {
+      "input": "Solar panels convert sunlight into electricity. This process is photovoltaic. Excess energy can be stored in batteries.",
+      "response": "<memory_write>Solar panels convert sunlight into electricity.</memory_write><memory_write>The process by which solar panels convert sunlight into electricity is photovoltaic.</memory_write><memory_write>Excess energy from solar panels can be stored in batteries.</memory_write>"
+    },
+    {
+      "input": "The 'TerraNova' colony on Mars reported successful crop growth in their biodome. They are currently cultivating potatoes and lettuce. What is their primary power source?",
+      "response": "<memory_ask>Information about the 'TerraNova' colony on Mars</memory_ask><memory_ask>What did the 'TerraNova' colony report?</memory_ask><memory_ask>What crops are 'TerraNova' colony cultivating?</memory_ask><memory_ask>What is the primary power source for 'TerraNova' colony?</memory_ask>"
+    },
+    {
+      "input": "\nOutput Generated. Write Memory.\n\nInput Question: User profile for 'test_user_123' indicates their preferred language is Spanish. It was English. Their last login was today.\n\nMemory:\nMemory 1: User 'test_user_123' preferred language is English.\nMemory 2: User 'test_user_123' last login was 2024-03-10.\nMemory 3: User 'test_user_123' has admin privileges.\n\nGenerated Thinking and Response: Updated preferred language and last login date for 'test_user_123'. Admin privileges remain.\n",
+      "response": "<memory_write>User profile for 'test_user_123' indicates their preferred language is Spanish.</memory_write><memory_write>User profile for 'test_user_123' last login was today.</memory_write>"
+    }
+  ]
+}
